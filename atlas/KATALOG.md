@@ -1,8 +1,8 @@
 # Romulijana · katalog za atlas
 
-Generisano: `node alati/atlas-inventar.js` · 2026-11-02 07:20 UTC. Ne menjati ručno; izvor istine je `baza/`. Mašinski oblik: baza/atlas-katalog.json, graf veza: [graf.json](graf.json).
+Generisano: `node alati/atlas-inventar.js` · 2026-11-02 07:44 UTC. Ne menjati ručno; izvor istine je `baza/`. Mašinski oblik: baza/atlas-katalog.json, graf veza: [graf.json](graf.json).
 
-**Zbir:** 81 izvora · 46 rendera · 71 tvrdnji · 66 čvorova · 3 objekta · 32041 pominjanja · 2118 datuma · graf 221 čvorova / 654 veza.
+**Zbir:** 81 izvora · 49 rendera · 71 tvrdnji · 66 čvorova · 3 objekta · 32041 pominjanja · 2118 datuma · graf 221 čvorova / 654 veza.
 
 Razmera: **S0** region (provincije, putevi carstva) · **S1** okolina do 25 km · **S2** lokalitet (utvrđenje, Magura, nekropole) · **S3** objekat (zgrada, kapija, crkva) · **S4** predmet (skulptura, mozaik, novac).
 
@@ -122,7 +122,7 @@ Razmera: **S0** region (provincije, putevi carstva) · **S1** okolina do 25 km �
 | W11 | dokaz | privatno | The blues of Romuliana | L 129, I.TO 48, L.P 34, L.U 33 | 0 | plavi pigmenti |
 | W16 | dokaz | privatno | Trepanning on Mediaeval Gamzigrad — Felix Romuliana | L 44, L.U.IK 7, N.FR 7, F.PR 6 | 0 | trepanacija, srednji vek |
 
-## Renderi (46)
+## Renderi (49)
 
 | fajl | izvor | PDF str. | objekti | tvrdnje |
 |---|---|---|---|---|
@@ -154,7 +154,10 @@ Razmera: **S0** region (provincije, putevi carstva) · **S1** okolina do 25 km �
 | umetnost/R04-p126.png | R04 | 126 |  |  |
 | umetnost/R04-p139.png | R04 | 139 |  |  |
 | umetnost/R05-p019.png | R05 | 19 |  |  |
+| umetnost/R05-p020-dionis.png | R05 |  |  |  |
+| umetnost/R05-p020-leopard.png | R05 |  |  |  |
 | umetnost/R05-p020-mere.png | R05 |  |  |  |
+| umetnost/R05-p020-venatori.png | R05 |  |  |  |
 | umetnost/R05-p020.png | R05 | 20 |  |  |
 | stampane/R04-p120-120.png | R04 |  |  |  |
 | stampane/R06-p131-131.png | R06 |  |  |  |

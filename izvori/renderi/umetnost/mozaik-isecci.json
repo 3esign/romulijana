@@ -1,0 +1,38 @@
+{
+ "R05-p020-dionis.png": {
+  "izvor": "R05",
+  "strana_pdf": 20,
+  "box_px": [
+   842,
+   245,
+   1612,
+   1105
+  ],
+  "iz": "izvori/renderi/umetnost/R05-p020.png",
+  "sha256": "a5c3794ae2f23b656c6e71e364fabb4fe15e0fb3893617d7cbc1db8d3658b6a8"
+ },
+ "R05-p020-leopard.png": {
+  "izvor": "R05",
+  "strana_pdf": 20,
+  "box_px": [
+   842,
+   1310,
+   1215,
+   2062
+  ],
+  "iz": "izvori/renderi/umetnost/R05-p020.png",
+  "sha256": "5f2bf6ce9420d9579dec5635f36b06687f35c552bdb6ba1280518d1473fcc115"
+ },
+ "R05-p020-venatori.png": {
+  "izvor": "R05",
+  "strana_pdf": 20,
+  "box_px": [
+   480,
+   255,
+   800,
+   920
+  ],
+  "iz": "izvori/renderi/umetnost/R05-p020.png",
+  "sha256": "66e2874b2329382a5e579e3068ab6ae6d77dfca72bce16400c1ba98e0f6afe91"
+ }
+}

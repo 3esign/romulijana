@@ -731,6 +731,8 @@ body.walking #minimap-wrap { bottom: 18px; right: 12px; left: auto; }
   box-shadow: 0 2px 10px rgba(0,0,0,0.12);
 }
 #s4-strip.open { display: flex; }
+.dos-cite { display: flex; gap: 6px; align-items: center; padding: 8px 0 2px; flex-wrap: wrap; }
+.dos-cite #cite-status { font-size: 10px; opacity: 0.7; }
 body.walking #s4-strip { display: none; }
 .s4-title {
   font-family: var(--font-mono);
@@ -969,6 +971,8 @@ body.noc .btn-about {
         <button class="btn" data-s4="S4-TETRAPILON" title="Kapiteli i reljefni piloni Tetrapilona na raskrsnici ka Maguri (RP-002)">Kapiteli Tetrapilona</button>
         <button class="btn" data-s4="S4-NOVAC" title="Numizmatički nalaz u podnožju tumula Romule (datovanje apoteoze 294/295. g., RU-018)">Novac apoteoze</button>
         <button class="btn" data-s4="S4-KRST" title="Bronzani litijski krst i carske insignije (R04 sl. 177)">Litijski krst</button>
+        <button class="btn" data-s4="S4-MOZAIK" title="Podni mozaici Palate I: lavirint (A), venatori i leopard (D), Dionis na gozbi (G) — mere iz RV-007">Mozaici Palate I</button>
+        <button class="btn" id="btn-mosaic-mode" title="Prikaz panela mozaika: fotografija iz kataloga R05 (sken) ili šema sa merama">Mozaik: sken</button>
         <button class="btn" id="btn-raking" title="Koso epigrafsko svetlo (Raking Light 12° vs 36°) za čitanje uklesanih slova i reljefa">Koso svetlo (12°)</button>
       </div>
     </header>
@@ -1061,6 +1065,11 @@ body.noc .btn-about {
       </div>
     </div>
 
+    <div class="dos-cite">
+      <button class="btn" id="btn-cite-copy" title="Kopira naučni citat izabranog čvora sa tvrdnjama, izvorima, stranama i trajnim linkom pogleda">Citiraj čvor</button>
+      <button class="btn" id="btn-cite-md" title="Preuzima karticu čvora kao Markdown (.md)">Izvezi karticu (.md)</button>
+      <span id="cite-status" class="mono" aria-live="polite"></span>
+    </div>
     <nav class="dos-tabs" role="tablist">
       <button class="dos-tab active" data-tab="dokazi" role="tab">Tvrdnje &amp; Dokazi (<span id="tab-cnt-tvr" class="num">6</span>)</button>
       <button class="dos-tab" data-tab="cvorovi" role="tab">Čvorovi (<span class="num">66</span>)</button>
@@ -1144,6 +1153,7 @@ const STATE = {
   clipX: 980,
   lightElevation: 34,
   lightAzimuth: 52,
+  mosaicMode: 'sken',
   audioOn: false
 };
 
@@ -1387,6 +1397,119 @@ const lineMatP = new THREE.LineDashedMaterial({ color: currentPal().edgeP, dashS
 /* ── Pomoćni graditelji geometrije sa crease linijama (Saito & Takahashi 1990) ── */
 const pickableMeshes = [];
 const nodeGroups = new Map(); // id -> { group, meshesA, meshesB, meshesC, edgesA, labelPos }
+
+/* Mozaici Palate I (L.P.MO): paneli u stvarnim merama iz RV-007, sken iz R05 PDF 20 ili šema.
+   Mere su štampani podatak; međusobni raspored panela unutar dvorana A, D, G je šematski. */
+const MOZAIK_PANELI = [
+  { id: 'A-lavirint', dvorana: 'A', naziv: 'Lavirint', w: 2.6, d: 2.6, x: -4.6, z: 3.6, mere: null, sken: null },
+  { id: 'D-venatori', dvorana: 'D', naziv: 'Venatori u borbi sa lavom', w: 2.54, d: 1.12, x: 2.4, z: 5.0, mere: '2,54 × 1,12 m', sken: '../izvori/renderi/umetnost/R05-p020-venatori.png' },
+  { id: 'D-lov', dvorana: 'D', naziv: 'Scena iz lova', w: 1.40, d: 0.90, x: 5.0, z: 2.6, mere: '1,40 × 0,90 m', sken: null },
+  { id: 'D-leopard', dvorana: 'D', naziv: 'Leopard u skoku', w: 2.47, d: 1.55, x: 1.6, z: 2.2, mere: '2,47 × 1,55 m', sken: '../izvori/renderi/umetnost/R05-p020-leopard.png' },
+  { id: 'G-dionis', dvorana: 'G', naziv: 'Dionis na gozbi', w: 1.98, d: 1.74, x: 0, z: -3.6, mere: '1,98 × 1,74 m', sken: '../izvori/renderi/umetnost/R05-p020-dionis.png' }
+];
+const mosaicPanels = [];
+
+function createMosaicSchemaTexture(pan) {
+  const px = 160, W = Math.round(pan.w * px), H = Math.round(pan.d * px);
+  const cnv = document.createElement('canvas'); cnv.width = W; cnv.height = H;
+  const ctx = cnv.getContext('2d');
+  ctx.fillStyle = '#d9d2c4'; ctx.fillRect(0, 0, W, H);
+  // Tesere kao tiha mreža
+  ctx.fillStyle = 'rgba(70,60,48,0.07)';
+  for (let y = 0; y < H; y += 6) for (let x = (y / 6) % 2 ? 3 : 0; x < W; x += 6) ctx.fillRect(x, y, 4, 4);
+  // Okvir: pletenica (guilloche) svedena na dve sinusoide
+  const b = 22;
+  ctx.strokeStyle = '#5b4c3b'; ctx.lineWidth = 2;
+  ctx.strokeRect(4, 4, W - 8, H - 8); ctx.strokeRect(b + 4, b + 4, W - 2 * b - 8, H - 2 * b - 8);
+  ctx.strokeStyle = '#8a3b2e'; ctx.lineWidth = 2.4;
+  const braid = (x0, y0, len, horiz) => {
+    for (const ph of [0, Math.PI]) {
+      ctx.beginPath();
+      for (let t = 0; t <= len; t += 2) {
+        const o = Math.sin(t / 9 + ph) * 6;
+        const X = horiz ? x0 + t : x0 + o, Y = horiz ? y0 + o : y0 + t;
+        if (t) ctx.lineTo(X, Y); else ctx.moveTo(X, Y);
+      }
+      ctx.stroke();
+    }
+  };
+  braid(4, 4 + b / 2 + 2, W - 8, true); braid(4, H - 6 - b / 2, W - 8, true);
+  braid(6 + b / 2, 4, H - 8, false); braid(W - 6 - b / 2, 4, H - 8, false);
+  const ix = b + 10, iy = b + 10, iw = W - 2 * ix, ih = H - 2 * iy;
+  if (pan.dvorana === 'A') {
+    // Lavirint: koncentrični meandar sa naizmeničnim prolazima (šema, ne reprodukcija)
+    ctx.strokeStyle = '#3d342a'; ctx.lineWidth = 5;
+    const rings = 6, cx = W / 2, cy = H / 2;
+    for (let r = 1; r <= rings; r++) {
+      const hw = (iw / 2) * r / rings, hh = (ih / 2) * r / rings, gap = Math.min(hw, hh) * 0.32;
+      const side = r % 4;
+      const pts = [[cx - hw, cy - hh], [cx + hw, cy - hh], [cx + hw, cy + hh], [cx - hw, cy + hh], [cx - hw, cy - hh]];
+      ctx.beginPath();
+      for (let i = 0; i < 4; i++) {
+        const [x1, y1] = pts[i], [x2, y2] = pts[i + 1];
+        if (i === side) {
+          const mx = (x1 + x2) / 2, my = (y1 + y2) / 2, dx = Math.sign(x2 - x1) * gap / 2, dy = Math.sign(y2 - y1) * gap / 2;
+          ctx.moveTo(x1, y1); ctx.lineTo(mx - dx, my - dy); ctx.moveTo(mx + dx, my + dy); ctx.lineTo(x2, y2);
+        } else { ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); }
+      }
+      ctx.stroke();
+    }
+    ctx.fillStyle = '#3d342a'; ctx.fillRect(cx - 9, cy - 9, 18, 18);
+  }
+  ctx.fillStyle = 'rgba(40,34,27,0.82)';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  if (pan.dvorana !== 'A') {
+    ctx.font = '600 ' + Math.max(15, Math.round(H * 0.075)) + 'px Inter, system-ui, sans-serif';
+    ctx.fillText(pan.dvorana + ' · ' + pan.naziv, W / 2, H / 2 - 12);
+    ctx.font = '500 ' + Math.max(12, Math.round(H * 0.055)) + 'px ui-monospace, monospace';
+    ctx.fillText(pan.mere + ' (RV-007)', W / 2, H / 2 + 16);
+  }
+  const tex = new THREE.CanvasTexture(cnv);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  tex.anisotropy = 4;
+  return tex;
+}
+
+function buildMosaicFloor(g, c, t) {
+  // Pod Palate I i šematske granice dvorana A, D, G
+  const floor = new THREE.Mesh(new THREE.BoxGeometry(t.w, 0.22, t.d), new THREE.MeshStandardMaterial({ color: 0xb9ad99, roughness: 0.92, metalness: 0, clippingPlanes: [clipPlane] }));
+  floor.position.y = 0.11; floor.receiveShadow = true;
+  floor.userData = { level: 'A', nodeId: c.id, customMat: true };
+  g.add(floor); pickableMeshes.push(floor);
+  const roomMat = new THREE.LineBasicMaterial({ color: 0x6b5d4c, transparent: true, opacity: 0.55 });
+  for (const [x, z, w, d] of [[-4.6, 3.6, 6.4, 6.0], [3.0, 3.6, 7.0, 5.6], [0, -3.6, 9.6, 5.4]]) {
+    const r = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(w, 0.02, d)), roomMat);
+    r.position.set(x, 0.24, z); r.userData = { level: 'A', isEdge: true, customMat: true };
+    g.add(r);
+  }
+  for (const pan of MOZAIK_PANELI) {
+    const schemaMat = new THREE.MeshStandardMaterial({ map: createMosaicSchemaTexture(pan), roughness: 0.82, metalness: 0, clippingPlanes: [clipPlane] });
+    let scanMat = null;
+    if (pan.sken) {
+      const tx = textureLoader.load(pan.sken, () => requestRender());
+      tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 4;
+      scanMat = new THREE.MeshStandardMaterial({ map: tx, roughness: 0.78, metalness: 0, clippingPlanes: [clipPlane] });
+    }
+    const geo = new THREE.PlaneGeometry(pan.w, pan.d); geo.rotateX(-Math.PI / 2);
+    const mesh = new THREE.Mesh(geo, STATE.mosaicMode === 'sken' && scanMat ? scanMat : schemaMat);
+    mesh.position.set(pan.x, 0.25, pan.z);
+    mesh.receiveShadow = true;
+    mesh.userData = { level: 'A', nodeId: c.id, customMat: true, mozaik: pan.id };
+    g.add(mesh); pickableMeshes.push(mesh);
+    const edge = new THREE.LineSegments(new THREE.EdgesGeometry(geo), new THREE.LineBasicMaterial({ color: 0x2f2a24 }));
+    edge.position.copy(mesh.position); edge.userData = { level: 'A', isEdge: true, customMat: true };
+    g.add(edge);
+    mosaicPanels.push({ pan, mesh, schemaMat, scanMat });
+  }
+}
+
+function setMosaicMode(mode) {
+  STATE.mosaicMode = mode;
+  for (const mp of mosaicPanels) mp.mesh.material = mode === 'sken' && mp.scanMat ? mp.scanMat : mp.schemaMat;
+  const b = document.getElementById('btn-mosaic-mode');
+  if (b) { b.textContent = mode === 'sken' ? 'Mozaik: sken' : 'Mozaik: šema'; b.classList.toggle('active', mode === 'sema'); }
+  requestRender();
+}
 
 function addMeshWithEdges(parent, geo, level, nodeId, yOffset = 0, xOffset = 0, zOffset = 0, rotY = 0) {
   const mat = level === 'A' ? matA : level === 'B' ? matB : level === 'C' ? matC : level === 'CAPTA1' ? matCapta1 : level === 'CAPTA2' ? matCapta2 : matP;
@@ -1862,6 +1985,8 @@ function buildNodeGeometry(c) {
     addMeshWithEdges(g, new THREE.CylinderGeometry(t.w * 0.52, t.w * 0.56, t.hA, sides), baseLvl, c.id, t.hA / 2, 0, 0);
     addMeshWithEdges(g, new THREE.CylinderGeometry(t.w * 0.42, t.w * 0.44, t.hB - t.hA, 12), 'B', c.id, t.hA + (t.hB - t.hA) / 2, 0, 0);
     addMeshWithEdges(g, new THREE.ConeGeometry(t.w * 0.45, t.hC + 1.5, 12), 'C', c.id, t.hB + (t.hC + 1.5) / 2, 0, 0);
+  } else if (t.oblik === 'mozaik') {
+    buildMosaicFloor(g, c, t);
   } else if (t.oblik === 'tumul') {
     // Konsekracioni tumuli (L.MG.K) — dva tumula jedan uz drugi
     for (const dx of [-18, 18]) {
@@ -2051,9 +2176,11 @@ function applySceneState() {
   planBorderMat.color.setHex(pal.edgeA);
   clipPlane.constant = STATE.clipX;
 
+  // Presek za mozaike: svi volumeni iznad poda Palate I (bedem, palata, peristil, aula) se sklanjaju dok je pod Palate I u fokusu (S4)
+  const mosaicCut = STATE.selectedId === 'L.P.MO' && STATE.scale === 'S4';
   for (const [cid, entry] of nodeGroups.entries()) {
     const faze = entry.node.topo.faze || [];
-    const phaseMatch = STATE.phase === 'SVE' || faze.includes(STATE.phase);
+    const phaseMatch = (STATE.phase === 'SVE' || faze.includes(STATE.phase)) && !(mosaicCut && cid !== 'L.P.MO' && Math.abs(entry.node.topo.x + 52) < entry.node.topo.w / 2 + 4 && Math.abs(entry.node.topo.z + 50) < entry.node.topo.d / 2 + 4);
     entry.group.visible = phaseMatch;
     if (!phaseMatch) continue;
 
@@ -2228,7 +2355,7 @@ function renderDossier() {
     }
 
     // S4 Forenzički 3D katalog predmeta i epigrafskih spomenika za izabrani čvor ili razmeru S4
-    const nodeS4 = (DATA.predmeti_s4 || []).filter(it => it.cvor === c.id || STATE.scale === 'S4');
+    const nodeS4 = (DATA.predmeti_s4 || []).filter(it => it.cvor === c.id || STATE.scale === 'S4').sort((x, y) => (y.cvor === c.id) - (x.cvor === c.id));
     if (nodeS4.length > 0) {
       const hS4 = document.createElement('div');
       hS4.className = 'section-h';
@@ -2360,7 +2487,7 @@ function renderDossier() {
 function updateS4StripVisibility() {
   const s4Strip = document.getElementById('s4-strip');
   if (!s4Strip) return;
-  const show = STATE.scale === 'S4' || /^N\./.test(STATE.selectedId);
+  const show = STATE.scale === 'S4' || /^N\./.test(STATE.selectedId) || STATE.selectedId === 'L.P.MO';
   s4Strip.classList.toggle('open', show);
 }
 
@@ -2583,6 +2710,66 @@ function applyTourStep(idx) {
   updateHash();
 }
 
+/* Izvoz citata i kartice čvora: tvrdnje, granice, izvori sa stranama, trajni link pogleda */
+function buildNodeCitation() {
+  const c = cvorById.get(STATE.selectedId) || DATA.cvorovi[0];
+  const izvorById = new Map((DATA.izvori || []).map(x => [x.id, x]));
+  const claims = DATA.tvrdnje.filter(t => (t.cvorovi || []).includes(c.id));
+  const datum = new Date().toISOString().slice(0, 10);
+  const base = location.protocol.startsWith('http') ? location.origin + location.pathname : 'https://3esign.github.io/romulijana/atlas/';
+  const link = `${base}#razmera=${STATE.scale}&cvor=${c.id}&faza=${STATE.phase}`;
+  const kratko = `Romulijana — 3D epistemički atlas (Felix Romuliana, Gamzigrad), čvor ${c.id} „${c.naziv}“. Svemir / Semir Poturak, ${DATA.generisano.slice(0, 10)}. ${link} (pristupljeno ${datum}).`;
+  const koriste = new Set();
+  const lines = [
+    `# ${c.naziv} (${c.id})`, '',
+    `> ${kratko}`, '',
+    `- Pominjanja u korpusu: ${c.pominjanja} u ${c.izvora} izvora`,
+    `- Formalizovane tvrdnje: ${claims.length}`,
+    `- Razmera / faza pogleda: ${STATE.scale} / ${STATE.phase}`, ''
+  ];
+  if (!claims.length) lines.push('Čvor još nema formalizovanu tvrdnju u registru; pominjanja nisu dokaz.', '');
+  for (const t of claims) {
+    lines.push(`## ${t.id} · ${t.tema || t.registar || ''}`, '', t.tvrdnja, '', `*Granica:* ${t.granica || '—'}`, `*Status:* ${t.status || '—'}`, '');
+    for (const d of (t.dokazi || [])) {
+      koriste.add(d.izvor);
+      const str = [d.strana != null ? `PDF str. ${d.strana}` : '', d.stampana ? `štampana ${d.stampana}` : ''].filter(Boolean).join(', ');
+      lines.push(`- ${d.izvor}${str ? ', ' + str : ''}${d.sidro ? ` — „${d.sidro}“` : ''}${d.sha256 ? ` (sha256 ${d.sha256.replace('…', '')})` : ''}`);
+    }
+    lines.push('');
+  }
+  if (koriste.size) {
+    lines.push('## Izvori', '');
+    for (const id of [...koriste].sort()) {
+      const z = izvorById.get(id);
+      lines.push(z ? `- ${id}: ${z.autori || 'autor nije upisan'}${z.godina ? ' (' + z.godina + ')' : ''}. ${z.naslov}. Prava: ${z.prava}.` : `- ${id}`);
+    }
+    lines.push('');
+  }
+  lines.push('---', 'Atlas razdvaja dokaz (A), izvedeno (B) i rekonstrukciju (C). Pre citiranja u radu proveriti izvornu stranu.');
+  return { kratko, md: lines.join('\n'), id: c.id };
+}
+
+function citeStatus(msg) {
+  const el = document.getElementById('cite-status');
+  if (el) { el.textContent = msg; clearTimeout(citeStatus.t); citeStatus.t = setTimeout(() => { el.textContent = ''; }, 3200); }
+}
+
+async function copyNodeCitation() {
+  const { md } = buildNodeCitation();
+  try { await navigator.clipboard.writeText(md); citeStatus('citat kopiran'); }
+  catch { downloadNodeCard(); }
+}
+
+function downloadNodeCard() {
+  const { md, id } = buildNodeCitation();
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([md], { type: 'text/markdown;charset=utf-8' }));
+  a.download = `romulijana-${id.replace(/\./g, '-')}.md`;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  citeStatus('kartica preuzeta');
+}
+
 function updateHash() {
   try {
     history.replaceState(null, '', `#razmera=${STATE.scale}&cvor=${STATE.selectedId}&faza=${STATE.phase}`);
@@ -2796,6 +2983,10 @@ document.getElementById('btn-reset-cam').addEventListener('click', () => setScal
   document.querySelectorAll('[data-s4]').forEach(btn => {
     btn.addEventListener('click', () => focusS4Item(btn.dataset.s4));
   });
+  const btnMosaic = document.getElementById('btn-mosaic-mode');
+  if (btnMosaic) btnMosaic.addEventListener('click', () => { setMosaicMode(STATE.mosaicMode === 'sken' ? 'sema' : 'sken'); playUiTone(700, 0.03); });
+  document.getElementById('btn-cite-copy')?.addEventListener('click', copyNodeCitation);
+  document.getElementById('btn-cite-md')?.addEventListener('click', downloadNodeCard);
   const btnRaking = document.getElementById('btn-raking');
   if (btnRaking) {
     btnRaking.addEventListener('click', () => {
@@ -3270,7 +3461,7 @@ function tick(now) {
   }
 }
 
-window.__atlas = { camera, WALK, STATE, sampleDemHeight, toggleAbout, setProjMode, focusS4Item, applyTourStep }; // za automatske provere
+window.__atlas = { camera, scene, WALK, STATE, sampleDemHeight, toggleAbout, setProjMode, focusS4Item, applyTourStep, setMosaicMode, buildNodeCitation }; // za automatske provere
 /* Inicijalizacija: čitanje početnog URL hash-a (#razmera=...&cvor=...&faza=...) */
 {
   const initStep = DATA.tura[STATE.tourIndex] || DATA.tura[0];
