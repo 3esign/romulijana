@@ -1198,6 +1198,7 @@ const labelsLayer = document.getElementById('labels-layer');
 const renderer = new THREE.WebGLRenderer({
   canvas,
   antialias: true,
+  logarithmicDepthBuffer: true, // bez z-fightinga na mobilnim GPU (near 0.12 / far 28000)
   powerPreference: 'high-performance',
   preserveDrawingBuffer: true
 });
@@ -1572,7 +1573,7 @@ const groundMesh = new THREE.Mesh(
   new THREE.MeshStandardMaterial({ color: currentPal().ground, roughness: 0.96, metalness: 0.0 })
 );
 groundMesh.rotation.x = -Math.PI / 2;
-groundMesh.position.y = -0.08;
+groundMesh.position.y = -0.25;
 groundMesh.receiveShadow = true;
 groundGroup.add(groundMesh);
 
@@ -1707,7 +1708,7 @@ const planBorderMat = new THREE.LineDashedMaterial({
 });
 
 for (const p of (DATA.planovi_overlay || []).filter(x => !x.sloj || x.sloj === 'plan')) {
-  const yPlane = 0.12;
+  const yPlane = 0.18;
   const pGroup = new THREE.Group();
   pGroup.position.set(p.centar_xz[0], yPlane, p.centar_xz[1]);
   if (p.rotacija_deg) pGroup.rotation.y = THREE.MathUtils.degToRad(-p.rotacija_deg);
@@ -1724,10 +1725,12 @@ for (const p of (DATA.planovi_overlay || []).filter(x => !x.sloj || x.sloj === '
     depthWrite: false,
     polygonOffset: true,
     polygonOffsetFactor: -1.2,
+    polygonOffsetUnits: -4,
     clippingPlanes: [clipPlane]
   });
 
   const mesh = new THREE.Mesh(geo, mat);
+  mesh.renderOrder = 2 + plansGroup.children.length * 0.01; // stalan redosled providnih planova, bez treperenja sortiranja
   mesh.userData = { isPlan: true, planId: p.id, cvorovi: p.cvorovi, planData: p };
   pGroup.add(mesh);
   pickableMeshes.push(mesh);
@@ -3220,7 +3223,7 @@ function toggleWalk(force) {
     camera.rotation.set(WALK.pitch, WALK.yaw, 0, 'YXZ');
     skyDome.position.copy(camera.position);
     controls.enabled = false;
-    camera.near = 0.12; camera.fov = 68; camera.updateProjectionMatrix();
+    camera.near = 0.2; camera.far = 6000; camera.fov = 68; camera.updateProjectionMatrix();
     updateWalkProximity();
     if (!WALK.touch) lockPointer();
   } else {
@@ -3228,7 +3231,7 @@ function toggleWalk(force) {
     WALK.keys.clear();
     WALK.joy = { x: 0, y: 0, id: null };
     controls.enabled = true;
-    camera.near = 1.0; camera.fov = STATE.projMode === '2D' ? 14 : STATE.projMode === '25D' ? 16 : 42;
+    camera.near = 1.0; camera.far = 28000; camera.fov = STATE.projMode === '2D' ? 14 : STATE.projMode === '25D' ? 16 : 42;
     camera.updateProjectionMatrix();
     camCurrent.pos.copy(camera.position);
     camCurrent.target.copy(new THREE.Vector3(0, 0, -30).applyQuaternion(camera.quaternion).add(camera.position));
