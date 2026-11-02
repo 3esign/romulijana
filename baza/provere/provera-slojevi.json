@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-31T21:47:49.243Z",
+  "claims": 18,
+  "evidence": 37,
+  "relations": 13,
+  "links": 51,
+  "errors": 0,
+  "scope": "JSON, node/source/claim IDs, SHA256, exact line anchors, Markdown files and internal anchors; no visual OCR verification"
+}

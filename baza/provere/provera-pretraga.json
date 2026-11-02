@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-02T02:27:25.267Z",
+  "tvrdnje": 71,
+  "dokazi": 166,
+  "veze": 73,
+  "slikeTvrdnji": 24,
+  "strane": 2894,
+  "pominjanja": 32041,
+  "stampanePokriveno": 1969,
+  "recnikPojmova": 18,
+  "objekti": 3,
+  "provereniLinkovi": 355,
+  "proverenaSidra": 63,
+  "departmanIzvori": 8,
+  "pregledi": {
+    "UMETNOST.md": "b098762f2655ec3b95e385c41c66acad80e40dfaceb1f87537073451d1b5b643",
+    "UMETNOST-VIZUELNO.md": "07f706eab7eaa4f87cce24503b83afad8ed3105a7993cbff5b7ba26dd67a0c85",
+    "SLOJEVI.md": "e1c5b86184e3dd4d893f92adf6ac9987affa8bd1c74a4ab9274818d2da289b88",
+    "PLANOVI.md": "8e7ed66b0764ff1a4f450f9d1da13c1e4da21d308254a2c4a322809d339c7642",
+    "DATOVANJE-BAZILIKE.md": "a8870296ecfa99536dbb4f8d6270719b0e53a21afa566d919cdd23e8ddf38974",
+    "PROVERA-SAZETKA.md": "0898bb80caa6cc8ea5317fe90818dec06227a395faf1c034dd69da3f7f263647",
+    "TOPOLOGIJA.md": "b806b9ed79d6e404096aa52ebdfbe7ae00f5886887319ae0fe209577be3cd6a2"
+  },
+  "status": "ok",
+  "granica": "Tehnička provera celog projekta, baze, heševa dokaza i slika, linkova i sidara; bez novog arheološkog zaključivanja."
+}

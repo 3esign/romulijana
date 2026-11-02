@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-31T21:42:50.796Z",
+  "claims": 16,
+  "evidence": 27,
+  "links": 28,
+  "checks": [
+    "unique IDs",
+    "existing hierarchy nodes",
+    "catalog source IDs",
+    "claim relations",
+    "27 source hashes and exact line anchors",
+    "R08 unit distinct from PDF page",
+    "all claim cards and relative links"
+  ],
+  "limit": "Structural integrity only; historical interpretation requires reading the sources. No image review."
+}

@@ -1,0 +1,487 @@
+{
+  "schema": "romulijana-georef-v1",
+  "created_at": "2026-11-02T02:18:29.103Z",
+  "crs_local": "Equirectangular metric around W66 Pleiades 207395 (43.899206N, 22.185750E), +X East, +Z South, +Y Up",
+  "kontrolne_tacke": [
+    {
+      "id": "GCP-01",
+      "naziv": "Centar utvrđenja (Pleiades 207395 / W66)",
+      "lat": 43.899206,
+      "lon": 22.18575,
+      "x": 0,
+      "z": 0,
+      "elev_m": 192,
+      "izvor": "W66, W20 p.10"
+    },
+    {
+      "id": "GCP-02",
+      "naziv": "Istočna (glavna) kapija L.U.IK — osovina prolaza",
+      "lat": 43.899242,
+      "lon": 22.187221,
+      "x": 118,
+      "z": -4,
+      "elev_m": 190,
+      "izvor": "R06, W45, W20-p055"
+    },
+    {
+      "id": "GCP-03",
+      "naziv": "Zapadna kapija L.U.ZK — osovina prolaza",
+      "lat": 43.899188,
+      "lon": 22.184279,
+      "x": -118,
+      "z": 2,
+      "elev_m": 195,
+      "izvor": "R06, W45, W20-p055"
+    },
+    {
+      "id": "GCP-04",
+      "naziv": "Severozapadna ugaona kula br. 16 (W02 sl. 9)",
+      "lat": 43.900051,
+      "lon": 22.184304,
+      "x": -116,
+      "z": -94,
+      "elev_m": 196,
+      "izvor": "R06, W02-p012"
+    },
+    {
+      "id": "GCP-05",
+      "naziv": "Jugozapadna ugaona kula br. 15 (W02 sl. 2)",
+      "lat": 43.898361,
+      "lon": 22.184304,
+      "x": -116,
+      "z": 94,
+      "elev_m": 193,
+      "izvor": "R06, W02-p005"
+    },
+    {
+      "id": "GCP-06",
+      "naziv": "Tetrapilon L.TP na raskrsnici ka Maguri",
+      "lat": 43.89979,
+      "lon": 22.190985,
+      "x": 420,
+      "z": -65,
+      "elev_m": 218,
+      "izvor": "W20-p055, R04, RP-002"
+    },
+    {
+      "id": "GCP-07",
+      "naziv": "Magura — Mauzolej 2 (Galerije, kota 254 m)",
+      "lat": 43.900284,
+      "lon": 22.197031,
+      "x": 905,
+      "z": -120,
+      "elev_m": 254,
+      "izvor": "W20-p055, R04, RT-010"
+    }
+  ],
+  "planovi": [
+    {
+      "id": "PLAN-R04-P199",
+      "fajl": "izvori/renderi/planovi/R04-p199.png",
+      "izvor": "R04",
+      "strana_pdf": 199,
+      "stampana": 197,
+      "sloj": "plan",
+      "naslov": "R04 sl. 170: Višefazna osnova Palate I i ranohrišćanskih bazilika",
+      "autor": "S. Petković 2010",
+      "cvorovi": [
+        "L.P.1",
+        "L.HR",
+        "L.P.PE",
+        "L.P.AU"
+      ],
+      "centar_xz": [
+        -48,
+        -38
+      ],
+      "sirina_m": 78,
+      "dubina_m": 68,
+      "rotacija_deg": 0,
+      "rms_m": 0.45,
+      "razmera": "S3",
+      "opseg": "Palata I i sakralni sklop crkava",
+      "sha256": "7833fb113e75dc761742fc45f5729cb5d4f3f13f408a5282edaddbae58da428e"
+    },
+    {
+      "id": "PLAN-R04-P207",
+      "fajl": "izvori/renderi/planovi/R04-p207.png",
+      "izvor": "R04",
+      "strana_pdf": 207,
+      "stampana": 205,
+      "sloj": "plan",
+      "naslov": "R04 sl. 176: Osnova i stratigrafski sklop nove bazilike",
+      "autor": "Đ. Janković 2010",
+      "cvorovi": [
+        "L.HR",
+        "L.KN"
+      ],
+      "centar_xz": [
+        -36,
+        -26
+      ],
+      "sirina_m": 54,
+      "dubina_m": 42,
+      "rotacija_deg": 0,
+      "rms_m": 0.5,
+      "razmera": "S3",
+      "opseg": "Srednjovekovni horizont i nova bazilika",
+      "sha256": "7d99dfd7f45a5576953aa8a839e8e2016947313a84dc2ec31a4dbf63e6346cd8"
+    },
+    {
+      "id": "PLAN-R04-P208",
+      "fajl": "izvori/renderi/planovi/R04-p208.png",
+      "izvor": "R04",
+      "strana_pdf": 208,
+      "stampana": 206,
+      "sloj": "plan",
+      "naslov": "R04 sl. 177: Bronzani litijski krst iz okoline bazilike",
+      "autor": "Đ. Janković 2010",
+      "cvorovi": [
+        "L.HR"
+      ],
+      "centar_xz": [
+        -32,
+        -22
+      ],
+      "sirina_m": 24,
+      "dubina_m": 24,
+      "rotacija_deg": 0,
+      "rms_m": 0.3,
+      "razmera": "S4",
+      "opseg": "Forenzika liturgijskog predmeta (XI vek)",
+      "sha256": "ddc32dfe28976b2e323f01b77743acaa0c446e721a5d947d19277abf40e36e4c"
+    },
+    {
+      "id": "PLAN-R05-P031",
+      "fajl": "izvori/renderi/planovi/R05-p031.png",
+      "izvor": "R05",
+      "strana_pdf": 31,
+      "stampana": 120,
+      "sloj": "plan",
+      "naslov": "R05 sl. 90: Osnova mlađe crkve sa četvorolisnom krstionicom",
+      "autor": "M. Čanak-Medić / D. Srejović 1983",
+      "cvorovi": [
+        "L.HR",
+        "L.P.1"
+      ],
+      "centar_xz": [
+        -44,
+        -32
+      ],
+      "sirina_m": 62,
+      "dubina_m": 50,
+      "rotacija_deg": 0,
+      "rms_m": 0.4,
+      "razmera": "S3",
+      "opseg": "Temelji mlađe crkve i zidovi Palate I",
+      "sha256": "f6c02eef8bc44ea6c3481f05aad49b523da390ff4559c8f66a6ee810755bdb3e"
+    },
+    {
+      "id": "PLAN-R05-P035",
+      "fajl": "izvori/renderi/planovi/R05-p035.png",
+      "izvor": "R05",
+      "strana_pdf": 35,
+      "stampana": 128,
+      "sloj": "plan",
+      "naslov": "R05 sl. 97: Arhitektonski detalj podova i profila crkve",
+      "autor": "M. Čanak-Medić 1983",
+      "cvorovi": [
+        "L.HR"
+      ],
+      "centar_xz": [
+        -36,
+        -26
+      ],
+      "sirina_m": 48,
+      "dubina_m": 38,
+      "rotacija_deg": 0,
+      "rms_m": 0.4,
+      "razmera": "S3",
+      "opseg": "Podne konstrukcije i malterni slojevi",
+      "sha256": "b66f24b5402e30e4c25a15e8ebe0c09613dea38553b71c27e874011f526259dc"
+    },
+    {
+      "id": "PLAN-R05-P035-KONTEKST",
+      "fajl": "izvori/renderi/planovi/R05-p035-kontekst.png",
+      "izvor": "R05",
+      "strana_pdf": 35,
+      "stampana": 128,
+      "sloj": "plan",
+      "naslov": "R05: Detaljni isečak temeljnih zidova crkve i peristila",
+      "autor": "M. Čanak-Medić 1983",
+      "cvorovi": [
+        "L.HR",
+        "L.P.PE"
+      ],
+      "centar_xz": [
+        -40,
+        -30
+      ],
+      "sirina_m": 36,
+      "dubina_m": 28,
+      "rotacija_deg": 0,
+      "rms_m": 0.35,
+      "razmera": "S3",
+      "opseg": "Isečak spoja peristila i crkve",
+      "sha256": "a6b695edd77d552070e2f3891eabecbc6e70aecde0f6f52dcce704280cd9db53"
+    },
+    {
+      "id": "PLAN-R06-P174",
+      "fajl": "izvori/renderi/planovi/R06-p174.png",
+      "izvor": "R06",
+      "strana_pdf": 174,
+      "stampana": 130,
+      "sloj": "plan",
+      "naslov": "R06 sl. 120: Otkopani ostaci temelja starije i mlađe crkve",
+      "autor": "M. Čanak-Medić 1978",
+      "cvorovi": [
+        "L.HR",
+        "L.P.1"
+      ],
+      "centar_xz": [
+        -42,
+        -34
+      ],
+      "sirina_m": 58,
+      "dubina_m": 46,
+      "rotacija_deg": 0,
+      "rms_m": 0.35,
+      "razmera": "S3",
+      "opseg": "Fotogrametrijski snimak i terenski crtež",
+      "sha256": "5e80d502a52968502c7cd07d5e99735196f6cdd0578e19b82ee819c8736d4514"
+    },
+    {
+      "id": "PLAN-R06-P179",
+      "fajl": "izvori/renderi/planovi/R06-p179.png",
+      "izvor": "R06",
+      "strana_pdf": 179,
+      "stampana": 134,
+      "sloj": "plan",
+      "naslov": "R06 sl. 122: Deo osnove Starije crkve (Bazilika I)",
+      "autor": "M. Čanak-Medić 1978",
+      "cvorovi": [
+        "L.HR"
+      ],
+      "centar_xz": [
+        -36,
+        -26
+      ],
+      "sirina_m": 46,
+      "dubina_m": 32,
+      "rotacija_deg": 0,
+      "rms_m": 0.38,
+      "razmera": "S3",
+      "opseg": "Plan Starije bazilike (odsečen zapadni trakt)",
+      "sha256": "eb7a1dc09f2ff2f9457bd1eba724d9b983ed4c495c8815055feac62f8b82ff46"
+    },
+    {
+      "id": "PLAN-R06-P184",
+      "fajl": "izvori/renderi/planovi/R06-p184.png",
+      "izvor": "R06",
+      "strana_pdf": 184,
+      "stampana": 138,
+      "sloj": "plan",
+      "naslov": "R06: Arhitektonska analiza apside i oltara Mlađe bazilike",
+      "autor": "M. Čanak-Medić 1978",
+      "cvorovi": [
+        "L.HR"
+      ],
+      "centar_xz": [
+        -26,
+        -26
+      ],
+      "sirina_m": 34,
+      "dubina_m": 26,
+      "rotacija_deg": 0,
+      "rms_m": 0.32,
+      "razmera": "S3",
+      "opseg": "Apsidalni završetak i proporcije",
+      "sha256": "35857a6db5692eaae3ea1e2dfda2713b24ad2744635c597acc0993e4bbab1981"
+    },
+    {
+      "id": "PLAN-R06-P185",
+      "fajl": "izvori/renderi/planovi/R06-p185.png",
+      "izvor": "R06",
+      "strana_pdf": 185,
+      "stampana": 139,
+      "sloj": "plan",
+      "naslov": "R06 sl. 124: Proporcijsko-kompozicijska shema Mlađe bazilike",
+      "autor": "M. Čanak-Medić 1978",
+      "cvorovi": [
+        "L.HR",
+        "L.P.1"
+      ],
+      "centar_xz": [
+        -36,
+        -26
+      ],
+      "sirina_m": 52,
+      "dubina_m": 36,
+      "rotacija_deg": 0,
+      "rms_m": 0.35,
+      "razmera": "S3",
+      "opseg": "Idealna rekonstrukciona geometrija i krstionica",
+      "sha256": "fdab07a3156053cd6bd52af12fb0d9ef75d3537052e997f53a17ec465ee35505"
+    },
+    {
+      "id": "PLAN-W02-P003",
+      "fajl": "izvori/renderi/planovi/W02-p003.png",
+      "izvor": "W02",
+      "strana_pdf": 3,
+      "stampana": 233,
+      "sloj": "podzemlje",
+      "naslov": "W02 Fig. 1: Plan geomagnetske prospekcije 2004–2007 oko utvrđene palate (anomalije 1–16)",
+      "autor": "G. von Bülow, Th. Schüler 2007",
+      "cvorovi": [
+        "L",
+        "L.U",
+        "L.HO",
+        "L.KN"
+      ],
+      "centar_xz": [
+        -15,
+        -35
+      ],
+      "sirina_m": 580,
+      "dubina_m": 660,
+      "rotacija_deg": 0,
+      "rms_m": 1.8,
+      "razmera": "S2",
+      "opseg": "Geomagnetska prospekcija van bedema (±10 nT/m)",
+      "sha256": "803c30523f2035c356b8aa4887c7ea292391d6dcf4272d0de5180668d91e4cb5"
+    },
+    {
+      "id": "PLAN-W02-P005",
+      "fajl": "izvori/renderi/planovi/W02-p005.png",
+      "izvor": "W02",
+      "strana_pdf": 5,
+      "stampana": 235,
+      "sloj": "podzemlje",
+      "naslov": "W02 Fig. 2: Sonde S04/01–S06/02 južno od JZ ugaone kule br. 15",
+      "autor": "G. von Bülow, Th. Schüler 2007",
+      "cvorovi": [
+        "L.U",
+        "L.U.K",
+        "L.JB"
+      ],
+      "centar_xz": [
+        -125,
+        135
+      ],
+      "sirina_m": 95,
+      "dubina_m": 130,
+      "rotacija_deg": 0,
+      "rms_m": 0.65,
+      "razmera": "S2",
+      "opseg": "Južna nekropola i građevina S06/01 van JZ kule 15",
+      "sha256": "031619fd078761c0c05c4d520a35ab969540472920e0096b3d6fc32ad5fda379"
+    },
+    {
+      "id": "PLAN-W02-P012",
+      "fajl": "izvori/renderi/planovi/W02-p012.png",
+      "izvor": "W02",
+      "strana_pdf": 12,
+      "stampana": 242,
+      "sloj": "podzemlje",
+      "naslov": "W02 Fig. 9: Sonde S07/01–S07/04 severno od SZ kule br. 16 i kule br. 14",
+      "autor": "G. von Bülow, Th. Schüler 2007",
+      "cvorovi": [
+        "L.U",
+        "L.U.K"
+      ],
+      "centar_xz": [
+        -85,
+        -165
+      ],
+      "sirina_m": 130,
+      "dubina_m": 180,
+      "rotacija_deg": 0,
+      "rms_m": 0.7,
+      "razmera": "S2",
+      "opseg": "Severno predpolje bedema i sonde 2007",
+      "sha256": "678c8553f2ddea92f8d75a7eb60ff36451b8b177804f6023b3db52a829c34048"
+    },
+    {
+      "id": "PLAN-W20-P053",
+      "fajl": "izvori/renderi/planovi/W20-p053.png",
+      "izvor": "W20",
+      "strana_pdf": 53,
+      "stampana": 53,
+      "sloj": "zona",
+      "naslov": "W20 Att. 3a: Karta zaštićene UNESCO zone (179,22 ha) sa utvrđenjem i Magurom",
+      "autor": "Zavod za zaštitu spomenika kulture 2005",
+      "cvorovi": [
+        "L",
+        "L.U",
+        "L.MG",
+        "L.TP"
+      ],
+      "centar_xz": [
+        380,
+        120
+      ],
+      "sirina_m": 1550,
+      "dubina_m": 1950,
+      "rotacija_deg": 0,
+      "rms_m": 3.5,
+      "razmera": "S1",
+      "opseg": "UNESCO Core Zone (179.217 ha)",
+      "sha256": "a1bd49c016e5d61df074e123361fb8195ded7a24e20bc1591402c9f1ef6fe125"
+    },
+    {
+      "id": "PLAN-W20-P054",
+      "fajl": "izvori/renderi/planovi/W20-p054.png",
+      "izvor": "W20",
+      "strana_pdf": 54,
+      "stampana": 54,
+      "sloj": "zona",
+      "naslov": "W20 Att. 3b: Karta tampon zone UNESCO (544,93 ha) i prirodnog amfiteatra",
+      "autor": "Zavod za zaštitu spomenika kulture 2005",
+      "cvorovi": [
+        "L",
+        "L.MG"
+      ],
+      "centar_xz": [
+        320,
+        80
+      ],
+      "sirina_m": 3100,
+      "dubina_m": 3600,
+      "rotacija_deg": 0,
+      "rms_m": 4.8,
+      "razmera": "S1",
+      "opseg": "UNESCO Buffer Zone (544.925 ha, r ≈ 1.5 km)",
+      "sha256": "5cfd0e096990b788d444949d2925d320538f156923978e3d1f37b3b99267d148"
+    },
+    {
+      "id": "PLAN-W20-P055",
+      "fajl": "izvori/renderi/planovi/W20-p055.png",
+      "izvor": "W20",
+      "strana_pdf": 55,
+      "stampana": 55,
+      "sloj": "zona",
+      "naslov": "W20 Att. 3c: Situacioni plan sa izohipsama (188–254 m), palatom, Tetrapilonom i Magurom",
+      "autor": "Zavod za zaštitu spomenika kulture 2005",
+      "cvorovi": [
+        "L",
+        "L.U",
+        "L.TP",
+        "L.MG",
+        "L.MG.M1",
+        "L.MG.M2",
+        "L.MG.K"
+      ],
+      "centar_xz": [
+        380,
+        120
+      ],
+      "sirina_m": 1550,
+      "dubina_m": 1950,
+      "rotacija_deg": 0,
+      "rms_m": 2.4,
+      "razmera": "S2",
+      "opseg": "Situacioni plan sa izohipsama i spomenicima na Maguri",
+      "sha256": "f01b67534a723253d557b78a48413babada47a29285975764e0d49eac7fc0c5d"
+    }
+  ]
+}

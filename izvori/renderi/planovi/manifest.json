@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-10-31T22:23:10.424Z",
+  "method": "pdftoppm single PDF page, scale-to 2400; no edits",
+  "records": [
+    {
+      "id": "R04",
+      "pdf": "izvori/pdf/R04_felix-romuliana-2010.pdf",
+      "source_sha256": "502bc9ac42726ad84adc7f0c83872b622b9df54a47b0c8319b9d8dfa50f23d4c",
+      "pdf_page": 199,
+      "image": "R04-p199.png",
+      "image_sha256": "7833fb113e75dc761742fc45f5729cb5d4f3f13f408a5282edaddbae58da428e",
+      "bytes": 767690
+    },
+    {
+      "id": "R04",
+      "pdf": "izvori/pdf/R04_felix-romuliana-2010.pdf",
+      "source_sha256": "502bc9ac42726ad84adc7f0c83872b622b9df54a47b0c8319b9d8dfa50f23d4c",
+      "pdf_page": 207,
+      "image": "R04-p207.png",
+      "image_sha256": "7d99dfd7f45a5576953aa8a839e8e2016947313a84dc2ec31a4dbf63e6346cd8",
+      "bytes": 909051
+    },
+    {
+      "id": "R04",
+      "pdf": "izvori/pdf/R04_felix-romuliana-2010.pdf",
+      "source_sha256": "502bc9ac42726ad84adc7f0c83872b622b9df54a47b0c8319b9d8dfa50f23d4c",
+      "pdf_page": 208,
+      "image": "R04-p208.png",
+      "image_sha256": "ddc32dfe28976b2e323f01b77743acaa0c446e721a5d947d19277abf40e36e4c",
+      "bytes": 989749
+    },
+    {
+      "id": "R05",
+      "pdf": "izvori/pdf/R05_gamzigrad-kasnoanticki-carski-dvorac.pdf",
+      "source_sha256": "2203c06175437aa14aac22b05c04149a00404ed595f29fd2731cbf4a71ce1929",
+      "pdf_page": 31,
+      "image": "R05-p031.png",
+      "image_sha256": "f6c02eef8bc44ea6c3481f05aad49b523da390ff4559c8f66a6ee810755bdb3e",
+      "bytes": 1763816
+    },
+    {
+      "id": "R06",
+      "pdf": "izvori/pdf/R06_canak-medic-gamzigrad.pdf",
+      "source_sha256": "d4a5632f9698f20ecfb0e5a01c64af8f3be164f884da6be2b1072c1d370c3122",
+      "pdf_page": 174,
+      "image": "R06-p174.png",
+      "image_sha256": "5e80d502a52968502c7cd07d5e99735196f6cdd0578e19b82ee819c8736d4514",
+      "bytes": 2015320
+    },
+    {
+      "id": "R06",
+      "pdf": "izvori/pdf/R06_canak-medic-gamzigrad.pdf",
+      "source_sha256": "d4a5632f9698f20ecfb0e5a01c64af8f3be164f884da6be2b1072c1d370c3122",
+      "pdf_page": 179,
+      "image": "R06-p179.png",
+      "image_sha256": "eb7a1dc09f2ff2f9457bd1eba724d9b983ed4c495c8815055feac62f8b82ff46",
+      "bytes": 358557
+    },
+    {
+      "id": "R06",
+      "pdf": "izvori/pdf/R06_canak-medic-gamzigrad.pdf",
+      "source_sha256": "d4a5632f9698f20ecfb0e5a01c64af8f3be164f884da6be2b1072c1d370c3122",
+      "pdf_page": 184,
+      "image": "R06-p184.png",
+      "image_sha256": "35857a6db5692eaae3ea1e2dfda2713b24ad2744635c597acc0993e4bbab1981",
+      "bytes": 768535
+    },
+    {
+      "id": "R06",
+      "pdf": "izvori/pdf/R06_canak-medic-gamzigrad.pdf",
+      "source_sha256": "d4a5632f9698f20ecfb0e5a01c64af8f3be164f884da6be2b1072c1d370c3122",
+      "pdf_page": 185,
+      "image": "R06-p185.png",
+      "image_sha256": "fdab07a3156053cd6bd52af12fb0d9ef75d3537052e997f53a17ec465ee35505",
+      "bytes": 532943
+    },
+    {
+      "id": "W02",
+      "pdf": "izvori/internet/pdf/starinar-2007-bulow-geofizika-2004-2007.pdf",
+      "source_sha256": "5284f1ceee535c546af927e5be2d113311dc38b9df79c3d8260bef3801cad039",
+      "pdf_page": 3,
+      "image": "W02-p003.png",
+      "image_sha256": "803c30523f2035c356b8aa4887c7ea292391d6dcf4272d0de5180668d91e4cb5",
+      "bytes": 1130372
+    },
+    {
+      "id": "W02",
+      "pdf": "izvori/internet/pdf/starinar-2007-bulow-geofizika-2004-2007.pdf",
+      "source_sha256": "5284f1ceee535c546af927e5be2d113311dc38b9df79c3d8260bef3801cad039",
+      "pdf_page": 5,
+      "image": "W02-p005.png",
+      "image_sha256": "031619fd078761c0c05c4d520a35ab969540472920e0096b3d6fc32ad5fda379",
+      "bytes": 470364
+    },
+    {
+      "id": "W02",
+      "pdf": "izvori/internet/pdf/starinar-2007-bulow-geofizika-2004-2007.pdf",
+      "source_sha256": "5284f1ceee535c546af927e5be2d113311dc38b9df79c3d8260bef3801cad039",
+      "pdf_page": 12,
+      "image": "W02-p012.png",
+      "image_sha256": "678c8553f2ddea92f8d75a7eb60ff36451b8b177804f6023b3db52a829c34048",
+      "bytes": 550401
+    },
+    {
+      "id": "W20",
+      "pdf": "izvori/internet/pdf/unesco-nominacija-1253.pdf",
+      "source_sha256": "dcaa5cd6afe583b3b5ab05a1b7d2b7d7e25a6c378c815cb4fedf32d822beef66",
+      "pdf_page": 53,
+      "image": "W20-p053.png",
+      "image_sha256": "a1bd49c016e5d61df074e123361fb8195ded7a24e20bc1591402c9f1ef6fe125",
+      "bytes": 2330559
+    },
+    {
+      "id": "W20",
+      "pdf": "izvori/internet/pdf/unesco-nominacija-1253.pdf",
+      "source_sha256": "dcaa5cd6afe583b3b5ab05a1b7d2b7d7e25a6c378c815cb4fedf32d822beef66",
+      "pdf_page": 54,
+      "image": "W20-p054.png",
+      "image_sha256": "5cfd0e096990b788d444949d2925d320538f156923978e3d1f37b3b99267d148",
+      "bytes": 2534123
+    },
+    {
+      "id": "W20",
+      "pdf": "izvori/internet/pdf/unesco-nominacija-1253.pdf",
+      "source_sha256": "dcaa5cd6afe583b3b5ab05a1b7d2b7d7e25a6c378c815cb4fedf32d822beef66",
+      "pdf_page": 55,
+      "image": "W20-p055.png",
+      "image_sha256": "f01b67534a723253d557b78a48413babada47a29285975764e0d49eac7fc0c5d",
+      "bytes": 1390818
+    }
+  ]
+}

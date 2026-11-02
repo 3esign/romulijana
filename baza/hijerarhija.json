@@ -1,0 +1,81 @@
+{
+ "opis": "Hijerarhija Romulijane: lokalitet > celina > objekat/deo; plus ose osoba, faza i izvora. 'oblici' su korenovi na latinici bez dijakritika (ćirilica se pre poređenja preslovljava), regex, poklapanje od početka reči. Čvor je mesto poređenja: svaki izvor i strana koji ga pominju vezuju se za njega. Dopunjuje se ručno posle čitanja; kandidati iz alati/indeks.js su predlog, ne upis.",
+ "cvorovi": [
+  {"id": "L", "naziv": "Felix Romuliana (Gamzigrad)", "tip": "lokalitet", "oblici": ["romulian", "romulijan", "gamzigrad", "felix romulian"]},
+
+  {"id": "L.U", "roditelj": "L", "naziv": "Utvrđenje i bedemi", "tip": "celina", "oblici": ["bedem", "utvrdjenj", "utvrden", "fortifikac", "fortification", "enceinte", "rampart", "wall", "kurtin", "curtain"]},
+  {"id": "L.U.1", "roditelj": "L.U", "naziv": "Stariji (unutrašnji) bedem — Galerije cezar", "tip": "objekat", "oblici": ["stari(?:ji|jeg|jem|i)? bedem", "unutrasnj\\w* bedem", "earlier (?:fortification|wall|rampart)", "first (?:fortification|wall|rampart)", "inner (?:wall|rampart)", "premiere enceinte", "fortification anterieure"]},
+  {"id": "L.U.2", "roditelj": "L.U", "naziv": "Mlađi (spoljni) bedem — Galerije avgust", "tip": "objekat", "oblici": ["mladj\\w* bedem", "nov\\w* bedem", "spoljn\\w* bedem", "later (?:fortification|wall|rampart)", "second (?:fortification|wall|rampart)", "outer (?:wall|rampart)", "seconde enceinte"]},
+  {"id": "L.U.K", "roditelj": "L.U", "naziv": "Kule", "tip": "objekat", "oblici": ["kul[aeiu]", "kulam", "tower", "tour"]},
+  {"id": "L.U.IK", "roditelj": "L.U", "naziv": "Istočna kapija", "tip": "objekat", "oblici": ["istocn\\w* kapij", "east(?:ern)? gate", "porte (?:est|orientale)"]},
+  {"id": "L.U.ZK", "roditelj": "L.U", "naziv": "Zapadna kapija", "tip": "objekat", "oblici": ["zapadn\\w* kapij", "west(?:ern)? gate", "porte (?:ouest|occidentale)"]},
+
+  {"id": "L.P", "roditelj": "L", "naziv": "Palata (carski dvorac)", "tip": "celina", "oblici": ["palat", "dvor(?:ac|ca|cu|cem)", "palace", "palais", "palast"]},
+  {"id": "L.P.1", "roditelj": "L.P", "naziv": "Palata I (severozapadna četvrt, D1–D2)", "tip": "objekat", "oblici": ["palat\\w*\\s+(?:i|1|d1)\\b", "severozapadn\\w*\\s+(?:cetvrt|palat)"]},
+  {"id": "L.P.2", "roditelj": "L.P", "naziv": "Palata II i zgrada sa koridorom (severoistočna četvrt, D3–D5)", "tip": "objekat", "oblici": ["palat\\w*\\s+(?:ii|2|d3)\\b", "severoistocn\\w*\\s+(?:cetvrt|palat)", "(?:zgrad|gradjevin)\\w*\\s+sa\\s+koridorom"]},
+  {"id": "L.P.PE", "roditelj": "L.P", "naziv": "Peristil", "tip": "deo", "oblici": ["peristil", "peristyl"]},
+  {"id": "L.P.AU", "roditelj": "L.P", "naziv": "Aula / triklinijum / apsidalna dvorana", "tip": "deo", "oblici": ["aul[aeiu]", "triklinij", "triclin", "apsidaln\\w* (?:dvoran|prostorij)", "apsidal hall", "salle absidale"]},
+  {"id": "L.P.MO", "roditelj": "L.P", "naziv": "Mozaici", "tip": "deo", "oblici": ["mozai", "mosai", "dionis", "dionys", "venator", "lavirint", "labyrinth"]},
+  {"id": "L.JB", "roditelj": "L", "naziv": "Južne javne građevine (tribunal/pretorijum G, petobrodna zgrada F)", "tip": "celina", "oblici": ["petobrodn\\w*\\s+(?:zgrad|gradjevin)", "tribunal", "pretorijum", "praetori"]},
+
+  {"id": "L.H", "roditelj": "L", "naziv": "Hramovi", "tip": "celina", "oblici": ["hram", "temple", "templ", "svetilist", "sanctuar"]},
+  {"id": "L.H.V", "roditelj": "L.H", "naziv": "Veliki hram (Divus Galerius)", "tip": "objekat", "oblici": ["velik\\w* hram", "large temple", "great temple", "grand temple", "big temple"]},
+  {"id": "L.H.M", "roditelj": "L.H", "naziv": "Mali hram (Diva Romula)", "tip": "objekat", "oblici": ["mal\\w* hram", "small temple", "petit temple"]},
+
+  {"id": "L.T", "roditelj": "L", "naziv": "Terme", "tip": "celina", "oblici": ["term[aeiu]", "termam", "kupatil", "therm", "bath", "balnea"]},
+  {"id": "L.HO", "roditelj": "L", "naziv": "Horeum i ekonomski objekti", "tip": "celina", "oblici": ["horre", "horeu", "magacin", "skladist", "granar"]},
+  {"id": "L.HR", "roditelj": "L", "naziv": "Ranohrišćanski objekti (bazilika, crkve)", "tip": "celina", "oblici": ["bazilik", "basilic", "crkv", "church", "eglise", "ranohriscansk", "early christian", "paleochretien", "episkop", "bishop"]},
+  {"id": "L.KN", "roditelj": "L", "naziv": "Kasnije naselje (vizantijsko, srednjovekovno)", "tip": "celina", "oblici": ["vizantij", "byzanti", "srednjovekovn", "medieval", "slovensk", "slav"]},
+
+  {"id": "L.MG", "roditelj": "L", "naziv": "Magura — memorijalni kompleks", "tip": "celina", "oblici": ["magur"]},
+  {"id": "L.MG.M1", "roditelj": "L.MG", "naziv": "Mauzolej 1 (Romula)", "tip": "objekat", "oblici": ["mauzolej\\w*\\s?(?:1|i)\\b", "mausoleum\\s?(?:1|i)\\b", "mausolee\\s?(?:1|i)\\b"]},
+  {"id": "L.MG.M2", "roditelj": "L.MG", "naziv": "Mauzolej 2 (Galerije)", "tip": "objekat", "oblici": ["mauzolej\\w*\\s?(?:2|ii)\\b", "mausoleum\\s?(?:2|ii)\\b", "mausolee\\s?(?:2|ii)\\b"]},
+  {"id": "L.MG.K", "roditelj": "L.MG", "naziv": "Konsekracioni spomenici (tumuli)", "tip": "objekat", "oblici": ["konsekrac", "consecrat", "tumul", "humk"]},
+  {"id": "L.MG.MZ", "roditelj": "L.MG", "naziv": "Mauzoleji (opšte)", "tip": "objekat", "oblici": ["mauzolej", "mausole"]},
+  {"id": "L.TP", "roditelj": "L", "naziv": "Tetrapilon", "tip": "objekat", "oblici": ["tetrapil", "tetrapyl"]},
+
+  {"id": "N", "naziv": "Natpisi i nalazi", "tip": "osa", "oblici": []},
+  {"id": "N.FR", "roditelj": "N", "naziv": "Natpis FELIX ROMULIANA (1984)", "tip": "nalaz", "oblici": ["felix romulian"]},
+  {"id": "N.NO", "roditelj": "N", "naziv": "Novac (numizmatika)", "tip": "nalaz", "oblici": ["novac", "novc", "numizmat", "coin", "monnaie", "follis", "solid"]},
+  {"id": "N.SK", "roditelj": "N", "naziv": "Skulptura i portreti", "tip": "nalaz", "oblici": ["skulptur", "sculptur", "portret", "portrait", "glava od porfir", "porfir", "porphyr", "statu"]},
+  {"id": "N.ZL", "roditelj": "N", "naziv": "Zlatni nakit i carske insignije", "tip": "nalaz", "oblici": ["zlatn\\w* (?:venac|venc|nakit)", "gold(?:en)? (?:wreath|jewel)", "insigni"]},
+
+  {"id": "O", "naziv": "Osobe", "tip": "osa", "oblici": []},
+  {"id": "O.GA", "roditelj": "O", "naziv": "Galerije", "tip": "osoba", "oblici": ["galerij", "galeri(?:us|o)", "galere", "maksimijan\\w* galerij", "maximian\\w* galeri"]},
+  {"id": "O.RO", "roditelj": "O", "naziv": "Romula (Galerijeva majka)", "tip": "osoba", "oblici": ["romul(?:a|e|i|u|om)\\b", "romula\\b"]},
+  {"id": "O.DI", "roditelj": "O", "naziv": "Dioklecijan", "tip": "osoba", "oblici": ["dioklecij", "dioclet", "diocleti"]},
+  {"id": "O.KO", "roditelj": "O", "naziv": "Konstantin", "tip": "osoba", "oblici": ["konstantin", "constantin"]},
+  {"id": "O.MD", "roditelj": "O", "naziv": "Maksimin Daja", "tip": "osoba", "oblici": ["maksimin", "maximin\\w* daia", "maximinus", "daj[aeiu]\\b", "daia"]},
+  {"id": "O.LI", "roditelj": "O", "naziv": "Licinije", "tip": "osoba", "oblici": ["licinij", "licini"]},
+  {"id": "O.LA", "roditelj": "O", "naziv": "Laktancije / Aurelije Viktor (antički pisci)", "tip": "osoba", "oblici": ["laktanc", "lactant", "aurelij\\w* viktor", "aurelius victor", "epitome de caesaribus"]},
+
+  {"id": "I", "naziv": "Istraživači", "tip": "osa", "oblici": []},
+  {"id": "I.SR", "roditelj": "I", "naziv": "Dragoslav Srejović", "tip": "istrazivac", "oblici": ["srejovi"]},
+  {"id": "I.CM", "roditelj": "I", "naziv": "Milka Čanak-Medić", "tip": "istrazivac", "oblici": ["canak", "medic\\b"]},
+  {"id": "I.MZ", "roditelj": "I", "naziv": "Đorđe Mano-Zisi", "tip": "istrazivac", "oblici": ["mano-zisi", "mano zisi", "zisi"]},
+  {"id": "I.LA", "roditelj": "I", "naziv": "Anka Lalović", "tip": "istrazivac", "oblici": ["lalovi"]},
+  {"id": "I.JA", "roditelj": "I", "naziv": "Đorđe Janković", "tip": "istrazivac", "oblici": ["jankovi"]},
+  {"id": "I.VA", "roditelj": "I", "naziv": "Čedomir Vasić", "tip": "istrazivac", "oblici": ["vasi(?:c|ca|cu|cem)\\b"]},
+  {"id": "I.PO", "roditelj": "I", "naziv": "Ivana Popović", "tip": "istrazivac", "oblici": ["popovi(?:c|ca|cu|eva|evoj)\\b"]},
+  {"id": "I.ZI", "roditelj": "I", "naziv": "Maja Živić", "tip": "istrazivac", "oblici": ["zivi(?:c|ca|cu)\\b"]},
+  {"id": "I.TO", "roditelj": "I", "naziv": "Gerda von Bülow / Stefan Pop-Lazić / Sofija Petković", "tip": "istrazivac", "oblici": ["bulow", "bülow", "pop-lazi", "petkovi"]},
+
+  {"id": "F", "naziv": "Faze i hronologija", "tip": "osa", "oblici": []},
+  {"id": "F.T", "roditelj": "F", "naziv": "Tetrarhija (293–311)", "tip": "faza", "oblici": ["tetrarh", "tetrarch", "cezar", "caesar", "cesar", "avgust\\b", "augustus\\b"]},
+  {"id": "F.PR", "roditelj": "F", "naziv": "Pre utvrđenja (praistorija, rani rimski)", "tip": "faza", "oblici": ["praistorij", "prehistor", "rimsk\\w* vil", "villa rustic"]},
+  {"id": "F.KA", "roditelj": "F", "naziv": "Kasnoantičko-ranovizantijsko (IV–VI v.)", "tip": "faza", "oblici": ["justinijan", "justinian", "ranovizantij", "early byzantine", "protobyzantin", "kasnoantick", "late antique", "antiquite tardive"]},
+  {"id": "F.SV", "roditelj": "F", "naziv": "Srednji vek (X–XII v.)", "tip": "faza", "oblici": ["srednj\\w* vek", "middle ages", "moyen age"]},
+
+  {"id": "R", "naziv": "Regionalni kontekst", "tip": "osa", "oblici": []},
+  {"id": "R.SA", "roditelj": "R", "naziv": "Šarkamen", "tip": "lokalitet", "oblici": ["sarkamen"]},
+  {"id": "R.RG", "roditelj": "R", "naziv": "Rgotina", "tip": "lokalitet", "oblici": ["rgotin"]},
+  {"id": "R.ZA", "roditelj": "R", "naziv": "Zaječar i Timok", "tip": "lokalitet", "oblici": ["zajecar", "timok", "timacum"]},
+  {"id": "R.ME", "roditelj": "R", "naziv": "Medijana / Naissus", "tip": "lokalitet", "oblici": ["medijan", "mediana", "naiss", "nis\\b"]},
+  {"id": "R.SP", "roditelj": "R", "naziv": "Split (Dioklecijanova palata)", "tip": "lokalitet", "oblici": ["split", "spalat", "aspalath"]},
+  {"id": "R.SO", "roditelj": "R", "naziv": "Solun (Galerijev kompleks)", "tip": "lokalitet", "oblici": ["solun", "thessalon", "thessaloniki"]},
+  {"id": "R.SI", "roditelj": "R", "naziv": "Sirmijum", "tip": "lokalitet", "oblici": ["sirmij", "sirmium"]},
+  {"id": "R.SE", "roditelj": "R", "naziv": "Serdika", "tip": "lokalitet", "oblici": ["serdik", "serdica"]},
+  {"id": "R.AQ", "roditelj": "R", "naziv": "Akvis (Aquae / Prahovo)", "tip": "lokalitet", "oblici": ["akvis", "aquae", "prahov"]},
+  {"id": "R.DA", "roditelj": "R", "naziv": "Dakija (Ripensis, Mediterranea)", "tip": "lokalitet", "oblici": ["dakij", "dacia", "dacie", "ripens"]}
+ ]
+}

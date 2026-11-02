@@ -1,0 +1,824 @@
+{
+  "at": "2026-11-01T11:17:24.307Z",
+  "failures": [],
+  "search": {
+    "at": "2026-11-01T11:17:24.867Z",
+    "tvrdnje": 52,
+    "dokazi": 106,
+    "veze": 50,
+    "strane": 1147,
+    "pregledi": {
+      "UMETNOST.md": "06a554a09dfe56b306a7809422618d5093f91ad7ee83d32d9ec0fca73a02e033",
+      "SLOJEVI.md": "35cf6864afe1c38f70e65ccd85be6cf63e0051b5d6bf224728e784ad52fd3950",
+      "DATOVANJE-BAZILIKE.md": "f966dcf99d6b024a5a84487f9bc213dc5fefb08d2280b4a379307da7825959a4"
+    },
+    "status": "ok",
+    "granica": "Tehnička provera i vernost registrima; bez novog arheološkog zaključivanja."
+  },
+  "counts": {
+    "strane": 1147,
+    "pominjanja": 17925,
+    "tvrdnje": 52,
+    "tvrdnje_dokazi": 106,
+    "tvrdnje_veze": 50,
+    "stampane": 1147
+  },
+  "printed": {
+    "R01": 18,
+    "R02": 24,
+    "R03": 14,
+    "R04": 228,
+    "R05": 0,
+    "R06": 133,
+    "R07": 294,
+    "R08": 0
+  },
+  "printedTotal": 711,
+  "links": [
+    {
+      "file": "SAZETAK.md",
+      "target": "KNOWLEDGE.md",
+      "exists": true
+    },
+    {
+      "file": "SAZETAK.md",
+      "target": "POREDJENJE.md",
+      "exists": true
+    },
+    {
+      "file": "SAZETAK.md",
+      "target": "pregled/UMETNOST.md",
+      "exists": true
+    },
+    {
+      "file": "SAZETAK.md",
+      "target": "pregled/UMETNOST-VIZUELNO.md",
+      "exists": true
+    },
+    {
+      "file": "SAZETAK.md",
+      "target": "pregled/SLOJEVI.md",
+      "exists": true
+    },
+    {
+      "file": "SAZETAK.md",
+      "target": "pregled/DATOVANJE-BAZILIKE.md",
+      "exists": true
+    },
+    {
+      "file": "SAZETAK.md",
+      "target": "../../data/sessions/c1793407199300pn7k/PROVERA-SAZETKA.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "SAZETAK.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "../../data/sessions/c1793407199300pn7k/romulijana-planovi/PLANOVI.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "pregled/DATOVANJE-BAZILIKE.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "pregled/SLOJEVI.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "baza/tvrdnje-slojevi.jsonl",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "pregled/UMETNOST.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "baza/tvrdnje-umetnost.jsonl",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "pregled/UMETNOST-VIZUELNO.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "baza/tvrdnje-vizuelno.jsonl",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "../../data/sessions/c1793407199300pn7k/PROVERA-SAZETKA.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../baza/tvrdnje-umetnost.jsonl",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R03/p001.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R03/p003.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p113.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p113.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R08/p017.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p114.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p070.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p117.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p075.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p124.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p124.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p125.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p115.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p119.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p139.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R05/p019.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R05/p020.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R05/p020.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R06/p140.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R06/p141.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p096.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R06/p131.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R05/p019.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p139.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R05/p019.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R04/p139.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST.md",
+      "target": "../tekst/R08/p121.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "../baza/tvrdnje-vizuelno.jsonl",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "UMETNOST.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-umetnost/manifest.json",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-umetnost/R04-p118.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-umetnost/R02-p020.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-umetnost/R04-p116.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "../izvori/foto/IM000028.JPG",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-umetnost/R04-p113.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-umetnost/R04-p114.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-umetnost/R04-p124.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-umetnost/R04-p139.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-umetnost/R05-p020.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-umetnost/R05-p020-mere.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/UMETNOST-VIZUELNO.md",
+      "target": "../izvori/foto/IM000134.JPG",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../baza/tvrdnje-slojevi.jsonl",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R02/p012.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R02/p013.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R02/p013.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R02/p013.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p191.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p191.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p191.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p185.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p186.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R06/p176.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p198.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p191.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R06/p184.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R05/p031.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p198.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R05/p031.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R06/p184.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R06/p186.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R05/p031.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R05/p031.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p198.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p199.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p207.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p207.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p199.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R02/p013.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p203.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R02/p013.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R05/p037.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p205.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p208.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p208.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p209.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p210.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R02/p013.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p206.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/SLOJEVI.md",
+      "target": "../tekst/R04/p207.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/PLANOVI.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "SLOJEVI.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../baza/tvrdnje-datovanje.jsonl",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/objekti.json",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R06/p184.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R05/p031.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/R05-p031.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "SLOJEVI.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "SLOJEVI.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R05/p031.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/R05-p031.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R05/p031.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/R05-p031.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "SLOJEVI.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R05/p031.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/R05-p031.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "SLOJEVI.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R05/p031.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/R05-p031.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R05/p031.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/R05-p031.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "SLOJEVI.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R05/p035.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/R05-p035.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R04/p207.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/R04-p207.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "SLOJEVI.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R05/p035.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/R05-p035-kontekst.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "SLOJEVI.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R04/p207.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/R04-p207.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R04/p208.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R04/p207.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/R04-p207.png",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "SLOJEVI.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R04/p199.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../tekst/R06/p186.txt",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "SLOJEVI.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "SLOJEVI.md",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/romulijana-planovi/datovanje-manifest.json",
+      "exists": true
+    },
+    {
+      "file": "pregled/DATOVANJE-BAZILIKE.md",
+      "target": "../../../data/sessions/c1793407199300pn7k/provera-datovanje.json",
+      "exists": true
+    }
+  ],
+  "images": [
+    {
+      "image": "R04-p113.png",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "R04-p114.png",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "R04-p115.png",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "R04-p116.png",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "R04-p117.png",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "R04-p118.png",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "R04-p124.png",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "R04-p126.png",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "R04-p139.png",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "R05-p019.png",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "R05-p020.png",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "R02-p019.png",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "R02-p020.png",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "../../../../!Projekti/Romulijana/izvori/foto/IM000028.JPG",
+      "imageOk": true,
+      "sourceOk": true
+    },
+    {
+      "image": "../../../../!Projekti/Romulijana/izvori/foto/IM000134.JPG",
+      "imageOk": true,
+      "sourceOk": true
+    }
+  ],
+  "departmentIds": [
+    "A-ROMULIANA-01",
+    "A-ROMULIANA-02",
+    "A-ROMULIANA-03",
+    "A-ROMULIANA-04",
+    "A-ROMULIANA-05",
+    "A-ROMULIANA-06",
+    "A-ROMULIANA-07",
+    "A-ROMULIANA-08"
+  ],
+  "summarySha256": "6768b96c783cbabe02c5f31d22673c313b32fd12c1083f397cd9a933eeb4f6eb",
+  "scope": "Local integrity and selected source text review; no new image interpretation, web search, full archive comparison or independent archaeological peer review. Link targets checked without fragment validation.",
+  "status": "ok"
+}

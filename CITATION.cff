@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "Ako koristite ovaj materijal, citirajte ga ovako / If you use this material, please cite it as below."
+title: "Felix Romuliana (Gamzigrad) — epistemički 3D atlas: izvori, tvrdnje sa dokazima i naučni instrument"
+type: dataset
+authors:
+  - family-names: Poturak
+    given-names: Semir
+    email: scumutator@gmail.com
+abstract: >-
+  Konsolidacija objavljenih istraživanja kasnoantičke palate cara Galerija
+  u Gamzigradu u proverljivu bazu znanja (81 izvor, 71 tvrdnja, 166 dokaza
+  sa stranom i hešom) i interaktivni 3D instrument sa nivoima sigurnosti
+  A/B/C. Deo obrađenih podataka (korpus R01–R08) dobijen je od Arheološkog
+  instituta u Beogradu; prava na izvorne publikacije pripadaju autorima i
+  izdavačima.
+keywords:
+  - Felix Romuliana
+  - Gamzigrad
+  - Galerius
+  - late antiquity
+  - tetrarchy
+  - archaeology
+  - 3D atlas
+  - London Charter
+references:
+  - type: data
+    title: "Korpus R01–R08 (monografije i zbornici o Gamzigradu, 1978–2017)"
+    authors:
+      - name: "Arheološki institut, Beograd"
+repository-code: "https://github.com/3esign/romulijana"
+version: 0.1-atlas
+date-released: 2026-11-02

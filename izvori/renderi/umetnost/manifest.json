@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-11-01T10:38:16.497Z",
+  "method": "pdftoppm single PDF page, scale-to 2400; R08 original JPG, sorted order as in ekstrakt.js",
+  "records": [
+    {
+      "id": "R04",
+      "source_sha256": "502bc9ac42726ad84adc7f0c83872b622b9df54a47b0c8319b9d8dfa50f23d4c",
+      "pdf_page": 113,
+      "image": "R04-p113.png",
+      "image_sha256": "0b2b8dcd6effee7b9ab3e421daca4ebc496ee73c7324eefbc75a818fe5505a4f"
+    },
+    {
+      "id": "R04",
+      "source_sha256": "502bc9ac42726ad84adc7f0c83872b622b9df54a47b0c8319b9d8dfa50f23d4c",
+      "pdf_page": 114,
+      "image": "R04-p114.png",
+      "image_sha256": "945cfbc341cbd068114a4eb97ed2ff98c333279dd6a85954530c32ee590bd7c5"
+    },
+    {
+      "id": "R04",
+      "source_sha256": "502bc9ac42726ad84adc7f0c83872b622b9df54a47b0c8319b9d8dfa50f23d4c",
+      "pdf_page": 115,
+      "image": "R04-p115.png",
+      "image_sha256": "ccd8b7cf29f8e8f17d004d9a8a742470f80fb3b22c94237db32936fbb25bb3ab"
+    },
+    {
+      "id": "R04",
+      "source_sha256": "502bc9ac42726ad84adc7f0c83872b622b9df54a47b0c8319b9d8dfa50f23d4c",
+      "pdf_page": 116,
+      "image": "R04-p116.png",
+      "image_sha256": "f4c7126d805ee624894b5444bffa33e29d9f87ad2946778ad92959131d443abd"
+    },
+    {
+      "id": "R04",
+      "source_sha256": "502bc9ac42726ad84adc7f0c83872b622b9df54a47b0c8319b9d8dfa50f23d4c",
+      "pdf_page": 117,
+      "image": "R04-p117.png",
+      "image_sha256": "4861bd4cb1ca6c871bf979f7bad62ab88181cc3c76fe6bbada9a71a6d5205889"
+    },
+    {
+      "id": "R04",
+      "source_sha256": "502bc9ac42726ad84adc7f0c83872b622b9df54a47b0c8319b9d8dfa50f23d4c",
+      "pdf_page": 118,
+      "image": "R04-p118.png",
+      "image_sha256": "66449616ab00a0fd1f570a80ea4784c5fe0e678dd447bfa2f42d112d99643106"
+    },
+    {
+      "id": "R04",
+      "source_sha256": "502bc9ac42726ad84adc7f0c83872b622b9df54a47b0c8319b9d8dfa50f23d4c",
+      "pdf_page": 124,
+      "image": "R04-p124.png",
+      "image_sha256": "39c6eb4f63b804499fadd10078837c57f76632d46107fd95588a99df51dddd00"
+    },
+    {
+      "id": "R04",
+      "source_sha256": "502bc9ac42726ad84adc7f0c83872b622b9df54a47b0c8319b9d8dfa50f23d4c",
+      "pdf_page": 126,
+      "image": "R04-p126.png",
+      "image_sha256": "b856bf2525b4d3cfb3cb5dab5b2a5f807260c71593c7b9759989fe8bb1e6b2e1"
+    },
+    {
+      "id": "R04",
+      "source_sha256": "502bc9ac42726ad84adc7f0c83872b622b9df54a47b0c8319b9d8dfa50f23d4c",
+      "pdf_page": 139,
+      "image": "R04-p139.png",
+      "image_sha256": "5e1c9fe478fba45898aa09b178eaefeca26749d3098df3671d9a9be78a0bb5bb"
+    },
+    {
+      "id": "R05",
+      "source_sha256": "2203c06175437aa14aac22b05c04149a00404ed595f29fd2731cbf4a71ce1929",
+      "pdf_page": 19,
+      "image": "R05-p019.png",
+      "image_sha256": "9b35caa9ec75a8adda7e29599952795a2de8bb5fcedb246dc4d59328c8ad8cbd"
+    },
+    {
+      "id": "R05",
+      "source_sha256": "2203c06175437aa14aac22b05c04149a00404ed595f29fd2731cbf4a71ce1929",
+      "pdf_page": 20,
+      "image": "R05-p020.png",
+      "image_sha256": "ebe8effd0cd55d2da0b8019e3e8afe18b8a2583060054c9027a41d2e11fb3cfd"
+    },
+    {
+      "id": "R02",
+      "source_sha256": "1ef56e56ac5ba633863fd35b6a864823500813ab769ed224aa2681c2a0863d19",
+      "pdf_page": 19,
+      "image": "R02-p019.png",
+      "image_sha256": "c9b40ed9466fb1efe76f348aef61bdbe8866890f2df343db65beb2c44dfff90d"
+    },
+    {
+      "id": "R02",
+      "source_sha256": "1ef56e56ac5ba633863fd35b6a864823500813ab769ed224aa2681c2a0863d19",
+      "pdf_page": 20,
+      "image": "R02-p020.png",
+      "image_sha256": "3872865ed0074e5b34c94f740771b4536e28ee2fd740c6363e29c64995b1b571"
+    },
+    {
+      "id": "R08",
+      "snimak": 17,
+      "image": "../../foto/IM000028.JPG",
+      "file": "IM000028.JPG",
+      "image_sha256": "48acd7fb2b653a178874db278fac68ee3a593724fb49453497fa8347d40def19"
+    },
+    {
+      "id": "R08",
+      "snimak": 121,
+      "image": "../../foto/IM000134.JPG",
+      "file": "IM000134.JPG",
+      "image_sha256": "69a0b7771729471a6e1f5525bf6fb1693d90447e6569c46e4aaa40fe0e2e74ed"
+    }
+  ]
+}

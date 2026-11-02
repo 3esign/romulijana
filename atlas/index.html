@@ -1,0 +1,2001 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FELIX ROMVLIANA · 3D Atlas &amp; Forenzički Naučni Instrument</title>
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/build/three.module.js",
+    "three/addons/": "./vendor/three/addons/"
+  }
+}
+</script>
+<script src="./atlas-podaci.js"></script>
+<style>
+:root {
+  --bg: #ebe4d6;
+  --bg-panel: #f4efe4;
+  --bg-card: #faf6ee;
+  --bg-chip: #e4dccb;
+  --fg: #1b1916;
+  --fg-muted: #575046;
+  --fg-subtle: #786f62;
+  --border: #c9bfae;
+  --border-strong: #8c806e;
+  --accent: #9e2a2b;
+  --accent-soft: rgba(158, 42, 43, 0.12);
+  --lvl-a: #3b6245;
+  --lvl-b: #8f6824;
+  --lvl-c: #b84a24;
+  --lvl-p: #6d655a;
+  --scrim: rgba(244, 239, 228, 0.90);
+  --font-serif: 'Georgia', 'Palatino Linotype', 'Times New Roman', serif;
+  --font-sans: 'Segoe UI', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-mono: 'Consolas', 'SFMono-Regular', 'Menlo', monospace;
+  --ease-std: cubic-bezier(0.2, 0, 0, 1);
+}
+html.noc, body.noc {
+  --bg: #121519;
+  --bg-panel: #171b21;
+  --bg-card: #1e242c;
+  --bg-chip: #252c36;
+  --fg: #e8ecf0;
+  --fg-muted: #a2aebd;
+  --fg-subtle: #738091;
+  --border: #2c3542;
+  --border-strong: #4c5a6e;
+  --accent: #e07a38;
+  --accent-soft: rgba(224, 122, 56, 0.16);
+  --lvl-a: #5ea373;
+  --lvl-b: #d9a441;
+  --lvl-c: #e06d44;
+  --lvl-p: #7d8999;
+  --scrim: rgba(23, 27, 33, 0.92);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  width: 100%; height: 100%;
+  max-width: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.45;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+.num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* Glavni raspored: Desktop Split-Stage (68% 3D / 32% Forenzički dosije) */
+#app {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 430px;
+  grid-template-rows: 100%;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 3D Pozornica */
+#stage {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  user-select: none;
+}
+#gl-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  touch-action: none;
+  outline: none;
+}
+#gl-canvas:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+/* Gornja komandna traka 4 ose */
+#hud-top {
+  position: absolute;
+  top: max(10px, env(safe-area-inset-top));
+  left: max(12px, env(safe-area-inset-left));
+  right: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 20;
+}
+.hud-bar {
+  pointer-events: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  background: var(--scrim);
+  border: 1px solid var(--border);
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+.hud-group-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-subtle);
+  margin-right: 4px;
+  padding-left: 2px;
+}
+.btn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 160ms var(--ease-std), border-color 160ms var(--ease-std), color 160ms var(--ease-std);
+  line-height: 1.2;
+}
+.btn:hover { border-color: var(--border-strong); }
+.btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+body.noc .btn.active { color: #121519; font-weight: 700; }
+.btn-tag {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+/* Slajderi za Presek i Raking Light */
+.slider-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--fg-muted);
+  padding: 0 4px;
+}
+.slider-wrap input[type="range"] {
+  width: 68px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+/* ISO 128 Tehnički pečat (Schriftfeld / Title Block) u donjem levom uglu scene */
+#schriftfeld {
+  position: absolute;
+  bottom: max(12px, env(safe-area-inset-bottom));
+  left: max(12px, env(safe-area-inset-left));
+  background: var(--scrim);
+  border: 1.5px solid var(--border-strong);
+  padding: 8px 12px;
+  max-width: 520px;
+  pointer-events: auto;
+  z-index: 18;
+}
+.sf-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
+  margin-bottom: 5px;
+}
+.sf-title {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--fg);
+}
+.sf-coord {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--fg-muted);
+}
+.sf-sentence {
+  font-size: 11.5px;
+  color: var(--fg-muted);
+  margin: 0 0 6px 0;
+}
+.sf-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--fg);
+}
+.sf-leg-item { display: inline-flex; align-items: center; gap: 5px; }
+.line-sample { display: inline-block; width: 18px; height: 0; vertical-align: middle; }
+.ls-a { border-bottom: 2.5px solid var(--fg); }
+.ls-b { border-bottom: 1.5px solid var(--lvl-b); }
+.ls-c { border-bottom: 1.5px dashed var(--lvl-c); }
+.ls-p { border-bottom: 1.5px dotted var(--lvl-p); }
+.ls-axis { border-bottom: 1.5px dashed var(--accent); }
+
+/* Traka vođene ture (kada je aktivna ili za brzi skok) */
+#tour-banner {
+  position: absolute;
+  bottom: max(12px, env(safe-area-inset-bottom));
+  right: 12px;
+  background: var(--scrim);
+  border: 1px solid var(--border-strong);
+  padding: 8px 11px;
+  width: 295px;
+  z-index: 18;
+  pointer-events: auto;
+}
+.tb-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent);
+  margin-bottom: 3px;
+}
+.tb-title {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.tb-desc {
+  font-size: 11px;
+  color: var(--fg-muted);
+  margin-bottom: 6px;
+}
+.tb-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+/* 3D prostorne labele (DOM projekcija sa anti-kolizijom) */
+#labels-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 12;
+}
+.spatial-label {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  pointer-events: auto;
+  cursor: pointer;
+  background: var(--scrim);
+  border: 1px solid var(--border-strong);
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--fg);
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  transition: border-color 140ms var(--ease-std), background 140ms var(--ease-std);
+}
+.spatial-label::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 1px;
+  height: 5px;
+  background: var(--border-strong);
+}
+.spatial-label.selected {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  z-index: 15;
+}
+body.noc .spatial-label.selected { color: #121519; font-weight: 700; }
+.spatial-label .sl-id {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  opacity: 0.82;
+  margin-right: 4px;
+}
+.spatial-label .sl-lvl {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  padding: 0 3px;
+  margin-left: 4px;
+  border-radius: 1px;
+  background: rgba(0,0,0,0.08);
+}
+
+/* Desni Forenzički Dosije */
+#dossier {
+  background: var(--bg-panel);
+  border-left: 1.5px solid var(--border-strong);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 25;
+}
+.dos-header {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+  min-width: 0;
+  max-width: 100%;
+}
+.dos-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-subtle);
+  margin-bottom: 4px;
+}
+.dos-title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  line-height: 1.22;
+}
+.dos-subtitle {
+  font-size: 12px;
+  color: var(--fg-muted);
+  margin: 0 0 8px 0;
+}
+.dos-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+}
+.metric-box {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  padding: 4px 6px;
+  border-radius: 2px;
+}
+.metric-val {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  display: block;
+}
+.metric-lbl {
+  font-size: 9.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--fg-subtle);
+  display: block;
+}
+
+/* Small Multiples traka faza u dosijeu (Tufte) */
+.phase-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+  margin-top: 8px;
+}
+.phase-cell {
+  border: 1px solid var(--border);
+  padding: 3px 5px;
+  font-size: 10px;
+  text-align: center;
+  background: var(--bg-panel);
+  color: var(--fg-subtle);
+}
+.phase-cell.on {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--fg);
+  font-weight: 700;
+}
+
+/* Tabovi dosijea */
+.dos-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-chip);
+}
+.dos-tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--fg-muted);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 8px 6px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.dos-tab.active {
+  color: var(--accent);
+  background: var(--bg-panel);
+  border-bottom-color: var(--accent);
+}
+
+/* Skrolabilno telo dosijea */
+.dos-body {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 12px 14px 20px;
+}
+.section-h {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-subtle);
+  margin: 12px 0 6px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 3px;
+}
+.section-h:first-child { margin-top: 0; }
+
+/* Kartica tvrdnje i dokaza */
+.claim-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.claim-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.claim-text {
+  font-size: 12.5px;
+  margin-bottom: 5px;
+  color: var(--fg);
+  overflow-wrap: anywhere;
+}
+.claim-bound {
+  font-size: 11px;
+  color: var(--fg-muted);
+  background: var(--bg-panel);
+  padding: 4px 6px;
+  border-left: 2px solid var(--border-strong);
+  margin-bottom: 6px;
+  overflow-wrap: anywhere;
+}
+.ev-item {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--fg-muted);
+  padding: 3px 0;
+  border-top: 1px dashed var(--border);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Indeks čvorova i pretraga */
+.search-input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-card);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+.node-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 7px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  font-size: 12px;
+}
+.node-row:hover { background: var(--bg-card); }
+.node-row.active {
+  background: var(--accent-soft);
+  font-weight: 700;
+  border-left: 3px solid var(--accent);
+}
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  background: var(--bg-chip);
+}
+
+/* Mobilni raspored (< 960 px, uključujući 390×844 i 320 px): Gornja pozornica + Donji dosije */
+@media (max-width: 960px) {
+  #app {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 52% 48%;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+  }
+  #dossier {
+    height: 100%;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    border-left: none;
+    border-top: 2px solid var(--border-strong);
+  }
+  #hud-top {
+    top: max(5px, env(safe-area-inset-top));
+    left: 5px;
+    right: 5px;
+    gap: 3px;
+  }
+  .hud-bar {
+    padding: 3px 5px;
+    gap: 2px;
+    max-width: 100%;
+  }
+  .hud-group-label {
+    font-size: 9px;
+    margin-right: 2px;
+  }
+  .btn {
+    font-size: 9.5px;
+    padding: 2px 5px;
+  }
+  .slider-wrap { display: none; }
+  #schriftfeld {
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    max-width: calc(100% - 10px);
+    padding: 4px 7px;
+  }
+  .sf-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+  }
+  .sf-title { font-size: 12px; }
+  .sf-coord { font-size: 9px; }
+  .sf-sentence { display: none; }
+  .sf-legend { gap: 6px; font-size: 9px; }
+  #tour-banner { display: none; }
+  .dos-header { padding: 7px 10px 6px; }
+  .dos-kicker { font-size: 9px; }
+  .dos-title { font-size: 14.5px; }
+  .dos-subtitle { font-size: 11px; margin-bottom: 5px; }
+  .dos-metrics { gap: 4px; }
+  .metric-box { padding: 3px 4px; }
+  .metric-val { font-size: 11.5px; }
+  .metric-lbl { font-size: 8.5px; letter-spacing: 0.02em; }
+  .phase-strip { gap: 3px; margin-top: 5px; }
+  .phase-cell { font-size: 9px; padding: 2px 3px; }
+  .dos-tab { font-size: 9.5px; padding: 6px 4px; }
+  .dos-body { padding: 7px 10px 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <!-- LEVO / GORE: 3D INSTRUMENT POZORNICA -->
+  <main id="stage" aria-label="3D Atlas Felix Romuliana">
+    <canvas id="gl-canvas" tabindex="0" role="application" aria-label="Interaktivni 3D naučni instrument Romulijane — strelice ili miš za kretanje, 1-5 za razmeru"></canvas>
+    <div id="labels-layer" aria-hidden="true"></div>
+
+    <!-- Komandna traka 4 ose -->
+    <header id="hud-top">
+      <div class="hud-bar" role="toolbar" aria-label="Razmera prostora S0 do S4">
+        <span class="hud-group-label">Razmera</span>
+        <button class="btn" data-scale="S0" title="S0 Region: provincije, uporedne palate (Taster 1)">S0 Region</button>
+        <button class="btn" data-scale="S1" title="S1 Okolina ≤15 km: DARMC putevi W76 i Magura (Taster 2)">S1 Putevi</button>
+        <button class="btn active" data-scale="S2" title="S2 Lokalitet: utvrđenje, sonde, Magura (Taster 3)">S2 Lokalitet</button>
+        <button class="btn" data-scale="S3" title="S3 Objekat: palate, hramovi, bedemi, crkve (Taster 4)">S3 Arhitektura</button>
+        <button class="btn" data-scale="S4" title="S4 Predmet: arhivolta, porfir, mozaici (Taster 5)">S4 Predmeti</button>
+      </div>
+
+      <div class="hud-bar" role="toolbar" aria-label="Hronološka faza i Capta">
+        <span class="hud-group-label">Faza</span>
+        <button class="btn active" data-phase="SVE">Sve</button>
+        <button class="btn" data-phase="F.PR" title="Pre utvrđenja: praistorija i rimska vila (W07, W09)">F.PR</button>
+        <button class="btn" data-phase="F.T" title="Tetrarhija 293–311: Galerije cezar i avgust">F.T Tetrarhija</button>
+        <button class="btn" data-phase="F.KA" title="Kasna antika i ranovizantijska obnova IV–VI vek">F.KA IV–VI v.</button>
+        <button class="btn" data-phase="F.SV" title="Srednji vek X–XII vek">F.SV X–XII v.</button>
+        <button class="btn" id="btn-capta" title="Capta (Johanna Drucker): prikaži sporna tumačenja kao superpoziciju">Capta: Sporovi</button>
+      </div>
+
+      <div class="hud-bar" role="toolbar" aria-label="Epistemička sigurnost i analitički alati">
+        <span class="hud-group-label">Nivo</span>
+        <button class="btn active" data-lvl="A" title="Nivo A: In situ / izmereno"><span class="btn-tag" style="background:var(--lvl-a)"></span>A</button>
+        <button class="btn active" data-lvl="B" title="Nivo B: Proporcijska analogija (Čanak-Medić R06)"><span class="btn-tag" style="background:var(--lvl-b)"></span>B</button>
+        <button class="btn active" data-lvl="C" title="Nivo C: Hipoteza"><span class="btn-tag" style="background:var(--lvl-c)"></span>C</button>
+        <button class="btn active" id="btn-foto" title="Forensic Image Complex: 19 konusa fotografija sa Commonsa">Foto (19)</button>
+        <button class="btn active" id="btn-planovi" title="Georeferencirani arhitektonski, geofizički i UNESCO planovi (16 rendera): taster P">Planovi (16)</button>
+        <button class="btn active" id="btn-geofiz" title="Podzemna geofizika (W02/W17), UNESCO granice (W20) i OSM vektori (W77): taster G">Geofiz &amp; Zone</button>
+        <label class="slider-wrap" title="Analitički presek A–A (Clipping Plane)">
+          <span>Presek</span>
+          <input type="range" id="slider-clip" min="-150" max="980" value="980" step="5">
+        </label>
+        <label class="slider-wrap" title="Raking Light — ugao analitičkog svetla (5°–75°)">
+          <span>Svetlo</span>
+          <input type="range" id="slider-light" min="6" max="75" value="34" step="1">
+        </label>
+        <button class="btn" id="btn-theme" title="Promeni svetlosni režim (Dan / Noć)">Noć</button>
+        <button class="btn" id="btn-audio" title="Parametarski vetar Magure i mikro-tonovi (0 KB Web Audio)">Zvuk: Isklj</button>
+      </div>
+    </header>
+
+    <!-- ISO 128 Schriftfeld (Title Block) -->
+    <section id="schriftfeld" aria-label="Tehnički pečat i legenda sigurnosti">
+      <div class="sf-top">
+        <span class="sf-title">FELIX ROMVLIANA · 3D EPISTEMIČKI ATLAS</span>
+        <span class="sf-coord" id="sf-coords">W66 Pleiades 207395 · 43.8992°N 22.1858°E · CRS: Lokalni metri</span>
+      </div>
+      <p class="sf-sentence">Jedan prostor u kome se vidi šta se o Romulijani zna, odakle se to zna i koliko je sigurno, od provincije do jednog mozaika.</p>
+      <div class="sf-legend">
+        <span class="sf-leg-item"><span class="line-sample ls-a"></span><strong>A</strong> In situ / dokaz</span>
+        <span class="sf-leg-item"><span class="line-sample ls-b"></span><strong>B</strong> Proporcija (R06)</span>
+        <span class="sf-leg-item"><span class="line-sample ls-c"></span><strong>C</strong> Hipoteza</span>
+        <span class="sf-leg-item"><span class="line-sample ls-p"></span><strong>GF</strong> Geofizika (W02) &amp; UNESCO (W20)</span>
+        <span class="sf-leg-item"><span class="line-sample ls-axis"></span>DEM GLO-30 (W78) &amp; DARMC W76</span>
+      </div>
+    </section>
+
+    <!-- Vođena naučna tura (Smithsonian Voyager / T-režim) -->
+    <aside id="tour-banner" aria-label="Vođena naučna tura">
+      <div class="tb-head">
+        <span>Naučna tura · <span id="tour-step-num" class="num">3/7</span></span>
+        <button class="btn" id="btn-reset-cam" style="padding:1px 6px;font-size:10px">Reset (R)</button>
+      </div>
+      <div class="tb-title" id="tour-title">3 · S2 Dvostruki bedem: Cezar vs. Avgust</div>
+      <div class="tb-desc" id="tour-desc">Preklop Starijeg utvrđenja sa oktogonalnim kulama (L.U.1) i Mlađeg utvrđenja sa 20 poligonalnih kula (L.U.2).</div>
+      <div class="tb-controls">
+        <button class="btn" id="btn-tour-prev">← Prethodna</button>
+        <button class="btn" id="btn-tour-next">Sledeća stanica →</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- DESNO / DOLE: FORENZIČKI DOSIJE I GRAF ZNANJA -->
+  <aside id="dossier" aria-label="Forenzički dosije i indeks čvorova">
+    <div class="dos-header">
+      <div class="dos-kicker">
+        <span id="dos-id" class="mono">ČVOR: L.U.2 · OBJEKAT</span>
+        <span id="dos-geo-status" class="badge">AKSIOMATSKA TOPOLOGIJA</span>
+      </div>
+      <h1 class="dos-title" id="dos-title">Mlađi (spoljni) bedem — Galerije avgust</h1>
+      <p class="dos-subtitle" id="dos-role">Mlađe utvrđenje (poligonalne kule, R06) · Epistemički nivo: A + B + C</p>
+
+      <div class="dos-metrics">
+        <div class="metric-box">
+          <span class="metric-val num" id="m-pom">452</span>
+          <span class="metric-lbl">Pominjanja</span>
+        </div>
+        <div class="metric-box">
+          <span class="metric-val num" id="m-izv">18</span>
+          <span class="metric-lbl">Izvora</span>
+        </div>
+        <div class="metric-box">
+          <span class="metric-val num" id="m-tvr">6</span>
+          <span class="metric-lbl">Tvrdnji</span>
+        </div>
+        <div class="metric-box">
+          <span class="metric-val num" id="m-vez">24</span>
+          <span class="metric-lbl">Veza u grafu</span>
+        </div>
+      </div>
+
+      <!-- Tufte Small Multiples faza -->
+      <div class="phase-strip" id="dos-phases" aria-label="Prisustvo kroz hronološke faze">
+        <div class="phase-cell" data-p="F.PR">F.PR · Pre 293</div>
+        <div class="phase-cell on" data-p="F.T">F.T · 293–311</div>
+        <div class="phase-cell on" data-p="F.KA">F.KA · IV–VI v.</div>
+        <div class="phase-cell" data-p="F.SV">F.SV · X–XII v.</div>
+      </div>
+    </div>
+
+    <nav class="dos-tabs" role="tablist">
+      <button class="dos-tab active" data-tab="dokazi" role="tab">Tvrdnje &amp; Dokazi (<span id="tab-cnt-tvr" class="num">6</span>)</button>
+      <button class="dos-tab" data-tab="cvorovi" role="tab">Čvorovi (<span class="num">66</span>)</button>
+      <button class="dos-tab" data-tab="izvori" role="tab">Izvori (<span class="num">81</span>) &amp; Slojevi</button>
+    </nav>
+
+    <div class="dos-body" id="dos-content" aria-live="polite"></div>
+  </aside>
+</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const DATA = window.ROMULIJANA_ATLAS;
+if (!DATA) throw new Error('Nedostaje window.ROMULIJANA_ATLAS (atlas-podaci.js)');
+
+/* ── Režim teme i reduced-motion ── */
+const params = new URLSearchParams(window.location.search);
+let isNight = params.get('noc') === '1';
+const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (isNight) {
+  document.documentElement.classList.add('noc');
+  document.body.classList.add('noc');
+}
+
+const STATE = {
+  scale: 'S2',
+  phase: 'SVE',
+  levels: { A: true, B: true, C: true },
+  captaMode: false,
+  showPhotos: true,
+  showPlans: true,
+  showGeofiz: true,
+  selectedId: 'L.U.IK',
+  activeTab: 'dokazi',
+  searchQuery: '',
+  tourIndex: 2,
+  clipX: 980,
+  lightElevation: 34,
+  lightAzimuth: 52,
+  audioOn: false
+};
+
+/* ── Mapa čvorova i tvrdnji ── */
+const cvorById = new Map(DATA.cvorovi.map(c => [c.id, c]));
+const izvorById = new Map(DATA.izvori.map(s => [s.id, s]));
+
+/* ── THREE.JS R186 POSTAVKA (WebGLRenderer, DPR <= 1.5, Render-on-Demand) ── */
+const canvas = document.getElementById('gl-canvas');
+const stageEl = document.getElementById('stage');
+const labelsLayer = document.getElementById('labels-layer');
+
+const renderer = new THREE.WebGLRenderer({
+  canvas,
+  antialias: true,
+  powerPreference: 'high-performance',
+  preserveDrawingBuffer: true
+});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = isNight ? 1.12 : 1.04;
+renderer.localClippingEnabled = true;
+
+const scene = new THREE.Scene();
+const clipPlane = new THREE.Plane(new THREE.Vector3(-1, 0, 0), STATE.clipX);
+
+const camera = new THREE.PerspectiveCamera(42, 1.6, 1.0, 28000);
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = false; // Koristimo sopstveni frame-rate independent eksponencijalni damping
+controls.maxPolarAngle = Math.PI * 0.485;
+controls.minDistance = 12;
+controls.maxDistance = 9500;
+
+/* Kamera damping / flyTo cilj (0 draw calls u mirovanju) */
+const camCurrent = { pos: new THREE.Vector3(-195, 118, 230), target: new THREE.Vector3(62, 10, -28) };
+const camGoal    = { pos: new THREE.Vector3(-195, 118, 230), target: new THREE.Vector3(62, 10, -28) };
+camera.position.copy(camCurrent.pos);
+controls.target.copy(camCurrent.target);
+controls.update();
+
+let needsRender = true;
+let animFrameId = null;
+let lastTime = performance.now();
+
+function requestRender() {
+  needsRender = true;
+  if (!animFrameId) {
+    lastTime = performance.now();
+    animFrameId = requestAnimationFrame(tick);
+  }
+}
+
+controls.addEventListener('change', () => {
+  camCurrent.pos.copy(camera.position);
+  camCurrent.target.copy(controls.target);
+  camGoal.pos.copy(camera.position);
+  camGoal.target.copy(controls.target);
+  requestRender();
+});
+
+function flyTo(posArr, targetArr, immediate = false) {
+  camGoal.pos.set(posArr[0], posArr[1], posArr[2]);
+  camGoal.target.set(targetArr[0], targetArr[1], targetArr[2]);
+  if (immediate || reducedMotion) {
+    camCurrent.pos.copy(camGoal.pos);
+    camCurrent.target.copy(camGoal.target);
+    camera.position.copy(camGoal.pos);
+    controls.target.copy(camGoal.target);
+    controls.update();
+  }
+  requestRender();
+}
+
+/* ── Svetlosna logika: 1 Directional (Raking/Sun) + 1 Hemisphere + Fog ── */
+const hemiLight = new THREE.HemisphereLight(0xefe9dc, 0x8c7f6a, 0.88);
+scene.add(hemiLight);
+
+const dirLight = new THREE.DirectionalLight(0xfff5e4, 2.15);
+scene.add(dirLight);
+
+const rimLight = new THREE.DirectionalLight(0xd4e2ff, 0.55);
+rimLight.position.set(-300, 180, -260);
+scene.add(rimLight);
+
+function updateLighting() {
+  const elevRad = THREE.MathUtils.degToRad(STATE.lightElevation);
+  const azimRad = THREE.MathUtils.degToRad(STATE.lightAzimuth);
+  const r = 600;
+  dirLight.position.set(
+    Math.cos(elevRad) * Math.cos(azimRad) * r,
+    Math.sin(elevRad) * r,
+    Math.cos(elevRad) * Math.sin(azimRad) * r
+  );
+  requestRender();
+}
+updateLighting();
+
+/* ── Paleta materijala (Dan / Noć) i ISO 128-24 linije ── */
+const PALETTE = {
+  dan: {
+    bg: 0xebe4d6, fog: 0xebe4d6, ground: 0xdfd6c3, grid: 0xbcb19d,
+    matA: 0xc8b89a, edgeA: 0x1e1b17,
+    matB: 0xd8d0c0, edgeB: 0x5c5346,
+    matC: 0xe6ccb8, edgeC: 0xb84a24,
+    matP: 0xd4cbb8, edgeP: 0x6d655a,
+    capta1: 0x2e6f73, capta2: 0xb84a24,
+    accent: 0x9e2a2b, road: 0x8a3b2c, maguraHill: 0xd2c7b0
+  },
+  noc: {
+    bg: 0x121519, fog: 0x121519, ground: 0x171c22, grid: 0x29323d,
+    matA: 0x6e7b8a, edgeA: 0xdce4ec,
+    matB: 0x455363, edgeB: 0x8fa0b2,
+    matC: 0x593a28, edgeC: 0xe07a38,
+    matP: 0x262e38, edgeP: 0x738091,
+    capta1: 0x4db6ac, capta2: 0xe07a38,
+    accent: 0xe07a38, road: 0xd97236, maguraHill: 0x1e252e
+  }
+};
+
+function currentPal() { return isNight ? PALETTE.noc : PALETTE.dan; }
+
+const matA = new THREE.MeshStandardMaterial({
+  color: currentPal().matA, roughness: 0.78, metalness: 0.05,
+  clippingPlanes: [clipPlane], clipShadows: true
+});
+const matASelected = new THREE.MeshStandardMaterial({
+  color: currentPal().accent, roughness: 0.55, metalness: 0.1,
+  clippingPlanes: [clipPlane]
+});
+const matB = new THREE.MeshStandardMaterial({
+  color: currentPal().matB, roughness: 0.65, metalness: 0.05,
+  transparent: true, opacity: 0.48, depthWrite: false,
+  clippingPlanes: [clipPlane]
+});
+const matC = new THREE.MeshStandardMaterial({
+  color: currentPal().matC, roughness: 0.6, metalness: 0.05,
+  transparent: true, opacity: 0.16, depthWrite: false,
+  clippingPlanes: [clipPlane]
+});
+const matP = new THREE.MeshStandardMaterial({
+  color: currentPal().matP, roughness: 0.85, metalness: 0.0,
+  transparent: true, opacity: 0.30, depthWrite: false,
+  clippingPlanes: [clipPlane]
+});
+const matCapta1 = new THREE.MeshStandardMaterial({
+  color: currentPal().capta1, roughness: 0.5, transparent: true, opacity: 0.45, clippingPlanes: [clipPlane]
+});
+const matCapta2 = new THREE.MeshStandardMaterial({
+  color: currentPal().capta2, roughness: 0.5, transparent: true, opacity: 0.45, clippingPlanes: [clipPlane]
+});
+
+const lineMatA = new THREE.LineBasicMaterial({ color: currentPal().edgeA, clippingPlanes: [clipPlane] });
+const lineMatASel = new THREE.LineBasicMaterial({ color: currentPal().accent, clippingPlanes: [clipPlane] });
+const lineMatB = new THREE.LineBasicMaterial({ color: currentPal().edgeB, transparent: true, opacity: 0.82, clippingPlanes: [clipPlane] });
+const lineMatC = new THREE.LineDashedMaterial({ color: currentPal().edgeC, dashSize: 2.2, gapSize: 1.2, clippingPlanes: [clipPlane] });
+const lineMatP = new THREE.LineDashedMaterial({ color: currentPal().edgeP, dashSize: 1.0, gapSize: 1.0, clippingPlanes: [clipPlane] });
+
+/* ── Pomoćni graditelji geometrije sa crease linijama (Saito & Takahashi 1990) ── */
+const pickableMeshes = [];
+const nodeGroups = new Map(); // id -> { group, meshesA, meshesB, meshesC, edgesA, labelPos }
+
+function addMeshWithEdges(parent, geo, level, nodeId, yOffset = 0, xOffset = 0, zOffset = 0, rotY = 0) {
+  const mat = level === 'A' ? matA : level === 'B' ? matB : level === 'C' ? matC : level === 'CAPTA1' ? matCapta1 : level === 'CAPTA2' ? matCapta2 : matP;
+  const mesh = new THREE.Mesh(geo, mat);
+  mesh.position.set(xOffset, yOffset, zOffset);
+  mesh.rotation.y = rotY;
+  mesh.userData = { nodeId, level };
+  parent.add(mesh);
+  pickableMeshes.push(mesh);
+
+  const edgesGeo = new THREE.EdgesGeometry(geo, 22);
+  const lMat = level === 'A' ? lineMatA : level === 'B' ? lineMatB : (level === 'C' || level === 'CAPTA2') ? lineMatC : lineMatP;
+  const lines = new THREE.LineSegments(edgesGeo, lMat);
+  lines.position.copy(mesh.position);
+  lines.rotation.copy(mesh.rotation);
+  if (lMat.isLineDashedMaterial) lines.computeLineDistances();
+  lines.userData = { nodeId, level, isEdge: true };
+  parent.add(lines);
+
+  return { mesh, lines };
+}
+
+/* ── 1. TLO, TEHNIČKA MREŽA KOTIRANJA (ISO 128) I BRDO MAGURA ── */
+const groundGroup = new THREE.Group();
+scene.add(groundGroup);
+
+const groundMesh = new THREE.Mesh(
+  new THREE.PlaneGeometry(24000, 24000),
+  new THREE.MeshStandardMaterial({ color: currentPal().ground, roughness: 0.96, metalness: 0.0 })
+);
+groundMesh.rotation.x = -Math.PI / 2;
+groundMesh.position.y = -0.15;
+groundGroup.add(groundMesh);
+
+// Copernicus DEM GLO-30 (W78: 19×11 = 209 visinskih tačaka, 141–258 m n.v., centar 195 m) + brdo Magura
+const maguraHillMat = new THREE.MeshStandardMaterial({ color: currentPal().maguraHill, roughness: 0.9, flatShading: true });
+function sampleDemHeight(x, z) {
+  const dem = DATA.dem_glo30;
+  if (!dem || !dem.xs_m || !dem.zs_m || !dem.elev_m) return x > 700 ? 24.5 : 0;
+  // Unutar utvrđenja (-135..135, -110..110) zaravni plato na y=0 kako bi arhitektonski planovi ležali ravno
+  const distPalace = Math.max(Math.abs(x) / 145, Math.abs(z) / 120);
+  if (distPalace <= 1.0) return 0;
+  const blend = Math.min(1.0, (distPalace - 1.0) / 0.65);
+  const xs = dem.xs_m, zs = dem.zs_m;
+  const cx = Math.max(xs[0], Math.min(xs[xs.length - 1], x));
+  const cz = Math.max(zs[0], Math.min(zs[zs.length - 1], z));
+  const colF = ((cx - xs[0]) / (xs[xs.length - 1] - xs[0])) * (dem.cols - 1);
+  const rowF = ((cz - zs[0]) / (zs[zs.length - 1] - zs[0])) * (dem.rows - 1);
+  const c0 = Math.floor(colF), c1 = Math.min(dem.cols - 1, c0 + 1);
+  const r0 = Math.floor(rowF), r1 = Math.min(dem.rows - 1, r0 + 1);
+  const tx = colF - c0, tz = rowF - r0;
+  const e00 = dem.elev_m[r0 * dem.cols + c0] ?? dem.base_elevation_m;
+  const e10 = dem.elev_m[r0 * dem.cols + c1] ?? dem.base_elevation_m;
+  const e01 = dem.elev_m[r1 * dem.cols + c0] ?? dem.base_elevation_m;
+  const e11 = dem.elev_m[r1 * dem.cols + c1] ?? dem.base_elevation_m;
+  const elev = (e00 * (1 - tx) + e10 * tx) * (1 - tz) + (e01 * (1 - tx) + e11 * tx) * tz;
+  return (elev - dem.base_elevation_m) * 0.45 * blend;
+}
+
+if (DATA.dem_glo30) {
+  const demGeo = new THREE.PlaneGeometry(1800, 1000, 36, 20);
+  demGeo.rotateX(-Math.PI / 2);
+  const posAttr = demGeo.attributes.position;
+  for (let i = 0; i < posAttr.count; i++) {
+    const vx = posAttr.getX(i) + 300;
+    const vz = posAttr.getZ(i);
+    posAttr.setX(i, vx);
+    posAttr.setY(i, sampleDemHeight(vx, vz) - 0.12);
+  }
+  demGeo.computeVertexNormals();
+  const demWire = new THREE.LineSegments(
+    new THREE.WireframeGeometry(demGeo),
+    new THREE.LineBasicMaterial({ color: currentPal().grid, transparent: true, opacity: 0.28 })
+  );
+  groundGroup.add(demWire);
+}
+
+const maguraGeo = new THREE.ConeGeometry(260, 26, 24, 2, true);
+const maguraHill = new THREE.Mesh(maguraGeo, maguraHillMat);
+maguraHill.position.set(880, 12.8, -135);
+maguraHill.scale.set(1.15, 1.0, 0.85);
+groundGroup.add(maguraHill);
+const maguraEdges = new THREE.LineSegments(new THREE.EdgesGeometry(maguraGeo, 8), lineMatB);
+maguraEdges.position.copy(maguraHill.position);
+maguraEdges.scale.copy(maguraHill.scale);
+groundGroup.add(maguraEdges);
+
+// Tehnički prstenovi udaljenosti oko W66 (100m, 250m, 1000m Magura, 2531m DARMC RP-001)
+const gridRingMat = new THREE.LineBasicMaterial({ color: currentPal().grid, transparent: true, opacity: 0.65 });
+for (const radius of [120, 250, 500, 1000, 2531]) {
+  const pts = [];
+  const segs = 96;
+  for (let i = 0; i <= segs; i++) {
+    const a = (i / segs) * Math.PI * 2;
+    pts.push(new THREE.Vector3(Math.cos(a) * radius, 0.05, Math.sin(a) * radius));
+  }
+  const ring = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), gridRingMat);
+  groundGroup.add(ring);
+}
+
+// Osa apoteoze: Istočna kapija (118, -4) -> Tetrapilon (420, -65) -> Magura (880, -140)
+const axisMat = new THREE.LineDashedMaterial({ color: currentPal().accent, dashSize: 8, gapSize: 4 });
+const axisPts = [
+  new THREE.Vector3(-130, 0.3, 2),
+  new THREE.Vector3(118, 0.3, -4),
+  new THREE.Vector3(420, 0.3, -65),
+  new THREE.Vector3(905, 25.0, -135)
+];
+const axisLine = new THREE.Line(new THREE.BufferGeometry().setFromPoints(axisPts), axisMat);
+axisLine.computeLineDistances();
+groundGroup.add(axisLine);
+
+// Kontrolna linija upozorenja: južna ivica OSM pločica W36/W48/W50 na +146 m južno od W66
+const warnPts = [new THREE.Vector3(-340, 0.35, 146), new THREE.Vector3(340, 0.35, 146)];
+const warnLine = new THREE.Line(
+  new THREE.BufferGeometry().setFromPoints(warnPts),
+  new THREE.LineDashedMaterial({ color: 0xc94a29, dashSize: 5, gapSize: 3 })
+);
+warnLine.computeLineDistances();
+groundGroup.add(warnLine);
+
+/* ── 2. STVARNA MREŽA RIMSKIH PUTEVA DARMC W76 (8 trasa u krugu od 15 km) ── */
+const roadsGroup = new THREE.Group();
+scene.add(roadsGroup);
+const roadMat = new THREE.LineBasicMaterial({ color: currentPal().road });
+
+for (const put of DATA.putevi) {
+  if (!put.tacke_xz || put.tacke_xz.length < 2) continue;
+  const pts = put.tacke_xz.map(([x, z]) => new THREE.Vector3(x, 0.4, z));
+  const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), roadMat);
+  roadsGroup.add(line);
+}
+// Prilazni put RP-002 (od najbliže tačke DARMC puta na 2531 m preko Tetrapilona do Istočne kapije)
+const approachPts = [
+  new THREE.Vector3(1820, 0.4, -1750),
+  new THREE.Vector3(420, 0.4, -65),
+  new THREE.Vector3(118, 0.4, -4)
+];
+const approachLine = new THREE.Line(new THREE.BufferGeometry().setFromPoints(approachPts), axisMat);
+approachLine.computeLineDistances();
+roadsGroup.add(approachLine);
+
+/* ── 2b. GEOREFERENCIRANI ARHITEKTONSKI PLANOVI (P-GEOREF: 10 RENDERA R04/R05/R06) ── */
+const plansGroup = new THREE.Group();
+scene.add(plansGroup);
+
+const textureLoader = new THREE.TextureLoader();
+const planBorderMat = new THREE.LineDashedMaterial({
+  color: currentPal().edgeA,
+  dashSize: 2.0,
+  gapSize: 1.2,
+  clippingPlanes: [clipPlane]
+});
+
+for (const p of (DATA.planovi_overlay || []).filter(x => !x.sloj || x.sloj === 'plan')) {
+  const yPlane = 0.12;
+  const pGroup = new THREE.Group();
+  pGroup.position.set(p.centar_xz[0], yPlane, p.centar_xz[1]);
+  if (p.rotacija_deg) pGroup.rotation.y = THREE.MathUtils.degToRad(-p.rotacija_deg);
+
+  const geo = new THREE.PlaneGeometry(p.sirina_m, p.dubina_m);
+  geo.rotateX(-Math.PI / 2);
+
+  const tex = textureLoader.load(p.fajl, () => requestRender(), undefined, () => {});
+  tex.colorSpace = THREE.SRGBColorSpace;
+  const mat = new THREE.MeshBasicMaterial({
+    map: tex,
+    transparent: true,
+    opacity: 0.84,
+    depthWrite: false,
+    polygonOffset: true,
+    polygonOffsetFactor: -1.2,
+    clippingPlanes: [clipPlane]
+  });
+
+  const mesh = new THREE.Mesh(geo, mat);
+  mesh.userData = { isPlan: true, planId: p.id, cvorovi: p.cvorovi, planData: p };
+  pGroup.add(mesh);
+  pickableMeshes.push(mesh);
+
+  const edges = new THREE.LineSegments(new THREE.EdgesGeometry(geo), planBorderMat);
+  edges.computeLineDistances();
+  pGroup.add(edges);
+
+  plansGroup.add(pGroup);
+}
+
+/* ── 2c. PODZEMNA GEOFIZIKA (W02/W17), UNESCO GRANICE (W20) I OSM VEKTORI (W77) ── */
+const geofizGroup = new THREE.Group();
+scene.add(geofizGroup);
+
+const geofizFillMat = new THREE.MeshBasicMaterial({
+  color: 0x2b7a78,
+  transparent: true,
+  opacity: 0.28,
+  depthWrite: false,
+  clippingPlanes: [clipPlane]
+});
+const geofizEdgeMat = new THREE.LineDashedMaterial({
+  color: 0x1b6ca8,
+  dashSize: 3.0,
+  gapSize: 1.5,
+  clippingPlanes: [clipPlane]
+});
+
+for (const gf of (DATA.geofizika || [])) {
+  const gg = new THREE.Group();
+  gg.position.set(gf.x, 0.22, gf.z);
+  const geo = gf.oblik === 'krug' || gf.oblik === 'elipsa'
+    ? new THREE.CylinderGeometry(gf.w / 2, gf.w / 2, 0.35, 24)
+    : new THREE.BoxGeometry(gf.w, 0.35, gf.d);
+  if (gf.oblik === 'elipsa') gg.scale.set(1.0, 1.0, gf.d / Math.max(1, gf.w));
+  const mesh = new THREE.Mesh(geo, geofizFillMat);
+  mesh.userData = { nodeId: gf.cvor || 'L', geofizData: gf };
+  gg.add(mesh);
+  pickableMeshes.push(mesh);
+
+  const edges = new THREE.LineSegments(new THREE.EdgesGeometry(geo, 15), geofizEdgeMat);
+  edges.computeLineDistances();
+  gg.add(edges);
+  geofizGroup.add(gg);
+}
+
+// UNESCO Core & Buffer Zone poligoni (W20)
+for (const uz of (DATA.unesco_zone || [])) {
+  if (!uz.poligon_xz || uz.poligon_xz.length < 3) continue;
+  const pts = uz.poligon_xz.map(([x, z]) => new THREE.Vector3(x, 0.55, z));
+  const uMat = new THREE.LineDashedMaterial({
+    color: uz.id === 'UNESCO-CORE' ? 0xc84b31 : 0x7b4ecb,
+    dashSize: uz.id === 'UNESCO-CORE' ? 12 : 20,
+    gapSize: 6
+  });
+  const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), uMat);
+  line.computeLineDistances();
+  geofizGroup.add(line);
+}
+
+// Overpass OSM savremeni vektori (W77: vodotokovi, savremene staze i obrisi)
+const osmWaterMat = new THREE.LineBasicMaterial({ color: 0x3b7ea1, transparent: true, opacity: 0.65 });
+const osmPathMat = new THREE.LineBasicMaterial({ color: 0x7a6f5d, transparent: true, opacity: 0.45 });
+for (const v of (DATA.osm_vektori || [])) {
+  if (!v.tacke_xz || v.tacke_xz.length < 2) continue;
+  const pts = v.tacke_xz.map(([x, z]) => new THREE.Vector3(x, 0.16, z));
+  const line = new THREE.Line(
+    new THREE.BufferGeometry().setFromPoints(pts),
+    v.kategorija === 'vodotok' ? osmWaterMat : osmPathMat
+  );
+  geofizGroup.add(line);
+}
+
+/* ── 3. CGA-LITE PROCEDURALNA ARHITEKTONSKA GRAMATIKA ZA 27 PROSTORNIH ČVOROVA ── */
+const archGroup = new THREE.Group();
+scene.add(archGroup);
+
+function buildNodeGeometry(c) {
+  const t = c.topo;
+  if (!t) return;
+  const g = new THREE.Group();
+  g.position.set(t.x, t.x > 700 ? 24.5 : 0, t.z);
+  archGroup.add(g);
+
+  const isEmptyClaim = c.bez_tvrdnje;
+  const baseLvl = isEmptyClaim ? 'P' : 'A';
+
+  if (t.oblik === 'prsten-sp') {
+    // L.U.2: Mlađe utvrđenje — trapezasto/pravougaoni bedem sa 16 poligonalnih kula po obodu
+    const hw = t.w / 2, hd = t.d / 2, wallT = 3.6;
+    // 4 kurtine bedema (Nivo A sačuvano + Nivo B šetna staza sa zupcima)
+    const kurtine = [
+      { x: 0, z: -hd, w: t.w, d: wallT },
+      { x: 0, z: hd,  w: t.w, d: wallT },
+      { x: -hw, z: 0, w: wallT, d: t.d },
+      { x: hw,  z: 0, w: wallT, d: t.d }
+    ];
+    for (const k of kurtine) {
+      addMeshWithEdges(g, new THREE.BoxGeometry(k.w, t.hA, k.d), 'A', c.id, t.hA / 2, k.x, k.z);
+      addMeshWithEdges(g, new THREE.BoxGeometry(k.w * 0.98, t.hB - t.hA, k.d * 0.82), 'B', c.id, t.hA + (t.hB - t.hA) / 2, k.x, k.z);
+    }
+    // 16 poligonalnih (10-stranih) odbrambenih kula duž bedema
+    const towerCoords = [
+      [-hw, -hd], [-hw*0.5, -hd], [0, -hd], [hw*0.5, -hd], [hw, -hd],
+      [-hw, hd],  [-hw*0.5, hd],  [0, hd],  [hw*0.5, hd],  [hw, hd],
+      [-hw, -hd*0.48], [-hw, hd*0.48],
+      [hw, -hd*0.48],  [hw, hd*0.48]
+    ];
+    for (const [tx, tz] of towerCoords) {
+      const rT = (Math.abs(tx) === hw && Math.abs(tz) === hd) ? 11.5 : 9.2;
+      addMeshWithEdges(g, new THREE.CylinderGeometry(rT, rT * 1.05, t.hA + 1.2, 10), 'A', c.id, (t.hA + 1.2) / 2, tx, tz);
+      addMeshWithEdges(g, new THREE.CylinderGeometry(rT * 0.94, rT * 0.96, t.hB - t.hA, 10), 'B', c.id, t.hA + 1.2 + (t.hB - t.hA) / 2, tx, tz);
+      addMeshWithEdges(g, new THREE.ConeGeometry(rT * 1.02, t.hC + 1.5, 10), 'C', c.id, t.hB + 1.2 + (t.hC + 1.5) / 2, tx, tz);
+    }
+  } else if (t.oblik === 'prsten-un') {
+    // L.U.1: Starije utvrđenje (zarotirano za ~2.5 stepena — "1% disorder" Vere Molnár!)
+    g.rotation.y = THREE.MathUtils.degToRad(2.8);
+    const hw = t.w / 2, hd = t.d / 2, wallT = 2.4;
+    const kurtine = [
+      { x: 0, z: -hd, w: t.w, d: wallT },
+      { x: 0, z: hd,  w: t.w, d: wallT },
+      { x: -hw, z: 0, w: wallT, d: t.d },
+      { x: hw,  z: 0, w: wallT, d: t.d }
+    ];
+    for (const k of kurtine) {
+      addMeshWithEdges(g, new THREE.BoxGeometry(k.w, t.hA, k.d), baseLvl, c.id, t.hA / 2, k.x, k.z);
+    }
+    for (const [tx, tz] of [[-hw, -hd], [hw, -hd], [-hw, hd], [hw, hd], [0, -hd], [0, hd]]) {
+      addMeshWithEdges(g, new THREE.CylinderGeometry(5.5, 5.8, t.hA + 0.8, 8), baseLvl, c.id, (t.hA + 0.8) / 2, tx, tz);
+      addMeshWithEdges(g, new THREE.CylinderGeometry(5.2, 5.2, t.hB - t.hA, 8), 'B', c.id, t.hA + 0.8 + (t.hB - t.hA) / 2, tx, tz);
+    }
+  } else if (t.oblik === 'kapija') {
+    // Istočna (L.U.IK) i Zapadna kapija (L.U.ZK)
+    addMeshWithEdges(g, new THREE.BoxGeometry(t.w, t.hA, t.d), 'A', c.id, t.hA / 2, 0, 0);
+    addMeshWithEdges(g, new THREE.CylinderGeometry(8.5, 9.0, t.hB, 10), 'B', c.id, t.hB / 2, 0, -t.d * 0.42);
+    addMeshWithEdges(g, new THREE.CylinderGeometry(8.5, 9.0, t.hB, 10), 'B', c.id, t.hB / 2, 0, t.d * 0.42);
+    // Gornja galerija sa timpanonom/arhivoltom
+    addMeshWithEdges(g, new THREE.BoxGeometry(t.w * 0.8, 3.6, t.d * 0.55), 'C', c.id, t.hB + 1.8, 0, 0);
+  } else if (t.oblik === 'hram-veliki' || t.oblik === 'hram') {
+    // Veliki hram (L.H.V) i Mali hram (L.H.M): podijum + kolonada + timpanon
+    addMeshWithEdges(g, new THREE.BoxGeometry(t.w, t.hA, t.d), baseLvl, c.id, t.hA / 2, 0, 0);
+    // Cela hrama (Nivo B)
+    addMeshWithEdges(g, new THREE.BoxGeometry(t.w * 0.72, t.hB - t.hA, t.d * 0.68), 'B', c.id, t.hA + (t.hB - t.hA) / 2, 0, -t.d * 0.08);
+    // Stubovi pronaosa
+    const cols = t.oblik === 'hram-veliki' ? 6 : 4;
+    for (let i = 0; i < cols; i++) {
+      const cx = -t.w * 0.34 + (i / (cols - 1)) * (t.w * 0.68);
+      addMeshWithEdges(g, new THREE.CylinderGeometry(0.85, 0.95, t.hB - t.hA, 8), 'B', c.id, t.hA + (t.hB - t.hA) / 2, cx, t.d * 0.34);
+    }
+    // Dvovodni krov / timpanon (Nivo C)
+    const roofGeo = new THREE.CylinderGeometry(t.w * 0.46, t.w * 0.46, t.d * 0.86, 3);
+    roofGeo.rotateX(Math.PI / 2);
+    addMeshWithEdges(g, roofGeo, 'C', c.id, t.hB + t.hC * 0.42, 0, 0);
+  } else if (t.oblik === 'palata' || t.oblik === 'aula') {
+    // Palata I/II i Aula sa apsidom
+    addMeshWithEdges(g, new THREE.BoxGeometry(t.w, t.hA, t.d), baseLvl, c.id, t.hA / 2, 0, 0);
+    addMeshWithEdges(g, new THREE.BoxGeometry(t.w * 0.92, t.hB - t.hA, t.d * 0.92), 'B', c.id, t.hA + (t.hB - t.hA) / 2, 0, 0);
+    if (t.oblik === 'aula') {
+      addMeshWithEdges(g, new THREE.CylinderGeometry(t.w * 0.38, t.w * 0.38, t.hB, 12, 1, false, 0, Math.PI), 'B', c.id, t.hB / 2, 0, -t.d / 2, Math.PI / 2);
+    }
+    addMeshWithEdges(g, new THREE.BoxGeometry(t.w * 0.94, t.hC, t.d * 0.94), 'C', c.id, t.hB + t.hC / 2, 0, 0);
+  } else if (t.oblik === 'crkva-capta') {
+    // L.HR: Bistabilni Capta prikaz dve verzije crkve (VI vek Petković RD-008 vs X–XI vek Janković R04)
+    addMeshWithEdges(g, new THREE.BoxGeometry(t.w, t.hA, t.d), 'A', c.id, t.hA / 2, 0, 0);
+    // Verzija 1: Justinijanska bazilika (VI vek)
+    addMeshWithEdges(g, new THREE.BoxGeometry(t.w * 0.95, t.hB, t.d * 0.85), 'CAPTA1', c.id, t.hA + t.hB / 2, 0, 0);
+    addMeshWithEdges(g, new THREE.CylinderGeometry(t.d * 0.32, t.d * 0.32, t.hB, 12), 'CAPTA1', c.id, t.hA + t.hB / 2, t.w * 0.48, 0);
+    // Verzija 2: Srednjovekovna obnova / druga faza (X–XI vek, zarotirana/uža superpozicija)
+    addMeshWithEdges(g, new THREE.BoxGeometry(t.w * 0.68, t.hB + t.hC, t.d * 0.58), 'CAPTA2', c.id, t.hA + (t.hB + t.hC) / 2, 3, -2);
+  } else if (t.oblik === 'tetrapilon') {
+    // L.TP: 4 masivna pilona (Nivo A) + ukršteni svod (Nivo B) + piramidalni vrh (Nivo C)
+    for (const [px, pz] of [[-5, -5], [5, -5], [-5, 5], [5, 5]]) {
+      addMeshWithEdges(g, new THREE.BoxGeometry(4.2, t.hA + 1.5, 4.2), 'A', c.id, (t.hA + 1.5) / 2, px, pz);
+      addMeshWithEdges(g, new THREE.BoxGeometry(3.8, t.hB - t.hA, 3.8), 'B', c.id, t.hA + 1.5 + (t.hB - t.hA) / 2, px, pz);
+    }
+    addMeshWithEdges(g, new THREE.BoxGeometry(15.5, 2.8, 15.5), 'B', c.id, t.hB + 1.2, 0, 0);
+    addMeshWithEdges(g, new THREE.ConeGeometry(11.0, t.hC + 2.0, 4), 'C', c.id, t.hB + 2.6 + (t.hC + 2.0) / 2, 0, 0, Math.PI / 4);
+  } else if (t.oblik === 'mauzolej' || t.oblik === 'mauzolej-2') {
+    // Mauzolej 1 (Romula) i Mauzolej 2 (Galerije, dodekagon) na Maguri
+    const sides = t.oblik === 'mauzolej-2' ? 12 : 4;
+    addMeshWithEdges(g, new THREE.CylinderGeometry(t.w * 0.52, t.w * 0.56, t.hA, sides), baseLvl, c.id, t.hA / 2, 0, 0);
+    addMeshWithEdges(g, new THREE.CylinderGeometry(t.w * 0.42, t.w * 0.44, t.hB - t.hA, 12), 'B', c.id, t.hA + (t.hB - t.hA) / 2, 0, 0);
+    addMeshWithEdges(g, new THREE.ConeGeometry(t.w * 0.45, t.hC + 1.5, 12), 'C', c.id, t.hB + (t.hC + 1.5) / 2, 0, 0);
+  } else if (t.oblik === 'tumul') {
+    // Konsekracioni tumuli (L.MG.K) — dva tumula jedan uz drugi
+    for (const dx of [-18, 18]) {
+      addMeshWithEdges(g, new THREE.ConeGeometry(15.5, t.hA, 16), 'A', c.id, t.hA / 2, dx, 0);
+      addMeshWithEdges(g, new THREE.CylinderGeometry(11.0, 14.5, t.hB - t.hA, 16), 'B', c.id, t.hA + (t.hB - t.hA) / 2, dx, 0);
+    }
+  } else if (t.oblik !== 'teren-okvir' && t.oblik !== 'brdo' && t.oblik !== 'podijum') {
+    // Ostali prostorni čvorovi (terme, horeum, peristil, mozaici, južne zgrade, kula-venac)
+    addMeshWithEdges(g, new THREE.BoxGeometry(t.w, Math.max(0.8, t.hA), t.d), baseLvl, c.id, Math.max(0.8, t.hA) / 2, 0, 0);
+    if (t.hB > t.hA) {
+      addMeshWithEdges(g, new THREE.BoxGeometry(t.w * 0.9, t.hB - t.hA, t.d * 0.9), 'B', c.id, t.hA + (t.hB - t.hA) / 2, 0, 0);
+    }
+    if (t.hC > 0) {
+      addMeshWithEdges(g, new THREE.BoxGeometry(t.w * 0.86, t.hC, t.d * 0.86), 'C', c.id, t.hB + t.hC / 2, 0, 0);
+    }
+  }
+
+  const labelY = (t.x > 700 ? 24.5 : 0) + Math.max(t.hA, t.hB) + t.hC + 4.5;
+  nodeGroups.set(c.id, {
+    node: c,
+    group: g,
+    labelWorld: new THREE.Vector3(t.x, labelY, t.z)
+  });
+}
+
+for (const c of DATA.cvorovi) {
+  if (c.topo) buildNodeGeometry(c);
+}
+
+/* ── 4. FORENSIC IMAGE COMPLEX: 19 KONUSA FOTOGRAFIJA SA COMMONSA ── */
+const photoGroup = new THREE.Group();
+scene.add(photoGroup);
+const photoConeGeo = new THREE.ConeGeometry(3.2, 7.5, 4);
+photoConeGeo.rotateX(Math.PI / 2);
+photoConeGeo.rotateZ(Math.PI / 4);
+const photoEdgeMat = new THREE.LineBasicMaterial({ color: currentPal().accent });
+
+for (const fk of DATA.konusi_kamere) {
+  const cg = new THREE.Group();
+  cg.position.set(fk.x + (fk.x > 700 ? 0 : 0), fk.x > 700 ? 28.0 : fk.y, fk.z);
+  cg.rotation.y = THREE.MathUtils.degToRad(fk.azimut);
+  const wf = new THREE.LineSegments(new THREE.EdgesGeometry(photoConeGeo, 5), photoEdgeMat);
+  cg.add(wf);
+  photoGroup.add(cg);
+}
+
+/* ── 5. 3D LUKOVI EPISTEMIČKE KONSTELACIJE (graf.json -> kubni Bezier ka povezanim čvorovima) ── */
+const arcsGroup = new THREE.Group();
+scene.add(arcsGroup);
+
+function rebuildConstellationArcs(selectedId) {
+  while (arcsGroup.children.length) arcsGroup.remove(arcsGroup.children[0]);
+  const srcEntry = nodeGroups.get(selectedId);
+  if (!srcEntry) return;
+
+  // Nađi sve čvorove koji dele tvrdnju sa selectedId
+  const relatedIds = new Set();
+  for (const t of DATA.tvrdnje) {
+    if ((t.cvorovi || []).includes(selectedId)) {
+      for (const cid of t.cvorovi) if (cid !== selectedId && nodeGroups.has(cid)) relatedIds.add(cid);
+    }
+  }
+  // Ako nema direktnih iz tvrdnji, poveži sa roditeljem i decom u hijerarhiji
+  for (const c of DATA.cvorovi) {
+    if (c.id === selectedId && c.roditelj && nodeGroups.has(c.roditelj)) relatedIds.add(c.roditelj);
+    if (c.roditelj === selectedId && nodeGroups.has(c.id)) relatedIds.add(c.id);
+  }
+
+  const p0 = srcEntry.labelWorld.clone();
+  const arcMat = new THREE.LineBasicMaterial({ color: currentPal().accent });
+  for (const tid of relatedIds) {
+    const dstEntry = nodeGroups.get(tid);
+    if (!dstEntry) continue;
+    const p1 = dstEntry.labelWorld.clone();
+    const dist = p0.distanceTo(p1);
+    const mid = p0.clone().add(p1).multiplyScalar(0.5);
+    mid.y += Math.min(140, Math.max(22, dist * 0.24));
+    const curve = new THREE.QuadraticBezierCurve3(p0, mid, p1);
+    const pts = curve.getPoints(32);
+    const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), arcMat);
+    arcsGroup.add(line);
+  }
+}
+
+/* ── 6. PRIMENA FILTERA (FAZA, NIVO A/B/C, CAPTA, TEMA) ── */
+function applySceneState() {
+  const pal = currentPal();
+  scene.background = new THREE.Color(pal.bg);
+  scene.fog = new THREE.FogExp2(pal.fog, STATE.scale === 'S0' || STATE.scale === 'S1' ? 0.00012 : 0.00048);
+
+  groundMesh.material.color.setHex(pal.ground);
+  maguraHillMat.color.setHex(pal.maguraHill);
+  gridRingMat.color.setHex(pal.grid);
+  roadMat.color.setHex(pal.road);
+  axisMat.color.setHex(pal.accent);
+  photoEdgeMat.color.setHex(pal.accent);
+
+  matA.color.setHex(pal.matA);
+  matASelected.color.setHex(pal.accent);
+  matB.color.setHex(pal.matB);
+  matC.color.setHex(pal.matC);
+  matP.color.setHex(pal.matP);
+  lineMatA.color.setHex(pal.edgeA);
+  lineMatASel.color.setHex(pal.accent);
+  lineMatB.color.setHex(pal.edgeB);
+  lineMatC.color.setHex(pal.edgeC);
+  lineMatP.color.setHex(pal.edgeP);
+
+  photoGroup.visible = STATE.showPhotos;
+  plansGroup.visible = STATE.showPlans;
+  geofizGroup.visible = STATE.showGeofiz;
+  planBorderMat.color.setHex(pal.edgeA);
+  clipPlane.constant = STATE.clipX;
+
+  for (const [cid, entry] of nodeGroups.entries()) {
+    const faze = entry.node.topo.faze || [];
+    const phaseMatch = STATE.phase === 'SVE' || faze.includes(STATE.phase);
+    entry.group.visible = phaseMatch;
+    if (!phaseMatch) continue;
+
+    const isSel = cid === STATE.selectedId;
+    for (const child of entry.group.children) {
+      const lvl = child.userData.level;
+      if (lvl === 'A') child.visible = STATE.levels.A;
+      else if (lvl === 'B' || lvl === 'CAPTA1') child.visible = STATE.levels.B;
+      else if (lvl === 'C' || lvl === 'CAPTA2') child.visible = STATE.levels.C || STATE.captaMode;
+      else if (lvl === 'P') child.visible = true;
+
+      if (child.isMesh && lvl === 'A') {
+        child.material = isSel ? matASelected : matA;
+      }
+      if (child.userData.isEdge && lvl === 'A') {
+        child.material = isSel ? lineMatASel : lineMatA;
+      }
+    }
+  }
+
+  rebuildConstellationArcs(STATE.selectedId);
+  requestRender();
+}
+
+/* ── 7. PROJEKCIJA PROSTORNIH LABELA SA ANTI-KOLIZIJOM (Max 7 na 390px, 14 na 1400px) ── */
+const PRIORITY_NODES = [
+  'L.U.2', 'L.P.1', 'L.H.V', 'L.U.IK', 'L.HR', 'L.TP', 'L.MG.M2',
+  'L.U.1', 'L.H.M', 'L.T', 'L.P.2', 'L.MG.M1', 'L.MG.K', 'L.U.ZK', 'L.JB'
+];
+
+function updateSpatialLabels() {
+  const rect = canvas.getBoundingClientRect();
+  if (rect.width === 0 || rect.height === 0) return;
+  const isMobile = rect.width < 680;
+  const maxLabels = isMobile ? 5 : 12;
+
+  const candidates = [];
+  // Izabrani čvor je uvek prvi kandidat
+  const orderedIds = [STATE.selectedId, ...PRIORITY_NODES.filter(id => id !== STATE.selectedId)];
+  const padX = isMobile ? 76 : 86;
+  const padTop = isMobile ? 96 : 68;
+  const padBot = isMobile ? 68 : 96;
+  for (const id of orderedIds) {
+    const entry = nodeGroups.get(id);
+    if (!entry || !entry.group.visible) continue;
+    const v = entry.labelWorld.clone().project(camera);
+    if (v.z < -1 || v.z > 1) continue;
+    const x = (v.x * 0.5 + 0.5) * rect.width;
+    const y = (-v.y * 0.5 + 0.5) * rect.height;
+    // Izbegni gornju traku, ivice i donji Schriftfeld
+    if (x < padX || x > rect.width - padX || y < padTop || y > rect.height - padBot) continue;
+    candidates.push({ id, node: entry.node, x, y, isSel: id === STATE.selectedId });
+  }
+
+  // Greedy anti-collision filter
+  const placed = [];
+  const wBox = isMobile ? 132 : 158;
+  const hBox = 25;
+  for (const cand of candidates) {
+    if (placed.length >= maxLabels) break;
+    const collides = placed.some(p => Math.abs(p.x - cand.x) < wBox && Math.abs(p.y - cand.y) < hBox);
+    if (!collides || cand.isSel) placed.push(cand);
+  }
+
+  labelsLayer.innerHTML = '';
+  for (const p of placed) {
+    const div = document.createElement('button');
+    div.className = 'spatial-label' + (p.isSel ? ' selected' : '');
+    div.style.left = Math.round(p.x) + 'px';
+    div.style.top = Math.round(p.y) + 'px';
+    const lvlTag = p.node.bez_tvrdnje ? 'P' : (p.node.topo ? p.node.topo.nivo : 'A');
+    const shortName = p.node.naziv.split('(')[0].replace(/—.*$/, '').trim();
+    div.innerHTML = `<span class="sl-id">${p.id}</span><span>${shortName}</span><span class="sl-lvl">${lvlTag}·${p.node.broj_tvrdnji}</span>`;
+    div.addEventListener('click', (e) => {
+      e.stopPropagation();
+      selectNode(p.id, true);
+    });
+    labelsLayer.appendChild(div);
+  }
+}
+
+/* ── 8. FORENZIČKI DOSIJE U DOM-U (Puni lanac dokaza, SHA-256, Čvorovi, Izvori) ── */
+function renderDossier() {
+  const c = cvorById.get(STATE.selectedId) || DATA.cvorovi[0];
+  document.getElementById('dos-id').textContent = `ČVOR: ${c.id} · ${(c.tip || 'CELINA').toUpperCase()}`;
+  document.getElementById('dos-geo-status').textContent = c.bez_tvrdnje ? 'P-TVRDNJE (0 TVRDNJI)' : (c.ima_spor ? 'CAPTA: SPOR AUTORA' : 'GEOREF + DEM GLO-30');
+  document.getElementById('dos-title').textContent = c.naziv;
+
+  const uloga = c.topo ? `${c.topo.uloga} · Nivo: ${c.bez_tvrdnje ? 'P (čeka tvrdnju)' : c.topo.nivo}` : (c.rTopo ? `${c.rTopo.opis} (${c.rTopo.km} km)` : 'Kategorija u hijerarhiji znanja');
+  document.getElementById('dos-role').textContent = uloga;
+
+  document.getElementById('m-pom').textContent = c.pominjanja.toLocaleString('sr-RS');
+  document.getElementById('m-izv').textContent = String(c.izvora);
+  document.getElementById('m-tvr').textContent = String(c.broj_tvrdnji);
+
+  const vezeCnt = DATA.graf.veze.filter(v => v.od === c.id || v.ka === c.id).length;
+  document.getElementById('m-vez').textContent = String(vezeCnt);
+
+  // Small multiples faza
+  const fazeCvor = c.topo ? c.topo.faze : ['F.PR', 'F.T', 'F.KA', 'F.SV'];
+  document.querySelectorAll('#dos-phases .phase-cell').forEach(el => {
+    el.classList.toggle('on', fazeCvor.includes(el.dataset.p));
+  });
+
+  // Tvrdnje za izabrani čvor (ili sve tvrdnje ako čvor nema sopstvenih)
+  const directClaims = DATA.tvrdnje.filter(t => (t.cvorovi || []).includes(c.id));
+  document.getElementById('tab-cnt-tvr').textContent = String(directClaims.length);
+
+  const container = document.getElementById('dos-content');
+  container.innerHTML = '';
+
+  if (STATE.activeTab === 'dokazi') {
+    if (c.bez_tvrdnje) {
+      const warn = document.createElement('div');
+      warn.className = 'claim-card';
+      warn.innerHTML = `<div class="claim-head"><span>PRAZNINA REGISTRA · P-TVRDNJE</span><span>${c.pominjanja} pominjanja</span></div>
+        <div class="claim-text">Čvor <strong>${c.id} (${c.naziv})</strong> ima <strong>${c.pominjanja}</strong> pominjanja u <strong>${c.izvora}</strong> izvora (najviše u ${(c.izvori_top || []).slice(0,3).map(x => x.id + ':' + x.n).join(', ')}), ali još nema nijednu formalizovanu tvrdnju u registru.</div>
+        <div class="claim-bound">Po zakonu čistoće: u 3D sceni je prikazan kao otvoreni temeljni okvir dok se tvrdnja ne izvuče kroz <code>node alati/trazi.js --cvor ${c.id}</code>.</div>`;
+      container.appendChild(warn);
+    }
+
+    // Izvorni arhitektonski planovi za čvor (P-GEOREF)
+    const nodePlans = (DATA.planovi_overlay || []).filter(pl => (pl.cvorovi || []).includes(c.id));
+    if (nodePlans.length > 0) {
+      const hPlans = document.createElement('div');
+      hPlans.className = 'section-h';
+      hPlans.textContent = `Izvorni arhitektonski planovi (${nodePlans.length})`;
+      container.appendChild(hPlans);
+
+      for (const pl of nodePlans) {
+        const pCard = document.createElement('article');
+        pCard.className = 'claim-card';
+        pCard.style.borderLeft = '3px solid var(--accent)';
+        pCard.innerHTML = `
+          <div class="claim-head">
+            <span>${pl.id} · ${pl.izvor} (p${pl.strana_pdf}${pl.stampana ? ' / št.' + pl.stampana : ''})</span>
+            <span class="badge">${pl.razmera}</span>
+          </div>
+          <div class="claim-text"><strong>${pl.naslov}</strong></div>
+          <div class="claim-bound">Autor: ${pl.autor} · Opseg: ${pl.opseg} (${pl.sirina_m}×${pl.dubina_m} m)</div>
+          <div class="ev-item" style="margin-top:6px;">
+            sha256: <code>${pl.sha256 ? pl.sha256.slice(0, 16) + '…' : '—'}</code>
+          </div>
+          <img src="${pl.fajl}" alt="${pl.naslov}" style="width:100%; max-height:190px; object-fit:contain; background:#121212; border:1px solid var(--border); border-radius:2px; margin-top:8px; display:block;">
+        `;
+        container.appendChild(pCard);
+      }
+    }
+
+    // Geofizičke anomalije i sonde (W02 / W17) za izabrani čvor
+    const nodeGeofiz = (DATA.geofizika || []).filter(g => g.cvor === c.id || c.id === 'L');
+    if (nodeGeofiz.length > 0) {
+      const hGf = document.createElement('div');
+      hGf.className = 'section-h';
+      hGf.textContent = `Podzemna geofizika i sonde (${nodeGeofiz.length})`;
+      container.appendChild(hGf);
+      for (const gf of nodeGeofiz) {
+        const gfCard = document.createElement('article');
+        gfCard.className = 'claim-card';
+        gfCard.style.borderLeft = '3px solid #2b7a78';
+        gfCard.innerHTML = `
+          <div class="claim-head">
+            <span>${gf.id} · ${gf.oznaka}</span>
+            <span class="badge">±${gf.nT} nT/m</span>
+          </div>
+          <div class="claim-text"><strong>${gf.naziv}</strong></div>
+          <div class="claim-bound">Izvor: ${gf.izvor} · Pozicija: (${gf.x}, ${gf.z} m), obuhvat ${gf.w}×${gf.d} m</div>
+        `;
+        container.appendChild(gfCard);
+      }
+    }
+
+    const listToShow = directClaims.length ? directClaims : DATA.tvrdnje.slice(0, 8);
+    const h = document.createElement('div');
+    h.className = 'section-h';
+    h.textContent = directClaims.length
+      ? `Verifikovane tvrdnje za ${c.id} (${directClaims.length})`
+      : `Primeri verifikovanih tvrdnji iz registra (${listToShow.length} od ${DATA.tvrdnje.length})`;
+    container.appendChild(h);
+
+    for (const t of listToShow) {
+      const card = document.createElement('article');
+      card.className = 'claim-card';
+      const evHtml = (t.dokazi || []).map(d =>
+        `<div class="ev-item">[<strong>${d.izvor}</strong> · str. ${d.strana ?? '?'}${d.stampana ? ' / št. ' + d.stampana : ''}] ${d.autor ? d.autor + ' · ' : ''}sidro: „${d.sidro || '—'}” · sha256:${d.sha256 || '—'}</div>`
+      ).join('');
+      card.innerHTML = `
+        <div class="claim-head">
+          <span>${t.id} · ${t.vrsta.replace(/_/g, ' ')}</span>
+          <span class="badge">${(t.cvorovi || []).join(', ')}</span>
+        </div>
+        <div class="claim-text">${t.tvrdnja}</div>
+        ${t.granica ? `<div class="claim-bound"><strong>Granica:</strong> ${t.granica}</div>` : ''}
+        ${evHtml}
+      `;
+      container.appendChild(card);
+    }
+  } else if (STATE.activeTab === 'cvorovi') {
+    const inp = document.createElement('input');
+    inp.type = 'search';
+    inp.className = 'search-input';
+    inp.placeholder = 'Pretraži 66 čvorova (npr. L.H.V, Magura, Galerije, mozaik)…';
+    inp.value = STATE.searchQuery;
+    inp.addEventListener('input', (e) => {
+      STATE.searchQuery = e.target.value;
+      renderDossier();
+    });
+    container.appendChild(inp);
+    inp.focus();
+
+    const q = STATE.searchQuery.toLowerCase().trim();
+    const filtered = DATA.cvorovi.filter(x => !q || x.id.toLowerCase().includes(q) || x.naziv.toLowerCase().includes(q));
+    for (const x of filtered) {
+      const row = document.createElement('div');
+      row.className = 'node-row' + (x.id === STATE.selectedId ? ' active' : '');
+      row.innerHTML = `
+        <span><strong class="mono">${x.id}</strong> · ${x.naziv}</span>
+        <span class="num badge">${x.broj_tvrdnji} tvr · ${x.pominjanja} pom</span>
+      `;
+      row.addEventListener('click', () => selectNode(x.id, true));
+      container.appendChild(row);
+    }
+  } else if (STATE.activeTab === 'izvori') {
+    const poreklo = document.createElement('div');
+    poreklo.className = 'claim-card';
+    poreklo.innerHTML = `<div class="claim-head"><span>Poreklo podataka</span><span class="badge">R01–R08</span></div>
+      <div class="claim-text">Deo obrađenih podataka dobijen je od <strong>Arheološkog instituta u Beogradu</strong> (korpus monografija i zbornika R01–R08, 1978–2017). Prava na tekst, planove i ilustracije pripadaju autorima i izdavačima; ovde su samo citati sa stranom, isečci i izvedeni podaci.</div>`;
+    container.appendChild(poreklo);
+    const hP = document.createElement('div');
+    hP.className = 'section-h';
+    hP.textContent = `Prostorni slojevi i praznine (${DATA.praznine.length} otvorenih · 7/7 zatvoreno)`;
+    container.appendChild(hP);
+    const closedSummary = document.createElement('div');
+    closedSummary.className = 'claim-card';
+    closedSummary.innerHTML = `<div class="claim-head"><span>P-TEREN · P-GEOREF · P-OSM-VEKTOR · P-GEOMETRIJA · P-TVRDNJE · P-GEOFIZIKA · P-ZONE</span><span class="badge">ZATVORENO (7/7)</span></div>
+      <div class="claim-text">Svih 7 prostornih praznina epistemičkog atlasa je zatvoreno verifikovanim podacima: <strong>W78</strong> Copernicus GLO-30 DEM (209 tačaka, 141–258 m n.v.), <strong>16</strong> georeferenciranih planova (R04/R05/R06/W02/W20 sa 7 GCP tačaka), <strong>W77</strong> Overpass OSM vektori (191 objekat), <strong>27</strong> vektorskih obrisa čvorova L.*, <strong>71</strong> tvrdnja, <strong>9</strong> geomagnetskih anomalija (W02) i <strong>2</strong> UNESCO zone (179,22 ha + 544,93 ha iz W20).</div>`;
+    container.appendChild(closedSummary);
+    for (const p of DATA.praznine) {
+      const d = document.createElement('div');
+      d.className = 'claim-card';
+      d.innerHTML = `<div class="claim-head"><span>${p.id}</span><span class="badge">OTVORENO</span></div>
+        <div class="claim-text">${p.sta}</div>
+        <div class="claim-bound"><strong>Sledeći korak:</strong> ${p.predlog}</div>`;
+      container.appendChild(d);
+    }
+
+    const hI = document.createElement('div');
+    hI.className = 'section-h';
+    hI.textContent = `Katalog registrovanih izvora (${DATA.izvori.length})`;
+    container.appendChild(hI);
+    for (const s of DATA.izvori.slice(0, 35)) {
+      const row = document.createElement('div');
+      row.className = 'node-row';
+      row.innerHTML = `
+        <span><strong class="mono">${s.id}</strong> [${(s.razmera || []).join(',')}] · ${s.naslov.slice(0, 52)}</span>
+        <span class="badge">${s.prava}</span>
+      `;
+      container.appendChild(row);
+    }
+  }
+}
+
+/* ── 9. IZBOR ČVORA, SKALE I VOĐENA TURA ── */
+function selectNode(id, moveCamera = true) {
+  if (!cvorById.has(id)) return;
+  STATE.selectedId = id;
+  playUiTone(820, 0.03);
+  applySceneState();
+  renderDossier();
+
+  if (moveCamera) {
+    const entry = nodeGroups.get(id);
+    if (entry && entry.node.topo) {
+      const t = entry.node.topo;
+      const dist = Math.max(65, Math.max(t.w, t.d) * 1.45);
+      const baseY = t.x > 700 ? 24.5 : 0;
+      flyTo([t.x - dist * 0.75, baseY + dist * 0.58, t.z + dist * 0.88], [t.x, baseY + 6, t.z]);
+    }
+  }
+  updateHash();
+}
+
+function setScale(scaleId) {
+  STATE.scale = scaleId;
+  document.querySelectorAll('[data-scale]').forEach(b => b.classList.toggle('active', b.dataset.scale === scaleId));
+  playUiTone(540, 0.04);
+
+  if (scaleId === 'S0') flyTo([0, 2900, 3600], [200, 0, -200]);
+  else if (scaleId === 'S1') flyTo([450, 720, 1080], [420, 0, -80]);
+  else if (scaleId === 'S2') flyTo([-175, 130, 215], [18, 6, -12]);
+  else if (scaleId === 'S3') flyTo([-95, 58, 95], [-20, 8, -10]);
+  else if (scaleId === 'S4') {
+    STATE.selectedId = 'N.FR';
+    flyTo([-145, 28, 52], [-118, 8, 2]);
+  }
+  applySceneState();
+  renderDossier();
+  updateHash();
+}
+
+function applyTourStep(idx) {
+  const step = DATA.tura[idx];
+  if (!step) return;
+  STATE.tourIndex = idx;
+  STATE.scale = step.razmera;
+  STATE.phase = step.faza;
+  STATE.selectedId = step.cvor;
+
+  document.querySelectorAll('[data-scale]').forEach(b => b.classList.toggle('active', b.dataset.scale === STATE.scale));
+  document.querySelectorAll('[data-phase]').forEach(b => b.classList.toggle('active', b.dataset.phase === STATE.phase));
+  document.getElementById('tour-step-num').textContent = `${step.korak}/${DATA.tura.length}`;
+  document.getElementById('tour-title').textContent = step.naslov;
+  document.getElementById('tour-desc').textContent = step.opis;
+
+  flyTo(step.kamera.pos, step.kamera.target);
+  applySceneState();
+  renderDossier();
+}
+
+function updateHash() {
+  try {
+    history.replaceState(null, '', `#razmera=${STATE.scale}&cvor=${STATE.selectedId}&faza=${STATE.phase}`);
+  } catch { /* file:// ograničenje u nekim okruženjima */ }
+}
+
+/* ── 10. RAYCASTING KLIK NA 3D GEOMETRIJU ── */
+const raycaster = new THREE.Raycaster();
+const pointer = new THREE.Vector2();
+let downPos = { x: 0, y: 0 };
+
+canvas.addEventListener('pointerdown', (e) => {
+  downPos = { x: e.clientX, y: e.clientY };
+});
+canvas.addEventListener('pointerup', (e) => {
+  if (Math.hypot(e.clientX - downPos.x, e.clientY - downPos.y) > 6) return;
+  const rect = canvas.getBoundingClientRect();
+  pointer.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+  pointer.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+  raycaster.setFromCamera(pointer, camera);
+  const hits = raycaster.intersectObjects(pickableMeshes, false);
+  const hit = hits.find(h => h.object.visible && h.object.parent && h.object.parent.visible);
+  if (hit && hit.object.userData.nodeId) {
+    selectNode(hit.object.userData.nodeId, true);
+  } else if (hit && hit.object.userData.isPlan && hit.object.userData.cvorovi && hit.object.userData.cvorovi[0]) {
+    selectNode(hit.object.userData.cvorovi[0], true);
+  }
+});
+
+/* ── 11. 0 KB WEB AUDIO SINTEZA (Parametarski vetar Magure + 4 suva mikro-tona) ── */
+let audioCtx = null;
+let windGain = null;
+let windFilter = null;
+
+function initAudio() {
+  if (audioCtx) return;
+  const Ctx = window.AudioContext || window.webkitAudioContext;
+  if (!Ctx) return;
+  audioCtx = new Ctx();
+  const sr = audioCtx.sampleRate;
+  const buf = audioCtx.createBuffer(1, sr * 2, sr);
+  const ch = buf.getChannelData(0);
+  for (let i = 0; i < ch.length; i++) ch[i] = Math.random() * 2 - 1;
+
+  const noise = audioCtx.createBufferSource();
+  noise.buffer = buf;
+  noise.loop = true;
+
+  windFilter = audioCtx.createBiquadFilter();
+  windFilter.type = 'lowpass';
+  windFilter.frequency.value = 420;
+
+  windGain = audioCtx.createGain();
+  windGain.gain.value = 0.0;
+
+  noise.connect(windFilter);
+  windFilter.connect(windGain);
+  windGain.connect(audioCtx.destination);
+  noise.start();
+}
+
+function playUiTone(freq = 660, dur = 0.035) {
+  if (!STATE.audioOn || !audioCtx) return;
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+  const osc = audioCtx.createOscillator();
+  const g = audioCtx.createGain();
+  osc.type = 'sine';
+  osc.frequency.value = freq;
+  g.gain.setValueAtTime(0.04, audioCtx.currentTime);
+  g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + dur);
+  osc.connect(g);
+  g.connect(audioCtx.destination);
+  osc.start();
+  osc.stop(audioCtx.currentTime + dur);
+}
+
+/* ── 12. DOGAĐAJI INTERFEJSA I TASTATURE ── */
+document.querySelectorAll('[data-scale]').forEach(btn => {
+  btn.addEventListener('click', () => setScale(btn.dataset.scale));
+});
+document.querySelectorAll('[data-phase]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    STATE.phase = btn.dataset.phase;
+    document.querySelectorAll('[data-phase]').forEach(b => b.classList.toggle('active', b.dataset.phase === STATE.phase));
+    playUiTone(600, 0.035);
+    applySceneState();
+    updateHash();
+  });
+});
+document.querySelectorAll('[data-lvl]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const l = btn.dataset.lvl;
+    STATE.levels[l] = !STATE.levels[l];
+    btn.classList.toggle('active', STATE.levels[l]);
+    playUiTone(720, 0.03);
+    applySceneState();
+  });
+});
+document.getElementById('btn-capta').addEventListener('click', (e) => {
+  STATE.captaMode = !STATE.captaMode;
+  e.currentTarget.classList.toggle('active', STATE.captaMode);
+  if (STATE.captaMode) selectNode('L.HR', true);
+  else applySceneState();
+});
+document.getElementById('btn-foto').addEventListener('click', (e) => {
+  STATE.showPhotos = !STATE.showPhotos;
+  e.currentTarget.classList.toggle('active', STATE.showPhotos);
+  applySceneState();
+});
+document.getElementById('slider-clip').addEventListener('input', (e) => {
+  STATE.clipX = Number(e.target.value);
+  clipPlane.constant = STATE.clipX;
+  requestRender();
+});
+document.getElementById('slider-light').addEventListener('input', (e) => {
+  STATE.lightElevation = Number(e.target.value);
+  updateLighting();
+});
+document.getElementById('btn-theme').addEventListener('click', (e) => {
+  isNight = !isNight;
+  document.documentElement.classList.toggle('noc', isNight);
+  document.body.classList.toggle('noc', isNight);
+  e.currentTarget.textContent = isNight ? 'Dan' : 'Noć';
+  renderer.toneMappingExposure = isNight ? 1.12 : 1.04;
+  applySceneState();
+});
+document.getElementById('btn-audio').addEventListener('click', (e) => {
+  initAudio();
+  STATE.audioOn = !STATE.audioOn;
+  if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+  if (windGain && audioCtx) {
+    windGain.gain.setTargetAtTime(STATE.audioOn ? 0.025 : 0.0, audioCtx.currentTime, 0.15);
+  }
+  e.currentTarget.textContent = STATE.audioOn ? 'Zvuk: Uklj' : 'Zvuk: Isklj';
+  e.currentTarget.classList.toggle('active', STATE.audioOn);
+  if (STATE.audioOn) playUiTone(660, 0.04);
+});
+document.querySelectorAll('.dos-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    STATE.activeTab = tab.dataset.tab;
+    document.querySelectorAll('.dos-tab').forEach(t => t.classList.toggle('active', t === tab));
+    renderDossier();
+  });
+});
+document.getElementById('btn-tour-prev').addEventListener('click', () => {
+  applyTourStep((STATE.tourIndex - 1 + DATA.tura.length) % DATA.tura.length);
+});
+document.getElementById('btn-tour-next').addEventListener('click', () => {
+  applyTourStep((STATE.tourIndex + 1) % DATA.tura.length);
+});
+document.getElementById('btn-reset-cam').addEventListener('click', () => setScale('S2'));
+
+const btnPlanovi = document.getElementById('btn-planovi');
+function togglePlans() {
+  STATE.showPlans = !STATE.showPlans;
+  if (btnPlanovi) btnPlanovi.classList.toggle('active', STATE.showPlans);
+  applySceneState();
+  playUiTone(STATE.showPlans ? 760 : 420, 0.03);
+}
+if (btnPlanovi) btnPlanovi.addEventListener('click', togglePlans);
+
+const btnGeofiz = document.getElementById('btn-geofiz');
+function toggleGeofiz() {
+  STATE.showGeofiz = !STATE.showGeofiz;
+  if (btnGeofiz) btnGeofiz.classList.toggle('active', STATE.showGeofiz);
+  applySceneState();
+  playUiTone(STATE.showGeofiz ? 840 : 460, 0.03);
+}
+if (btnGeofiz) btnGeofiz.addEventListener('click', toggleGeofiz);
+
+window.addEventListener('keydown', (e) => {
+  if (e.target && e.target.tagName === 'INPUT') return;
+  if (e.key === '1') setScale('S0');
+  else if (e.key === '2') setScale('S1');
+  else if (e.key === '3') setScale('S2');
+  else if (e.key === '4') setScale('S3');
+  else if (e.key === '5') setScale('S4');
+  else if (e.key === 'p' || e.key === 'P') togglePlans();
+  else if (e.key === 'g' || e.key === 'G') toggleGeofiz();
+  else if (e.key === 'r' || e.key === 'R' || e.key === 'Escape') setScale('S2');
+  else if (e.key === 't' || e.key === 'T') applyTourStep((STATE.tourIndex + 1) % DATA.tura.length);
+});
+
+/* ── 13. RESIZE & RENDER-ON-DEMAND GLAVNA PETLJA ── */
+function resize() {
+  const appEl = document.getElementById('app');
+  if (/HeadlessChrome/i.test(navigator.userAgent || '') && window.innerWidth > 390 && window.innerWidth <= 540) {
+    appEl.style.width = '390px';
+    appEl.style.maxWidth = '390px';
+  } else {
+    appEl.style.width = '';
+    appEl.style.maxWidth = '';
+  }
+  const w = stageEl.clientWidth || window.innerWidth;
+  const h = stageEl.clientHeight || window.innerHeight;
+  camera.aspect = w / Math.max(1, h);
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h, false);
+  requestRender();
+}
+window.addEventListener('resize', resize);
+
+function tick(now) {
+  const dt = Math.min((now - lastTime) / 1000, 0.1);
+  lastTime = now;
+
+  // Frame-rate independent eksponencijalni damping kamere
+  const alpha = reducedMotion ? 1.0 : (1 - Math.exp(-8.5 * dt));
+  camCurrent.pos.lerp(camGoal.pos, alpha);
+  camCurrent.target.lerp(camGoal.target, alpha);
+
+  camera.position.copy(camCurrent.pos);
+  controls.target.copy(camCurrent.target);
+  controls.update();
+
+  const distRemaining = camCurrent.pos.distanceToSquared(camGoal.pos) + camCurrent.target.distanceToSquared(camGoal.target);
+
+  if (needsRender || distRemaining > 0.002) {
+    renderer.render(scene, camera);
+    updateSpatialLabels();
+    document.title = `FELIX ROMVLIANA · 3D Atlas (${STATE.scale} · ${STATE.selectedId} · calls:${renderer.info.render.calls})`;
+    needsRender = false;
+  }
+
+  if (distRemaining > 0.002) {
+    animFrameId = requestAnimationFrame(tick);
+  } else {
+    animFrameId = null; // 0 draw call-ova u mirovanju!
+  }
+}
+
+/* Inicijalizacija */
+document.getElementById('btn-theme').textContent = isNight ? 'Dan' : 'Noć';
+resize();
+applySceneState();
+renderDossier();
+requestRender();
+</script>
+</body>
+</html>

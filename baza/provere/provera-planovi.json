@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-31T22:24:40.624Z",
+  "checks": {
+    "source_hashes": 3,
+    "image_hashes": 8,
+    "links": 13,
+    "object_evidence": 8,
+    "prior_claims": 6
+  },
+  "errors": [],
+  "review_rounds": [
+    {
+      "round": 1,
+      "type": "visual-caption-and-scheme",
+      "corrections": [
+        "R06 sl.120 is photo, sl.124 is plan",
+        "column grid is author reconstruction, not excavated column inventory"
+      ]
+    },
+    {
+      "round": 2,
+      "type": "content-and-limitations",
+      "corrections": [
+        "R06 PDF179 incomplete plan excluded from full correlation",
+        "R04 other cruciform baptistery excluded",
+        "Jankovic relation is textual, not a second plan",
+        "chronology and identity remain separate"
+      ]
+    }
+  ],
+  "scope": "8 visually opened pages; same assistant; integrity check is not archaeological validation"
+}

@@ -1,0 +1,181 @@
+{
+  "schema": "romulijana-object-crosswalk-v1",
+  "status": "integrated-in-project",
+  "project": "Romulijana",
+  "date": "2026-10-31",
+  "reviewer": "same assistant; no independent countersign",
+  "objects": [
+    {
+      "id": "ROM-CH-P1-EARLY",
+      "label": "Starija crkva u južnim dvoranama palate I",
+      "parent_node": "L.P.1",
+      "aliases": [
+        {
+          "source": "R06",
+          "label": "Bazilika I"
+        },
+        {
+          "source": "R05",
+          "label": "Bazilika I"
+        },
+        {
+          "source": "R04",
+          "author": "Sofija Petković",
+          "label": "Bazilika I"
+        }
+      ],
+      "evidence": [
+        {
+          "source": "R04",
+          "pdf_page": 199,
+          "figure": 170,
+          "image": "izvori/renderi/planovi/R04-p199.png"
+        }
+      ],
+      "status": "textual correlation; partial visual context only",
+      "prior_claims": [
+        "RS-007"
+      ]
+    },
+    {
+      "id": "ROM-CH-P1-LATE",
+      "label": "Mlađa crkva nad južnim dvoranama palate I",
+      "parent_node": "L.P.1",
+      "aliases": [
+        {
+          "source": "R06",
+          "label": "Bazilika III"
+        },
+        {
+          "source": "R05",
+          "label": "Bazilika II"
+        },
+        {
+          "source": "R04",
+          "author": "Sofija Petković",
+          "label": "Bazilika II"
+        },
+        {
+          "source": "R04",
+          "author": "Đorđe Janković",
+          "label": "nova srednjovekovna bazilika"
+        }
+      ],
+      "evidence": [
+        {
+          "source": "R06",
+          "pdf_page": 185,
+          "printed_page": "139",
+          "figure": 124,
+          "image": "izvori/renderi/planovi/R06-p185.png",
+          "type": "plan with proportional reconstruction"
+        },
+        {
+          "source": "R05",
+          "pdf_page": 31,
+          "printed_page": "120–121",
+          "figure": 90,
+          "image": "izvori/renderi/planovi/R05-p031.png",
+          "type": "foundation plan"
+        },
+        {
+          "source": "R04",
+          "pdf_page": 199,
+          "printed_page": "197",
+          "figure": 170,
+          "image": "izvori/renderi/planovi/R04-p199.png",
+          "type": "phase plan"
+        },
+        {
+          "source": "R04",
+          "pdf_page": 207,
+          "printed_page": "205",
+          "image": "izvori/renderi/planovi/R04-p207.png",
+          "type": "text and note 16"
+        }
+      ],
+      "status": "visual and textual correlation supported; chronology unresolved",
+      "prior_claims": [
+        "RS-008",
+        "RS-009",
+        "RS-010",
+        "RS-011",
+        "RS-012"
+      ],
+      "dating_hypotheses": [
+        {
+          "source": "R06",
+          "author": "Milka Čanak-Medić",
+          "period": "VI vek, Justinijan",
+          "status": "author interpretation"
+        },
+        {
+          "source": "R05",
+          "author": null,
+          "period": "ne pre 580-ih; korišćena u XI; gradnja ili obnova otvorene",
+          "status": "author interpretation"
+        },
+        {
+          "source": "R04",
+          "author": "Sofija Petković",
+          "period": "VI vek, verovatno Justinijan",
+          "status": "author interpretation"
+        },
+        {
+          "source": "R04",
+          "author": "Đorđe Janković",
+          "period": "srednjovekovna gradnja, kontekst X–XI veka",
+          "status": "author interpretation and revision of 1983 attribution"
+        }
+      ]
+    },
+    {
+      "id": "ROM-BAPT-P1-LATE",
+      "label": "Četvorolisna krstionica uz mlađu crkvu",
+      "parent_object": "ROM-CH-P1-LATE",
+      "aliases": [
+        {
+          "source": "R06",
+          "label": "krstionica četvorolisnog oblika"
+        },
+        {
+          "source": "R05",
+          "label": "krstionica četvorolisne osnove"
+        },
+        {
+          "source": "R04",
+          "author": "Sofija Petković",
+          "label": "tetrakonhalna krstionica"
+        },
+        {
+          "source": "R04",
+          "author": "Đorđe Janković",
+          "label": "krstionica četvorolisne osnove"
+        }
+      ],
+      "evidence": [
+        {
+          "source": "R06",
+          "pdf_page": 185,
+          "figure": 124,
+          "image": "izvori/renderi/planovi/R06-p185.png"
+        },
+        {
+          "source": "R05",
+          "pdf_page": 31,
+          "figure": 90,
+          "image": "izvori/renderi/planovi/R05-p031.png"
+        },
+        {
+          "source": "R04",
+          "pdf_page": 199,
+          "figure": 170,
+          "image": "izvori/renderi/planovi/R04-p199.png"
+        }
+      ],
+      "status": "visual correlation supported; does not independently date construction",
+      "exclude": "Krstoobrazna krstionica druge crkve uz R04 sl.171; repeated basilica numbering is publication-local"
+    }
+  ],
+  "updated": "2026-11-01"
+}

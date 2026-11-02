@@ -1,0 +1,61 @@
+# Palata II i zgrada sa koridorom (severoistočna četvrt, D3–D5) (`L.P.2`)
+
+Putanja: Felix Romuliana (Gamzigrad) › Palata (carski dvorac) › Palata II i zgrada sa koridorom (severoistočna četvrt, D3–D5)
+
+Oblici: `palat\w*\s+(?:ii|2|d3)\b`, `severoistocn\w*\s+(?:cetvrt|palat)`, `(?:zgrad|gradjevin)\w*\s+sa\s+koridorom` · ukupno 67 pominjanja u 7 izvora.
+
+## R02 · Gamzigrad (+ Rgotina, antičko nalazište; Istraživanje spomenika u Vrelu, Šarkamen) (1980)
+
+- **s. 2** — 66 Сакрални објекти Готово по средини северног дела Гамзиграда, између његове северозападне и североисточне четврти, откривени су 1973. године остаци паганског храма, које је описала M. Чанак-Медић. Својим основним обликом (тетрастилни простиДрагослав Срејовић, Анка Лалови
+- **s. 12** — оу здравице остаци покојника који је сахрањен у згрченом положају. Веома танак слој с уломцима праисторијске грнчарије утврђен је при ископавању граbeBHHa у североисточној четврти. Како је, међутим, праисторијска грнчарија нађена и у земљи којом је вршена нивелација терена западно од великог храма, то постоји могућност да су праистори
+- **s. 12** — може се отуда утврдити једино на основу положаја појединих архитектонских целина и њихових међусобних просторних односа. Тако се чини да је најпре изграђена североисточна четврт Гамзиграда и фортификација на источној и западној страни, а да се затим одустало од првобитне архитектонске – замисли и приступило подизању „палате“ у североза
+
+## R03 · Felix Romuliana. Galerijeva palata u Gamzigradu (1985)
+
+- **s. 13** — коме је она била предана: светилиште и жртвеник „планинских божанстава“, као и одаја за ритуалне обеде. За храм и жртвеник који су откривени између палате I и палате II у северном делу Гамзиграда већ је претпостављено да су повезани са мистичним култом божанства које је Ромула штовала (сл. 9 и 10)! Крипта са крстообразним базе
+
+## R04 · Felix Romuliana – Gamzigrad (2010)
+
+- **s. 38** — da sa tri drške (sl. 17). Između severnog stupca portika starijeg utvrđenja, koji flankira ulaz u severnu kulu istočne kapije (kula II), i jugoistočnog ugla «građevine sa koridorom« palate II, otkriven je zid starije građevine u temeljnoj zoni, izrađen od lomljenog kamena zalivenog krečnim malterom. Nažalost, na osnovu otkrivenog zida ni
+- **s. 56** — ijalni karakter, u njoj su predviđeni i prostori za zvanične aktivnosti cara, obavljane kada je u njoj boravio. Druga palata privatnog karaktera smeštena je u severoistočnoj četvrti naselja (D3). Ona je trasirana uporedo podstakao napuštanje prvog utvrđenja, tim više što je on mogao izazvati i požare, arheološki konstatovane na otkopanom
+- **s. 56** — e i trgove, a potom i za ostale javne građevine.23 One su trasirane u severozapadnom i južnom delu u ortogonalnom rasporedu određenom pravcem dekumanusa, a u severoistočnoj četvrti naselja prate pravac pružanja okolnih bedema (plan V). Podeljene su na privatne rezidencije sa hramom u istoj funkciji na severnoj, levoj strani, i na javne gr
+- **s. 57** — na. Na severnoj strani građenje je započeto na obe pomenute palate jednovremeno, ali prvo je završena palata čija je složena i razgranata shema osnove zauzela severoistočnu četvrtinu unutrašnjeg prostora (D3). Ona svojim istočnim delom negira unutrašnji portik starijeg utvrđenja, po čemu se pouzdano moglo utvrditi da je podignuta pošto j
+- **s. 57** — .25 Severoistočni deo te palate izborom arhitektonskih oblika i pravcem pružanja istočnog zida prilagođen je položaju hrama postavljenom u istom rasteru kao i palata D3. Kada je on završavan i građen njegov temenos, zapadni deo susedne palate D3 je preoblikovan i njemu prilagođen.26 To nepobitno potvrđuje da je istočna palat
+- **s. 57** — , funkcionalno povezan sa palatom u severoistočnoj polovini Romulijane. Celina izgrađenih površina u ovoj polovini unutrašnjeg prostora zaključena je dugačkom zgradom sa koridorom D4, trasiranom južno od palate D3, i atrijumom D5, kojim je ova zgrada bila povezana sa palatom u severozapadnom delu (D1,2). Na južnoj strani, namenjenoj građ
+- **s. 58** — drugi podaci svedoče da je ta palata naknadno dobila skupocene kamene portike u svojim peristilima, o čemu će posle biti više reči. Isto tako, ima dokaza da je palata D3 naknadno spojena sa temenosom malog hrama (C). Ipak, vidi se da je unapred usvojen princip binarnosti podelom unutrašnjeg prostora na dve, koncepcijski i funkci
+- **s. 79** — trastilni prostilos, ili mali hram (C), kako se često naziva, smešten je između palate D1 i palate D 3, na način da se uklapa u raster pravaca pružanja zidova palate D3. On je postavljen dužom stranom u pravcu istok–zapad, a na 8,25 m od njega, prema istoku, podignut je žrtvenik. Ulaz u hram je na istočnoj strani, te on svojom
+- **s. 82** — nje apside je sužen i obrazovana vrata. Za pilastar u sklopu unutrašnje strane portika, gde je u produžetku bila kolonada, iskorišćen je početak krivine apside palate D3 i on je dopunjen kada je građen temenos u pravcu zapada. Po tehnici građenja i korišćenom gradivu utvrđeno je da su zaziđivanje otvora apside, temenos i gor
+- **s. 82** — od kojeg su nađena podnožja stubova sa tragom plinte jednog samostalnog nosača. U celini je otkriven severni zid temenosa koji se naslanja na bočne prostorije palate D3 na istočnoj strani, a na zapadnoj nije isto tako konstruktivno povezan sa severoistočnim uglom palate D1, već se uz njega prislanja. On se ne pruža uporedno sa
+- **s. 82** — uglom palate D1, već se uz njega prislanja. On se ne pruža uporedno sa severnim zidom hrama, što je posledica namere da se obezbedi pristup u temenos hrama iz palate D3. Pored severnog dela temenosa, postoji i njegov zapadni deo, čiji je spoljni zid nejednako udaljen od istočnog zida palate D1. Njegovu istočnu stranu činio je z
+- **s. 82** — azama, istovetnih kao stubovi na drugoj galeriji zapadnih tvrđavskih vrata. Ako nisu poticali sa severnog bedema, onda su pripadali kolonadi portika temenosa. Palata D3 radi povezivanja sa temenosom hrama prepravljana je kada je on zidan. Tada je porušena polukružna apsida njene središnje dvorane i umesto nje izgrađeno 95 — Sr
+- … još 26+ u bazi
+
+## R05 · Gamzigrad – kasnoantički carski dvorac (1983)
+
+- **s. 8** — не до 1983, године, и то: ]. првобитно утврђење. 2. млађе утврђење, 3. палата у с; дном делу, 4. храм у северном делу, 5. палата у североисточном делу, 6. грађевина са коридором, 7. храм у јужном делу, 8. једнобродна грађевина са портиком и 9. петобродна грађевина у југозападном делу. 1. Првобитно утврђење У јесен 1864. године Каниц
+- **s. 12** — енцу били су, вероватно, распоређени украси, можда и од порфирита. Храм и жртвеник налазе се у простору који је на западу ограничен палатом 1, на југу великом грађевином са коридором, а на истоку палатом П. Пошто је северна страна остала слободна, сакрални простор је на тој страни ограђен портиком који је подигнут између североисточног угл
+- **s. 12** — е обликоване њена јужна, а већим делом и источна и западна фасада. Источна фасада, иако главна, делом је била заклоњена грађевинама које су биле подигнуте у североисточној четврти. Део од југоисточног угла до јужног зида дворишта К, у целини изложен погледу, вероватно је био разуЂен помоћу оквира главног улаза у палату (слободни стубо
+- **s. 12** — чњака. Капители су били од белог 45/ реним према истоку. На тај Haun обликовано је двориште храма (temenos). непосредно повезано са палатом IL као и с великом грађевином са коридором. 5. Палата П У североисточном делу Гамзиграда 1981. и 1982. године делимично је истражена грађевина која заузима површину од око 3000 п. Све њене просторије у
+- **s. 13** — рисана површина, вероватно под истурених пропилеја или портика. На портик указује и део зида који је са источне стране затваpao двориште E, а можда и повезивао палату II са грађевином на јужној страни. 6. Грађевина са коридором У североисточном делу Гамзиграда, јужно од палате П. делимично је 1980. године истражена једна велик
+- **s. 14** — рађевина у јужном делу, с великим храмом у средишту. У северном делу уочавају се две целине: једна у североисточној и једна у северозападној четврти. Целина у североисточној четврти је изразитија. Ова има у средишту храм са жртвеником, а њој Je прилагођен и цео североисточни тракт палате IL Лако се уочава да се у средишту сваке архитекто
+- **s. 15** — етири грађевиџе, од којих је она у средишту сакралног карактера. Грађевина западно од храма (палата 1) и две међусобно спојене грађевине источно од њега (палата II и грађевина са коридором) по склопу веома џаликују једна на другу, па се мора претпоставити да имају и сличну функцију. У североисточном делу, према декуманус
+- **s. 15** — делова. првенствено великих дворишта са перистилом, подразумева кретање у разним правиима, односно слободну шетњу. Из тих разлога се чини да граЂђевина у североисточној четврти има исту функпију као и грађевина у северозапалној четврти. С друге стране, ови делови грађевине истурсни према декуманусу вероватно имају официјелан, а дело
+- **s. 15** — ју наведеHMM примерима. па отуда и нема места сумњи да онс чине парску палату. То значи да њих не треба иосматрати као посебне објекте (палата Т, палата П, грађевина са коридором), већ као делове једне пелине. Храм, који заузима централно место у овој целини, свакако треба сматрати храмом царске палате. : Намену просторија у унутрашњост
+- **s. 15** — Domiciani). Како леристили у свим познатим примерима имају функцију да раздвоје ове делове, извесно је да и у тамзиградској палати перистили Е (палата 1) и В (палата II} имају исту улогу. односно да су оба тракта истурена према декуманусу намењена званичним пријемима, a повучени делови — потребама приватног живота. У склопу га
+- **s. 15** — карактер. То би се односило првенствено на салу G палате 1 и салу С палате IL Свако даље тумачсње намене појединих просторија представља ризик. Део палате у североисточној четврти (грађевина са коридором, палата Il) морао би, због архитектонског склопа и близине главног уласка у дворац (врата у средишту источног бедема). да се повеже са
+- **s. 15** — , због архитектонског склопа и близине главног уласка у дворац (врата у средишту источног бедема). да се повеже са доласком званичних гостију. У том случају би грађевина са коридором била у целини намењена боравку гостију (hospitalia), док би у палати П становала царска породица (domus Augustana), с тим што би њен издвојен тракт (предворје
+- … još 7+ u bazi
+
+## R06 · Gamzigrad. Kasnoantička palata. Arhitektura i prostorni sklop (1978)
+
+- **s. 167** — m. 317 За зидање нише и њеног свода y западном зиду коришћене су само опеке дебљине 4,5 до 5 cm, док cy y 318 О овим постројењима и грађевинској целини из североисточне четврти биће речи доцније, y делу о просторном склопу насеља после његове обнове.
+- **s. 168** — почето грађење храма. Његови ce зидови не уклапају y ортогонални распоред просторија палате, већ ce пружају y истом правцу као зидови грађевинске целине из североисточне четврти од које досада откривени делови припадају другом раздобљу грађења y насељу. Према подацима којима ce сада располаже, изгледа да су изградња североисточног
+
+## R08 · Rimski carski gradovi i palate u Srbiji (1993)
+
+- **s. 23** — да једном великом градњом обе место свог чудесног зачећа и узвиси своју мајку Ромулу. То значи да изградњу uje фортификације Ромулијане, дела царске палате у североисточној четврти и | храма треба везати за последње године Ш в. Ту је градњу, међутим, тешко сагле јер је брзо напуштена; чини се да је по формату и стилу била блиска Диокле
+
+## W01 · Unilateral antler combs from Romuliana (2006)
+
+- **s. 8** — ted bell-shaped comb from the Sektor of Palace II (Cat. 7) Sl. 7. ^e{aq sa polukru`nom dr{kom iz kule 19 (kat. 5) Sl. 8. ^e{aq sa polukru`nom dr{kom sa Sektora palate II (kat. 6) Sl. 9. Fragmentovan ~e{aq sa polukru`nom dr{kom sa Sektora palate II (kat. 7) kat. 106, 108, T. IX, 2–3; Csákvar (Sálamon–Barkóci 1971, Abb. 7, 3, G–11
+- **s. 14** — oga (Sl. 2. 1–9). Oni su na|eni na tri sektora na ovom nalazi{tu (Sl. 1): ~etiri primerka u ju`noj kuli zapadne kapije mla|eg utvr|ewa, Kuli 19, dva na Sektoru palate II, ju`no od Kibelinog hrama i tri na Sektoru termi u jugoisto~nom delu utvr|ewa. Pomenuti ~e{qevi mogu se svrstati u dva tipa: tip troslojnih, jednorednih ~e{qeva

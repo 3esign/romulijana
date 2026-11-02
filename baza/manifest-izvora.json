@@ -1,0 +1,1160 @@
+{
+  "opis": "Kriptografski manifest svih izvornih fajlova prenetih iz romulijana.rar sa laptopa 3esign (7 PDF-ova + 182 JPG snimka).",
+  "provereno": "2026-11-01T11:27:31.342Z",
+  "pdf": [
+    {
+      "id": "R01",
+      "fajl": "izvori/pdf/R01_srejovic-vasic-1994.pdf",
+      "izvorno_ime": "srejovi1993.pdf",
+      "velicina": 3788066,
+      "sha256": "392278133c5951d2138ecab13cdb303ba2d99c977318512cd356e87a691eeb1e",
+      "strane": 19
+    },
+    {
+      "id": "R02",
+      "fajl": "izvori/pdf/R02_starinar-1980.pdf",
+      "izvorno_ime": "Starinar_1980_Gamz_Rgot_Šark.pdf",
+      "velicina": 87326929,
+      "sha256": "1ef56e56ac5ba633863fd35b6a864823500813ab769ed224aa2681c2a0863d19",
+      "strane": 38
+    },
+    {
+      "id": "R03",
+      "fajl": "izvori/pdf/R03_starinar-1985.pdf",
+      "izvorno_ime": "Starinar_1985_Gamzigrad_Felix_Romuliana.pdf",
+      "velicina": 36952515,
+      "sha256": "61347e9b5baec6a1f1d0cec8e8f0bbae778579defbc34779edc13b4ca51927d1",
+      "strane": 17
+    },
+    {
+      "id": "R04",
+      "fajl": "izvori/pdf/R04_felix-romuliana-2010.pdf",
+      "izvorno_ime": "Felix_Romuliana 2010.pdf",
+      "velicina": 20447621,
+      "sha256": "502bc9ac42726ad84adc7f0c83872b622b9df54a47b0c8319b9d8dfa50f23d4c",
+      "strane": 240
+    },
+    {
+      "id": "R05",
+      "fajl": "izvori/pdf/R05_gamzigrad-kasnoanticki-carski-dvorac.pdf",
+      "izvorno_ime": "Gamzigrad-kasnoantički-carski-dvorac.pdf",
+      "velicina": 39280695,
+      "sha256": "2203c06175437aa14aac22b05c04149a00404ed595f29fd2731cbf4a71ce1929",
+      "strane": 49
+    },
+    {
+      "id": "R06",
+      "fajl": "izvori/pdf/R06_canak-medic-gamzigrad.pdf",
+      "izvorno_ime": "Gamzigrad_Čanak_Medić.pdf",
+      "velicina": 44544667,
+      "sha256": "d4a5632f9698f20ecfb0e5a01c64af8f3be164f884da6be2b1072c1d370c3122",
+      "strane": 302
+    },
+    {
+      "id": "R07",
+      "fajl": "izvori/pdf/R07_mnemosynon-firmitatis.pdf",
+      "izvorno_ime": "MNEMOSYNON_FIRMITATIS.pdf",
+      "velicina": 19979140,
+      "sha256": "b2de8b9dcb503fab5ba35762bb3580289a9e95f527d5ae476a8416391b05757b",
+      "strane": 300
+    }
+  ],
+  "foto_r08": {
+    "ukupno_snimaka": 182,
+    "ukupno_bajtova": 192655506,
+    "snimci": [
+      {
+        "snimak": 1,
+        "fajl": "izvori/foto/IM000011.JPG",
+        "velicina": 907473,
+        "sha256": "7945ab565af49a05cd8a9635e7c0b9bf916a996c283b6617bd4762609792dc4a"
+      },
+      {
+        "snimak": 2,
+        "fajl": "izvori/foto/IM000012.JPG",
+        "velicina": 821511,
+        "sha256": "a6ada6ff36892bcbe7394d522b9ab1e3c88e920f17ad565a11b9eb9f072e018d"
+      },
+      {
+        "snimak": 3,
+        "fajl": "izvori/foto/IM000013.JPG",
+        "velicina": 902130,
+        "sha256": "729eb1b73e907171511083c446911c0ccf486e9549046718bb0d1aad4ae957b9"
+      },
+      {
+        "snimak": 4,
+        "fajl": "izvori/foto/IM000014.JPG",
+        "velicina": 901236,
+        "sha256": "af9ad8330d61e8024753e5af1d4a7bc93add6e76722d60ab7cad9548241e09c7"
+      },
+      {
+        "snimak": 5,
+        "fajl": "izvori/foto/IM000016.JPG",
+        "velicina": 876569,
+        "sha256": "e64f436b0eec481c7627c0235db0c6a26c1087bd41529bd0abb886058b19e28f"
+      },
+      {
+        "snimak": 6,
+        "fajl": "izvori/foto/IM000017.JPG",
+        "velicina": 845712,
+        "sha256": "24a9f33e303add29f5296c147f157a680ee2f053480d417d6ad6849dd2b518af"
+      },
+      {
+        "snimak": 7,
+        "fajl": "izvori/foto/IM000018.JPG",
+        "velicina": 811081,
+        "sha256": "04b60b6af7f032e825805d3b396f20becdc5f7e0298a28c5d2addb548b618df2"
+      },
+      {
+        "snimak": 8,
+        "fajl": "izvori/foto/IM000019.JPG",
+        "velicina": 977173,
+        "sha256": "79d62135a5154dc9238cf38151f83f5887e37f92f528a111e6422af8d3044809"
+      },
+      {
+        "snimak": 9,
+        "fajl": "izvori/foto/IM000020.JPG",
+        "velicina": 802276,
+        "sha256": "31bcd0e9fc2afba829d3d32a860e320441099621b30a3ffe73a150d47e524a4c"
+      },
+      {
+        "snimak": 10,
+        "fajl": "izvori/foto/IM000021.JPG",
+        "velicina": 912164,
+        "sha256": "40c5815d5f23c29ba5f00899579cb21652f4364ecccb41264c3b4f104865aa73"
+      },
+      {
+        "snimak": 11,
+        "fajl": "izvori/foto/IM000022.JPG",
+        "velicina": 742117,
+        "sha256": "99d2852dd7321b4a51f311d76fae8c84c5a52bfaf4acbcd75440c2b71421bfb7"
+      },
+      {
+        "snimak": 12,
+        "fajl": "izvori/foto/IM000023.JPG",
+        "velicina": 952968,
+        "sha256": "fb2874ba66a739ac844f8070fa4827d41eb281a93375ded5f70eb42cfa1ae6a7"
+      },
+      {
+        "snimak": 13,
+        "fajl": "izvori/foto/IM000024.JPG",
+        "velicina": 723280,
+        "sha256": "4cf4fb8e3711b80e1b200c657cf4b5bb27ba68d08c4e2a2db67a54db7e988a59"
+      },
+      {
+        "snimak": 14,
+        "fajl": "izvori/foto/IM000025.JPG",
+        "velicina": 718306,
+        "sha256": "7ec065b9b0b05cbb8b4812ae8b85d8d39df94080fad5ebc22539d59bfb8c156f"
+      },
+      {
+        "snimak": 15,
+        "fajl": "izvori/foto/IM000026.JPG",
+        "velicina": 1422957,
+        "sha256": "d9223d36f285116ea4186db916259ff7b0747cf27da1cf5046c9457770f929d2"
+      },
+      {
+        "snimak": 16,
+        "fajl": "izvori/foto/IM000027.JPG",
+        "velicina": 923726,
+        "sha256": "61eae746f5f482420f6fdea4a242cc625c1069f31065b3914b4e5acda8309a1f"
+      },
+      {
+        "snimak": 17,
+        "fajl": "izvori/foto/IM000028.JPG",
+        "velicina": 938498,
+        "sha256": "48acd7fb2b653a178874db278fac68ee3a593724fb49453497fa8347d40def19"
+      },
+      {
+        "snimak": 18,
+        "fajl": "izvori/foto/IM000029.JPG",
+        "velicina": 1092797,
+        "sha256": "7280ddf27d89cb2bfefd89ab299ce24033f93f277140a90d21ab5d96a953c9cd"
+      },
+      {
+        "snimak": 19,
+        "fajl": "izvori/foto/IM000030.JPG",
+        "velicina": 915000,
+        "sha256": "1fb99afe96821ac49d2669f31a280036c654aff32a12a89c8b4aca10a737c233"
+      },
+      {
+        "snimak": 20,
+        "fajl": "izvori/foto/IM000031.JPG",
+        "velicina": 986422,
+        "sha256": "9dbbd580cc8f094c599e7cebbdf7d928a799e4f23d21ac1b09c7ca6b1f7e7079"
+      },
+      {
+        "snimak": 21,
+        "fajl": "izvori/foto/IM000032.JPG",
+        "velicina": 805110,
+        "sha256": "c72f7b44075888c8109059c61f0fa334755a94aff6223e34c42bb2d3b11ea8ed"
+      },
+      {
+        "snimak": 22,
+        "fajl": "izvori/foto/IM000033.JPG",
+        "velicina": 844164,
+        "sha256": "15b16638735939dd057a63ba8f99754f419c8d543dddf6f3ff9b1ebe26527748"
+      },
+      {
+        "snimak": 23,
+        "fajl": "izvori/foto/IM000034.JPG",
+        "velicina": 1060518,
+        "sha256": "edd9cd4d0736faf7c0822878ab0ebef66a76024e603eb58d01b8e856464a1360"
+      },
+      {
+        "snimak": 24,
+        "fajl": "izvori/foto/IM000035.JPG",
+        "velicina": 1038801,
+        "sha256": "0733f83ac93f8357c98501b8ff43531194f069b6dbf1189959a893113e073960"
+      },
+      {
+        "snimak": 25,
+        "fajl": "izvori/foto/IM000036.JPG",
+        "velicina": 1046289,
+        "sha256": "bb8a4abe643a8980b0ac846fdc68a262cd810bcaf584a97c2eb620c725f87ecb"
+      },
+      {
+        "snimak": 26,
+        "fajl": "izvori/foto/IM000037.JPG",
+        "velicina": 1242407,
+        "sha256": "749201357b7aec6935769f30d463b1cbcdda24cc1336d43b7ef77200ec521bbd"
+      },
+      {
+        "snimak": 27,
+        "fajl": "izvori/foto/IM000038.JPG",
+        "velicina": 1276015,
+        "sha256": "78a4ddb4422c409e3227390d725d87497d418aa8005ea22f00b3d9fffc591789"
+      },
+      {
+        "snimak": 28,
+        "fajl": "izvori/foto/IM000039.JPG",
+        "velicina": 1129395,
+        "sha256": "493adca760331adda9b20c8fa903a200a713c3285e01433cf3d202f4bcfc879c"
+      },
+      {
+        "snimak": 29,
+        "fajl": "izvori/foto/IM000040.JPG",
+        "velicina": 1265315,
+        "sha256": "7200ab0dec4332b5bab8b2bdcf24a7e868e3975b3a5ebf09621d95e68f8515b5"
+      },
+      {
+        "snimak": 30,
+        "fajl": "izvori/foto/IM000041.JPG",
+        "velicina": 869416,
+        "sha256": "eb6c1551b66c18f73457aa474003f8cb37260a7aba321ba20bd34ace45a14b2f"
+      },
+      {
+        "snimak": 31,
+        "fajl": "izvori/foto/IM000042.JPG",
+        "velicina": 638774,
+        "sha256": "ad278ea5ad31f9a029c291bd485817d6f224e9acb32a3578304168db7dd5366e"
+      },
+      {
+        "snimak": 32,
+        "fajl": "izvori/foto/IM000043.JPG",
+        "velicina": 866835,
+        "sha256": "c2934e8b1f97bc99f1ba7d6cf97413f9acec46be694cae0eb5be4f4fd62185f6"
+      },
+      {
+        "snimak": 33,
+        "fajl": "izvori/foto/IM000044.JPG",
+        "velicina": 823106,
+        "sha256": "89932b1923809aa7ca040585f6c985335fc88017b5c3a5ffa15d9a985fa16bf9"
+      },
+      {
+        "snimak": 34,
+        "fajl": "izvori/foto/IM000045.JPG",
+        "velicina": 877098,
+        "sha256": "d0ce678b546aa5fb3136744f3f230f4c21336615fe9ea0ce7e848d62efd39095"
+      },
+      {
+        "snimak": 35,
+        "fajl": "izvori/foto/IM000046.JPG",
+        "velicina": 854317,
+        "sha256": "ee77f43fcdbdf0ccdc2c6aeef3a36dda6861a03616231a95cd070c17a61e2f4f"
+      },
+      {
+        "snimak": 36,
+        "fajl": "izvori/foto/IM000047.JPG",
+        "velicina": 815606,
+        "sha256": "ee28d4db0b5d17a6856c03724a874366d316829cc061954b1b9e0c96d413b22c"
+      },
+      {
+        "snimak": 37,
+        "fajl": "izvori/foto/IM000048.JPG",
+        "velicina": 714611,
+        "sha256": "86547ec98a85cd5cd7547ec4f00e7b4b57931f9aad37d9139d91f87e7610a0a2"
+      },
+      {
+        "snimak": 38,
+        "fajl": "izvori/foto/IM000049.JPG",
+        "velicina": 887838,
+        "sha256": "a0b7e5fb5d65ae7e972ce5abcddcba96dc4d49712548f8c70b395733743d8212"
+      },
+      {
+        "snimak": 39,
+        "fajl": "izvori/foto/IM000050.JPG",
+        "velicina": 991482,
+        "sha256": "1d433559e9d675cf782c79431940a28fc8274b2b7a29538a5a215116fc123245"
+      },
+      {
+        "snimak": 40,
+        "fajl": "izvori/foto/IM000051.JPG",
+        "velicina": 830965,
+        "sha256": "af54af69f79ed4d05b1ed432916501f9364850109bd7e37e793079d78092e567"
+      },
+      {
+        "snimak": 41,
+        "fajl": "izvori/foto/IM000052.JPG",
+        "velicina": 1010607,
+        "sha256": "d6ad2163262693258abada274b37d5a022b6ef4e92caf7e1f6f8a6cb917b6b0c"
+      },
+      {
+        "snimak": 42,
+        "fajl": "izvori/foto/IM000053.JPG",
+        "velicina": 1283214,
+        "sha256": "a9e61c8b05bdb87eb520a7d2e8fb4703298d349f761485b7233127f7d71920cb"
+      },
+      {
+        "snimak": 43,
+        "fajl": "izvori/foto/IM000054.JPG",
+        "velicina": 1254909,
+        "sha256": "7cd059b9127672d255bb66ec1276424cbdf616ad47b488bd1c90c88df0186449"
+      },
+      {
+        "snimak": 44,
+        "fajl": "izvori/foto/IM000055.JPG",
+        "velicina": 1333573,
+        "sha256": "6e2d2fd63e622dd710e90d315eddc12e25fd0670eade814d4d5400141396f937"
+      },
+      {
+        "snimak": 45,
+        "fajl": "izvori/foto/IM000056.JPG",
+        "velicina": 1273105,
+        "sha256": "3bd886ec2c322d3149cff2261342eba08f43b1a8b8efc6735d17b54634073f92"
+      },
+      {
+        "snimak": 46,
+        "fajl": "izvori/foto/IM000057.JPG",
+        "velicina": 1051102,
+        "sha256": "bc321a0d7623bc72e4f2a1754a05c5616f28c028dcb2537e505c7e8e9a892b58"
+      },
+      {
+        "snimak": 47,
+        "fajl": "izvori/foto/IM000058.JPG",
+        "velicina": 1041927,
+        "sha256": "96e67b2e677eecbdf99c60ff931b14c8c835db233fbcde6d7b565158ca3e49f0"
+      },
+      {
+        "snimak": 48,
+        "fajl": "izvori/foto/IM000059.JPG",
+        "velicina": 1214542,
+        "sha256": "2c612aed05c766f8b0d54d768dffd4dbe2ff4f5d6d0b06b0e5f31c86f00ff4af"
+      },
+      {
+        "snimak": 49,
+        "fajl": "izvori/foto/IM000060.JPG",
+        "velicina": 1153473,
+        "sha256": "92387b05fb3809869212df98c7a52c25b22f76519c83cd3ff7701e11f7c71227"
+      },
+      {
+        "snimak": 50,
+        "fajl": "izvori/foto/IM000061.JPG",
+        "velicina": 1088638,
+        "sha256": "ab62c541e069307783b6adbb61f3206c347a1872f9817d1c976adaea20116053"
+      },
+      {
+        "snimak": 51,
+        "fajl": "izvori/foto/IM000062.JPG",
+        "velicina": 1149982,
+        "sha256": "c1dbbfd44d9dca7a2b54595e8bcebba2ee9f8483cd86714db50cb0c705782a2d"
+      },
+      {
+        "snimak": 52,
+        "fajl": "izvori/foto/IM000063.JPG",
+        "velicina": 1111496,
+        "sha256": "5d9edf839892397dc4b312b7b6a5abb06341ad803cf007fd3bc6005c3e8448eb"
+      },
+      {
+        "snimak": 53,
+        "fajl": "izvori/foto/IM000064.JPG",
+        "velicina": 1272640,
+        "sha256": "e847ef9ad73212d02542578b055560a4ead3ccce6bdb96be1dd64d0e990762da"
+      },
+      {
+        "snimak": 54,
+        "fajl": "izvori/foto/IM000065.JPG",
+        "velicina": 1332789,
+        "sha256": "99b42fd21583df39d5efece6888c7da4a01b8669c5b623a4877b176475f54fdd"
+      },
+      {
+        "snimak": 55,
+        "fajl": "izvori/foto/IM000066.JPG",
+        "velicina": 1007760,
+        "sha256": "461cb79b6e94a38f6df2bdf1718975fc9568ed3867416ab375fda3c319978ef0"
+      },
+      {
+        "snimak": 56,
+        "fajl": "izvori/foto/IM000067.JPG",
+        "velicina": 1185226,
+        "sha256": "7dea4a60a03a5a707af4bf37753e524486070766613bed86c6faddd77d0fd09b"
+      },
+      {
+        "snimak": 57,
+        "fajl": "izvori/foto/IM000068.JPG",
+        "velicina": 1303211,
+        "sha256": "65ba48129f7afc800dcdb8e65321b3ed1e80cee9f64da048482580725eedea87"
+      },
+      {
+        "snimak": 58,
+        "fajl": "izvori/foto/IM000069.JPG",
+        "velicina": 1111106,
+        "sha256": "9a72cddd5ed848611e6a5b74e47d35bd3bc03508531942916962887d9a0279ca"
+      },
+      {
+        "snimak": 59,
+        "fajl": "izvori/foto/IM000070.JPG",
+        "velicina": 1179224,
+        "sha256": "6c66a38f2918622be6d883c22785e3f4879509f872fba8296efb2e91c8ee2f15"
+      },
+      {
+        "snimak": 60,
+        "fajl": "izvori/foto/IM000071.JPG",
+        "velicina": 1236751,
+        "sha256": "8d46ede2d14d52d64298b5103693192ac4a3bcab6a99665ba257ab07e19cbade"
+      },
+      {
+        "snimak": 61,
+        "fajl": "izvori/foto/IM000072.JPG",
+        "velicina": 1106943,
+        "sha256": "4fe530bb547e40b89f0ae7ff707d1d9ea0ce7c45e3367733d50c4ff9c62317df"
+      },
+      {
+        "snimak": 62,
+        "fajl": "izvori/foto/IM000073.JPG",
+        "velicina": 1247353,
+        "sha256": "1bedbeb517613b23f00422bc2a352e1350aca0e05b982ebf6cd798b3b50625d9"
+      },
+      {
+        "snimak": 63,
+        "fajl": "izvori/foto/IM000074.JPG",
+        "velicina": 1172985,
+        "sha256": "28078825e6cd9192ee1a8deada4a434898656663952ab2e38a0d95dcf77f081e"
+      },
+      {
+        "snimak": 64,
+        "fajl": "izvori/foto/IM000075.JPG",
+        "velicina": 1138083,
+        "sha256": "4580d5e6ff8ec0f46ab5ac72bf0aebf800618d277a228942c4788e03e9c595e6"
+      },
+      {
+        "snimak": 65,
+        "fajl": "izvori/foto/IM000076.JPG",
+        "velicina": 1155024,
+        "sha256": "e6f769d7edff42c3510935f31f4ffe9f628f35535ab33680c414e9d6535db06f"
+      },
+      {
+        "snimak": 66,
+        "fajl": "izvori/foto/IM000077.JPG",
+        "velicina": 1217863,
+        "sha256": "4e3ed4c136a66531d77d89b24c7b2dae4129f5f5133ef56f00af94684559a3e2"
+      },
+      {
+        "snimak": 67,
+        "fajl": "izvori/foto/IM000078.JPG",
+        "velicina": 1121273,
+        "sha256": "1c07e574029a9dc00c43fa48a477114185b34394bfe874396cfac40f858d1b78"
+      },
+      {
+        "snimak": 68,
+        "fajl": "izvori/foto/IM000079.JPG",
+        "velicina": 1158927,
+        "sha256": "94c618541a539518a051383eb81b0c91f6f1b98cb03a0a254e3858674b8f4c39"
+      },
+      {
+        "snimak": 69,
+        "fajl": "izvori/foto/IM000080.JPG",
+        "velicina": 1191134,
+        "sha256": "1b1ec45f3c590859f374048d4384f4b44eea40d243c8a073514accf43df9855f"
+      },
+      {
+        "snimak": 70,
+        "fajl": "izvori/foto/IM000081.JPG",
+        "velicina": 1117694,
+        "sha256": "39c85d13b37c9471f23825ded62ce4bf263356f7fdc61fd54b4e9b7cab773bb0"
+      },
+      {
+        "snimak": 71,
+        "fajl": "izvori/foto/IM000083.JPG",
+        "velicina": 1192272,
+        "sha256": "a849b8709a80a3f03b4a54bb3097cbceede7be6e5158433f4125fcc1fa71694a"
+      },
+      {
+        "snimak": 72,
+        "fajl": "izvori/foto/IM000084.JPG",
+        "velicina": 1250276,
+        "sha256": "1e7243d64c8319392fad0ceb04a05e843f8ae4342284cdd5536cf6f22dcc68fe"
+      },
+      {
+        "snimak": 73,
+        "fajl": "izvori/foto/IM000085.JPG",
+        "velicina": 1166692,
+        "sha256": "f2570fae319216c279501aa9b6687f6c090f92bc095769a6df3474e2287b7c98"
+      },
+      {
+        "snimak": 74,
+        "fajl": "izvori/foto/IM000086.JPG",
+        "velicina": 1034335,
+        "sha256": "7abbd9ca16c150d50c8c1a7d6bbf5fb17af261c4f428808047c9d0f2809a111f"
+      },
+      {
+        "snimak": 75,
+        "fajl": "izvori/foto/IM000087.JPG",
+        "velicina": 1176877,
+        "sha256": "efd02d093f8a9837b94a32108ab167d0f053736a8317756b4249642d8b6079db"
+      },
+      {
+        "snimak": 76,
+        "fajl": "izvori/foto/IM000088.JPG",
+        "velicina": 1010787,
+        "sha256": "1d7cf3410592fc2ffe5b6f32e670db6f32d7368d3bb359c308fa3c8f0d62d54d"
+      },
+      {
+        "snimak": 77,
+        "fajl": "izvori/foto/IM000089.JPG",
+        "velicina": 1207734,
+        "sha256": "499fbb966bd47599b8fc59f0b9c8d339deaf35c7ddda1da1512859a012392414"
+      },
+      {
+        "snimak": 78,
+        "fajl": "izvori/foto/IM000090.JPG",
+        "velicina": 993928,
+        "sha256": "4e39137feda7ceb0be285ec25e738c753aa72dd47882c9f2d94124bb12935e15"
+      },
+      {
+        "snimak": 79,
+        "fajl": "izvori/foto/IM000091.JPG",
+        "velicina": 1114016,
+        "sha256": "134ed4101dd2dbe3a471e81d0fdf899b3c6e0c11766c80d8c57e0ee86524ac13"
+      },
+      {
+        "snimak": 80,
+        "fajl": "izvori/foto/IM000092.JPG",
+        "velicina": 1264427,
+        "sha256": "4c0470bdda48e90f69a0ec337b43c340cd61ca46a8e2440dda3fce681b3903b7"
+      },
+      {
+        "snimak": 81,
+        "fajl": "izvori/foto/IM000093.JPG",
+        "velicina": 986696,
+        "sha256": "7a972ebdc3352f5b0dfd47b05914507d5d433085fdda73e41b32fbf52387214e"
+      },
+      {
+        "snimak": 82,
+        "fajl": "izvori/foto/IM000094.JPG",
+        "velicina": 1046184,
+        "sha256": "3f868d82b57fbfa89615b71dd4df48f0b9ec41cbac12c5afaadc438d40165ff5"
+      },
+      {
+        "snimak": 83,
+        "fajl": "izvori/foto/IM000095.JPG",
+        "velicina": 1025078,
+        "sha256": "ddf14822fcc1e8c464e359fbd6575664d04a55bc3285f3b061db1db835dc82f7"
+      },
+      {
+        "snimak": 84,
+        "fajl": "izvori/foto/IM000096.JPG",
+        "velicina": 1175797,
+        "sha256": "2e2263b7439149709a7e67d9a5971711a1964a220c48d6835cea4e8839b358d5"
+      },
+      {
+        "snimak": 85,
+        "fajl": "izvori/foto/IM000097.JPG",
+        "velicina": 1317665,
+        "sha256": "b3ec6c4d0e73b7eba9894367ecefb8cf46cc2600399907f900b63292a398710d"
+      },
+      {
+        "snimak": 86,
+        "fajl": "izvori/foto/IM000098.JPG",
+        "velicina": 1113913,
+        "sha256": "019d954783a4d46a797d999fe008119d05b642acaea14c1533f67c37f691bac6"
+      },
+      {
+        "snimak": 87,
+        "fajl": "izvori/foto/IM000099.JPG",
+        "velicina": 1184116,
+        "sha256": "d21e39b9a9f78667e0d74fff4dc1a01729726204ecd0b6b6860b2210c801d8ef"
+      },
+      {
+        "snimak": 88,
+        "fajl": "izvori/foto/IM000100.JPG",
+        "velicina": 1057264,
+        "sha256": "0bb3f98c6f3006fa3676a89b279047a0ed29c2eba00473f0d2774ffb9ad8e194"
+      },
+      {
+        "snimak": 89,
+        "fajl": "izvori/foto/IM000101.JPG",
+        "velicina": 1068170,
+        "sha256": "645b5e7a3524048cf2c05128a1580f8780870a58676f2d9b84da6103a72a4f0a"
+      },
+      {
+        "snimak": 90,
+        "fajl": "izvori/foto/IM000102.JPG",
+        "velicina": 1163739,
+        "sha256": "36d9040fefb1e564951910a675c58b954f5066ffd6b207a71d08a9f53aa403f6"
+      },
+      {
+        "snimak": 91,
+        "fajl": "izvori/foto/IM000103.JPG",
+        "velicina": 1042182,
+        "sha256": "3f57967a2c906a38aea12027c0ba5e4fc7028133c360bd5f962ad43ea7faadee"
+      },
+      {
+        "snimak": 92,
+        "fajl": "izvori/foto/IM000104.JPG",
+        "velicina": 1001881,
+        "sha256": "05345b2083aefc7f5238a6799bf2dfe40aff2c8c530df12d91669a49d185b838"
+      },
+      {
+        "snimak": 93,
+        "fajl": "izvori/foto/IM000105.JPG",
+        "velicina": 1086804,
+        "sha256": "d8880ede0377ae6cca0d346783d6829c6cbf8cccf17c2c430aa9bc7fd1e71e2d"
+      },
+      {
+        "snimak": 94,
+        "fajl": "izvori/foto/IM000106.JPG",
+        "velicina": 1069104,
+        "sha256": "1d5621d77abfbf96d31382e6f2d920008837ff284a0e6007a91ca41ec2d9ab4d"
+      },
+      {
+        "snimak": 95,
+        "fajl": "izvori/foto/IM000107.JPG",
+        "velicina": 1047348,
+        "sha256": "4e6abd83db68bd0bc3e5805792226ce9a7794251e70c6d3a751ccf5dddfc0873"
+      },
+      {
+        "snimak": 96,
+        "fajl": "izvori/foto/IM000108.JPG",
+        "velicina": 1057722,
+        "sha256": "71f78f2542a2ae36a08e0c6f5c5e89feff89658ffe75fac01ad7eb59cc7275cc"
+      },
+      {
+        "snimak": 97,
+        "fajl": "izvori/foto/IM000109.JPG",
+        "velicina": 1124984,
+        "sha256": "5926a3600e66416101dfa390eeefa2e2239800516a15e521d4e7eb82fb937b53"
+      },
+      {
+        "snimak": 98,
+        "fajl": "izvori/foto/IM000110.JPG",
+        "velicina": 1110938,
+        "sha256": "9a2aa6c052bf757fba715455cf049ed580feb582ed6ccc5fcbfc4ab35c4aef34"
+      },
+      {
+        "snimak": 99,
+        "fajl": "izvori/foto/IM000111.JPG",
+        "velicina": 1095754,
+        "sha256": "bb7a1ec06bf25bd9f3a76e60aeadc824943f259cbcba7de4f05405d6e72dc84b"
+      },
+      {
+        "snimak": 100,
+        "fajl": "izvori/foto/IM000112.JPG",
+        "velicina": 1026124,
+        "sha256": "662d3d0b0c8ec66712debc66c983a69f23bd66043bf0a36a4e596aef323407cb"
+      },
+      {
+        "snimak": 101,
+        "fajl": "izvori/foto/IM000113.JPG",
+        "velicina": 653511,
+        "sha256": "789c5cc860e47a4b59587498794131499c029a2f22b83272c4d03f856fb2c2e4"
+      },
+      {
+        "snimak": 102,
+        "fajl": "izvori/foto/IM000114.JPG",
+        "velicina": 661888,
+        "sha256": "e25f5f426d662f5bbe6d7ad01f5f165ae21117f5c0506cbb6a3678685e564bc9"
+      },
+      {
+        "snimak": 103,
+        "fajl": "izvori/foto/IM000115.JPG",
+        "velicina": 645328,
+        "sha256": "727a65d30455a2bfb04f3d17c075f8a487e7e7505d25d00415d72ae5b180d1d3"
+      },
+      {
+        "snimak": 104,
+        "fajl": "izvori/foto/IM000116.JPG",
+        "velicina": 747814,
+        "sha256": "72f180a1397cd8eb65bb252a8d3babc1d79156c98a81aa59a29ffac2b2957f7f"
+      },
+      {
+        "snimak": 105,
+        "fajl": "izvori/foto/IM000118.JPG",
+        "velicina": 819373,
+        "sha256": "d444f63597453b368b9135e6a3a8a178c002906729863baf960eb557a747bddf"
+      },
+      {
+        "snimak": 106,
+        "fajl": "izvori/foto/IM000119.JPG",
+        "velicina": 686812,
+        "sha256": "b72caab75d0b646fa6ead30dce4363d79c7e9e751aaec776fa8af796628fcecd"
+      },
+      {
+        "snimak": 107,
+        "fajl": "izvori/foto/IM000120.JPG",
+        "velicina": 737581,
+        "sha256": "bfa8d63012783693cffda4a06300b4ba3fb00acbc82e584c153ddafdc776ed88"
+      },
+      {
+        "snimak": 108,
+        "fajl": "izvori/foto/IM000121.JPG",
+        "velicina": 864177,
+        "sha256": "435e1474473ce709c0e647ce54b95e8ff1a082545e77c6416e69e190bde3c2b5"
+      },
+      {
+        "snimak": 109,
+        "fajl": "izvori/foto/IM000122.JPG",
+        "velicina": 733708,
+        "sha256": "bb3c5e6ad1aed2edcb46e710073677134db20cad335d9588968afc257e8fccb0"
+      },
+      {
+        "snimak": 110,
+        "fajl": "izvori/foto/IM000123.JPG",
+        "velicina": 766718,
+        "sha256": "eb4fde9b6d817bd321b1bac928b2b6be34975fba7cf9141604b336007200a966"
+      },
+      {
+        "snimak": 111,
+        "fajl": "izvori/foto/IM000124.JPG",
+        "velicina": 909716,
+        "sha256": "402b422f6561bf6c0af3ac47d0561c5bb67135b17824993ac98a6d9b722fe3b9"
+      },
+      {
+        "snimak": 112,
+        "fajl": "izvori/foto/IM000125.JPG",
+        "velicina": 712161,
+        "sha256": "373cc231bc78ce20c502dc62c8ae832112c017b8bdb379c4ab270aa5796e2a12"
+      },
+      {
+        "snimak": 113,
+        "fajl": "izvori/foto/IM000126.JPG",
+        "velicina": 859587,
+        "sha256": "fa7d50b82402bdcb3d588d300c54b62db91904e22207ce2f556b39de37b00c35"
+      },
+      {
+        "snimak": 114,
+        "fajl": "izvori/foto/IM000127.JPG",
+        "velicina": 1046433,
+        "sha256": "a9778fcff233ea73c3a287a2ee5000bf7e116e97e2622f43091d93720b9aa00d"
+      },
+      {
+        "snimak": 115,
+        "fajl": "izvori/foto/IM000128.JPG",
+        "velicina": 1111939,
+        "sha256": "56ecc733268df4b4f12d3e79781865744b2ab3a3d5e148cc738b64eac21407e6"
+      },
+      {
+        "snimak": 116,
+        "fajl": "izvori/foto/IM000129.JPG",
+        "velicina": 994740,
+        "sha256": "7a6b8db3923cf2f02828ab356df411942926ab75b456cea051021925f3d985c4"
+      },
+      {
+        "snimak": 117,
+        "fajl": "izvori/foto/IM000130.JPG",
+        "velicina": 1027623,
+        "sha256": "91127f362e64a4be9de1d35f3240f6d8356a8e79689bf4c3fef8647ead567e7b"
+      },
+      {
+        "snimak": 118,
+        "fajl": "izvori/foto/IM000131.JPG",
+        "velicina": 935242,
+        "sha256": "2cd2f342a725c6c22d992825931b0b6d94fffd35d569158c17d3b1b92d971cb3"
+      },
+      {
+        "snimak": 119,
+        "fajl": "izvori/foto/IM000132.JPG",
+        "velicina": 1060603,
+        "sha256": "68fcd2f2d555c309390fda924b8a1c19412f28a0eb32b2591f4756c572d859e8"
+      },
+      {
+        "snimak": 120,
+        "fajl": "izvori/foto/IM000133.JPG",
+        "velicina": 1029703,
+        "sha256": "aaf325a1de684bb5eee5f7bd4b7ea0c051ff9b7eb03533aee532fc28c352da1f"
+      },
+      {
+        "snimak": 121,
+        "fajl": "izvori/foto/IM000134.JPG",
+        "velicina": 1301029,
+        "sha256": "69a0b7771729471a6e1f5525bf6fb1693d90447e6569c46e4aaa40fe0e2e74ed"
+      },
+      {
+        "snimak": 122,
+        "fajl": "izvori/foto/IM000136.JPG",
+        "velicina": 1309617,
+        "sha256": "a5a83d0a84210bc0ca39ccec2a71125fffc05a6f180d9da385c0a1fc6521c527"
+      },
+      {
+        "snimak": 123,
+        "fajl": "izvori/foto/IM000137.JPG",
+        "velicina": 1254400,
+        "sha256": "fbc91f22f7473432ec9156030b401559df83f418525e1c7d0d8ba2a129821440"
+      },
+      {
+        "snimak": 124,
+        "fajl": "izvori/foto/IM000138.JPG",
+        "velicina": 1239029,
+        "sha256": "2071c5eab87ae63785b6eb8ccd19cb7b894b7ff160183be5ac1297c2c5047ae3"
+      },
+      {
+        "snimak": 125,
+        "fajl": "izvori/foto/IM000139.JPG",
+        "velicina": 1291898,
+        "sha256": "635b71bead918d076d3cfaa40edc1a065c5d0e59a1353379ce09a720275d7178"
+      },
+      {
+        "snimak": 126,
+        "fajl": "izvori/foto/IM000140.JPG",
+        "velicina": 1059931,
+        "sha256": "8a2427681902a6375d7d9e4e27b5d09add9a1b2e00d8251775200758c86a2e92"
+      },
+      {
+        "snimak": 127,
+        "fajl": "izvori/foto/IM000141.JPG",
+        "velicina": 1255812,
+        "sha256": "6011124a9f8ca659e615105231b702f2418f887daf6d4bfab42b3f8916ca8d2d"
+      },
+      {
+        "snimak": 128,
+        "fajl": "izvori/foto/IM000142.JPG",
+        "velicina": 1186103,
+        "sha256": "2ec14935a58e7ac4ba9fdf249f67f216a3ce72b554fd79067619668da09bd606"
+      },
+      {
+        "snimak": 129,
+        "fajl": "izvori/foto/IM000143.JPG",
+        "velicina": 1048217,
+        "sha256": "fd5395bb2275b16cb9f0004e5a67cb5251bf26906771ab70e20f6eec29876fb0"
+      },
+      {
+        "snimak": 130,
+        "fajl": "izvori/foto/IM000144.JPG",
+        "velicina": 1130430,
+        "sha256": "a726d99c25f7d3af5d11dbbb5a031ce4a96a9477139f3e788bf8fa8df300c2e5"
+      },
+      {
+        "snimak": 131,
+        "fajl": "izvori/foto/IM000145.JPG",
+        "velicina": 1093860,
+        "sha256": "385204ce3a7f6215e368b61c8a71016367b15e5c39fe8f99896cbb12d5594f8b"
+      },
+      {
+        "snimak": 132,
+        "fajl": "izvori/foto/IM000146.JPG",
+        "velicina": 1172902,
+        "sha256": "af6ded52b1388c0932b484130c385e3960907ab82e8d35deb1cb2d57fc0d908c"
+      },
+      {
+        "snimak": 133,
+        "fajl": "izvori/foto/IM000147.JPG",
+        "velicina": 1029037,
+        "sha256": "8b3770486f7a04697f0cd4655027f1e463fcb6852f73091352d444a19f4c1695"
+      },
+      {
+        "snimak": 134,
+        "fajl": "izvori/foto/IM000148.JPG",
+        "velicina": 1359365,
+        "sha256": "e590b9f5d6c6aeb54b53089c009bee36aff65d3d54d43195a7482d7cac8f86af"
+      },
+      {
+        "snimak": 135,
+        "fajl": "izvori/foto/IM000150.JPG",
+        "velicina": 1185400,
+        "sha256": "786043fd4ca7699a88e0867328733dc0d398f6effdaf98d220876fc2a27e74f2"
+      },
+      {
+        "snimak": 136,
+        "fajl": "izvori/foto/IM000151.JPG",
+        "velicina": 1195011,
+        "sha256": "e391831e192c1e3b63443e90bdce337a15a5810a26668ae758c0b658b3512e79"
+      },
+      {
+        "snimak": 137,
+        "fajl": "izvori/foto/IM000152.JPG",
+        "velicina": 1200404,
+        "sha256": "c9abe520775d4d411cf2adcb17bc2cfe45000955e806cebf56334291813f41c8"
+      },
+      {
+        "snimak": 138,
+        "fajl": "izvori/foto/IM000153.JPG",
+        "velicina": 1123103,
+        "sha256": "93180f976246427f078220308fa4c26b5d15e29f184622c86d2973dbdd14ccac"
+      },
+      {
+        "snimak": 139,
+        "fajl": "izvori/foto/IM000154.JPG",
+        "velicina": 1044969,
+        "sha256": "984e6114b382e2a0dc42b635e9ecc9fcfef67d33ba0207b8228faec0de22c16d"
+      },
+      {
+        "snimak": 140,
+        "fajl": "izvori/foto/IM000155.JPG",
+        "velicina": 1014795,
+        "sha256": "2eeffdb55fddf3835977ab0839fe19274c267c60ee41a270a6e04214bed678c9"
+      },
+      {
+        "snimak": 141,
+        "fajl": "izvori/foto/IM000156.JPG",
+        "velicina": 1041975,
+        "sha256": "6c68a833e10b9f62c4b3d2ba82ff2ca3cbb12d2958fb4bbf36ffaf235dccf0a9"
+      },
+      {
+        "snimak": 142,
+        "fajl": "izvori/foto/IM000157.JPG",
+        "velicina": 1038102,
+        "sha256": "af0bcd8148b7800b978da1fb57d3e980f2177600f1a8423df2420bea8de11dec"
+      },
+      {
+        "snimak": 143,
+        "fajl": "izvori/foto/IM000158.JPG",
+        "velicina": 1078522,
+        "sha256": "416beab58a760ef7ac5da461f618f57965d53455126068702b22607951edc4e4"
+      },
+      {
+        "snimak": 144,
+        "fajl": "izvori/foto/IM000159.JPG",
+        "velicina": 1009104,
+        "sha256": "6aa030de45122f0b8755040a3be0a3b5264f53ca578f487e20f8ebec01ec6542"
+      },
+      {
+        "snimak": 145,
+        "fajl": "izvori/foto/IM000160.JPG",
+        "velicina": 1105072,
+        "sha256": "f59bb91ebb71c825f3455f978f1dde9e0d812ed0560ec47d53094abb94785098"
+      },
+      {
+        "snimak": 146,
+        "fajl": "izvori/foto/IM000161.JPG",
+        "velicina": 963621,
+        "sha256": "f0672cbc69aa9400e1cd0944de2cc892d2801546623f69c70f7c9a65a76474fd"
+      },
+      {
+        "snimak": 147,
+        "fajl": "izvori/foto/IM000162.JPG",
+        "velicina": 979804,
+        "sha256": "bdea45bb74372c419500915164df8947134db4c218b3590f1498ce4186d46bfd"
+      },
+      {
+        "snimak": 148,
+        "fajl": "izvori/foto/IM000163.JPG",
+        "velicina": 1025242,
+        "sha256": "3557a86a3a683e4f123e496e616f9901b8fa6da958c1df143b083d486120b2de"
+      },
+      {
+        "snimak": 149,
+        "fajl": "izvori/foto/IM000164.JPG",
+        "velicina": 1016506,
+        "sha256": "827a21b80e069cfe7918315c38f6faadee9e33d909fa3b80fc2d4e680239a3ba"
+      },
+      {
+        "snimak": 150,
+        "fajl": "izvori/foto/IM000166.JPG",
+        "velicina": 949870,
+        "sha256": "581f422595d10bc52df568d5d163ce3c0e9feed6d0b2b47d0cf3035ac9dcb3b7"
+      },
+      {
+        "snimak": 151,
+        "fajl": "izvori/foto/IM000167.JPG",
+        "velicina": 1011911,
+        "sha256": "f2cda7fd2c214fd041a093a7ecd1b9b2b0155be8b13487228672e3153455b95e"
+      },
+      {
+        "snimak": 152,
+        "fajl": "izvori/foto/IM000168.JPG",
+        "velicina": 985576,
+        "sha256": "b5ca54e36362824ae4feec7f0c43c376f1b7732f061e3919611c6e7fd1b542c9"
+      },
+      {
+        "snimak": 153,
+        "fajl": "izvori/foto/IM000169.JPG",
+        "velicina": 981517,
+        "sha256": "15763ec3890e273ff64316de61c415387ab740218d5d0d2619c93d1f9b45bae5"
+      },
+      {
+        "snimak": 154,
+        "fajl": "izvori/foto/IM000170.JPG",
+        "velicina": 996472,
+        "sha256": "483802ea62b16e3b23cac7d19d109940b21d9b2be1ef086456dd763fc2e40a1d"
+      },
+      {
+        "snimak": 155,
+        "fajl": "izvori/foto/IM000171.JPG",
+        "velicina": 1082224,
+        "sha256": "951c6850b766ca9e6f520f3222f9952a920e1a781925e5507194779b19404767"
+      },
+      {
+        "snimak": 156,
+        "fajl": "izvori/foto/IM000172.JPG",
+        "velicina": 1148146,
+        "sha256": "c427c8589ecd32b9d2e41a7fd3636ec6635f7186f6478f8f720511a7f649b9ba"
+      },
+      {
+        "snimak": 157,
+        "fajl": "izvori/foto/IM000173.JPG",
+        "velicina": 1083333,
+        "sha256": "5bc80d89589c8dc786af62659a8bbf1787b3dc3ea18d380f8a3dc51016ea922a"
+      },
+      {
+        "snimak": 158,
+        "fajl": "izvori/foto/IM000174.JPG",
+        "velicina": 1068980,
+        "sha256": "630cc64a9bf056d5ea490752cc775eca19864a9b9ff04b06ea0404aecd3490f3"
+      },
+      {
+        "snimak": 159,
+        "fajl": "izvori/foto/IM000175.JPG",
+        "velicina": 1103541,
+        "sha256": "94fc9ec85f29a47f3d88ca7ef300e7fd932ed487d292c2ec5b439b11c8ae7969"
+      },
+      {
+        "snimak": 160,
+        "fajl": "izvori/foto/IM000176.JPG",
+        "velicina": 1228065,
+        "sha256": "df47234d6b850c328ecf935f32f69d1dd23b45beaff96a4102ca3dbf1fba96c7"
+      },
+      {
+        "snimak": 161,
+        "fajl": "izvori/foto/IM000177.JPG",
+        "velicina": 1243695,
+        "sha256": "d5e41aa67851b167382da6af16a9b5996e5eb9594007abe04a511579556951fb"
+      },
+      {
+        "snimak": 162,
+        "fajl": "izvori/foto/IM000178.JPG",
+        "velicina": 1168250,
+        "sha256": "837a6708af33895b6d5b48b99cf4c6a40f782bf5faea68f564cd6b4ddd2fd95f"
+      },
+      {
+        "snimak": 163,
+        "fajl": "izvori/foto/IM000179.JPG",
+        "velicina": 1166319,
+        "sha256": "2d0f04f25107eceba842a4d6b98e6b8d5220998e6bb456b3e85b58cf9b0f8d3d"
+      },
+      {
+        "snimak": 164,
+        "fajl": "izvori/foto/IM000180.JPG",
+        "velicina": 1440113,
+        "sha256": "8488f7459455dcd9c9b95a32dfe7ebc8956fe71843039389ea60b4a2d31087b3"
+      },
+      {
+        "snimak": 165,
+        "fajl": "izvori/foto/IM000181.JPG",
+        "velicina": 1094499,
+        "sha256": "dd0020c9ca6d59d59d188d1d786eed95b3a3156ac80d490af5bb1a1bffa291c8"
+      },
+      {
+        "snimak": 166,
+        "fajl": "izvori/foto/IM000182.JPG",
+        "velicina": 1150567,
+        "sha256": "3980bfaed02eebeb13efbb17dbed1a5f1dfc74cbba147187cbecfe82c1d78a3f"
+      },
+      {
+        "snimak": 167,
+        "fajl": "izvori/foto/IM000183.JPG",
+        "velicina": 1150021,
+        "sha256": "f4d5d289c24311c31f91fa87b8c4bb2467d8f891161bef79904f7954745d6933"
+      },
+      {
+        "snimak": 168,
+        "fajl": "izvori/foto/IM000184.JPG",
+        "velicina": 1259298,
+        "sha256": "c63f90b966e6a25fa3f205cd6a8420958432f0debbfc27e3a13075d7041983bc"
+      },
+      {
+        "snimak": 169,
+        "fajl": "izvori/foto/IM000185.JPG",
+        "velicina": 1262290,
+        "sha256": "d3612e21476bd4a3f7d9c808d16c9aaac58cb17da5b4fa0a02741f96e84bc4d1"
+      },
+      {
+        "snimak": 170,
+        "fajl": "izvori/foto/IM000186.JPG",
+        "velicina": 1217178,
+        "sha256": "1b24bd8ad4cbfb0c9586d86694de50ba8131d17dd42f68c3fa1699bb562af81c"
+      },
+      {
+        "snimak": 171,
+        "fajl": "izvori/foto/IM000187.JPG",
+        "velicina": 1194893,
+        "sha256": "e605b9784e15015c92991c826cc3f393e2f5c5739d49c7411df8713b1bcfdfd3"
+      },
+      {
+        "snimak": 172,
+        "fajl": "izvori/foto/IM000188.JPG",
+        "velicina": 1159444,
+        "sha256": "44fdaed35592a62a418ba24808c79f109ba128ec4c3dd36586afa4c651e1ae38"
+      },
+      {
+        "snimak": 173,
+        "fajl": "izvori/foto/IM000189.JPG",
+        "velicina": 1099781,
+        "sha256": "1a9703fa191e75963e4f7acef4dab39bba695bb7f7faccb4608a6f4f8aa82415"
+      },
+      {
+        "snimak": 174,
+        "fajl": "izvori/foto/IM000190.JPG",
+        "velicina": 1395778,
+        "sha256": "0bdaa43fff99a43e6d0aaa017549224c0cbac06d2de690dc21edbc94501f4a7e"
+      },
+      {
+        "snimak": 175,
+        "fajl": "izvori/foto/IM000191.JPG",
+        "velicina": 1032168,
+        "sha256": "140d3e3780ebd10602b70f822f19b9d83ab59f82e1151f243ce4d56bb3cae56c"
+      },
+      {
+        "snimak": 176,
+        "fajl": "izvori/foto/IM000192.JPG",
+        "velicina": 916381,
+        "sha256": "30b75e4398ba363fd6e5f7ff6f6c5f49ccc41ef2e5251fe9c9c7d07c5a9a06eb"
+      },
+      {
+        "snimak": 177,
+        "fajl": "izvori/foto/IM000193.JPG",
+        "velicina": 1043842,
+        "sha256": "f3b499f2096d564f3af5f6ff5efd07d47a6418c1e289cd113c4085752f540224"
+      },
+      {
+        "snimak": 178,
+        "fajl": "izvori/foto/IM000194.JPG",
+        "velicina": 1127309,
+        "sha256": "eec6eb047a20515b44ab9846f418937d8a4d886aa49dc23727e7ad99ff98ca45"
+      },
+      {
+        "snimak": 179,
+        "fajl": "izvori/foto/IM000195.JPG",
+        "velicina": 1157865,
+        "sha256": "5b72ddf0d4b2157a43390ac0778913d5969c3cdebbde70059e1f8d3b840b99d2"
+      },
+      {
+        "snimak": 180,
+        "fajl": "izvori/foto/IM000196.JPG",
+        "velicina": 1154739,
+        "sha256": "0e1e7cdda4886a89ed55fb55b111f5b0b57f432092e42cb0970a237d8340f84f"
+      },
+      {
+        "snimak": 181,
+        "fajl": "izvori/foto/IM000197.JPG",
+        "velicina": 1174529,
+        "sha256": "3a3c81a665578466c83a3c1026e3ed7939a9a9ef261e3d5a5514a3987a38f5ae"
+      },
+      {
+        "snimak": 182,
+        "fajl": "izvori/foto/IM000198.JPG",
+        "velicina": 1162176,
+        "sha256": "c6d53df804fe99884baeedddc17ef28645c2fb77d942918c29c10f9df5463c65"
+      }
+    ]
+  }
+}

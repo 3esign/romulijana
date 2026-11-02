@@ -1,0 +1,5438 @@
+{
+ "cvorovi": [
+  {
+   "id": "L",
+   "tip": "cvor",
+   "naziv": "Felix Romuliana (Gamzigrad)",
+   "pominjanja": 4481
+  },
+  {
+   "id": "L.U",
+   "tip": "cvor",
+   "naziv": "Utvrđenje i bedemi",
+   "pominjanja": 2672
+  },
+  {
+   "id": "L.U.1",
+   "tip": "cvor",
+   "naziv": "Stariji (unutrašnji) bedem — Galerije cezar",
+   "pominjanja": 40
+  },
+  {
+   "id": "L.U.2",
+   "tip": "cvor",
+   "naziv": "Mlađi (spoljni) bedem — Galerije avgust",
+   "pominjanja": 70
+  },
+  {
+   "id": "L.U.K",
+   "tip": "cvor",
+   "naziv": "Kule",
+   "pominjanja": 1610
+  },
+  {
+   "id": "L.U.IK",
+   "tip": "cvor",
+   "naziv": "Istočna kapija",
+   "pominjanja": 122
+  },
+  {
+   "id": "L.U.ZK",
+   "tip": "cvor",
+   "naziv": "Zapadna kapija",
+   "pominjanja": 156
+  },
+  {
+   "id": "L.P",
+   "tip": "cvor",
+   "naziv": "Palata (carski dvorac)",
+   "pominjanja": 2757
+  },
+  {
+   "id": "L.P.1",
+   "tip": "cvor",
+   "naziv": "Palata I (severozapadna četvrt, D1–D2)",
+   "pominjanja": 218
+  },
+  {
+   "id": "L.P.2",
+   "tip": "cvor",
+   "naziv": "Palata II i zgrada sa koridorom (severoistočna četvrt, D3–D5)",
+   "pominjanja": 67
+  },
+  {
+   "id": "L.P.PE",
+   "tip": "cvor",
+   "naziv": "Peristil",
+   "pominjanja": 126
+  },
+  {
+   "id": "L.P.AU",
+   "tip": "cvor",
+   "naziv": "Aula / triklinijum / apsidalna dvorana",
+   "pominjanja": 70
+  },
+  {
+   "id": "L.P.MO",
+   "tip": "cvor",
+   "naziv": "Mozaici",
+   "pominjanja": 909
+  },
+  {
+   "id": "L.JB",
+   "tip": "cvor",
+   "naziv": "Južne javne građevine (tribunal/pretorijum G, petobrodna zgrada F)",
+   "pominjanja": 62
+  },
+  {
+   "id": "L.H",
+   "tip": "cvor",
+   "naziv": "Hramovi",
+   "pominjanja": 1035
+  },
+  {
+   "id": "L.H.V",
+   "tip": "cvor",
+   "naziv": "Veliki hram (Divus Galerius)",
+   "pominjanja": 172
+  },
+  {
+   "id": "L.H.M",
+   "tip": "cvor",
+   "naziv": "Mali hram (Diva Romula)",
+   "pominjanja": 66
+  },
+  {
+   "id": "L.T",
+   "tip": "cvor",
+   "naziv": "Terme",
+   "pominjanja": 718
+  },
+  {
+   "id": "L.HO",
+   "tip": "cvor",
+   "naziv": "Horeum i ekonomski objekti",
+   "pominjanja": 324
+  },
+  {
+   "id": "L.HR",
+   "tip": "cvor",
+   "naziv": "Ranohrišćanski objekti (bazilika, crkve)",
+   "pominjanja": 1165
+  },
+  {
+   "id": "L.KN",
+   "tip": "cvor",
+   "naziv": "Kasnije naselje (vizantijsko, srednjovekovno)",
+   "pominjanja": 1237
+  },
+  {
+   "id": "L.MG",
+   "tip": "cvor",
+   "naziv": "Magura — memorijalni kompleks",
+   "pominjanja": 211
+  },
+  {
+   "id": "L.MG.M1",
+   "tip": "cvor",
+   "naziv": "Mauzolej 1 (Romula)",
+   "pominjanja": 66
+  },
+  {
+   "id": "L.MG.M2",
+   "tip": "cvor",
+   "naziv": "Mauzolej 2 (Galerije)",
+   "pominjanja": 38
+  },
+  {
+   "id": "L.MG.K",
+   "tip": "cvor",
+   "naziv": "Konsekracioni spomenici (tumuli)",
+   "pominjanja": 296
+  },
+  {
+   "id": "L.MG.MZ",
+   "tip": "cvor",
+   "naziv": "Mauzoleji (opšte)",
+   "pominjanja": 369
+  },
+  {
+   "id": "L.TP",
+   "tip": "cvor",
+   "naziv": "Tetrapilon",
+   "pominjanja": 88
+  },
+  {
+   "id": "N",
+   "tip": "cvor",
+   "naziv": "Natpisi i nalazi",
+   "pominjanja": 0
+  },
+  {
+   "id": "N.FR",
+   "tip": "cvor",
+   "naziv": "Natpis FELIX ROMULIANA (1984)",
+   "pominjanja": 370
+  },
+  {
+   "id": "N.NO",
+   "tip": "cvor",
+   "naziv": "Novac (numizmatika)",
+   "pominjanja": 1173
+  },
+  {
+   "id": "N.SK",
+   "tip": "cvor",
+   "naziv": "Skulptura i portreti",
+   "pominjanja": 905
+  },
+  {
+   "id": "N.ZL",
+   "tip": "cvor",
+   "naziv": "Zlatni nakit i carske insignije",
+   "pominjanja": 28
+  },
+  {
+   "id": "O",
+   "tip": "cvor",
+   "naziv": "Osobe",
+   "pominjanja": 0
+  },
+  {
+   "id": "O.GA",
+   "tip": "cvor",
+   "naziv": "Galerije",
+   "pominjanja": 1389
+  },
+  {
+   "id": "O.RO",
+   "tip": "cvor",
+   "naziv": "Romula (Galerijeva majka)",
+   "pominjanja": 197
+  },
+  {
+   "id": "O.DI",
+   "tip": "cvor",
+   "naziv": "Dioklecijan",
+   "pominjanja": 414
+  },
+  {
+   "id": "O.KO",
+   "tip": "cvor",
+   "naziv": "Konstantin",
+   "pominjanja": 488
+  },
+  {
+   "id": "O.MD",
+   "tip": "cvor",
+   "naziv": "Maksimin Daja",
+   "pominjanja": 112
+  },
+  {
+   "id": "O.LI",
+   "tip": "cvor",
+   "naziv": "Licinije",
+   "pominjanja": 106
+  },
+  {
+   "id": "O.LA",
+   "tip": "cvor",
+   "naziv": "Laktancije / Aurelije Viktor (antički pisci)",
+   "pominjanja": 109
+  },
+  {
+   "id": "I",
+   "tip": "cvor",
+   "naziv": "Istraživači",
+   "pominjanja": 0
+  },
+  {
+   "id": "I.SR",
+   "tip": "cvor",
+   "naziv": "Dragoslav Srejović",
+   "pominjanja": 568
+  },
+  {
+   "id": "I.CM",
+   "tip": "cvor",
+   "naziv": "Milka Čanak-Medić",
+   "pominjanja": 455
+  },
+  {
+   "id": "I.MZ",
+   "tip": "cvor",
+   "naziv": "Đorđe Mano-Zisi",
+   "pominjanja": 119
+  },
+  {
+   "id": "I.LA",
+   "tip": "cvor",
+   "naziv": "Anka Lalović",
+   "pominjanja": 119
+  },
+  {
+   "id": "I.JA",
+   "tip": "cvor",
+   "naziv": "Đorđe Janković",
+   "pominjanja": 294
+  },
+  {
+   "id": "I.VA",
+   "tip": "cvor",
+   "naziv": "Čedomir Vasić",
+   "pominjanja": 345
+  },
+  {
+   "id": "I.PO",
+   "tip": "cvor",
+   "naziv": "Ivana Popović",
+   "pominjanja": 442
+  },
+  {
+   "id": "I.ZI",
+   "tip": "cvor",
+   "naziv": "Maja Živić",
+   "pominjanja": 131
+  },
+  {
+   "id": "I.TO",
+   "tip": "cvor",
+   "naziv": "Gerda von Bülow / Stefan Pop-Lazić / Sofija Petković",
+   "pominjanja": 660
+  },
+  {
+   "id": "F",
+   "tip": "cvor",
+   "naziv": "Faze i hronologija",
+   "pominjanja": 0
+  },
+  {
+   "id": "F.T",
+   "tip": "cvor",
+   "naziv": "Tetrarhija (293–311)",
+   "pominjanja": 562
+  },
+  {
+   "id": "F.PR",
+   "tip": "cvor",
+   "naziv": "Pre utvrđenja (praistorija, rani rimski)",
+   "pominjanja": 416
+  },
+  {
+   "id": "F.KA",
+   "tip": "cvor",
+   "naziv": "Kasnoantičko-ranovizantijsko (IV–VI v.)",
+   "pominjanja": 811
+  },
+  {
+   "id": "F.SV",
+   "tip": "cvor",
+   "naziv": "Srednji vek (X–XII v.)",
+   "pominjanja": 219
+  },
+  {
+   "id": "R",
+   "tip": "cvor",
+   "naziv": "Regionalni kontekst",
+   "pominjanja": 0
+  },
+  {
+   "id": "R.SA",
+   "tip": "cvor",
+   "naziv": "Šarkamen",
+   "pominjanja": 46
+  },
+  {
+   "id": "R.RG",
+   "tip": "cvor",
+   "naziv": "Rgotina",
+   "pominjanja": 9
+  },
+  {
+   "id": "R.ZA",
+   "tip": "cvor",
+   "naziv": "Zaječar i Timok",
+   "pominjanja": 449
+  },
+  {
+   "id": "R.ME",
+   "tip": "cvor",
+   "naziv": "Medijana / Naissus",
+   "pominjanja": 342
+  },
+  {
+   "id": "R.SP",
+   "tip": "cvor",
+   "naziv": "Split (Dioklecijanova palata)",
+   "pominjanja": 363
+  },
+  {
+   "id": "R.SO",
+   "tip": "cvor",
+   "naziv": "Solun (Galerijev kompleks)",
+   "pominjanja": 243
+  },
+  {
+   "id": "R.SI",
+   "tip": "cvor",
+   "naziv": "Sirmijum",
+   "pominjanja": 399
+  },
+  {
+   "id": "R.SE",
+   "tip": "cvor",
+   "naziv": "Serdika",
+   "pominjanja": 50
+  },
+  {
+   "id": "R.AQ",
+   "tip": "cvor",
+   "naziv": "Akvis (Aquae / Prahovo)",
+   "pominjanja": 101
+  },
+  {
+   "id": "R.DA",
+   "tip": "cvor",
+   "naziv": "Dakija (Ripensis, Mediterranea)",
+   "pominjanja": 462
+  },
+  {
+   "id": "R01",
+   "tip": "izvor",
+   "naziv": "Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia)",
+   "razmera": [
+    "S2",
+    "S3"
+   ],
+   "slojevi": [
+    "dokaz",
+    "plan"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "R02",
+   "tip": "izvor",
+   "naziv": "Gamzigrad (+ Rgotina, antičko nalazište; Istraživanje spomenika u Vrelu, Šarkamen)",
+   "razmera": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "slojevi": [
+    "dokaz",
+    "vreme"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "R03",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana. Galerijeva palata u Gamzigradu",
+   "razmera": [
+    "S2",
+    "S3"
+   ],
+   "slojevi": [
+    "dokaz"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "R04",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana – Gamzigrad",
+   "razmera": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "slojevi": [
+    "dokaz",
+    "plan",
+    "vreme"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "R05",
+   "tip": "izvor",
+   "naziv": "Gamzigrad – kasnoantički carski dvorac",
+   "razmera": [
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "slojevi": [
+    "dokaz",
+    "plan"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "R06",
+   "tip": "izvor",
+   "naziv": "Gamzigrad. Kasnoantička palata. Arhitektura i prostorni sklop",
+   "razmera": [
+    "S1",
+    "S2",
+    "S3"
+   ],
+   "slojevi": [
+    "dokaz",
+    "plan",
+    "rekonstrukcija"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "R07",
+   "tip": "izvor",
+   "naziv": "Mnemosynon firmitatis. Sedamdeset godina Arheološkog instituta (1947–2017)",
+   "razmera": [
+    "S0",
+    "S2"
+   ],
+   "slojevi": [
+    "dokaz"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "R08",
+   "tip": "izvor",
+   "naziv": "Rimski carski gradovi i palate u Srbiji",
+   "razmera": [
+    "S0",
+    "S3",
+    "S4"
+   ],
+   "slojevi": [
+    "dokaz",
+    "gradja"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W01",
+   "tip": "izvor",
+   "naziv": "Unilateral antler combs from Romuliana",
+   "razmera": [
+    "S4"
+   ],
+   "slojevi": [
+    "dokaz"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W02",
+   "tip": "izvor",
+   "naziv": "Geophysical and archaeological research at Gamzigrad: report of the 2004–2007 campaigns",
+   "razmera": [
+    "S1",
+    "S2"
+   ],
+   "slojevi": [
+    "dokaz",
+    "podzemlje"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W03",
+   "tip": "izvor",
+   "naziv": "Late Roman necropolis of Romuliana, area south of the fortified palace: research 2005–2006",
+   "razmera": [
+    "S2"
+   ],
+   "slojevi": [
+    "dokaz",
+    "zona"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W04",
+   "tip": "izvor",
+   "naziv": "Catalogue of small finds from excavations outside the fortified palace of Romuliana (2005–2007)",
+   "razmera": [
+    "S4"
+   ],
+   "slojevi": [
+    "dokaz"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W05",
+   "tip": "izvor",
+   "naziv": "Findings of coins from Romuliana, unearthed in 2005 and 2006 outside the fortified palace",
+   "razmera": [
+    "S4"
+   ],
+   "slojevi": [
+    "dokaz",
+    "vreme"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W06",
+   "tip": "izvor",
+   "naziv": "Animal and plant remains in a tomb in test-pit 1/05, outside the fortified imperial palace Felix Romuliana",
+   "razmera": [
+    "S4"
+   ],
+   "slojevi": [
+    "dokaz"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W07",
+   "tip": "izvor",
+   "naziv": "O uticajima Vatina i Verbičoare na nalazima Gamzigradske kulturne grupe",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "dokaz",
+    "vreme"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W08",
+   "tip": "izvor",
+   "naziv": "Crossbow fibulae from Gamzigrad (Romuliana)",
+   "razmera": [
+    "S4"
+   ],
+   "slojevi": [
+    "dokaz",
+    "vreme"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W09",
+   "tip": "izvor",
+   "naziv": "The Roman settlement on Gamzigrad prior to the imperial palace Felix Romuliana",
+   "razmera": [
+    "S2"
+   ],
+   "slojevi": [
+    "dokaz",
+    "vreme"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W10",
+   "tip": "izvor",
+   "naziv": "Archaeological excavations at Gamzigrad – Romuliana in 2007–2008",
+   "razmera": [
+    "S2"
+   ],
+   "slojevi": [
+    "dokaz",
+    "zona"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W11",
+   "tip": "izvor",
+   "naziv": "The blues of Romuliana",
+   "razmera": [
+    "S4"
+   ],
+   "slojevi": [
+    "dokaz"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W12",
+   "tip": "izvor",
+   "naziv": "Nike/Victoria representations in Late Antique Central Balkans",
+   "razmera": [
+    "S0",
+    "S4"
+   ],
+   "slojevi": [
+    "dokaz"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W13",
+   "tip": "izvor",
+   "naziv": "Starinar 45–46 (1994–1995) — cela sveska",
+   "razmera": [
+    "S0",
+    "S2"
+   ],
+   "slojevi": [
+    "dokaz"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W14",
+   "tip": "izvor",
+   "naziv": "Starinar 48 (1997) — cela sveska",
+   "razmera": [
+    "S0",
+    "S2"
+   ],
+   "slojevi": [
+    "dokaz"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W15",
+   "tip": "izvor",
+   "naziv": "The medieval cemetery outside the eastern gate of Gamzigrad (Felix Romuliana): a paleodemographic interpretation",
+   "razmera": [
+    "S2"
+   ],
+   "slojevi": [
+    "dokaz",
+    "zona"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W16",
+   "tip": "izvor",
+   "naziv": "Trepanning on Mediaeval Gamzigrad — Felix Romuliana",
+   "razmera": [
+    "S4"
+   ],
+   "slojevi": [
+    "dokaz"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W17",
+   "tip": "izvor",
+   "naziv": "Gerda von Bülow, Sofija Petković (eds), Gamzigrad-Studien I. Ergebnisse der deutschserbischen Forschungen im Umfeld des Palastes Romuliana (RGF 75, Wiesbaden 2020)",
+   "razmera": [
+    "S1",
+    "S2"
+   ],
+   "slojevi": [
+    "dokaz",
+    "podzemlje"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W18",
+   "tip": "izvor",
+   "naziv": "Photogrammetry of archaeological site Felix Romuliana at Gamzigrad using aerial digital camera and non-metric digital camera",
+   "razmera": [
+    "S2"
+   ],
+   "slojevi": [
+    "dokaz",
+    "metod"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W19",
+   "tip": "izvor",
+   "naziv": "Archaeological Site of Gamzigrad (Felix Romuliana)",
+   "razmera": [
+    "S2"
+   ],
+   "slojevi": [
+    "dokaz"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W20",
+   "tip": "izvor",
+   "naziv": "Gamzigrad – Romuliana, Palace of Galerius: nomination dossier for inscription on the World Heritage List",
+   "razmera": [
+    "S1",
+    "S2"
+   ],
+   "slojevi": [
+    "dokaz",
+    "zona"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W21",
+   "tip": "izvor",
+   "naziv": "Late Roman Romuliana and mediaeval Gamzigrad from the end of the 4th to the 11th centuries AD",
+   "razmera": [
+    "S2",
+    "S3"
+   ],
+   "slojevi": [
+    "dokaz",
+    "vreme"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W22",
+   "tip": "izvor",
+   "naziv": "Keszthely-Fenékpuszta im Kontext spätantiker Kontinuitätsforschung zwischen Noricum und Moesia (CPP 2)",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "dokaz"
+   ],
+   "prava": "privatno"
+  },
+  {
+   "id": "W23",
+   "tip": "izvor",
+   "naziv": "Dalmatia&Moesia Superior.JPG",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "istorijska-karta"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W24",
+   "tip": "izvor",
+   "naziv": "Roman Dardania part of Moesia Superior part of old map made 1865.jpg",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "istorijska-karta"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W25",
+   "tip": "izvor",
+   "naziv": "Roman Dardania part of Moesia Superior part of old map made 1830.jpg",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "istorijska-karta"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W26",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana, built in 298 AD by Emperor Galerius, Dacia Ripensis, Serbia (28086214227).jpg",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W27",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana, built in 298 AD by Emperor Galerius, Dacia Ripensis, Serbia (28086212597).jpg",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W28",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana, built in 298 AD by Emperor Galerius, Dacia Ripensis, Serbia (28086215607).jpg",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W29",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana, built in 298 AD by Emperor Galerius, Dacia Ripensis, Serbia (28086218927).jpg",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W30",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana, built in 298 AD by Emperor Galerius, Dacia Ripensis, Serbia (28086220797).jpg",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W34",
+   "tip": "izvor",
+   "naziv": "Roman Dardania part of Moesia Superior part of old map made 1820.jpg",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "istorijska-karta"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W35",
+   "tip": "izvor",
+   "naziv": "Map of Dacia and Moesia by Abraham Ortelius.jpeg",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "istorijska-karta"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W36",
+   "tip": "izvor",
+   "naziv": "OSM savremeni kontekst Gamzigrad z13 (ispravne koordinate 43.899/22.186)",
+   "razmera": [
+    "S1"
+   ],
+   "slojevi": [
+    "podloga"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W37",
+   "tip": "izvor",
+   "naziv": "OpenStreetMap API upit oko lokaliteta (22.18–22.195E, 43.895–43.905N) — sažetak: 2452 elementa prebrojano, sačuvan 1 imenovani (planinarska ruta E4), bez geometrije",
+   "razmera": [
+    "S2"
+   ],
+   "slojevi": [
+    "metapodatak"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W39",
+   "tip": "izvor",
+   "naziv": "Nominatim pretraga \"Felix Romuliana\" i \"Gamzigrad\" — OSM identitet lokaliteta",
+   "razmera": [
+    "S1"
+   ],
+   "slojevi": [
+    "sidro"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W40",
+   "tip": "izvor",
+   "naziv": "Map of the Roman province of Moesia (1896)",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "istorijska-karta"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W41",
+   "tip": "izvor",
+   "naziv": "Macedonia, Thracia, Illyria, Moesia, Dacia (Findlay, Map X, 1849)",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "istorijska-karta"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W42",
+   "tip": "izvor",
+   "naziv": "Macedonia, Thracia, Illyria, Moesia, Dacia (Findlay 1849, refurbished)",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "istorijska-karta"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W43",
+   "tip": "izvor",
+   "naziv": "The Roman provinces of the Lower Danube (Droysens Historischer Atlas, 1886) — izrez",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "istorijska-karta"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W44",
+   "tip": "izvor",
+   "naziv": "Thracia posle Dioklecijanove reforme (Droysen, 1886) — izrez",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "istorijska-karta"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W45",
+   "tip": "izvor",
+   "naziv": "Sentinel-2 L2A S2B_34TEP_20250922 (2025-09-22, oblak 0%) — TCI isečak Romulijane i okoline (22.1810,43.8948–22.1916,43.9039), 1400×1530 px",
+   "razmera": [
+    "S2"
+   ],
+   "slojevi": [
+    "podloga"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W46",
+   "tip": "izvor",
+   "naziv": "Sentinel-2 S2B_34TEP_20250922 thumbnail (cela scena, pregled)",
+   "razmera": [
+    "S1"
+   ],
+   "slojevi": [
+    "podloga"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W47",
+   "tip": "izvor",
+   "naziv": "STAC item S2B_34TEP_20250922_0_L2A (potpuni metapodaci scene: orbita, Cloud Cover 0.0, sve COG trake)",
+   "razmera": [
+    "S1"
+   ],
+   "slojevi": [
+    "metapodatak"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W48",
+   "tip": "izvor",
+   "naziv": "OSM savremeni kontekst Gamzigrad z12",
+   "razmera": [
+    "S1"
+   ],
+   "slojevi": [
+    "podloga"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W50",
+   "tip": "izvor",
+   "naziv": "OSM savremeni kontekst Gamzigrad z14",
+   "razmera": [
+    "S1"
+   ],
+   "slojevi": [
+    "podloga"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W51",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana 1.jpg",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W52",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana 2.jpg",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W53",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana 3.jpg",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W54",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana 4.jpg",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W55",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana 5.jpg",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W56",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana 8.jpg",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W57",
+   "tip": "izvor",
+   "naziv": "Felix Romuliana unutrašnjost.jpg",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W58",
+   "tip": "izvor",
+   "naziv": "Gamzigrad - Felix Romuliana (by Pudelek) 1.jpg",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W59",
+   "tip": "izvor",
+   "naziv": "Gamzigrad - Felix Romuliana (by Pudelek) 2.JPG",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W60",
+   "tip": "izvor",
+   "naziv": "Gamzigrad - Felix Romuliana (by Pudelek) 3.JPG",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W61",
+   "tip": "izvor",
+   "naziv": "Gamzigrad — Felix Romuliana (Pudelek 4)",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W62",
+   "tip": "izvor",
+   "naziv": "Gamzigrad — Istočna kapija (Pudelek 5)",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W63",
+   "tip": "izvor",
+   "naziv": "Gamzigrad — Felix Romuliana (Pudelek 6)",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W64",
+   "tip": "izvor",
+   "naziv": "Gamzigrad — Felix Romuliana (Pudelek 7)",
+   "razmera": [
+    "S3"
+   ],
+   "slojevi": [
+    "gradja"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W65",
+   "tip": "izvor",
+   "naziv": "The Roman provinces of Illyricum, Macedonia, Dacia, Moesia, Pannonia and Thracia (Droysens Historischer Atlas, 1886) — cela karta",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "istorijska-karta"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W66",
+   "tip": "izvor",
+   "naziv": "Pleiades 207395 — Romuliana (JSON resurs)",
+   "razmera": [
+    "S0",
+    "S1"
+   ],
+   "slojevi": [
+    "sidro"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W67",
+   "tip": "izvor",
+   "naziv": "Pleiades 207395 — Romuliana (arhivirana HTML stranica)",
+   "razmera": [
+    "S0",
+    "S1"
+   ],
+   "slojevi": [
+    "sidro"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "W68",
+   "tip": "izvor",
+   "naziv": "DARMC Roman Road Network v2008 — Readme (licenca CC BY-NC 3.0, citat McCormick et al. 2013)",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "metapodatak"
+   ],
+   "prava": "nekomercijalno"
+  },
+  {
+   "id": "W69",
+   "tip": "izvor",
+   "naziv": "DARMC rimski putevi v2008 — geometrija (7154 polilinije, 70652 tačke)",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "vektor"
+   ],
+   "prava": "nekomercijalno"
+  },
+  {
+   "id": "W70",
+   "tip": "izvor",
+   "naziv": "DARMC rimski putevi v2008 — prostorni indeks",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "metapodatak"
+   ],
+   "prava": "nekomercijalno"
+  },
+  {
+   "id": "W71",
+   "tip": "izvor",
+   "naziv": "DARMC rimski putevi v2008 — atributi (CLASS/CERTAINTY/SOURCE)",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "metapodatak"
+   ],
+   "prava": "nekomercijalno"
+  },
+  {
+   "id": "W72",
+   "tip": "izvor",
+   "naziv": "DARMC rimski putevi v2008 — projekcija (ED50, Europe LCC)",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "metapodatak"
+   ],
+   "prava": "nekomercijalno"
+  },
+  {
+   "id": "W73",
+   "tip": "izvor",
+   "naziv": "DARMC rimski putevi v2008 — spatial index .sbn",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "metapodatak"
+   ],
+   "prava": "nekomercijalno"
+  },
+  {
+   "id": "W74",
+   "tip": "izvor",
+   "naziv": "DARMC rimski putevi v2008 — spatial index .sbx",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "metapodatak"
+   ],
+   "prava": "nekomercijalno"
+  },
+  {
+   "id": "W75",
+   "tip": "izvor",
+   "naziv": "DARMC rimski putevi v2008 — metapodaci .shp.xml",
+   "razmera": [
+    "S0"
+   ],
+   "slojevi": [
+    "metapodatak"
+   ],
+   "prava": "nekomercijalno"
+  },
+  {
+   "id": "W76",
+   "tip": "izvor",
+   "naziv": "DARMC rimski putevi oko Romulijane — izvedeni sloj okoline 15 km (8 trasa, WGS84)",
+   "razmera": [
+    "S1"
+   ],
+   "slojevi": [
+    "vektor"
+   ],
+   "prava": "nekomercijalno"
+  },
+  {
+   "id": "W77",
+   "tip": "izvor",
+   "naziv": "OpenStreetMap Overpass vektorska geometrija lokaliteta Felix Romuliana i Magure (191 feature: bedemi, kule, putevi, vodotokovi)",
+   "razmera": [
+    "S2"
+   ],
+   "slojevi": [
+    "vektor"
+   ],
+   "prava": "deli-isto"
+  },
+  {
+   "id": "W78",
+   "tip": "izvor",
+   "naziv": "Copernicus DEM GLO-30 model terena (visinska mreža 19×11 = 209 tačaka, 141–258 m n.v.) za Romulijanu i brdo Magura",
+   "razmera": [
+    "S1",
+    "S2"
+   ],
+   "slojevi": [
+    "teren"
+   ],
+   "prava": "javno"
+  },
+  {
+   "id": "RD-001",
+   "tip": "tvrdnja",
+   "tema": "pod mlađe bazilike",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-datovanje.jsonl"
+  },
+  {
+   "id": "RD-002",
+   "tip": "tvrdnja",
+   "tema": "nasipanje i faze temelja",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-datovanje.jsonl"
+  },
+  {
+   "id": "RD-003",
+   "tip": "tvrdnja",
+   "tema": "keramika nad malterom i krečanom",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-datovanje.jsonl"
+  },
+  {
+   "id": "RD-004",
+   "tip": "tvrdnja",
+   "tema": "pećnjaci u prostoru priprate",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-datovanje.jsonl"
+  },
+  {
+   "id": "RD-005",
+   "tip": "tvrdnja",
+   "tema": "identitet litijskog krsta",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-datovanje.jsonl"
+  },
+  {
+   "id": "RD-006",
+   "tip": "tvrdnja",
+   "tema": "mesto nalaza krsta",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-datovanje.jsonl"
+  },
+  {
+   "id": "RD-007",
+   "tip": "tvrdnja",
+   "tema": "promena datovanja krsta",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-datovanje.jsonl"
+  },
+  {
+   "id": "RD-008",
+   "tip": "tvrdnja",
+   "tema": "šta bi razrešilo datovanje",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-datovanje.jsonl"
+  },
+  {
+   "id": "RD-009",
+   "tip": "tvrdnja",
+   "tema": "datovanje bazilike II — podignuta sredina VI veka, moguća obnova u X veku",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-datovanje.jsonl"
+  },
+  {
+   "id": "RP-001",
+   "tip": "tvrdnja",
+   "tema": "saobracajnice",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-putevi.jsonl"
+  },
+  {
+   "id": "RP-002",
+   "tip": "tvrdnja",
+   "tema": "prilazni_put",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-putevi.jsonl"
+  },
+  {
+   "id": "RS-001",
+   "tip": "tvrdnja",
+   "tema": "stratigrafija",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-002",
+   "tip": "tvrdnja",
+   "tema": "ponovno naseljavanje",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-003",
+   "tip": "tvrdnja",
+   "tema": "požari i istorijski događaji",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-004",
+   "tip": "tvrdnja",
+   "tema": "faze naselja posle palate",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-005",
+   "tip": "tvrdnja",
+   "tema": "radionice",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-006",
+   "tip": "tvrdnja",
+   "tema": "metalurgija",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-007",
+   "tip": "tvrdnja",
+   "tema": "bazilika I",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-008",
+   "tip": "tvrdnja",
+   "tema": "identitet mlađe bazilike",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-009",
+   "tip": "tvrdnja",
+   "tema": "datovanje mlađe bazilike 1978",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-010",
+   "tip": "tvrdnja",
+   "tema": "datovanje mlađe bazilike 1983",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-011",
+   "tip": "tvrdnja",
+   "tema": "datovanje mlađe bazilike Petković 2010",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-012",
+   "tip": "tvrdnja",
+   "tema": "datovanje mlađe bazilike Janković 2010",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-013",
+   "tip": "tvrdnja",
+   "tema": "broj crkava i ograničenja",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-014",
+   "tip": "tvrdnja",
+   "tema": "napuštanje u VII veku",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-015",
+   "tip": "tvrdnja",
+   "tema": "srednjovekovni povratak",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-016",
+   "tip": "tvrdnja",
+   "tema": "stanovanje i preuređenje",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-017",
+   "tip": "tvrdnja",
+   "tema": "groblja",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RS-018",
+   "tip": "tvrdnja",
+   "tema": "kraj srednjovekovnog naselja",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-slojevi.jsonl"
+  },
+  {
+   "id": "RT-001",
+   "tip": "tvrdnja",
+   "tema": "lokalitet_identifikacija",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-topologija.jsonl"
+  },
+  {
+   "id": "RT-002",
+   "tip": "tvrdnja",
+   "tema": "starije_utvrdjenje",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-topologija.jsonl"
+  },
+  {
+   "id": "RT-003",
+   "tip": "tvrdnja",
+   "tema": "mladje_utvrdjenje_kule",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-topologija.jsonl"
+  },
+  {
+   "id": "RT-004",
+   "tip": "tvrdnja",
+   "tema": "palacijalni_kompleks",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-topologija.jsonl"
+  },
+  {
+   "id": "RT-005",
+   "tip": "tvrdnja",
+   "tema": "peristil_palate",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-topologija.jsonl"
+  },
+  {
+   "id": "RT-006",
+   "tip": "tvrdnja",
+   "tema": "juzne_javne_gradjevine",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-topologija.jsonl"
+  },
+  {
+   "id": "RT-007",
+   "tip": "tvrdnja",
+   "tema": "sakralna_osa_hramova",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-topologija.jsonl"
+  },
+  {
+   "id": "RT-008",
+   "tip": "tvrdnja",
+   "tema": "mali_hram_diva_romula",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-topologija.jsonl"
+  },
+  {
+   "id": "RT-009",
+   "tip": "tvrdnja",
+   "tema": "mauzolej_1_magura",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-topologija.jsonl"
+  },
+  {
+   "id": "RT-010",
+   "tip": "tvrdnja",
+   "tema": "mauzolej_2_magura",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-topologija.jsonl"
+  },
+  {
+   "id": "RT-011",
+   "tip": "tvrdnja",
+   "tema": "tumuli_apoteoze",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-topologija.jsonl"
+  },
+  {
+   "id": "RT-012",
+   "tip": "tvrdnja",
+   "tema": "tetrapilon_prilaz",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-topologija.jsonl"
+  },
+  {
+   "id": "RU-001",
+   "tip": "tvrdnja",
+   "tema": "natpis",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-002",
+   "tip": "tvrdnja",
+   "tema": "natpis",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-003",
+   "tip": "tvrdnja",
+   "tema": "natpis",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-004",
+   "tip": "tvrdnja",
+   "tema": "natpis",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-005",
+   "tip": "tvrdnja",
+   "tema": "tetrarsi",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-006",
+   "tip": "tvrdnja",
+   "tema": "tetrarsi",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-007",
+   "tip": "tvrdnja",
+   "tema": "porfirni_portret",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-008",
+   "tip": "tvrdnja",
+   "tema": "porfirni_portret",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-009",
+   "tip": "tvrdnja",
+   "tema": "veliki_hram_skulptura",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-010",
+   "tip": "tvrdnja",
+   "tema": "arijadna",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-011",
+   "tip": "tvrdnja",
+   "tema": "raspored_mozaika",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-012",
+   "tip": "tvrdnja",
+   "tema": "venatori",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-013",
+   "tip": "tvrdnja",
+   "tema": "dionis",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-014",
+   "tip": "tvrdnja",
+   "tema": "znacenje_mozaika",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-015",
+   "tip": "tvrdnja",
+   "tema": "izgubljeni_paneli",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-016",
+   "tip": "tvrdnja",
+   "tema": "uporedni_stil",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-017",
+   "tip": "tvrdnja",
+   "tema": "veliki_hram_skulptura",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-018",
+   "tip": "tvrdnja",
+   "tema": "datum_apoteoze",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-019",
+   "tip": "tvrdnja",
+   "tema": "bakljonose",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RU-020",
+   "tip": "tvrdnja",
+   "tema": "torzo_imperatora_u_oklopu",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-umetnost.jsonl"
+  },
+  {
+   "id": "RV-001",
+   "tip": "tvrdnja",
+   "tema": "natpis",
+   "status": "vizuelno_pregledano_na_reprodukciji",
+   "registar": "tvrdnje-vizuelno.jsonl"
+  },
+  {
+   "id": "RV-002",
+   "tip": "tvrdnja",
+   "tema": "tetrarsi",
+   "status": "vizuelno_pregledano_na_reprodukciji",
+   "registar": "tvrdnje-vizuelno.jsonl"
+  },
+  {
+   "id": "RV-003",
+   "tip": "tvrdnja",
+   "tema": "tetrarsi",
+   "status": "vizuelno_pregledano_na_reprodukciji",
+   "registar": "tvrdnje-vizuelno.jsonl"
+  },
+  {
+   "id": "RV-004",
+   "tip": "tvrdnja",
+   "tema": "veliki_hram_skulptura",
+   "status": "vizuelno_pregledano_na_reprodukciji",
+   "registar": "tvrdnje-vizuelno.jsonl"
+  },
+  {
+   "id": "RV-005",
+   "tip": "tvrdnja",
+   "tema": "veliki_hram_skulptura",
+   "status": "vizuelno_pregledano_na_reprodukciji",
+   "registar": "tvrdnje-vizuelno.jsonl"
+  },
+  {
+   "id": "RV-006",
+   "tip": "tvrdnja",
+   "tema": "porfirni_portret",
+   "status": "vizuelno_pregledano_na_reprodukciji",
+   "registar": "tvrdnje-vizuelno.jsonl"
+  },
+  {
+   "id": "RV-007",
+   "tip": "tvrdnja",
+   "tema": "mere_mozaika",
+   "status": "vizuelno_pregledano_na_reprodukciji",
+   "registar": "tvrdnje-vizuelno.jsonl"
+  },
+  {
+   "id": "RV-008",
+   "tip": "tvrdnja",
+   "tema": "uporedni_stil",
+   "status": "vizuelno_pregledano_na_reprodukciji",
+   "registar": "tvrdnje-vizuelno.jsonl"
+  },
+  {
+   "id": "RV-009",
+   "tip": "tvrdnja",
+   "tema": "natpis",
+   "status": "vizuelno_pregledano_na_reprodukciji",
+   "registar": "tvrdnje-vizuelno.jsonl"
+  },
+  {
+   "id": "RV-010",
+   "tip": "tvrdnja",
+   "tema": "raspored_mozaika",
+   "status": "vizuelno_pregledano_na_reprodukciji",
+   "registar": "tvrdnje-vizuelno.jsonl"
+  },
+  {
+   "id": "ROM-CH-P1-EARLY",
+   "tip": "objekat",
+   "naziv": "Starija crkva u južnim dvoranama palate I"
+  },
+  {
+   "id": "ROM-CH-P1-LATE",
+   "tip": "objekat",
+   "naziv": "Mlađa crkva nad južnim dvoranama palate I"
+  },
+  {
+   "id": "ROM-BAPT-P1-LATE",
+   "tip": "objekat",
+   "naziv": "Četvorolisna krstionica uz mlađu crkvu"
+  }
+ ],
+ "veze": [
+  {
+   "od": "L",
+   "ka": "L.U",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.U",
+   "ka": "L.U.1",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.U",
+   "ka": "L.U.2",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.U",
+   "ka": "L.U.K",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.U",
+   "ka": "L.U.IK",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.U",
+   "ka": "L.U.ZK",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L",
+   "ka": "L.P",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.P",
+   "ka": "L.P.1",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.P",
+   "ka": "L.P.2",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.P",
+   "ka": "L.P.PE",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.P",
+   "ka": "L.P.AU",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.P",
+   "ka": "L.P.MO",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L",
+   "ka": "L.JB",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L",
+   "ka": "L.H",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.H",
+   "ka": "L.H.V",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.H",
+   "ka": "L.H.M",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L",
+   "ka": "L.T",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L",
+   "ka": "L.HO",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L",
+   "ka": "L.HR",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L",
+   "ka": "L.KN",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L",
+   "ka": "L.MG",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.MG",
+   "ka": "L.MG.M1",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.MG",
+   "ka": "L.MG.M2",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.MG",
+   "ka": "L.MG.K",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L.MG",
+   "ka": "L.MG.MZ",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "L",
+   "ka": "L.TP",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "N",
+   "ka": "N.FR",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "N",
+   "ka": "N.NO",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "N",
+   "ka": "N.SK",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "N",
+   "ka": "N.ZL",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "O",
+   "ka": "O.GA",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "O",
+   "ka": "O.RO",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "O",
+   "ka": "O.DI",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "O",
+   "ka": "O.KO",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "O",
+   "ka": "O.MD",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "O",
+   "ka": "O.LI",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "O",
+   "ka": "O.LA",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "I",
+   "ka": "I.SR",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "I",
+   "ka": "I.CM",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "I",
+   "ka": "I.MZ",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "I",
+   "ka": "I.LA",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "I",
+   "ka": "I.JA",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "I",
+   "ka": "I.VA",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "I",
+   "ka": "I.PO",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "I",
+   "ka": "I.ZI",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "I",
+   "ka": "I.TO",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "F",
+   "ka": "F.T",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "F",
+   "ka": "F.PR",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "F",
+   "ka": "F.KA",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "F",
+   "ka": "F.SV",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "R",
+   "ka": "R.SA",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "R",
+   "ka": "R.RG",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "R",
+   "ka": "R.ZA",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "R",
+   "ka": "R.ME",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "R",
+   "ka": "R.SP",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "R",
+   "ka": "R.SO",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "R",
+   "ka": "R.SI",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "R",
+   "ka": "R.SE",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "R",
+   "ka": "R.AQ",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "R",
+   "ka": "R.DA",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "R01",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 82
+  },
+  {
+   "od": "R01",
+   "ka": "L.MG.MZ",
+   "tip": "pominje",
+   "tezina": 48
+  },
+  {
+   "od": "R01",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 48
+  },
+  {
+   "od": "R01",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 35
+  },
+  {
+   "od": "R01",
+   "ka": "L.MG",
+   "tip": "pominje",
+   "tezina": 24
+  },
+  {
+   "od": "R01",
+   "ka": "L.MG.K",
+   "tip": "pominje",
+   "tezina": 24
+  },
+  {
+   "od": "R01",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 22
+  },
+  {
+   "od": "R01",
+   "ka": "I.SR",
+   "tip": "pominje",
+   "tezina": 20
+  },
+  {
+   "od": "R02",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 195
+  },
+  {
+   "od": "R02",
+   "ka": "L.H",
+   "tip": "pominje",
+   "tezina": 167
+  },
+  {
+   "od": "R02",
+   "ka": "N.SK",
+   "tip": "pominje",
+   "tezina": 74
+  },
+  {
+   "od": "R02",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 56
+  },
+  {
+   "od": "R02",
+   "ka": "L.H.V",
+   "tip": "pominje",
+   "tezina": 43
+  },
+  {
+   "od": "R02",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 32
+  },
+  {
+   "od": "R02",
+   "ka": "I.CM",
+   "tip": "pominje",
+   "tezina": 32
+  },
+  {
+   "od": "R02",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 21
+  },
+  {
+   "od": "R03",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 172
+  },
+  {
+   "od": "R03",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 63
+  },
+  {
+   "od": "R03",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 50
+  },
+  {
+   "od": "R03",
+   "ka": "O.RO",
+   "tip": "pominje",
+   "tezina": 46
+  },
+  {
+   "od": "R03",
+   "ka": "L.H",
+   "tip": "pominje",
+   "tezina": 39
+  },
+  {
+   "od": "R03",
+   "ka": "L.P.MO",
+   "tip": "pominje",
+   "tezina": 38
+  },
+  {
+   "od": "R03",
+   "ka": "N.FR",
+   "tip": "pominje",
+   "tezina": 31
+  },
+  {
+   "od": "R03",
+   "ka": "L.MG.MZ",
+   "tip": "pominje",
+   "tezina": 23
+  },
+  {
+   "od": "R04",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 772
+  },
+  {
+   "od": "R04",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 552
+  },
+  {
+   "od": "R04",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 448
+  },
+  {
+   "od": "R04",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 355
+  },
+  {
+   "od": "R04",
+   "ka": "L.U.K",
+   "tip": "pominje",
+   "tezina": 298
+  },
+  {
+   "od": "R04",
+   "ka": "L.P.MO",
+   "tip": "pominje",
+   "tezina": 269
+  },
+  {
+   "od": "R04",
+   "ka": "I.SR",
+   "tip": "pominje",
+   "tezina": 203
+  },
+  {
+   "od": "R04",
+   "ka": "F.T",
+   "tip": "pominje",
+   "tezina": 174
+  },
+  {
+   "od": "R05",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 596
+  },
+  {
+   "od": "R05",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 395
+  },
+  {
+   "od": "R05",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 238
+  },
+  {
+   "od": "R05",
+   "ka": "L.H",
+   "tip": "pominje",
+   "tezina": 143
+  },
+  {
+   "od": "R05",
+   "ka": "L.P.MO",
+   "tip": "pominje",
+   "tezina": 134
+  },
+  {
+   "od": "R05",
+   "ka": "N.SK",
+   "tip": "pominje",
+   "tezina": 119
+  },
+  {
+   "od": "R05",
+   "ka": "F.KA",
+   "tip": "pominje",
+   "tezina": 113
+  },
+  {
+   "od": "R05",
+   "ka": "L.HR",
+   "tip": "pominje",
+   "tezina": 101
+  },
+  {
+   "od": "R06",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 655
+  },
+  {
+   "od": "R06",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 644
+  },
+  {
+   "od": "R06",
+   "ka": "L.U.K",
+   "tip": "pominje",
+   "tezina": 558
+  },
+  {
+   "od": "R06",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 556
+  },
+  {
+   "od": "R06",
+   "ka": "L.HR",
+   "tip": "pominje",
+   "tezina": 259
+  },
+  {
+   "od": "R06",
+   "ka": "L.H",
+   "tip": "pominje",
+   "tezina": 248
+  },
+  {
+   "od": "R06",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 180
+  },
+  {
+   "od": "R06",
+   "ka": "F.KA",
+   "tip": "pominje",
+   "tezina": 149
+  },
+  {
+   "od": "R07",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 110
+  },
+  {
+   "od": "R07",
+   "ka": "N.NO",
+   "tip": "pominje",
+   "tezina": 81
+  },
+  {
+   "od": "R07",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 61
+  },
+  {
+   "od": "R07",
+   "ka": "L.KN",
+   "tip": "pominje",
+   "tezina": 56
+  },
+  {
+   "od": "R07",
+   "ka": "R.SI",
+   "tip": "pominje",
+   "tezina": 42
+  },
+  {
+   "od": "R07",
+   "ka": "F.PR",
+   "tip": "pominje",
+   "tezina": 34
+  },
+  {
+   "od": "R07",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 33
+  },
+  {
+   "od": "R07",
+   "ka": "I.PO",
+   "tip": "pominje",
+   "tezina": 33
+  },
+  {
+   "od": "R08",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 253
+  },
+  {
+   "od": "R08",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 93
+  },
+  {
+   "od": "R08",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 86
+  },
+  {
+   "od": "R08",
+   "ka": "R.SI",
+   "tip": "pominje",
+   "tezina": 86
+  },
+  {
+   "od": "R08",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 82
+  },
+  {
+   "od": "R08",
+   "ka": "N.SK",
+   "tip": "pominje",
+   "tezina": 80
+  },
+  {
+   "od": "R08",
+   "ka": "N.FR",
+   "tip": "pominje",
+   "tezina": 77
+  },
+  {
+   "od": "R08",
+   "ka": "R.ME",
+   "tip": "pominje",
+   "tezina": 72
+  },
+  {
+   "od": "W01",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 64
+  },
+  {
+   "od": "W01",
+   "ka": "I.TO",
+   "tip": "pominje",
+   "tezina": 57
+  },
+  {
+   "od": "W01",
+   "ka": "L.U.K",
+   "tip": "pominje",
+   "tezina": 39
+  },
+  {
+   "od": "W01",
+   "ka": "L.T",
+   "tip": "pominje",
+   "tezina": 22
+  },
+  {
+   "od": "W01",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 17
+  },
+  {
+   "od": "W01",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 16
+  },
+  {
+   "od": "W01",
+   "ka": "R.DA",
+   "tip": "pominje",
+   "tezina": 9
+  },
+  {
+   "od": "W01",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 8
+  },
+  {
+   "od": "W02",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 125
+  },
+  {
+   "od": "W02",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 43
+  },
+  {
+   "od": "W02",
+   "ka": "L.U.K",
+   "tip": "pominje",
+   "tezina": 26
+  },
+  {
+   "od": "W02",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 16
+  },
+  {
+   "od": "W02",
+   "ka": "I.TO",
+   "tip": "pominje",
+   "tezina": 10
+  },
+  {
+   "od": "W02",
+   "ka": "N.NO",
+   "tip": "pominje",
+   "tezina": 6
+  },
+  {
+   "od": "W02",
+   "ka": "L.HO",
+   "tip": "pominje",
+   "tezina": 5
+  },
+  {
+   "od": "W02",
+   "ka": "L.U.2",
+   "tip": "pominje",
+   "tezina": 3
+  },
+  {
+   "od": "W03",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 87
+  },
+  {
+   "od": "W03",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 71
+  },
+  {
+   "od": "W03",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 35
+  },
+  {
+   "od": "W03",
+   "ka": "I.TO",
+   "tip": "pominje",
+   "tezina": 33
+  },
+  {
+   "od": "W03",
+   "ka": "N.NO",
+   "tip": "pominje",
+   "tezina": 19
+  },
+  {
+   "od": "W03",
+   "ka": "L.KN",
+   "tip": "pominje",
+   "tezina": 9
+  },
+  {
+   "od": "W03",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 9
+  },
+  {
+   "od": "W03",
+   "ka": "L.MG.K",
+   "tip": "pominje",
+   "tezina": 7
+  },
+  {
+   "od": "W04",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 35
+  },
+  {
+   "od": "W04",
+   "ka": "I.TO",
+   "tip": "pominje",
+   "tezina": 29
+  },
+  {
+   "od": "W04",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 24
+  },
+  {
+   "od": "W04",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 20
+  },
+  {
+   "od": "W04",
+   "ka": "N.NO",
+   "tip": "pominje",
+   "tezina": 16
+  },
+  {
+   "od": "W04",
+   "ka": "I.JA",
+   "tip": "pominje",
+   "tezina": 12
+  },
+  {
+   "od": "W04",
+   "ka": "N.SK",
+   "tip": "pominje",
+   "tezina": 7
+  },
+  {
+   "od": "W04",
+   "ka": "L.KN",
+   "tip": "pominje",
+   "tezina": 6
+  },
+  {
+   "od": "W05",
+   "ka": "N.NO",
+   "tip": "pominje",
+   "tezina": 25
+  },
+  {
+   "od": "W05",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 9
+  },
+  {
+   "od": "W05",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 8
+  },
+  {
+   "od": "W05",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 6
+  },
+  {
+   "od": "W05",
+   "ka": "L.HO",
+   "tip": "pominje",
+   "tezina": 2
+  },
+  {
+   "od": "W05",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 2
+  },
+  {
+   "od": "W05",
+   "ka": "O.DI",
+   "tip": "pominje",
+   "tezina": 2
+  },
+  {
+   "od": "W05",
+   "ka": "O.LI",
+   "tip": "pominje",
+   "tezina": 2
+  },
+  {
+   "od": "W06",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 16
+  },
+  {
+   "od": "W06",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 13
+  },
+  {
+   "od": "W06",
+   "ka": "N.FR",
+   "tip": "pominje",
+   "tezina": 10
+  },
+  {
+   "od": "W06",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 5
+  },
+  {
+   "od": "W06",
+   "ka": "I.JA",
+   "tip": "pominje",
+   "tezina": 3
+  },
+  {
+   "od": "W06",
+   "ka": "I.TO",
+   "tip": "pominje",
+   "tezina": 3
+  },
+  {
+   "od": "W06",
+   "ka": "L.MG.K",
+   "tip": "pominje",
+   "tezina": 2
+  },
+  {
+   "od": "W06",
+   "ka": "R.SI",
+   "tip": "pominje",
+   "tezina": 2
+  },
+  {
+   "od": "W07",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 38
+  },
+  {
+   "od": "W07",
+   "ka": "I.SR",
+   "tip": "pominje",
+   "tezina": 24
+  },
+  {
+   "od": "W07",
+   "ka": "F.PR",
+   "tip": "pominje",
+   "tezina": 15
+  },
+  {
+   "od": "W07",
+   "ka": "R.ZA",
+   "tip": "pominje",
+   "tezina": 12
+  },
+  {
+   "od": "W07",
+   "ka": "I.JA",
+   "tip": "pominje",
+   "tezina": 9
+  },
+  {
+   "od": "W07",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 6
+  },
+  {
+   "od": "W07",
+   "ka": "L.MG",
+   "tip": "pominje",
+   "tezina": 6
+  },
+  {
+   "od": "W07",
+   "ka": "L.MG.K",
+   "tip": "pominje",
+   "tezina": 4
+  },
+  {
+   "od": "W08",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 189
+  },
+  {
+   "od": "W08",
+   "ka": "I.TO",
+   "tip": "pominje",
+   "tezina": 97
+  },
+  {
+   "od": "W08",
+   "ka": "N.SK",
+   "tip": "pominje",
+   "tezina": 49
+  },
+  {
+   "od": "W08",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 28
+  },
+  {
+   "od": "W08",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 26
+  },
+  {
+   "od": "W08",
+   "ka": "O.KO",
+   "tip": "pominje",
+   "tezina": 23
+  },
+  {
+   "od": "W08",
+   "ka": "F.T",
+   "tip": "pominje",
+   "tezina": 16
+  },
+  {
+   "od": "W08",
+   "ka": "L.U.K",
+   "tip": "pominje",
+   "tezina": 15
+  },
+  {
+   "od": "W09",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 135
+  },
+  {
+   "od": "W09",
+   "ka": "L.T",
+   "tip": "pominje",
+   "tezina": 82
+  },
+  {
+   "od": "W09",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 78
+  },
+  {
+   "od": "W09",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 66
+  },
+  {
+   "od": "W09",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 64
+  },
+  {
+   "od": "W09",
+   "ka": "I.TO",
+   "tip": "pominje",
+   "tezina": 41
+  },
+  {
+   "od": "W09",
+   "ka": "L.U.K",
+   "tip": "pominje",
+   "tezina": 26
+  },
+  {
+   "od": "W09",
+   "ka": "L.U.1",
+   "tip": "pominje",
+   "tezina": 19
+  },
+  {
+   "od": "W10",
+   "ka": "L.T",
+   "tip": "pominje",
+   "tezina": 70
+  },
+  {
+   "od": "W10",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 46
+  },
+  {
+   "od": "W10",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 38
+  },
+  {
+   "od": "W10",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 34
+  },
+  {
+   "od": "W10",
+   "ka": "I.TO",
+   "tip": "pominje",
+   "tezina": 21
+  },
+  {
+   "od": "W10",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 13
+  },
+  {
+   "od": "W10",
+   "ka": "L.U.K",
+   "tip": "pominje",
+   "tezina": 12
+  },
+  {
+   "od": "W10",
+   "ka": "F.PR",
+   "tip": "pominje",
+   "tezina": 11
+  },
+  {
+   "od": "W11",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 129
+  },
+  {
+   "od": "W11",
+   "ka": "I.TO",
+   "tip": "pominje",
+   "tezina": 48
+  },
+  {
+   "od": "W11",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 34
+  },
+  {
+   "od": "W11",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 33
+  },
+  {
+   "od": "W11",
+   "ka": "L.P.MO",
+   "tip": "pominje",
+   "tezina": 30
+  },
+  {
+   "od": "W11",
+   "ka": "N.FR",
+   "tip": "pominje",
+   "tezina": 19
+  },
+  {
+   "od": "W11",
+   "ka": "L.U.K",
+   "tip": "pominje",
+   "tezina": 12
+  },
+  {
+   "od": "W11",
+   "ka": "I.SR",
+   "tip": "pominje",
+   "tezina": 11
+  },
+  {
+   "od": "W12",
+   "ka": "N.SK",
+   "tip": "pominje",
+   "tezina": 94
+  },
+  {
+   "od": "W12",
+   "ka": "F.KA",
+   "tip": "pominje",
+   "tezina": 43
+  },
+  {
+   "od": "W12",
+   "ka": "R.ME",
+   "tip": "pominje",
+   "tezina": 39
+  },
+  {
+   "od": "W12",
+   "ka": "N.NO",
+   "tip": "pominje",
+   "tezina": 38
+  },
+  {
+   "od": "W12",
+   "ka": "I.PO",
+   "tip": "pominje",
+   "tezina": 36
+  },
+  {
+   "od": "W12",
+   "ka": "O.KO",
+   "tip": "pominje",
+   "tezina": 26
+  },
+  {
+   "od": "W12",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 25
+  },
+  {
+   "od": "W12",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 25
+  },
+  {
+   "od": "W13",
+   "ka": "N.NO",
+   "tip": "pominje",
+   "tezina": 395
+  },
+  {
+   "od": "W13",
+   "ka": "L.KN",
+   "tip": "pominje",
+   "tezina": 286
+  },
+  {
+   "od": "W13",
+   "ka": "L.HR",
+   "tip": "pominje",
+   "tezina": 264
+  },
+  {
+   "od": "W13",
+   "ka": "F.PR",
+   "tip": "pominje",
+   "tezina": 107
+  },
+  {
+   "od": "W13",
+   "ka": "I.PO",
+   "tip": "pominje",
+   "tezina": 102
+  },
+  {
+   "od": "W13",
+   "ka": "R.SP",
+   "tip": "pominje",
+   "tezina": 94
+  },
+  {
+   "od": "W13",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 93
+  },
+  {
+   "od": "W13",
+   "ka": "F.KA",
+   "tip": "pominje",
+   "tezina": 82
+  },
+  {
+   "od": "W14",
+   "ka": "L.HR",
+   "tip": "pominje",
+   "tezina": 202
+  },
+  {
+   "od": "W14",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 176
+  },
+  {
+   "od": "W14",
+   "ka": "L.KN",
+   "tip": "pominje",
+   "tezina": 140
+  },
+  {
+   "od": "W14",
+   "ka": "F.PR",
+   "tip": "pominje",
+   "tezina": 106
+  },
+  {
+   "od": "W14",
+   "ka": "L.MG.K",
+   "tip": "pominje",
+   "tezina": 80
+  },
+  {
+   "od": "W14",
+   "ka": "F.KA",
+   "tip": "pominje",
+   "tezina": 65
+  },
+  {
+   "od": "W14",
+   "ka": "I.PO",
+   "tip": "pominje",
+   "tezina": 59
+  },
+  {
+   "od": "W14",
+   "ka": "R.ME",
+   "tip": "pominje",
+   "tezina": 59
+  },
+  {
+   "od": "W15",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 13
+  },
+  {
+   "od": "W15",
+   "ka": "L.KN",
+   "tip": "pominje",
+   "tezina": 13
+  },
+  {
+   "od": "W15",
+   "ka": "L.U.IK",
+   "tip": "pominje",
+   "tezina": 5
+  },
+  {
+   "od": "W15",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 3
+  },
+  {
+   "od": "W15",
+   "ka": "I.SR",
+   "tip": "pominje",
+   "tezina": 2
+  },
+  {
+   "od": "W15",
+   "ka": "I.JA",
+   "tip": "pominje",
+   "tezina": 2
+  },
+  {
+   "od": "W15",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 1
+  },
+  {
+   "od": "W15",
+   "ka": "N.FR",
+   "tip": "pominje",
+   "tezina": 1
+  },
+  {
+   "od": "W16",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 44
+  },
+  {
+   "od": "W16",
+   "ka": "L.U.IK",
+   "tip": "pominje",
+   "tezina": 7
+  },
+  {
+   "od": "W16",
+   "ka": "N.FR",
+   "tip": "pominje",
+   "tezina": 7
+  },
+  {
+   "od": "W16",
+   "ka": "F.PR",
+   "tip": "pominje",
+   "tezina": 6
+  },
+  {
+   "od": "W16",
+   "ka": "L.KN",
+   "tip": "pominje",
+   "tezina": 5
+  },
+  {
+   "od": "W16",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 4
+  },
+  {
+   "od": "W16",
+   "ka": "L.HR",
+   "tip": "pominje",
+   "tezina": 2
+  },
+  {
+   "od": "W17",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 47
+  },
+  {
+   "od": "W17",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 43
+  },
+  {
+   "od": "W17",
+   "ka": "N.FR",
+   "tip": "pominje",
+   "tezina": 24
+  },
+  {
+   "od": "W17",
+   "ka": "N.SK",
+   "tip": "pominje",
+   "tezina": 22
+  },
+  {
+   "od": "W17",
+   "ka": "I.TO",
+   "tip": "pominje",
+   "tezina": 17
+  },
+  {
+   "od": "W17",
+   "ka": "N.NO",
+   "tip": "pominje",
+   "tezina": 15
+  },
+  {
+   "od": "W17",
+   "ka": "L.P.MO",
+   "tip": "pominje",
+   "tezina": 9
+  },
+  {
+   "od": "W17",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 9
+  },
+  {
+   "od": "W18",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 15
+  },
+  {
+   "od": "W18",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 8
+  },
+  {
+   "od": "W18",
+   "ka": "N.FR",
+   "tip": "pominje",
+   "tezina": 4
+  },
+  {
+   "od": "W18",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 3
+  },
+  {
+   "od": "W18",
+   "ka": "L.H",
+   "tip": "pominje",
+   "tezina": 3
+  },
+  {
+   "od": "W18",
+   "ka": "L.P.MO",
+   "tip": "pominje",
+   "tezina": 2
+  },
+  {
+   "od": "W18",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 2
+  },
+  {
+   "od": "W18",
+   "ka": "L.T",
+   "tip": "pominje",
+   "tezina": 1
+  },
+  {
+   "od": "W19",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 30
+  },
+  {
+   "od": "W19",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 18
+  },
+  {
+   "od": "W19",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 11
+  },
+  {
+   "od": "W19",
+   "ka": "I.SR",
+   "tip": "pominje",
+   "tezina": 10
+  },
+  {
+   "od": "W19",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 8
+  },
+  {
+   "od": "W19",
+   "ka": "I.CM",
+   "tip": "pominje",
+   "tezina": 8
+  },
+  {
+   "od": "W19",
+   "ka": "N.FR",
+   "tip": "pominje",
+   "tezina": 6
+  },
+  {
+   "od": "W19",
+   "ka": "L.P.MO",
+   "tip": "pominje",
+   "tezina": 5
+  },
+  {
+   "od": "W20",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 430
+  },
+  {
+   "od": "W20",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 410
+  },
+  {
+   "od": "W20",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 266
+  },
+  {
+   "od": "W20",
+   "ka": "L.U.K",
+   "tip": "pominje",
+   "tezina": 264
+  },
+  {
+   "od": "W20",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 214
+  },
+  {
+   "od": "W20",
+   "ka": "L.P.MO",
+   "tip": "pominje",
+   "tezina": 146
+  },
+  {
+   "od": "W20",
+   "ka": "L.H",
+   "tip": "pominje",
+   "tezina": 125
+  },
+  {
+   "od": "W20",
+   "ka": "R.ZA",
+   "tip": "pominje",
+   "tezina": 115
+  },
+  {
+   "od": "W21",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 141
+  },
+  {
+   "od": "W21",
+   "ka": "I.TO",
+   "tip": "pominje",
+   "tezina": 42
+  },
+  {
+   "od": "W21",
+   "ka": "I.JA",
+   "tip": "pominje",
+   "tezina": 36
+  },
+  {
+   "od": "W21",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 31
+  },
+  {
+   "od": "W21",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 27
+  },
+  {
+   "od": "W21",
+   "ka": "L.KN",
+   "tip": "pominje",
+   "tezina": 23
+  },
+  {
+   "od": "W21",
+   "ka": "I.SR",
+   "tip": "pominje",
+   "tezina": 23
+  },
+  {
+   "od": "W21",
+   "ka": "F.KA",
+   "tip": "pominje",
+   "tezina": 22
+  },
+  {
+   "od": "W22",
+   "ka": "L.KN",
+   "tip": "pominje",
+   "tezina": 307
+  },
+  {
+   "od": "W22",
+   "ka": "L.HO",
+   "tip": "pominje",
+   "tezina": 236
+  },
+  {
+   "od": "W22",
+   "ka": "N.NO",
+   "tip": "pominje",
+   "tezina": 233
+  },
+  {
+   "od": "W22",
+   "ka": "L.U",
+   "tip": "pominje",
+   "tezina": 202
+  },
+  {
+   "od": "W22",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 201
+  },
+  {
+   "od": "W22",
+   "ka": "R.SI",
+   "tip": "pominje",
+   "tezina": 168
+  },
+  {
+   "od": "W22",
+   "ka": "L.HR",
+   "tip": "pominje",
+   "tezina": 161
+  },
+  {
+   "od": "W22",
+   "ka": "O.KO",
+   "tip": "pominje",
+   "tezina": 158
+  },
+  {
+   "od": "RD-001",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-001",
+   "ka": "L.P.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-001",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-001",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R06",
+   "ka": "RD-001",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R05",
+   "ka": "RD-001",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RD-001",
+   "ka": "RS-009",
+   "tip": "dopunjuje"
+  },
+  {
+   "od": "RD-001",
+   "ka": "RS-008",
+   "tip": "odnosi_se_na"
+  },
+  {
+   "od": "RD-002",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-002",
+   "ka": "L.P.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-002",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-002",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R05",
+   "ka": "RD-002",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RD-002",
+   "ka": "RS-010",
+   "tip": "dopunjuje"
+  },
+  {
+   "od": "RD-003",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-003",
+   "ka": "L.P.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-003",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-003",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R05",
+   "ka": "RD-003",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RD-003",
+   "ka": "RS-010",
+   "tip": "ogranicava"
+  },
+  {
+   "od": "RD-003",
+   "ka": "RD-001",
+   "tip": "povezuje"
+  },
+  {
+   "od": "RD-004",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-004",
+   "ka": "L.P.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-004",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-004",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R05",
+   "ka": "RD-004",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RD-004",
+   "ka": "RS-010",
+   "tip": "objasnjava_argument"
+  },
+  {
+   "od": "RD-004",
+   "ka": "RD-003",
+   "tip": "povezuje"
+  },
+  {
+   "od": "RD-005",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-005",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-005",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R05",
+   "ka": "RD-005",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RD-005",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RD-005",
+   "ka": "RS-012",
+   "tip": "dopunjuje"
+  },
+  {
+   "od": "RD-006",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-006",
+   "ka": "L.P.2",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-006",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R05",
+   "ka": "RD-006",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RD-006",
+   "ka": "RS-012",
+   "tip": "ogranicava"
+  },
+  {
+   "od": "RD-006",
+   "ka": "RD-005",
+   "tip": "povezuje"
+  },
+  {
+   "od": "RD-007",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-007",
+   "ka": "L.P.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-007",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-007",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RD-007",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RD-007",
+   "ka": "RS-012",
+   "tip": "precizira"
+  },
+  {
+   "od": "RD-007",
+   "ka": "RD-006",
+   "tip": "ograniceno_sa"
+  },
+  {
+   "od": "RD-008",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-008",
+   "ka": "L.P.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-008",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-008",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RD-008",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R06",
+   "ka": "RD-008",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RD-008",
+   "ka": "RS-011",
+   "tip": "ogranicava"
+  },
+  {
+   "od": "RD-008",
+   "ka": "RS-012",
+   "tip": "ogranicava"
+  },
+  {
+   "od": "RD-008",
+   "ka": "RD-004",
+   "tip": "povezuje"
+  },
+  {
+   "od": "RD-008",
+   "ka": "RD-007",
+   "tip": "povezuje"
+  },
+  {
+   "od": "RD-009",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-009",
+   "ka": "L.P.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-009",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RD-009",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "W21",
+   "ka": "RD-009",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RD-009",
+   "ka": "RD-008",
+   "tip": "povezuje"
+  },
+  {
+   "od": "RD-009",
+   "ka": "RD-001",
+   "tip": "povezuje"
+  },
+  {
+   "od": "RD-009",
+   "ka": "RD-002",
+   "tip": "povezuje"
+  },
+  {
+   "od": "RP-001",
+   "ka": "R.ZA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RP-001",
+   "ka": "L.HO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RP-001",
+   "ka": "R.DA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R06",
+   "ka": "RP-001",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R05",
+   "ka": "RP-001",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RP-002",
+   "ka": "R.ZA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RP-002",
+   "ka": "L.HO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RP-002",
+   "ka": "L.U",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R06",
+   "ka": "RP-002",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RP-002",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RP-002",
+   "ka": "RP-001",
+   "tip": "razjasnjava"
+  },
+  {
+   "od": "RS-001",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-001",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-001",
+   "ka": "L.KN",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R02",
+   "ka": "RS-001",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-002",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-002",
+   "ka": "L.KN",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R02",
+   "ka": "RS-002",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-003",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-003",
+   "ka": "L.KN",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R02",
+   "ka": "RS-003",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-004",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-004",
+   "ka": "L.KN",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-004",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RS-004",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-005",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-005",
+   "ka": "L.KN",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-005",
+   "ka": "L.P.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RS-005",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-006",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-006",
+   "ka": "L.KN",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RS-006",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-007",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-007",
+   "ka": "L.P.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-007",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R06",
+   "ka": "RS-007",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RS-007",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-008",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-008",
+   "ka": "L.P.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-008",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-008",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R06",
+   "ka": "RS-008",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R05",
+   "ka": "RS-008",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RS-008",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-008",
+   "ka": "RS-007",
+   "tip": "povezuje"
+  },
+  {
+   "od": "RS-009",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-009",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R06",
+   "ka": "RS-009",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-009",
+   "ka": "RS-008",
+   "tip": "odnosi_se_na"
+  },
+  {
+   "od": "RS-010",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-010",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-010",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R05",
+   "ka": "RS-010",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-010",
+   "ka": "RS-009",
+   "tip": "alternativno_datovanje"
+  },
+  {
+   "od": "RS-010",
+   "ka": "RS-008",
+   "tip": "odnosi_se_na"
+  },
+  {
+   "od": "RS-011",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-011",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RS-011",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-011",
+   "ka": "RS-012",
+   "tip": "alternativno_datovanje"
+  },
+  {
+   "od": "RS-011",
+   "ka": "RS-008",
+   "tip": "odnosi_se_na"
+  },
+  {
+   "od": "RS-012",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-012",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RS-012",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-012",
+   "ka": "RS-010",
+   "tip": "revidira"
+  },
+  {
+   "od": "RS-012",
+   "ka": "RS-011",
+   "tip": "alternativno_datovanje"
+  },
+  {
+   "od": "RS-012",
+   "ka": "RS-008",
+   "tip": "odnosi_se_na"
+  },
+  {
+   "od": "RS-013",
+   "ka": "L.HR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-013",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RS-013",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-013",
+   "ka": "RS-012",
+   "tip": "ograniceno_sa"
+  },
+  {
+   "od": "RS-014",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-014",
+   "ka": "L.KN",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R02",
+   "ka": "RS-014",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RS-014",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-014",
+   "ka": "RS-003",
+   "tip": "nastavlja"
+  },
+  {
+   "od": "RS-015",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-015",
+   "ka": "L.KN",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R02",
+   "ka": "RS-015",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R05",
+   "ka": "RS-015",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RS-015",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-015",
+   "ka": "RS-014",
+   "tip": "sledi_posle"
+  },
+  {
+   "od": "RS-016",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-016",
+   "ka": "L.KN",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-016",
+   "ka": "L.P.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-016",
+   "ka": "L.P.2",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RS-016",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-017",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-017",
+   "ka": "L.KN",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RS-017",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-018",
+   "ka": "F.SV",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RS-018",
+   "ka": "L.KN",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R02",
+   "ka": "RS-018",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RS-018",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RS-018",
+   "ka": "RS-015",
+   "tip": "zavrsava"
+  },
+  {
+   "od": "RT-001",
+   "ka": "L",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RT-001",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R06",
+   "ka": "RT-001",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RT-001",
+   "ka": "RU-001",
+   "tip": "oslanja_se_na"
+  },
+  {
+   "od": "RT-001",
+   "ka": "RP-001",
+   "tip": "dopunjuje"
+  },
+  {
+   "od": "RT-002",
+   "ka": "L.U.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RT-002",
+   "ka": "L.U",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RT-002",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R06",
+   "ka": "RT-002",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RT-002",
+   "ka": "RU-004",
+   "tip": "prethodi"
+  },
+  {
+   "od": "RT-003",
+   "ka": "L.U.K",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RT-003",
+   "ka": "L.U",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RT-003",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R06",
+   "ka": "RT-003",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RT-003",
+   "ka": "RU-004",
+   "tip": "prostorno_povezan"
+  },
+  {
+   "od": "RT-004",
+   "ka": "L.P",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RT-004",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R06",
+   "ka": "RT-004",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RT-004",
+   "ka": "RU-006",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "RT-005",
+   "ka": "L.P.PE",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RT-005",
+   "ka": "L.P",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RT-005",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RT-005",
+   "ka": "RU-015",
+   "tip": "prostorno_povezan"
+  },
+  {
+   "od": "RT-006",
+   "ka": "L.JB",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R05",
+   "ka": "RT-006",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RT-006",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RT-006",
+   "ka": "RU-001",
+   "tip": "mesto_nalaza"
+  },
+  {
+   "od": "RT-007",
+   "ka": "L.H",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RT-007",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R06",
+   "ka": "RT-007",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RT-007",
+   "ka": "RU-019",
+   "tip": "obuhvata"
+  },
+  {
+   "od": "RT-008",
+   "ka": "L.H.M",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RT-008",
+   "ka": "L.H",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RT-008",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R06",
+   "ka": "RT-008",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RT-008",
+   "ka": "RU-018",
+   "tip": "kultni_par"
+  },
+  {
+   "od": "RT-009",
+   "ka": "L.MG.M1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RT-009",
+   "ka": "L.MG",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RT-009",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RT-009",
+   "ka": "RU-018",
+   "tip": "vezan_za_apoteozu"
+  },
+  {
+   "od": "RT-010",
+   "ka": "L.MG.M2",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RT-010",
+   "ka": "L.MG",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RT-010",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RT-010",
+   "ka": "RU-018",
+   "tip": "vezan_za_apoteozu"
+  },
+  {
+   "od": "RT-011",
+   "ka": "L.MG.K",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RT-011",
+   "ka": "L.MG",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RT-011",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RT-011",
+   "ka": "RU-018",
+   "tip": "vezan_za_apoteozu"
+  },
+  {
+   "od": "RT-012",
+   "ka": "L.TP",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RT-012",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RT-012",
+   "ka": "RP-002",
+   "tip": "povezuje_trasu"
+  },
+  {
+   "od": "RU-001",
+   "ka": "N.FR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R03",
+   "ka": "RU-001",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-001",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-002",
+   "ka": "N.FR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-002",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-003",
+   "ka": "N.FR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-003",
+   "ka": "O.RO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-003",
+   "ka": "O.GA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R08",
+   "ka": "RU-003",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-003",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-004",
+   "ka": "N.FR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-004",
+   "ka": "L.U.ZK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-004",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-004",
+   "ka": "RU-001",
+   "tip": "razlikuje_nalaz_od_ugradnje"
+  },
+  {
+   "od": "RU-005",
+   "ka": "N.SK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-005",
+   "ka": "L.U.IK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-005",
+   "ka": "F.T",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-005",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-006",
+   "ka": "N.SK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-006",
+   "ka": "L.U.IK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-006",
+   "ka": "L.U.2",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-006",
+   "ka": "F.T",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-006",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-006",
+   "ka": "RU-005",
+   "tip": "alternativa"
+  },
+  {
+   "od": "RU-007",
+   "ka": "N.SK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-007",
+   "ka": "L.T",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-007",
+   "ka": "O.GA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-007",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-008",
+   "ka": "N.SK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-008",
+   "ka": "O.GA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-008",
+   "ka": "O.DI",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-008",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-008",
+   "ka": "RU-007",
+   "tip": "tumaci"
+  },
+  {
+   "od": "RU-009",
+   "ka": "N.SK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-009",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-009",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-010",
+   "ka": "N.SK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-010",
+   "ka": "L.T",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-010",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-011",
+   "ka": "L.P.MO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-011",
+   "ka": "L.P.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-011",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R05",
+   "ka": "RU-011",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-012",
+   "ka": "L.P.MO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R05",
+   "ka": "RU-012",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-013",
+   "ka": "L.P.MO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-013",
+   "ka": "L.P.AU",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R05",
+   "ka": "RU-013",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R06",
+   "ka": "RU-013",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-013",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-014",
+   "ka": "L.P.MO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R06",
+   "ka": "RU-014",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R05",
+   "ka": "RU-014",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-014",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-015",
+   "ka": "L.P.MO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R05",
+   "ka": "RU-015",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-015",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-015",
+   "ka": "RU-014",
+   "tip": "ogranicava_rekonstrukciju"
+  },
+  {
+   "od": "RU-016",
+   "ka": "L.P.MO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R08",
+   "ka": "RU-016",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-017",
+   "ka": "L.MG",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-017",
+   "ka": "O.GA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-017",
+   "ka": "O.RO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R02",
+   "ka": "RU-017",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-017",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-017",
+   "ka": "RU-009",
+   "tip": "razresava_deo"
+  },
+  {
+   "od": "RU-017",
+   "ka": "RV-005",
+   "tip": "povezuje"
+  },
+  {
+   "od": "RU-018",
+   "ka": "L.MG.MZ",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-018",
+   "ka": "O.RO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-018",
+   "ka": "R.ZA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-018",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-018",
+   "ka": "RU-003",
+   "tip": "dopunjuje"
+  },
+  {
+   "od": "RU-018",
+   "ka": "RU-017",
+   "tip": "uvod_u"
+  },
+  {
+   "od": "RU-019",
+   "ka": "L.MG",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-019",
+   "ka": "F.KA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-019",
+   "ka": "O.RO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R02",
+   "ka": "RU-019",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-019",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-019",
+   "ka": "RU-017",
+   "tip": "nadovezuje_se"
+  },
+  {
+   "od": "RU-020",
+   "ka": "L.MG",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-020",
+   "ka": "O.GA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-020",
+   "ka": "O.DI",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RU-020",
+   "ka": "R.ME",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RU-020",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RU-020",
+   "ka": "RU-017",
+   "tip": "razgranicava"
+  },
+  {
+   "od": "RV-001",
+   "ka": "N.FR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RV-001",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RV-001",
+   "ka": "RU-002",
+   "tip": "vizuelno_potvrdjuje"
+  },
+  {
+   "od": "RV-002",
+   "ka": "N.SK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RV-002",
+   "ka": "L.U.IK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RV-002",
+   "ka": "F.T",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RV-002",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RV-002",
+   "ka": "RV-001",
+   "tip": "odvojen_predmet_od"
+  },
+  {
+   "od": "RV-002",
+   "ka": "RV-003",
+   "tip": "odvojen_predmet_od"
+  },
+  {
+   "od": "RV-003",
+   "ka": "N.SK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RV-003",
+   "ka": "L.U.IK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RV-003",
+   "ka": "F.T",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RV-003",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R08",
+   "ka": "RV-003",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RV-003",
+   "ka": "RU-005",
+   "tip": "vizuelno_potvrdjuje"
+  },
+  {
+   "od": "RV-003",
+   "ka": "RU-006",
+   "tip": "dopunjuje"
+  },
+  {
+   "od": "RV-004",
+   "ka": "N.SK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RV-004",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RV-004",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R08",
+   "ka": "RV-004",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RV-004",
+   "ka": "RU-009",
+   "tip": "precizira"
+  },
+  {
+   "od": "RV-005",
+   "ka": "N.SK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RV-005",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R02",
+   "ka": "RV-005",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RV-005",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RV-005",
+   "ka": "RU-009",
+   "tip": "razresava_deo"
+  },
+  {
+   "od": "RV-005",
+   "ka": "RV-004",
+   "tip": "odvojen_predmet_od"
+  },
+  {
+   "od": "RV-006",
+   "ka": "N.SK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RV-006",
+   "ka": "O.GA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RV-006",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RV-006",
+   "ka": "RU-007",
+   "tip": "dopunjuje"
+  },
+  {
+   "od": "RV-006",
+   "ka": "RU-008",
+   "tip": "ogranicava"
+  },
+  {
+   "od": "RV-007",
+   "ka": "L.P.MO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R05",
+   "ka": "RV-007",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RV-007",
+   "ka": "RU-012",
+   "tip": "vizuelno_potvrdjuje"
+  },
+  {
+   "od": "RV-007",
+   "ka": "RU-013",
+   "tip": "vizuelno_potvrdjuje"
+  },
+  {
+   "od": "RV-008",
+   "ka": "L.P.MO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R08",
+   "ka": "RV-008",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RV-008",
+   "ka": "RU-016",
+   "tip": "precizira"
+  },
+  {
+   "od": "RV-009",
+   "ka": "N.FR",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RV-009",
+   "ka": "N.SK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RV-009",
+   "ka": "O.GA",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R08",
+   "ka": "RV-009",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RV-009",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RV-009",
+   "ka": "RU-003",
+   "tip": "potvrdjuje_ogranicenje"
+  },
+  {
+   "od": "RV-009",
+   "ka": "RV-004",
+   "tip": "precizira"
+  },
+  {
+   "od": "RV-010",
+   "ka": "L.P.MO",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RV-010",
+   "ka": "L.P.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R04",
+   "ka": "RV-010",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RV-010",
+   "ka": "RU-011",
+   "tip": "dopunjuje"
+  },
+  {
+   "od": "RV-010",
+   "ka": "RU-015",
+   "tip": "potvrdjuje"
+  },
+  {
+   "od": "L.P.1",
+   "ka": "ROM-CH-P1-EARLY",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "RS-007",
+   "ka": "ROM-CH-P1-EARLY",
+   "tip": "o_objektu"
+  },
+  {
+   "od": "L.P.1",
+   "ka": "ROM-CH-P1-LATE",
+   "tip": "sadrzi"
+  },
+  {
+   "od": "RS-008",
+   "ka": "ROM-CH-P1-LATE",
+   "tip": "o_objektu"
+  },
+  {
+   "od": "RS-009",
+   "ka": "ROM-CH-P1-LATE",
+   "tip": "o_objektu"
+  },
+  {
+   "od": "RS-010",
+   "ka": "ROM-CH-P1-LATE",
+   "tip": "o_objektu"
+  },
+  {
+   "od": "RS-011",
+   "ka": "ROM-CH-P1-LATE",
+   "tip": "o_objektu"
+  },
+  {
+   "od": "RS-012",
+   "ka": "ROM-CH-P1-LATE",
+   "tip": "o_objektu"
+  },
+  {
+   "od": "ROM-CH-P1-LATE",
+   "ka": "ROM-BAPT-P1-LATE",
+   "tip": "sadrzi"
+  }
+ ]
+}

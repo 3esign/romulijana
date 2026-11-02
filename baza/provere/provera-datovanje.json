@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-31T23:07:32.645Z",
+  "claims": 8,
+  "evidence": 15,
+  "relations": 16,
+  "markdown_links": 54,
+  "images": 4,
+  "source_pdfs": 2,
+  "errors": 0,
+  "scope": "IDs, node/object/source relations, exact text line anchors and SHA256, source PDF and image hashes, file and fragment links; historical conclusions remain interpretations; no independent reviewer"
+}
