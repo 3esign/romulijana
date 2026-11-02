@@ -1626,6 +1626,7 @@ if (DATA.dem_glo30) {
     new THREE.WireframeGeometry(demGeo),
     new THREE.LineBasicMaterial({ color: currentPal().grid, transparent: true, opacity: 0.28 })
   );
+  demWire.name = 'demWire'; window.__demWire = demWire;
   groundGroup.add(demWire);
 }
 
@@ -1708,7 +1709,7 @@ const planBorderMat = new THREE.LineDashedMaterial({
 });
 
 for (const p of (DATA.planovi_overlay || []).filter(x => !x.sloj || x.sloj === 'plan')) {
-  const yPlane = 0.18;
+  const yPlane = 0.18 + plansGroup.children.length * 0.03; // svaki plan na svojoj visini, bez preklapanja
   const pGroup = new THREE.Group();
   pGroup.position.set(p.centar_xz[0], yPlane, p.centar_xz[1]);
   if (p.rotacija_deg) pGroup.rotation.y = THREE.MathUtils.degToRad(-p.rotacija_deg);
@@ -1718,6 +1719,7 @@ for (const p of (DATA.planovi_overlay || []).filter(x => !x.sloj || x.sloj === '
 
   const tex = textureLoader.load(p.fajl, () => requestRender(), undefined, () => {});
   tex.colorSpace = THREE.SRGBColorSpace;
+  tex.anisotropy = renderer.capabilities.getMaxAnisotropy(); // bez moire šare pod oštrim uglom
   const mat = new THREE.MeshBasicMaterial({
     map: tex,
     transparent: true,
@@ -2203,8 +2205,9 @@ function applySceneState() {
   lineMatP.color.setHex(pal.edgeP);
 
   photoGroup.visible = STATE.showPhotos;
-  plansGroup.visible = STATE.showPlans;
-  geofizGroup.visible = STATE.showGeofiz;
+  plansGroup.visible = STATE.showPlans && !window.__walkOn;
+  geofizGroup.visible = STATE.showGeofiz && !window.__walkOn;
+  if (window.__demWire) window.__demWire.visible = !window.__walkOn;
   planBorderMat.color.setHex(pal.edgeA);
   clipPlane.constant = STATE.clipX;
 
@@ -3175,11 +3178,12 @@ window.__walkEnv = (pal) => {
 function toggleWalk(force) {
   const on = typeof force === 'boolean' ? force : !WALK.on;
   if (on === WALK.on) return;
-  WALK.on = on;
+  WALK.on = on; window.__walkOn = on;
   document.getElementById('btn-walk').classList.toggle('active', on);
   document.querySelectorAll('[data-proj]').forEach(b => b.classList.toggle('active', !on && b.dataset.proj === STATE.projMode));
   document.body.classList.toggle('walking', on);
-  skyDome.visible = on; walkGrid.visible = on;
+  skyDome.visible = on; walkGrid.visible = on && !/Mobi|Android|iPhone/i.test(navigator.userAgent);
+  // U šetnji: odozgo-slojevi (planovi, geofizika, DEM žica) se skidaju — gledani iskosa trepere i prave moire
   applySceneState();
   if (on) {
     WALK.saved = { pos: camCurrent.pos.clone(), target: camCurrent.target.clone() };
