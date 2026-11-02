@@ -17,21 +17,21 @@
 :root {
   --bg: #ebe4d6;
   --bg-panel: #f4efe4;
-  --bg-card: #faf6ee;
-  --bg-chip: #e4dccb;
+  --bg-card: #fafaf8;
+  --bg-chip: #ebe9e4;
   --fg: #1b1916;
   --fg-muted: #575046;
   --fg-subtle: #786f62;
-  --border: #c9bfae;
+  --border: #d6d3cc;
   --border-strong: #8c806e;
-  --accent: #9e2a2b;
+  --accent: #8a4b3c;
   --accent-soft: rgba(158, 42, 43, 0.12);
   --lvl-a: #3b6245;
   --lvl-b: #8f6824;
   --lvl-c: #b84a24;
   --lvl-p: #6d655a;
-  --scrim: rgba(244, 239, 228, 0.90);
-  --font-serif: 'Georgia', 'Palatino Linotype', 'Times New Roman', serif;
+  --scrim: rgba(248, 247, 244, 0.88);
+  --font-serif: 'Segoe UI Variable Display', 'Segoe UI', -apple-system, 'Helvetica Neue', system-ui, sans-serif;
   --font-sans: 'Segoe UI', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-mono: 'Consolas', 'SFMono-Regular', 'Menlo', monospace;
   --ease-std: cubic-bezier(0.2, 0, 0, 1);
@@ -570,13 +570,19 @@ body.noc .spatial-label.selected { color: #121519; font-weight: 700; }
 @media (max-width: 960px) {
   #app {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: 52% 48%;
+    grid-template-rows: 100%;
     width: 100%;
     max-width: 100vw;
     height: 100%;
   }
   #dossier {
-    height: 100%;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    height: 62%;
+    transform: translateY(calc(100% - 46px));
+    transition: transform 260ms var(--ease-std);
+    box-shadow: 0 -6px 24px rgba(0,0,0,0.12);
+    border-radius: 12px 12px 0 0;
+    background: var(--bg-panel);
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -622,6 +628,13 @@ body.noc .spatial-label.selected { color: #121519; font-weight: 700; }
   .sf-sentence { display: none; }
   .sf-legend { gap: 6px; font-size: 9px; }
   #tour-banner { display: none; }
+  #dossier.open { transform: translateY(0); }
+  .hud-bar { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .hud-bar .btn { flex: 0 0 auto; }
+  #dossier .dos-header { cursor: pointer; }
+  #dossier .dos-header::before { content: ""; display: block; width: 36px; height: 4px; border-radius: 2px; background: var(--border-strong); margin: 0 auto 6px; }
+  #schriftfeld { bottom: 52px; }
+  #schriftfeld .sf-legend { display: none; }
   .dos-header { padding: 7px 10px 6px; }
   .dos-kicker { font-size: 9px; }
   .dos-title { font-size: 14.5px; }
@@ -835,6 +848,27 @@ controls.enableDamping = false; // Koristimo sopstveni frame-rate independent ek
 controls.maxPolarAngle = Math.PI * 0.485;
 controls.minDistance = 12;
 controls.maxDistance = 9500;
+/* Navigacija: levo = orbit, desno / Shift+levo / dva prsta = pan, točkić i pinch = zoom ka kursoru */
+controls.mouseButtons = { LEFT: THREE.MOUSE.ROTATE, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.PAN };
+controls.touches = { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_PAN };
+controls.screenSpacePanning = false;
+controls.zoomToCursor = true;
+controls.keyPanSpeed = 18;
+canvas.addEventListener('contextmenu', (e) => e.preventDefault());
+/* Touchpad: pinch (ctrl+wheel) = zoom, dva prsta prevlačenje = pan; klasičan točkić miša = zoom */
+canvas.addEventListener('wheel', (e) => {
+  const trackpadScroll = !e.ctrlKey && e.deltaMode === 0 &&
+    (Math.abs(e.deltaX) > 0 || !Number.isInteger(e.deltaY) || Math.abs(e.deltaY) < 40);
+  if (!trackpadScroll) return; // OrbitControls radi zoom (uključujući pinch kao ctrl+wheel)
+  e.preventDefault(); e.stopImmediatePropagation();
+  const dist = camera.position.distanceTo(controls.target);
+  const k = dist / Math.max(1, canvas.clientHeight) * 1.1;
+  const right = new THREE.Vector3().setFromMatrixColumn(camera.matrix, 0);
+  const fwd = new THREE.Vector3().subVectors(controls.target, camera.position).setY(0).normalize();
+  const move = right.multiplyScalar(e.deltaX * k).add(fwd.multiplyScalar(-e.deltaY * k));
+  camGoal.pos.add(move); camGoal.target.add(move);
+  requestRender();
+}, { passive: false, capture: true });
 
 /* Kamera damping / flyTo cilj (0 draw calls u mirovanju) */
 const camCurrent = { pos: new THREE.Vector3(-195, 118, 230), target: new THREE.Vector3(62, 10, -28) };
@@ -1783,6 +1817,7 @@ canvas.addEventListener('pointerup', (e) => {
   const hit = hits.find(h => h.object.visible && h.object.parent && h.object.parent.visible);
   if (hit && hit.object.userData.nodeId) {
     selectNode(hit.object.userData.nodeId, true);
+    window.__openDossier && window.__openDossier();
   } else if (hit && hit.object.userData.isPlan && hit.object.userData.cvorovi && hit.object.userData.cvorovi[0]) {
     selectNode(hit.object.userData.cvorovi[0], true);
   }
@@ -1960,6 +1995,14 @@ function resize() {
   requestRender();
 }
 window.addEventListener('resize', resize);
+/* Mobilni list dosijea: tap na zaglavlje otvara/zatvara, izbor čvora otvara */
+{
+  const dos = document.getElementById('dossier');
+  const mq = window.matchMedia('(max-width: 960px)');
+  dos.querySelector('.dos-header').addEventListener('click', () => { if (mq.matches) dos.classList.toggle('open'); });
+  canvas.addEventListener('pointerdown', () => { if (mq.matches) dos.classList.remove('open'); });
+  window.__openDossier = () => { if (mq.matches) dos.classList.add('open'); };
+}
 
 function tick(now) {
   const dt = Math.min((now - lastTime) / 1000, 0.1);
