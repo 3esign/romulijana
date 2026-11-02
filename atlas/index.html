@@ -655,6 +655,26 @@ body.noc .spatial-label.selected { color: #121519; font-weight: 700; }
     animation-duration: 0.01ms !important;
   }
 }
+
+/* Šetnja u prvom licu */
+#walk-ui { display: none; }
+body.walking #walk-ui { display: block; }
+body.walking #gl-canvas { touch-action: none; cursor: crosshair; }
+body.walking #tour-banner, body.walking #labels-layer, body.walking #schriftfeld { display: none; }
+@media (max-width: 960px) { body.walking #dossier { display: none; } }
+.walk-cross { position: absolute; left: 50%; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; z-index: 22; pointer-events: none;
+  background: linear-gradient(currentColor, currentColor) center/1px 100% no-repeat, linear-gradient(currentColor, currentColor) center/100% 1px no-repeat;
+  color: rgba(255,255,255,.85); mix-blend-mode: difference; }
+.walk-hint { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 22; pointer-events: none;
+  font: 500 11.5px/1.4 system-ui, sans-serif; padding: 6px 12px; border-radius: 6px;
+  background: rgba(20,20,22,.55); color: #f1efe9; backdrop-filter: blur(6px); white-space: nowrap; max-width: 92vw; overflow: hidden; text-overflow: ellipsis; }
+.walk-joy { display: none; position: absolute; left: 22px; bottom: 74px; width: 112px; height: 112px; border-radius: 50%; z-index: 31;
+  background: rgba(20,20,22,.22); border: 1px solid rgba(255,255,255,.35); touch-action: none; }
+.walk-knob { position: absolute; left: 50%; top: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%;
+  background: rgba(255,255,255,.7); pointer-events: none; }
+.walk-exit { position: absolute; right: 12px; bottom: 60px; z-index: 31; }
+@media (pointer: coarse) { .walk-joy { display: block; } .walk-hint { bottom: 196px; } }
+@media (pointer: fine) { .walk-exit { display: none; } }
 </style>
 </head>
 <body>
@@ -701,6 +721,7 @@ body.noc .spatial-label.selected { color: #121519; font-weight: 700; }
           <span>Svetlo</span>
           <input type="range" id="slider-light" min="6" max="75" value="34" step="1">
         </label>
+        <button class="btn" id="btn-walk" title="Šetnja u prvom licu: WASD/strelice, miš gleda, Shift trči, C sudari, F ili Esc izlaz">Šetnja (F)</button>
         <button class="btn" id="btn-theme" title="Promeni svetlosni režim (Dan / Noć)">Noć</button>
         <button class="btn" id="btn-audio" title="Parametarski vetar Magure i mikro-tonovi (0 KB Web Audio)">Zvuk: Isklj</button>
       </div>
@@ -859,6 +880,12 @@ canvas.addEventListener('contextmenu', (e) => e.preventDefault());
 canvas.addEventListener('wheel', (e) => {
   const trackpadScroll = !e.ctrlKey && e.deltaMode === 0 &&
     (Math.abs(e.deltaX) > 0 || !Number.isInteger(e.deltaY) || Math.abs(e.deltaY) < 40);
+  if (WALK.on) { // u šetnji točkić menja brzinu hoda
+    e.preventDefault(); e.stopImmediatePropagation();
+    WALK.speed = THREE.MathUtils.clamp(WALK.speed * (e.deltaY > 0 ? 0.85 : 1.18), 1, 40);
+    walkHint();
+    return;
+  }
   if (!trackpadScroll) return; // OrbitControls radi zoom (uključujući pinch kao ctrl+wheel)
   e.preventDefault(); e.stopImmediatePropagation();
   const dist = camera.position.distanceTo(controls.target);
@@ -889,7 +916,9 @@ function requestRender() {
   }
 }
 
+let internalCamUpdate = false; // tick/flyTo pomeraju kameru: 'change' tada ne sme da poništi cilj leta
 controls.addEventListener('change', () => {
+  if (internalCamUpdate) return;
   camCurrent.pos.copy(camera.position);
   camCurrent.target.copy(controls.target);
   camGoal.pos.copy(camera.position);
@@ -905,7 +934,7 @@ function flyTo(posArr, targetArr, immediate = false) {
     camCurrent.target.copy(camGoal.target);
     camera.position.copy(camGoal.pos);
     controls.target.copy(camGoal.target);
-    controls.update();
+    internalCamUpdate = true; controls.update(); internalCamUpdate = false;
   }
   requestRender();
 }
@@ -1446,6 +1475,10 @@ function applySceneState() {
   const pal = currentPal();
   scene.background = new THREE.Color(pal.bg);
   scene.fog = new THREE.FogExp2(pal.fog, STATE.scale === 'S0' || STATE.scale === 'S1' ? 0.00012 : 0.00048);
+  if (document.body.classList.contains('walking')) {
+    scene.fog = new THREE.FogExp2(pal.fog, 0.0011); // u visini očiju vazdušna perspektiva daje dubinu
+    if (window.__walkEnv) window.__walkEnv(pal);
+  }
 
   groundMesh.material.color.setHex(pal.ground);
   maguraHillMat.color.setHex(pal.maguraHill);
@@ -1809,14 +1842,17 @@ canvas.addEventListener('pointerdown', (e) => {
 });
 canvas.addEventListener('pointerup', (e) => {
   if (Math.hypot(e.clientX - downPos.x, e.clientY - downPos.y) > 6) return;
+  if (WALK.on && e.pointerType !== 'touch' && !document.pointerLockElement) return; // prvi klik u šetnji samo hvata miš
   const rect = canvas.getBoundingClientRect();
+  if (WALK.on && document.pointerLockElement) { pointer.set(0, 0); } else { // zaključan miš: bira se ono pod nišanom
   pointer.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
   pointer.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+  }
   raycaster.setFromCamera(pointer, camera);
   const hits = raycaster.intersectObjects(pickableMeshes, false);
   const hit = hits.find(h => h.object.visible && h.object.parent && h.object.parent.visible);
   if (hit && hit.object.userData.nodeId) {
-    selectNode(hit.object.userData.nodeId, true);
+    selectNode(hit.object.userData.nodeId, !WALK.on);
     window.__openDossier && window.__openDossier();
   } else if (hit && hit.object.userData.isPlan && hit.object.userData.cvorovi && hit.object.userData.cvorovi[0]) {
     selectNode(hit.object.userData.cvorovi[0], true);
@@ -1966,6 +2002,8 @@ if (btnGeofiz) btnGeofiz.addEventListener('click', toggleGeofiz);
 
 window.addEventListener('keydown', (e) => {
   if (e.target && e.target.tagName === 'INPUT') return;
+  if (e.key === 'f' || e.key === 'F') { toggleWalk(); return; }
+  if (WALK.on) { if (e.key === 'Escape') toggleWalk(false); return; }
   if (e.key === '1') setScale('S0');
   else if (e.key === '2') setScale('S1');
   else if (e.key === '3') setScale('S2');
@@ -1976,6 +2014,201 @@ window.addEventListener('keydown', (e) => {
   else if (e.key === 'r' || e.key === 'R' || e.key === 'Escape') setScale('S2');
   else if (e.key === 't' || e.key === 'T') applyTourStep((STATE.tourIndex + 1) % DATA.tura.length);
 });
+
+/* ── 12b. ŠETNJA U PRVOM LICU (oči na 1,65 m, tlo iz DEM-a, sudari sa zidovima) ── */
+const WALK = { on: false, yaw: 0, pitch: 0, feet: new THREE.Vector3(), speed: 4, collide: true, keys: new Set(),
+  touch: window.matchMedia('(pointer: coarse)').matches, joy: { x: 0, y: 0, id: null }, look: { id: null, x: 0, y: 0 }, saved: null };
+const EYE = 1.65, STEP = 0.6, RADIUS = 0.35;
+const walkUi = document.createElement('div');
+walkUi.id = 'walk-ui';
+walkUi.innerHTML = '<div class="walk-cross"></div><div class="walk-hint" id="walk-hint"></div>' +
+  '<div class="walk-joy" id="walk-joy"><div class="walk-knob" id="walk-knob"></div></div>' +
+  '<button class="btn walk-exit" id="walk-exit">Izađi iz šetnje</button>';
+document.getElementById('stage').appendChild(walkUi);
+const ray = new THREE.Raycaster();
+const _v = new THREE.Vector3(), _d = new THREE.Vector3();
+
+function walkSolids() {
+  return pickableMeshes.filter(m => m.visible && m.parent && m.parent.visible && m.userData.nodeId && !m.userData.isPlan);
+}
+function groundAt(x, z, fromY) {
+  const y = sampleDemHeight(x, z);
+  ray.set(_v.set(x, fromY, z), _d.set(0, -1, 0));
+  ray.far = Math.max(0.01, fromY - y + 0.01);
+  const hit = ray.intersectObjects(walkSolids(), false)[0];
+  return hit ? Math.max(y, hit.point.y) : y;
+}
+function blocked(from, dir, dist) {
+  if (!WALK.collide) return false;
+  const solids = walkSolids();
+  for (const h of [STEP + 0.05, 1.4]) {
+    ray.set(_v.set(from.x, from.y + h, from.z), dir);
+    ray.far = dist + RADIUS;
+    if (ray.intersectObjects(solids, false).length) return true;
+  }
+  return false;
+}
+function lockPointer() {
+  try { const p = canvas.requestPointerLock?.(); if (p && p.catch) p.catch(() => walkHint()); } catch { /* bez pointer-locka radi prevlačenje */ }
+}
+function walkHint() {
+  const el = document.getElementById('walk-hint');
+  const brz = WALK.speed.toFixed(0) + ' m/s';
+  const sud = WALK.collide ? 'sudari uklj.' : 'prolaz kroz zidove';
+  el.textContent = WALK.touch
+    ? `Levo: hod · desno: pogled · tap bira objekat · ${brz}`
+    : (document.pointerLockElement
+      ? `WASD/strelice hod · Shift trk · točkić brzina (${brz}) · C ${sud} · klik bira · Esc pusti miš · F izlaz`
+      : 'Klikni u scenu za pogled mišem · F izlaz');
+}
+/* Okruženje šetnje: blago nebo (kupola) i tanka metarska mreža tla; vidljivi samo u šetnji */
+const skyMat = new THREE.ShaderMaterial({
+  side: THREE.BackSide, depthWrite: false, fog: false,
+  uniforms: { top: { value: new THREE.Color() }, horizon: { value: new THREE.Color() }, below: { value: new THREE.Color() } },
+  vertexShader: 'varying vec3 vDir; void main(){ vDir = normalize(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }',
+  fragmentShader: 'uniform vec3 top; uniform vec3 horizon; uniform vec3 below; varying vec3 vDir; void main(){ float h = vDir.y; vec3 c = h > 0.0 ? mix(horizon, top, pow(smoothstep(0.0, 0.55, h), 0.8)) : mix(horizon, below, smoothstep(0.0, 0.08, -h)); gl_FragColor = vec4(c, 1.0); }'
+});
+const skyDome = new THREE.Mesh(new THREE.SphereGeometry(5000, 32, 16), skyMat);
+skyDome.visible = false; skyDome.renderOrder = -10; skyDome.frustumCulled = false;
+scene.add(skyDome);
+const walkGrid = new THREE.Group(); walkGrid.visible = false; scene.add(walkGrid);
+const gridFine = new THREE.GridHelper(700, 140), gridCoarse = new THREE.GridHelper(2100, 42);
+for (const [g, op] of [[gridFine, 0.22], [gridCoarse, 0.38]]) {
+  g.material.transparent = true; g.material.opacity = op; g.material.depthWrite = false;
+  g.position.y = 0.03; walkGrid.add(g);
+}
+window.__walkEnv = (pal) => {
+  const night = pal === PALETTE.noc;
+  skyMat.uniforms.top.value.setHex(night ? 0x0b0f16 : 0xc9d3db);
+  skyMat.uniforms.horizon.value.setHex(pal.fog);
+  skyMat.uniforms.below.value.setHex(pal.ground);
+  scene.background = new THREE.Color(pal.fog);
+  for (const g of [gridFine, gridCoarse]) g.material.color.setHex(pal.grid);
+};
+function toggleWalk(force) {
+  const on = typeof force === 'boolean' ? force : !WALK.on;
+  if (on === WALK.on) return;
+  WALK.on = on;
+  document.getElementById('btn-walk').classList.toggle('active', on);
+  document.body.classList.toggle('walking', on);
+  skyDome.visible = on; walkGrid.visible = on;
+  applySceneState();
+  if (on) {
+    WALK.saved = { pos: camCurrent.pos.clone(), target: camCurrent.target.clone() };
+    // početak: tačka koju orbit gleda (ako je u širem lokalitetu), pogled u istom pravcu
+    const t = controls.target.clone();
+    if (Math.abs(t.x) > 1100 || Math.abs(t.z) > 700) t.set(0, 0, 60);
+    const look = new THREE.Vector3().subVectors(controls.target, camera.position);
+    WALK.yaw = Math.atan2(-look.x, -look.z);
+    WALK.pitch = 0;
+    // ako je tačka pod krovom ili zidom, povlači se ka kameri dok ne nađe slobodno tlo
+    const back = new THREE.Vector3(camera.position.x - t.x, 0, camera.position.z - t.z).normalize();
+    for (let i = 0; i < 80 && groundAt(t.x, t.z, 400) > sampleDemHeight(t.x, t.z) + STEP; i++) { t.x += back.x * 3; t.z += back.z * 3; }
+    const fwd = new THREE.Vector3(-Math.sin(WALK.yaw), 0, -Math.cos(WALK.yaw));
+    for (let i = 0; i < 40; i++) {
+      ray.set(_v.set(t.x, sampleDemHeight(t.x, t.z) + EYE, t.z), fwd); ray.far = 18;
+      if (!ray.intersectObjects(walkSolids(), false).length && groundAt(t.x, t.z, 400) <= sampleDemHeight(t.x, t.z) + STEP) break;
+      t.x -= fwd.x * 3; t.z -= fwd.z * 3;
+    }
+    WALK.feet.set(t.x, sampleDemHeight(t.x, t.z), t.z);
+    skyDome.position.set(0, 0, 0);
+    controls.enabled = false;
+    camera.near = 0.12; camera.fov = 68; camera.updateProjectionMatrix();
+    if (!WALK.touch) lockPointer();
+  } else {
+    if (document.pointerLockElement) document.exitPointerLock();
+    WALK.keys.clear();
+    WALK.joy = { x: 0, y: 0, id: null };
+    controls.enabled = true;
+    camera.near = 1.0; camera.fov = 42; camera.updateProjectionMatrix();
+    // let nazad u orbit polazi iz tačke gde je šetnja stala
+    camCurrent.pos.copy(camera.position);
+    camCurrent.target.copy(new THREE.Vector3(0, 0, -30).applyQuaternion(camera.quaternion).add(camera.position));
+    flyTo(WALK.saved.pos.toArray(), WALK.saved.target.toArray());
+  }
+  walkHint();
+  playUiTone(on ? 700 : 480, 0.04);
+  requestRender();
+}
+function walkStep(dt) {
+  let f = 0, r = 0;
+  const k = WALK.keys;
+  if (k.has('KeyW') || k.has('ArrowUp')) f += 1;
+  if (k.has('KeyS') || k.has('ArrowDown')) f -= 1;
+  if (k.has('KeyD') || k.has('ArrowRight')) r += 1;
+  if (k.has('KeyA') || k.has('ArrowLeft')) r -= 1;
+  f += -WALK.joy.y; r += WALK.joy.x;
+  const len = Math.hypot(f, r);
+  if (len > 0.01) {
+    const run = (k.has('ShiftLeft') || k.has('ShiftRight')) ? 3 : 1;
+    const step = WALK.speed * run * dt * Math.min(1, len) / len;
+    const sy = Math.sin(WALK.yaw), cy = Math.cos(WALK.yaw);
+    const mx = (-sy * f + cy * r) * step, mz = (-cy * f - sy * r) * step;
+    // klizanje uz zid: prvo ceo pomeraj, pa posebno x i z
+    const tryMove = (dx, dz) => {
+      const d = Math.hypot(dx, dz);
+      if (d < 1e-6) return false;
+      if (blocked(WALK.feet, _d.set(dx / d, 0, dz / d), d)) return false;
+      WALK.feet.x += dx; WALK.feet.z += dz; return true;
+    };
+    if (!tryMove(mx, mz)) { tryMove(mx, 0); tryMove(0, mz); }
+  }
+  const g = groundAt(WALK.feet.x, WALK.feet.z, WALK.feet.y + STEP);
+  WALK.feet.y += (g - WALK.feet.y) * Math.min(1, dt * 12);
+  camera.position.set(WALK.feet.x, WALK.feet.y + EYE, WALK.feet.z);
+  skyDome.position.copy(camera.position);
+  camera.rotation.set(WALK.pitch, WALK.yaw, 0, 'YXZ');
+}
+function walkLook(dx, dy, sens) {
+  WALK.yaw -= dx * sens;
+  WALK.pitch = THREE.MathUtils.clamp(WALK.pitch - dy * sens, -1.45, 1.45);
+}
+document.getElementById('btn-walk').addEventListener('click', () => toggleWalk());
+document.getElementById('walk-exit').addEventListener('click', () => toggleWalk(false));
+window.addEventListener('keydown', (e) => {
+  if (!WALK.on || (e.target && e.target.tagName === 'INPUT')) return;
+  if (e.code === 'KeyC') { WALK.collide = !WALK.collide; walkHint(); return; }
+  WALK.keys.add(e.code);
+  if (e.code.startsWith('Arrow') || e.code === 'Space') e.preventDefault();
+});
+window.addEventListener('keyup', (e) => WALK.keys.delete(e.code));
+window.addEventListener('blur', () => WALK.keys.clear());
+canvas.addEventListener('click', () => { if (WALK.on && !WALK.touch && !document.pointerLockElement) lockPointer(); });
+document.addEventListener('pointerlockchange', walkHint);
+document.addEventListener('mousemove', (e) => {
+  if (WALK.on && document.pointerLockElement === canvas) walkLook(e.movementX, e.movementY, 0.0022);
+});
+// dodir: levi palac je džojstik, desni prst pogled
+{
+  const joy = document.getElementById('walk-joy'), knob = document.getElementById('walk-knob');
+  const R = 46;
+  const moveJoy = (e) => {
+    const b = joy.getBoundingClientRect();
+    let x = e.clientX - (b.left + b.width / 2), y = e.clientY - (b.top + b.height / 2);
+    const l = Math.hypot(x, y); if (l > R) { x *= R / l; y *= R / l; }
+    knob.style.transform = `translate(${x}px, ${y}px)`;
+    WALK.joy.x = x / R; WALK.joy.y = y / R;
+  };
+  joy.addEventListener('pointerdown', (e) => { e.preventDefault(); WALK.joy.id = e.pointerId; joy.setPointerCapture(e.pointerId); moveJoy(e); });
+  joy.addEventListener('pointermove', (e) => { if (e.pointerId === WALK.joy.id) moveJoy(e); });
+  const endJoy = (e) => { if (e.pointerId !== WALK.joy.id) return; WALK.joy = { x: 0, y: 0, id: null }; knob.style.transform = ''; };
+  joy.addEventListener('pointerup', endJoy); joy.addEventListener('pointercancel', endJoy);
+  canvas.addEventListener('pointerdown', (e) => {
+    if (!WALK.on || e.pointerType !== 'touch' || WALK.look.id !== null) return;
+    WALK.look = { id: e.pointerId, x: e.clientX, y: e.clientY };
+  });
+  canvas.addEventListener('pointermove', (e) => {
+    if (!WALK.on) return;
+    if (e.pointerType === 'touch' && e.pointerId === WALK.look.id) {
+      walkLook(e.clientX - WALK.look.x, e.clientY - WALK.look.y, 0.005);
+      WALK.look.x = e.clientX; WALK.look.y = e.clientY;
+    } else if (e.pointerType !== 'touch' && !document.pointerLockElement && e.buttons) {
+      walkLook(e.movementX, e.movementY, 0.004); // ako browser ne da pointer-lock: prevlačenje gleda
+    }
+  });
+  const endLook = (e) => { if (e.pointerId === WALK.look.id) WALK.look.id = null; };
+  canvas.addEventListener('pointerup', endLook); canvas.addEventListener('pointercancel', endLook);
+}
 
 /* ── 13. RESIZE & RENDER-ON-DEMAND GLAVNA PETLJA ── */
 function resize() {
@@ -2013,26 +2246,31 @@ function tick(now) {
   camCurrent.pos.lerp(camGoal.pos, alpha);
   camCurrent.target.lerp(camGoal.target, alpha);
 
-  camera.position.copy(camCurrent.pos);
-  controls.target.copy(camCurrent.target);
-  controls.update();
+  if (WALK.on) {
+    walkStep(dt);
+  } else {
+    camera.position.copy(camCurrent.pos);
+    controls.target.copy(camCurrent.target);
+    internalCamUpdate = true; controls.update(); internalCamUpdate = false;
+  }
 
   const distRemaining = camCurrent.pos.distanceToSquared(camGoal.pos) + camCurrent.target.distanceToSquared(camGoal.target);
 
-  if (needsRender || distRemaining > 0.002) {
+  if (WALK.on || needsRender || distRemaining > 0.002) {
     renderer.render(scene, camera);
     updateSpatialLabels();
     document.title = `FELIX ROMVLIANA · 3D Atlas (${STATE.scale} · ${STATE.selectedId} · calls:${renderer.info.render.calls})`;
     needsRender = false;
   }
 
-  if (distRemaining > 0.002) {
+  if (WALK.on || distRemaining > 0.002) {
     animFrameId = requestAnimationFrame(tick);
   } else {
     animFrameId = null; // 0 draw call-ova u mirovanju!
   }
 }
 
+window.__atlas = { camera, WALK, STATE }; // za automatske provere
 /* Inicijalizacija */
 document.getElementById('btn-theme').textContent = isNight ? 'Dan' : 'Noć';
 resize();
