@@ -1,19 +1,28 @@
 # Felix Romuliana (Gamzigrad) — epistemički 3D atlas
 
-**Kasnoantički carski dvorac i memorijalni kompleks cara Galerija, složen u proverljiv sistem znanja: izvori → tvrdnje sa dokazima → 3D naučni instrument.**
+**Kasnoantički carski dvorac i memorijalni kompleks cara Galerija (UNESCO #1253), složen u proverljiv sistem znanja: izvori → tvrdnje sa dokazima → interaktivni 3D naučni instrument.**
 
-Bratski projekat: [Medijana (Naissus)](https://github.com/3esign/medijana).
+- **Živi 3D atlas (GitHub Pages):** **[https://3esign.github.io/romulijana/atlas/](https://3esign.github.io/romulijana/atlas/)**
+- **Bratski projekat:** [Medijana (Naissus)](https://github.com/3esign/medijana)
+- **Arhitektura i sistem gradnje:** **Svemir** (*tehnodrom rada i znanja*, departman za arheologiju i Atelje Svemira)
 
 ---
 
-## Poreklo podataka i prava
+## Poreklo podataka, potvrde i prava
 
 > **Deo obrađenih podataka dobijen je od Arheološkog instituta u Beogradu.**
-> To je korpus monografija i zbornika `R01–R08` (1978–2017; Srejović, Vasić, Čanak-Medić, Lalović, Janković, Popović i saradnici) iz kog su izvučeni tekst, štampane strane, planovi i ilustracije.
-> Autorska prava na te publikacije, planove i fotografije pripadaju autorima i izdavačima. Ovaj repozitorijum **ne sadrži** izvorne PDF-ove ni fotografije: sadrži bibliografske zapise, kratke citate kao dokaze uz broj strane i SHA-256 heš izvora, isečke planova i ilustracija (`izvori/renderi/`) i izvedene podatke.
-> Zbog toga je repozitorijum **privatan**. Javno objavljivanje isečaka i izvedenih slojeva traži saglasnost Instituta i nosilaca prava.
+> To je korpus monografija i zbornika `R01–R08` (1978–2017; D. Srejović, M. Čanak-Medić, M. Vasić, A. Lalović, Đ. Janković, M. Živić, I. Popović, S. Petković, G. von Bülow, T. Schüler i saradnici) iz kog su izvučeni bibliografski podaci, štampane strane, georeferencirani planovi i verifikovane naučne tvrdnje.
+> Autorska prava na izvorne publikacije, planove i fotografije pripadaju autorima i izdavačima. Ovaj repozitorijum **ne sadrži** izvorne PDF-ove ni kompletne skenove knjiga: sadrži bibliografske zapise, kratke citate kao dokaze uz broj strane i SHA-256 heš izvora, georeferencirane slojeve i izvedeni 3D naučni instrument, javno objavljen uz potvrde za naučni i obrazovni uvid.
 
-Ostali slojevi (`W01–W78`) su javni internet izvori; licenca svakog stoji u `baza/izvori.json` (Copernicus GLO-30 DEM, © OpenStreetMap saradnici ODbL, DARMC CC BY-NC 3.0, Wikimedia Commons CC BY-SA, UNESCO dosije #1253, nemačka geofizička istraživanja 2004–2007 i dr.).
+Ostali slojevi (`W01–W78`) potiču iz javnih naučnih baza; licenca svakog stoji u `baza/izvori.json` (Copernicus GLO-30 DEM, © OpenStreetMap saradnici ODbL, DARMC Harvard CC BY-NC 3.0, Pleiades CC BY 3.0, Wikimedia Commons CC BY-SA, UNESCO dosije #1253, nemačka geofizička istraživanja 2004–2007 i dr.).
+
+## Kako je atlas izgrađen (Svemir)
+
+Atlas je izgrađen u sistemu **Svemir** — istraživačkoj i inženjerskoj arhitekturi procesa koju razvija **Semir Poturak**. U Svemiru više nezavisnih AI umova, domenskih departmana Univerziteta Svemira (`svemir-arheologija`, `svemir-web-3d`, `svemir-design`, `svemir-lepota`, `svemir-bim-cad-gis`) i determinističkih alata za proveru sarađuje po pravilu **dokaz pre piksela**:
+
+1. **81 izvor i 2.894 strane** indeksirano je sa mapiranjem štampanih strana (`711/1.147` jedinica) i FTS5 pretragom (`17.925` pominjanja kroz `66` čvorova).
+2. **71 formalizovana tvrdnja sa 166 dokaza** vezuje svaku prostornu i hronološku odluku za tačan izvor, stranu, citat/sidro, SHA-256 heš i eksplicitnu granicu zaključka.
+3. **Kontinuum projekcija (`2D Nacrt` ↔ `2.5D Aksonometrija` ↔ `3D Perspektiva` ↔ `Šetnja u prvom licu` na 1,65 m)** uz interaktivnu **2D radar-minimapu**, sunčeve senke pod kontrolom ugla svetla (*Raking Light*), analitički presek i modal **`O atlasu · Svemir`**.
 
 ## Šta je ovde
 

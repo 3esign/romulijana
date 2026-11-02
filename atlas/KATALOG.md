@@ -1,6 +1,6 @@
 # Romulijana · katalog za atlas
 
-Generisano: `node alati/atlas-inventar.js` · 2026-11-02 02:25 UTC. Ne menjati ručno; izvor istine je `baza/`. Mašinski oblik: baza/atlas-katalog.json, graf veza: [graf.json](graf.json).
+Generisano: `node alati/atlas-inventar.js` · 2026-11-02 06:56 UTC. Ne menjati ručno; izvor istine je `baza/`. Mašinski oblik: baza/atlas-katalog.json, graf veza: [graf.json](graf.json).
 
 **Zbir:** 81 izvora · 46 rendera · 71 tvrdnji · 66 čvorova · 3 objekta · 32041 pominjanja · 2118 datuma · graf 221 čvorova / 654 veza.
 

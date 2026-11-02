@@ -665,16 +665,174 @@ body.walking #tour-banner, body.walking #labels-layer, body.walking #schriftfeld
 .walk-cross { position: absolute; left: 50%; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; z-index: 22; pointer-events: none;
   background: linear-gradient(currentColor, currentColor) center/1px 100% no-repeat, linear-gradient(currentColor, currentColor) center/100% 1px no-repeat;
   color: rgba(255,255,255,.85); mix-blend-mode: difference; }
+.walk-prox { position: absolute; left: 50%; bottom: 52px; transform: translateX(-50%); z-index: 22; pointer-events: none;
+  font: 600 12px/1.35 var(--font-sans); padding: 6px 14px; border-radius: 4px;
+  background: var(--scrim); color: var(--fg); border: 1.5px solid var(--accent);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.18); white-space: nowrap; max-width: 92vw; overflow: hidden; text-overflow: ellipsis; }
+.walk-prox:empty { display: none; }
 .walk-hint { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 22; pointer-events: none;
   font: 500 11.5px/1.4 system-ui, sans-serif; padding: 6px 12px; border-radius: 6px;
-  background: rgba(20,20,22,.55); color: #f1efe9; backdrop-filter: blur(6px); white-space: nowrap; max-width: 92vw; overflow: hidden; text-overflow: ellipsis; }
+  background: rgba(20,20,22,.68); color: #f1efe9; backdrop-filter: blur(6px); white-space: nowrap; max-width: 94vw; overflow: hidden; text-overflow: ellipsis; }
 .walk-joy { display: none; position: absolute; left: 22px; bottom: 74px; width: 112px; height: 112px; border-radius: 50%; z-index: 31;
   background: rgba(20,20,22,.22); border: 1px solid rgba(255,255,255,.35); touch-action: none; }
 .walk-knob { position: absolute; left: 50%; top: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%;
   background: rgba(255,255,255,.7); pointer-events: none; }
 .walk-exit { position: absolute; right: 12px; bottom: 60px; z-index: 31; }
-@media (pointer: coarse) { .walk-joy { display: block; } .walk-hint { bottom: 196px; } }
+@media (pointer: coarse) { .walk-joy { display: block; } .walk-hint { bottom: 196px; } .walk-prox { bottom: 232px; } }
 @media (pointer: fine) { .walk-exit { display: none; } }
+
+/* Interaktivna 2D Radar-Minimapa (orijentacija u prostoru i frustum kamere) */
+#minimap-wrap {
+  position: absolute;
+  bottom: 132px;
+  right: 12px;
+  width: 176px;
+  background: var(--scrim);
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
+  padding: 5px 6px 6px;
+  z-index: 18;
+  pointer-events: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+body.walking #minimap-wrap { bottom: 18px; right: 12px; }
+.mm-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+  margin-bottom: 3px;
+}
+#minimap-canvas {
+  display: block;
+  width: 162px;
+  height: 92px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  cursor: crosshair;
+  border-radius: 2px;
+}
+@media (max-width: 960px) {
+  #minimap-wrap { display: none; }
+}
+
+/* Dugme i modal "O atlasu · Svemir" */
+.btn-about {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 700;
+}
+body.noc .btn-about {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+#about-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(14, 16, 20, 0.62);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+#about-modal.open { display: flex; }
+.about-dialog {
+  background: var(--bg-panel);
+  color: var(--fg);
+  border: 1.5px solid var(--border-strong);
+  border-radius: 6px;
+  max-width: 780px;
+  width: 100%;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.32);
+  overflow: hidden;
+}
+.about-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 18px 12px;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+}
+.about-kicker {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 3px;
+}
+.about-title {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+.about-body {
+  padding: 16px 18px 20px;
+  overflow-y: auto;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.about-body h2 {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent);
+  margin: 16px 0 6px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--border);
+}
+.about-body h2:first-child { margin-top: 0; }
+.about-body p { margin: 0 0 9px; color: var(--fg); }
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 8px;
+  margin: 10px 0 12px;
+}
+.about-stat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 6px 9px;
+  border-radius: 2px;
+}
+.about-stat strong {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--fg);
+}
+.about-stat span {
+  font-size: 10.5px;
+  color: var(--fg-muted);
+}
+.about-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  font-size: 11.5px;
+  color: var(--fg-muted);
+}
 </style>
 </head>
 <body>
@@ -721,9 +879,13 @@ body.walking #tour-banner, body.walking #labels-layer, body.walking #schriftfeld
           <span>Svetlo</span>
           <input type="range" id="slider-light" min="6" max="75" value="34" step="1">
         </label>
-        <button class="btn" id="btn-walk" title="Šetnja u prvom licu: WASD/strelice, miš gleda, Shift trči, C sudari, F ili Esc izlaz">Šetnja (F)</button>
+        <button class="btn" data-proj="2D" title="2D analitički tlocrt (ortografski CAD pogled odozgo bez perspektivnog skraćenja)">2D Nacrt</button>
+        <button class="btn" data-proj="25D" title="2.5D aksonometrija (paralelna izometrijska projekcija 35.26° / 45°)">2.5D Akson.</button>
+        <button class="btn active" data-proj="3D" title="3D perspektivna kamera (orbit + let)">3D</button>
+        <button class="btn" id="btn-walk" title="Šetnja u prvom licu (1,65 m): WASD/strelice, miš gleda, Shift trči, E visina (1.65m/6m), C sudari, F ili Esc izlaz">Šetnja (F)</button>
         <button class="btn" id="btn-theme" title="Promeni svetlosni režim (Dan / Noć)">Noć</button>
         <button class="btn" id="btn-audio" title="Parametarski vetar Magure i mikro-tonovi (0 KB Web Audio)">Zvuk: Isklj</button>
+        <button class="btn btn-about" id="btn-about" title="O projektu, kako je izgrađen, šta je Svemir i poreklo podataka (Taster I ili ?)">O atlasu · Svemir</button>
       </div>
     </header>
 
@@ -742,6 +904,15 @@ body.walking #tour-banner, body.walking #labels-layer, body.walking #schriftfeld
         <span class="sf-leg-item"><span class="line-sample ls-axis"></span>DEM GLO-30 (W78) &amp; DARMC W76</span>
       </div>
     </section>
+
+    <!-- Interaktivna 2D Radar-Minimapa (Utvrđenje → Tetrapilon → Magura) -->
+    <aside id="minimap-wrap" aria-label="2D radar mapa lokaliteta i konus pogleda">
+      <div class="mm-head">
+        <span>2D Radar · Klik za skok</span>
+        <span id="mm-elev" class="mono">195m n.v.</span>
+      </div>
+      <canvas id="minimap-canvas" width="324" height="184" title="Klikni bilo gde na radar mapu (Utvrđenje levo, Tetrapilon u sredini, Magura desno) za trenutni prelaz kamere ili šetnje"></canvas>
+    </aside>
 
     <!-- Vođena naučna tura (Smithsonian Voyager / T-režim) -->
     <aside id="tour-banner" aria-label="Vođena naučna tura">
@@ -806,6 +977,47 @@ body.walking #tour-banner, body.walking #labels-layer, body.walking #schriftfeld
   </aside>
 </div>
 
+<!-- MODAL: O ATLASU · SVEMIR · METODOLOGIJA I POREKLO PODATAKA -->
+<div id="about-modal" role="dialog" aria-modal="true" aria-labelledby="about-title">
+  <div class="about-dialog">
+    <div class="about-head">
+      <div>
+        <div class="about-kicker">FELIX ROMVLIANA (GAMZIGRAD, UNESCO #1253) · NAUČNI INSTRUMENT</div>
+        <h1 class="about-title" id="about-title">Kako je izgrađen 3D Epistemički Atlas i šta je Svemir</h1>
+      </div>
+      <button class="btn" id="btn-about-close" aria-label="Zatvori prozor">Zatvori (Esc)</button>
+    </div>
+    <div class="about-body">
+      <div class="about-grid">
+        <div class="about-stat"><strong>81 izvor · 2.894 str.</strong><span>Indeksirani korpus (R01–R08 + W01–W78)</span></div>
+        <div class="about-stat"><strong>71 tvrdnja · 166 dokaza</strong><span>Svaki sa stranom, citatom i SHA-256</span></div>
+        <div class="about-stat"><strong>16 georef. planova</strong><span>Afina transformacija (7 GCP, R04–R06/W02/W20)</span></div>
+        <div class="about-stat"><strong>2D ↔ 2.5D ↔ 3D + FPS</strong><span>Kontinuum projekcija i šetnja (1,65 m)</span></div>
+      </div>
+
+      <h2>1. Šta je ovaj instrument (Prostorno-epistemološki blizanac)</h2>
+      <p>Za razliku od komercijalnih 3D animacija u kojima posmatrač ne zna šta je fizički kamen na terenu a šta pretpostavka modelara, <strong>3D Epistemički Atlas Felix Romuliana</strong> je forenzički naučni instrument u kome je svaki kubni metar geometrije direktno vezan za izvor, stranu, citat i kriptografski SHA-256 otisak. Prostor je istovremeno čitljiv kroz 5 prostornih razmera (<strong>S0</strong> provincija → <strong>S1</strong> DARMC putevi i Magura → <strong>S2</strong> lokalitet i geofizika → <strong>S3</strong> arhitektura → <strong>S4</strong> skulptura, arhivolta i mozaici), 4 hronološke faze i kontinuum projekcija (<strong>2D Nacrt</strong>, <strong>2.5D Aksonometrija</strong>, <strong>3D Perspektiva</strong> i <strong>Šetnja u prvom licu</strong> na visini oka od 1,65 m).</p>
+
+      <h2>2. Šta je Svemir (Tehnodrom rada i znanja)</h2>
+      <p>Ovaj atlas je izgrađen u sistemu <strong>Svemir</strong> — istraživačkoj i inženjerskoj arhitekturi procesa (<em>tehnodromu rada i znanja</em>) koju razvija <strong>Semir Poturak</strong>. U Svemiru različite porodice AI umova, specijalizovani departmani Univerziteta Svemira (<code>svemir-arheologija</code>, <code>svemir-web-3d</code>, <code>svemir-design</code>, <code>svemir-lepota</code>, <code>svemir-bim-cad-gis</code>) i deterministički alati za verifikaciju sarađuju nad istim koordinatnim sistemom dokaza.</p>
+      <p><strong>Kako smo gradili (Dokaz pre piksela):</strong>
+        1) Izvorni korpus monografija i radova prošao je ekstrakciju teksta, OCR i ručno/algoritamsko mapiranje štampanih strana (711/1.147 jedinica) u FTS5 indeks (17.925 pominjanja, 66 čvorova).
+        2) Svaka naučna tvrdnja formalizovana je u JSONL registru sa izričitom granicom zaključka.
+        3) Izvorni arhitektonski planovi (<code>R04</code>, <code>R05</code>, <code>R06</code>), nemačka geomagnetska prospekcija (<code>W02</code>/<code>W17</code>, 9 anomalija) i UNESCO zone (<code>W20</code>, 179,22 ha + 544,93 ha) georeferencirani su u lokalni metarski koordinatni sistem (Pleiades <code>W66</code>: 43.8992°N, 22.1858°E) nad Copernicus GLO-30 DEM reljefom (<code>W78</code>).
+        4) Proceduralni CGA-lite generator prevodi podatke u 3D volumene prema stepenu dokaza: <strong>Nivo A</strong> (in situ / izmereno, puna linija ISO 128), <strong>Nivo B</strong> (proporcijska rekonstrukcija Čanak-Medić R06), <strong>Nivo C</strong> (hipoteza, isprekidana linija) i <strong>Capta</strong> (bistabilni preklop tamo gde se autori spore, npr. bazilika VI vs. X–XI vek).
+        5) Ceo lanac prolazi mašinsku verifikaciju (<code>proveri-pretragu.js</code> i <code>atlas-inventar.js</code>: 0 grešaka, 0 praznina) i vizuelnu kapiju Ateljea Svemira.</p>
+
+      <h2>3. Poreklo podataka, potvrde i Arheološki institut u Beogradu</h2>
+      <p><strong>Deo obrađenih podataka dobijen je od Arheološkog instituta u Beogradu</strong> (korpus monografija i zbornika <code>R01–R08</code>, 1978–2017: D. Srejović, M. Čanak-Medić, M. Vasić, A. Lalović, Đ. Janković, M. Živić, I. Popović, S. Petković, G. von Bülow, T. Schüler i saradnici). Autorska prava na izvorne publikacije, crteže i fotografije pripadaju autorima i izdavačima; ovaj javno objavljeni naučni instrument prikazuje verifikovane bibliografske navode, citate sa stranom, georeferencirane slojeve i sintetičku 3D geometriju uz dobijene potvrde za javni uvid.</p>
+      <p>Regionalni i satelitski slojevi (<code>W01–W78</code>) preuzeti su iz otvorenih naučnih baza: Copernicus DEM GLO-30, DARMC Harvard (CC BY-NC 3.0), Pleiades (CC BY 3.0), UNESCO World Heritage #1253, OpenStreetMap (ODbL) i Wikimedia Commons (CC BY-SA).</p>
+    </div>
+    <div class="about-foot">
+      <span><strong>Semir Poturak</strong> · <strong>Svemir</strong> (Departman za arheologiju &amp; Atelje Svemira, 2026)</span>
+      <span>Bratski projekat: <a href="https://github.com/3esign/medijana" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">Medijana (Naissus)</a> · <a href="https://github.com/3esign/romulijana" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">GitHub Repo</a></span>
+    </div>
+  </div>
+</div>
+
 <script type="module">
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -824,6 +1036,7 @@ if (isNight) {
 
 const STATE = {
   scale: 'S2',
+  projMode: '3D',
   phase: 'SVE',
   levels: { A: true, B: true, C: true },
   captaMode: false,
@@ -859,6 +1072,8 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = isNight ? 1.12 : 1.04;
 renderer.localClippingEnabled = true;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 const scene = new THREE.Scene();
 const clipPlane = new THREE.Plane(new THREE.Vector3(-1, 0, 0), STATE.clipX);
@@ -939,11 +1154,20 @@ function flyTo(posArr, targetArr, immediate = false) {
   requestRender();
 }
 
-/* ── Svetlosna logika: 1 Directional (Raking/Sun) + 1 Hemisphere + Fog ── */
+/* ── Svetlosna logika: 1 Directional (Raking/Sun sa senkama) + 1 Hemisphere + Fog ── */
 const hemiLight = new THREE.HemisphereLight(0xefe9dc, 0x8c7f6a, 0.88);
 scene.add(hemiLight);
 
 const dirLight = new THREE.DirectionalLight(0xfff5e4, 2.15);
+dirLight.castShadow = true;
+dirLight.shadow.mapSize.set(1024, 1024);
+dirLight.shadow.camera.near = 50;
+dirLight.shadow.camera.far = 1400;
+dirLight.shadow.camera.left = -260;
+dirLight.shadow.camera.right = 260;
+dirLight.shadow.camera.top = 240;
+dirLight.shadow.camera.bottom = -240;
+dirLight.shadow.bias = -0.0008;
 scene.add(dirLight);
 
 const rimLight = new THREE.DirectionalLight(0xd4e2ff, 0.55);
@@ -1016,6 +1240,9 @@ const matCapta1 = new THREE.MeshStandardMaterial({
 const matCapta2 = new THREE.MeshStandardMaterial({
   color: currentPal().capta2, roughness: 0.5, transparent: true, opacity: 0.45, clippingPlanes: [clipPlane]
 });
+const aoPadMat = new THREE.MeshBasicMaterial({
+  color: 0x1a1714, transparent: true, opacity: 0.14, depthWrite: false, clippingPlanes: [clipPlane]
+});
 
 const lineMatA = new THREE.LineBasicMaterial({ color: currentPal().edgeA, clippingPlanes: [clipPlane] });
 const lineMatASel = new THREE.LineBasicMaterial({ color: currentPal().accent, clippingPlanes: [clipPlane] });
@@ -1032,6 +1259,8 @@ function addMeshWithEdges(parent, geo, level, nodeId, yOffset = 0, xOffset = 0, 
   const mesh = new THREE.Mesh(geo, mat);
   mesh.position.set(xOffset, yOffset, zOffset);
   mesh.rotation.y = rotY;
+  mesh.castShadow = (level === 'A' || level === 'B');
+  mesh.receiveShadow = true;
   mesh.userData = { nodeId, level };
   parent.add(mesh);
   pickableMeshes.push(mesh);
@@ -1057,18 +1286,27 @@ const groundMesh = new THREE.Mesh(
   new THREE.MeshStandardMaterial({ color: currentPal().ground, roughness: 0.96, metalness: 0.0 })
 );
 groundMesh.rotation.x = -Math.PI / 2;
-groundMesh.position.y = -0.15;
+groundMesh.position.y = -0.08;
+groundMesh.receiveShadow = true;
 groundGroup.add(groundMesh);
 
 // Copernicus DEM GLO-30 (W78: 19×11 = 209 visinskih tačaka, 141–258 m n.v., centar 195 m) + brdo Magura
+// Ujednačena nenegativna površina tla (y >= 0 svuda): plato utvrđenja i prilaza do Tetrapilona je na y = 0,
+// a sveto brdo Magura (x ~ 880, z ~ -135) glatko se uzdiže do y = +24.5 m. Šetač ni objekti nikada nisu ispod tla!
 const maguraHillMat = new THREE.MeshStandardMaterial({ color: currentPal().maguraHill, roughness: 0.9, flatShading: true });
 function sampleDemHeight(x, z) {
+  // Analitički profil grebena Magure (usaglašen sa konusom Magure i spomenicima L.MG.* na y = 24.5 m)
+  const dxM = (x - 880) / 1.15;
+  const dzM = (z - (-135)) / 0.85;
+  const rM = Math.hypot(dxM, dzM);
+  const maguraY = rM < 260 ? 24.5 * Math.max(0, 1 - (rM / 260) * (rM / 260)) : 0;
+
   const dem = DATA.dem_glo30;
-  if (!dem || !dem.xs_m || !dem.zs_m || !dem.elev_m) return x > 700 ? 24.5 : 0;
-  // Unutar utvrđenja (-135..135, -110..110) zaravni plato na y=0 kako bi arhitektonski planovi ležali ravno
-  const distPalace = Math.max(Math.abs(x) / 145, Math.abs(z) / 120);
-  if (distPalace <= 1.0) return 0;
-  const blend = Math.min(1.0, (distPalace - 1.0) / 0.65);
+  if (!dem || !dem.xs_m || !dem.zs_m || !dem.elev_m) return maguraY;
+  // Unutar utvrđenja i ceremonijalnog platoa ka Tetrapilonu (-165..465, -135..125) zaravni na y = 0
+  if (x >= -165 && x <= 465 && z >= -135 && z <= 125) return Math.max(0, maguraY);
+  const distPalace = Math.max(Math.abs(x - 140) / 310, Math.abs(z) / 145);
+  const blend = Math.min(1.0, Math.max(0, (distPalace - 1.0) / 0.65));
   const xs = dem.xs_m, zs = dem.zs_m;
   const cx = Math.max(xs[0], Math.min(xs[xs.length - 1], x));
   const cz = Math.max(zs[0], Math.min(zs[zs.length - 1], z));
@@ -1082,7 +1320,8 @@ function sampleDemHeight(x, z) {
   const e01 = dem.elev_m[r1 * dem.cols + c0] ?? dem.base_elevation_m;
   const e11 = dem.elev_m[r1 * dem.cols + c1] ?? dem.base_elevation_m;
   const elev = (e00 * (1 - tx) + e10 * tx) * (1 - tz) + (e01 * (1 - tx) + e11 * tx) * tz;
-  return (elev - dem.base_elevation_m) * 0.45 * blend;
+  const demPositive = Math.max(0, (elev - dem.base_elevation_m) * 0.45) * blend;
+  return Math.max(maguraY, demPositive);
 }
 
 if (DATA.dem_glo30) {
@@ -1093,7 +1332,7 @@ if (DATA.dem_glo30) {
     const vx = posAttr.getX(i) + 300;
     const vz = posAttr.getZ(i);
     posAttr.setX(i, vx);
-    posAttr.setY(i, sampleDemHeight(vx, vz) - 0.12);
+    posAttr.setY(i, sampleDemHeight(vx, vz) + 0.02);
   }
   demGeo.computeVertexNormals();
   const demWire = new THREE.LineSegments(
@@ -1103,9 +1342,9 @@ if (DATA.dem_glo30) {
   groundGroup.add(demWire);
 }
 
-const maguraGeo = new THREE.ConeGeometry(260, 26, 24, 2, true);
+const maguraGeo = new THREE.ConeGeometry(260, 24.5, 24, 2, true);
 const maguraHill = new THREE.Mesh(maguraGeo, maguraHillMat);
-maguraHill.position.set(880, 12.8, -135);
+maguraHill.position.set(880, 12.25, -135);
 maguraHill.scale.set(1.15, 1.0, 0.85);
 groundGroup.add(maguraHill);
 const maguraEdges = new THREE.LineSegments(new THREE.EdgesGeometry(maguraGeo, 8), lineMatB);
@@ -1120,7 +1359,8 @@ for (const radius of [120, 250, 500, 1000, 2531]) {
   const segs = 96;
   for (let i = 0; i <= segs; i++) {
     const a = (i / segs) * Math.PI * 2;
-    pts.push(new THREE.Vector3(Math.cos(a) * radius, 0.05, Math.sin(a) * radius));
+    const rx = Math.cos(a) * radius, rz = Math.sin(a) * radius;
+    pts.push(new THREE.Vector3(rx, sampleDemHeight(rx, rz) + 0.06, rz));
   }
   const ring = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), gridRingMat);
   groundGroup.add(ring);
@@ -1132,7 +1372,7 @@ const axisPts = [
   new THREE.Vector3(-130, 0.3, 2),
   new THREE.Vector3(118, 0.3, -4),
   new THREE.Vector3(420, 0.3, -65),
-  new THREE.Vector3(905, 25.0, -135)
+  new THREE.Vector3(905, sampleDemHeight(905, -135) + 0.5, -135)
 ];
 const axisLine = new THREE.Line(new THREE.BufferGeometry().setFromPoints(axisPts), axisMat);
 axisLine.computeLineDistances();
@@ -1154,13 +1394,13 @@ const roadMat = new THREE.LineBasicMaterial({ color: currentPal().road });
 
 for (const put of DATA.putevi) {
   if (!put.tacke_xz || put.tacke_xz.length < 2) continue;
-  const pts = put.tacke_xz.map(([x, z]) => new THREE.Vector3(x, 0.4, z));
+  const pts = put.tacke_xz.map(([x, z]) => new THREE.Vector3(x, sampleDemHeight(x, z) + 0.4, z));
   const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), roadMat);
   roadsGroup.add(line);
 }
 // Prilazni put RP-002 (od najbliže tačke DARMC puta na 2531 m preko Tetrapilona do Istočne kapije)
 const approachPts = [
-  new THREE.Vector3(1820, 0.4, -1750),
+  new THREE.Vector3(1820, sampleDemHeight(1820, -1750) + 0.4, -1750),
   new THREE.Vector3(420, 0.4, -65),
   new THREE.Vector3(118, 0.4, -4)
 ];
@@ -1252,7 +1492,7 @@ for (const gf of (DATA.geofizika || [])) {
 // UNESCO Core & Buffer Zone poligoni (W20)
 for (const uz of (DATA.unesco_zone || [])) {
   if (!uz.poligon_xz || uz.poligon_xz.length < 3) continue;
-  const pts = uz.poligon_xz.map(([x, z]) => new THREE.Vector3(x, 0.55, z));
+  const pts = uz.poligon_xz.map(([x, z]) => new THREE.Vector3(x, sampleDemHeight(x, z) + 0.55, z));
   const uMat = new THREE.LineDashedMaterial({
     color: uz.id === 'UNESCO-CORE' ? 0xc84b31 : 0x7b4ecb,
     dashSize: uz.id === 'UNESCO-CORE' ? 12 : 20,
@@ -1268,7 +1508,7 @@ const osmWaterMat = new THREE.LineBasicMaterial({ color: 0x3b7ea1, transparent: 
 const osmPathMat = new THREE.LineBasicMaterial({ color: 0x7a6f5d, transparent: true, opacity: 0.45 });
 for (const v of (DATA.osm_vektori || [])) {
   if (!v.tacke_xz || v.tacke_xz.length < 2) continue;
-  const pts = v.tacke_xz.map(([x, z]) => new THREE.Vector3(x, 0.16, z));
+  const pts = v.tacke_xz.map(([x, z]) => new THREE.Vector3(x, sampleDemHeight(x, z) + 0.16, z));
   const line = new THREE.Line(
     new THREE.BufferGeometry().setFromPoints(pts),
     v.kategorija === 'vodotok' ? osmWaterMat : osmPathMat
@@ -1284,8 +1524,18 @@ function buildNodeGeometry(c) {
   const t = c.topo;
   if (!t) return;
   const g = new THREE.Group();
-  g.position.set(t.x, t.x > 700 ? 24.5 : 0, t.z);
+  const baseY = sampleDemHeight(t.x, t.z);
+  g.position.set(t.x, baseY, t.z);
   archGroup.add(g);
+
+  // Arhitektonska kontaktna stopa (AO plinth) na tlu radi jasnog uzemljenja volumena u šetnji i 3D prikazu
+  if (t.oblik !== 'teren-okvir' && t.oblik !== 'brdo' && t.oblik !== 'prsten-sp' && t.oblik !== 'prsten-un') {
+    const padGeo = new THREE.PlaneGeometry(t.w + 2.4, t.d + 2.4);
+    padGeo.rotateX(-Math.PI / 2);
+    const padMesh = new THREE.Mesh(padGeo, aoPadMat);
+    padMesh.position.y = 0.04;
+    g.add(padMesh);
+  }
 
   const isEmptyClaim = c.bez_tvrdnje;
   const baseLvl = isEmptyClaim ? 'P' : 'A';
@@ -1732,9 +1982,12 @@ function renderDossier() {
   } else if (STATE.activeTab === 'izvori') {
     const poreklo = document.createElement('div');
     poreklo.className = 'claim-card';
-    poreklo.innerHTML = `<div class="claim-head"><span>Poreklo podataka</span><span class="badge">R01–R08</span></div>
-      <div class="claim-text">Deo obrađenih podataka dobijen je od <strong>Arheološkog instituta u Beogradu</strong> (korpus monografija i zbornika R01–R08, 1978–2017). Prava na tekst, planove i ilustracije pripadaju autorima i izdavačima; ovde su samo citati sa stranom, isečci i izvedeni podaci.</div>`;
+    poreklo.innerHTML = `<div class="claim-head"><span>Poreklo podataka i arhitektura Svemira</span><span class="badge">R01–R08 · SVEMIR</span></div>
+      <div class="claim-text">Deo obrađenih podataka dobijen je od <strong>Arheološkog instituta u Beogradu</strong> (korpus monografija i zbornika R01–R08, 1978–2017) uz potvrde za javni naučni uvid. Prava na izvorne publikacije, planove i ilustracije pripadaju autorima i izdavačima. Ceo 3D epistemički instrument izgrađen je u sistemu <strong>Svemir</strong> (tehnodrom rada i znanja Semira Poturka, departman za arheologiju i Atelje Svemira).</div>
+      <button class="btn btn-about" id="btn-dos-about" style="margin-top:4px">O projektu, metodologiji i Svemiru →</button>`;
     container.appendChild(poreklo);
+    const btnDosAbout = poreklo.querySelector('#btn-dos-about');
+    if (btnDosAbout) btnDosAbout.addEventListener('click', () => toggleAbout(true));
     const hP = document.createElement('div');
     hP.className = 'section-h';
     hP.textContent = `Prostorni slojevi i praznine (${DATA.praznine.length} otvorenih · 7/7 zatvoreno)`;
@@ -1769,7 +2022,7 @@ function renderDossier() {
   }
 }
 
-/* ── 9. IZBOR ČVORA, SKALE I VOĐENA TURA ── */
+/* ── 9. IZBOR ČVORA, SKALE, PROJEKCIJE (2D/2.5D/3D) I VOĐENA TURA ── */
 function selectNode(id, moveCamera = true) {
   if (!cvorById.has(id)) return;
   STATE.selectedId = id;
@@ -1777,22 +2030,66 @@ function selectNode(id, moveCamera = true) {
   applySceneState();
   renderDossier();
 
-  if (moveCamera) {
+  if (moveCamera && !WALK.on) {
     const entry = nodeGroups.get(id);
     if (entry && entry.node.topo) {
       const t = entry.node.topo;
       const dist = Math.max(65, Math.max(t.w, t.d) * 1.45);
-      const baseY = t.x > 700 ? 24.5 : 0;
-      flyTo([t.x - dist * 0.75, baseY + dist * 0.58, t.z + dist * 0.88], [t.x, baseY + 6, t.z]);
+      const baseY = sampleDemHeight(t.x, t.z);
+      if (STATE.projMode === '2D') {
+        flyTo([t.x, baseY + dist * 2.9, t.z + 0.5], [t.x, baseY, t.z]);
+      } else if (STATE.projMode === '25D') {
+        flyTo([t.x - dist * 1.55, baseY + dist * 1.45, t.z + dist * 1.55], [t.x, baseY + 4, t.z]);
+      } else {
+        flyTo([t.x - dist * 0.75, baseY + dist * 0.58, t.z + dist * 0.88], [t.x, baseY + 6, t.z]);
+      }
     }
   }
   updateHash();
 }
 
+function setProjMode(mode) {
+  if (WALK.on) toggleWalk(false);
+  STATE.projMode = mode;
+  document.querySelectorAll('[data-proj]').forEach(b => b.classList.toggle('active', b.dataset.proj === mode));
+  playUiTone(620, 0.035);
+
+  const tgt = camGoal.target.clone();
+  const curDist = Math.max(80, camGoal.pos.distanceTo(tgt));
+  if (mode === '2D') {
+    camera.fov = 14;
+    controls.maxPolarAngle = Math.PI * 0.485;
+    if (!STATE.showPlans) {
+      STATE.showPlans = true;
+      const bp = document.getElementById('btn-planovi');
+      if (bp) bp.classList.add('active');
+    }
+    flyTo([tgt.x, tgt.y + Math.max(480, curDist * 2.1), tgt.z + 0.8], [tgt.x, tgt.y, tgt.z]);
+  } else if (mode === '25D') {
+    camera.fov = 16;
+    const d = Math.max(240, curDist * 1.15);
+    flyTo([tgt.x - d, tgt.y + d * 0.88, tgt.z + d], [tgt.x, tgt.y, tgt.z]);
+  } else {
+    camera.fov = 42;
+    const d = Math.min(420, Math.max(95, curDist * 0.52));
+    flyTo([tgt.x - d * 0.75, tgt.y + d * 0.56, tgt.z + d * 0.88], [tgt.x, tgt.y + 4, tgt.z]);
+  }
+  camera.updateProjectionMatrix();
+  applySceneState();
+}
+
 function setScale(scaleId) {
+  if (WALK.on) toggleWalk(false);
   STATE.scale = scaleId;
   document.querySelectorAll('[data-scale]').forEach(b => b.classList.toggle('active', b.dataset.scale === scaleId));
   playUiTone(540, 0.04);
+
+  if (STATE.projMode !== '3D') {
+    STATE.projMode = '3D';
+    camera.fov = 42;
+    camera.updateProjectionMatrix();
+    document.querySelectorAll('[data-proj]').forEach(b => b.classList.toggle('active', b.dataset.proj === '3D'));
+  }
 
   if (scaleId === 'S0') flyTo([0, 2900, 3600], [200, 0, -200]);
   else if (scaleId === 'S1') flyTo([450, 720, 1080], [420, 0, -80]);
@@ -1808,6 +2105,7 @@ function setScale(scaleId) {
 }
 
 function applyTourStep(idx) {
+  if (WALK.on) toggleWalk(false);
   const step = DATA.tura[idx];
   if (!step) return;
   STATE.tourIndex = idx;
@@ -1845,8 +2143,8 @@ canvas.addEventListener('pointerup', (e) => {
   if (WALK.on && e.pointerType !== 'touch' && !document.pointerLockElement) return; // prvi klik u šetnji samo hvata miš
   const rect = canvas.getBoundingClientRect();
   if (WALK.on && document.pointerLockElement) { pointer.set(0, 0); } else { // zaključan miš: bira se ono pod nišanom
-  pointer.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-  pointer.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+    pointer.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+    pointer.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
   }
   raycaster.setFromCamera(pointer, camera);
   const hits = raycaster.intersectObjects(pickableMeshes, false);
@@ -1855,7 +2153,7 @@ canvas.addEventListener('pointerup', (e) => {
     selectNode(hit.object.userData.nodeId, !WALK.on);
     window.__openDossier && window.__openDossier();
   } else if (hit && hit.object.userData.isPlan && hit.object.userData.cvorovi && hit.object.userData.cvorovi[0]) {
-    selectNode(hit.object.userData.cvorovi[0], true);
+    selectNode(hit.object.userData.cvorovi[0], !WALK.on);
   }
 });
 
@@ -1906,7 +2204,20 @@ function playUiTone(freq = 660, dur = 0.035) {
   osc.stop(audioCtx.currentTime + dur);
 }
 
-/* ── 12. DOGAĐAJI INTERFEJSA I TASTATURE ── */
+/* ── 12. DOGAĐAJI INTERFEJSA, PROJEKCIJE I MODALA "O ATLASU · SVEMIR" ── */
+const aboutModal = document.getElementById('about-modal');
+function toggleAbout(force) {
+  const open = typeof force === 'boolean' ? force : !aboutModal.classList.contains('open');
+  aboutModal.classList.toggle('open', open);
+  playUiTone(open ? 740 : 520, 0.03);
+}
+document.getElementById('btn-about').addEventListener('click', () => toggleAbout(true));
+document.getElementById('btn-about-close').addEventListener('click', () => toggleAbout(false));
+aboutModal.addEventListener('click', (e) => { if (e.target === aboutModal) toggleAbout(false); });
+
+document.querySelectorAll('[data-proj]').forEach(btn => {
+  btn.addEventListener('click', () => setProjMode(btn.dataset.proj));
+});
 document.querySelectorAll('[data-scale]').forEach(btn => {
   btn.addEventListener('click', () => setScale(btn.dataset.scale));
 });
@@ -2002,6 +2313,11 @@ if (btnGeofiz) btnGeofiz.addEventListener('click', toggleGeofiz);
 
 window.addEventListener('keydown', (e) => {
   if (e.target && e.target.tagName === 'INPUT') return;
+  if (aboutModal.classList.contains('open')) {
+    if (e.key === 'Escape' || e.key === 'i' || e.key === 'I' || e.key === '?') toggleAbout(false);
+    return;
+  }
+  if (e.key === 'i' || e.key === 'I' || e.key === '?') { toggleAbout(true); return; }
   if (e.key === 'f' || e.key === 'F') { toggleWalk(); return; }
   if (WALK.on) { if (e.key === 'Escape') toggleWalk(false); return; }
   if (e.key === '1') setScale('S0');
@@ -2011,17 +2327,18 @@ window.addEventListener('keydown', (e) => {
   else if (e.key === '5') setScale('S4');
   else if (e.key === 'p' || e.key === 'P') togglePlans();
   else if (e.key === 'g' || e.key === 'G') toggleGeofiz();
+  else if (e.key === 'v' || e.key === 'V') setProjMode(STATE.projMode === '3D' ? '25D' : STATE.projMode === '25D' ? '2D' : '3D');
   else if (e.key === 'r' || e.key === 'R' || e.key === 'Escape') setScale('S2');
   else if (e.key === 't' || e.key === 'T') applyTourStep((STATE.tourIndex + 1) % DATA.tura.length);
 });
 
-/* ── 12b. ŠETNJA U PRVOM LICU (oči na 1,65 m, tlo iz DEM-a, sudari sa zidovima) ── */
-const WALK = { on: false, yaw: 0, pitch: 0, feet: new THREE.Vector3(), speed: 4, collide: true, keys: new Set(),
+/* ── 12b. ŠETNJA U PRVOM LICU (garantovano iznad tla y >= 0, oči 1,65 m / 6,0 m, Voyager kartica blizine) ── */
+const WALK = { on: false, yaw: 0, pitch: 0.05, feet: new THREE.Vector3(), eyeHeight: 1.65, speed: 5, collide: true, keys: new Set(),
   touch: window.matchMedia('(pointer: coarse)').matches, joy: { x: 0, y: 0, id: null }, look: { id: null, x: 0, y: 0 }, saved: null };
-const EYE = 1.65, STEP = 0.6, RADIUS = 0.35;
+const EYE = 1.65, STEP = 0.65, RADIUS = 0.4;
 const walkUi = document.createElement('div');
 walkUi.id = 'walk-ui';
-walkUi.innerHTML = '<div class="walk-cross"></div><div class="walk-hint" id="walk-hint"></div>' +
+walkUi.innerHTML = '<div class="walk-cross"></div><div class="walk-prox" id="walk-prox"></div><div class="walk-hint" id="walk-hint"></div>' +
   '<div class="walk-joy" id="walk-joy"><div class="walk-knob" id="walk-knob"></div></div>' +
   '<button class="btn walk-exit" id="walk-exit">Izađi iz šetnje</button>';
 document.getElementById('stage').appendChild(walkUi);
@@ -2029,19 +2346,21 @@ const ray = new THREE.Raycaster();
 const _v = new THREE.Vector3(), _d = new THREE.Vector3();
 
 function walkSolids() {
-  return pickableMeshes.filter(m => m.visible && m.parent && m.parent.visible && m.userData.nodeId && !m.userData.isPlan);
+  return pickableMeshes.filter(m => m.visible && m.parent && m.parent.visible && m.userData.nodeId && !m.userData.isPlan && m.userData.level === 'A');
 }
 function groundAt(x, z, fromY) {
-  const y = sampleDemHeight(x, z);
-  ray.set(_v.set(x, fromY, z), _d.set(0, -1, 0));
-  ray.far = Math.max(0.01, fromY - y + 0.01);
+  const baseY = Math.max(0, sampleDemHeight(x, z));
+  const startY = Math.max(baseY + STEP, fromY || baseY + STEP);
+  ray.set(_v.set(x, startY, z), _d.set(0, -1, 0));
+  ray.far = Math.max(0.05, startY - baseY + 0.1);
   const hit = ray.intersectObjects(walkSolids(), false)[0];
-  return hit ? Math.max(y, hit.point.y) : y;
+  if (hit && hit.point.y >= baseY && hit.point.y <= baseY + STEP) return hit.point.y;
+  return baseY;
 }
 function blocked(from, dir, dist) {
   if (!WALK.collide) return false;
   const solids = walkSolids();
-  for (const h of [STEP + 0.05, 1.4]) {
+  for (const h of [STEP + 0.1, 1.35]) {
     ray.set(_v.set(from.x, from.y + h, from.z), dir);
     ray.far = dist + RADIUS;
     if (ray.intersectObjects(solids, false).length) return true;
@@ -2055,11 +2374,39 @@ function walkHint() {
   const el = document.getElementById('walk-hint');
   const brz = WALK.speed.toFixed(0) + ' m/s';
   const sud = WALK.collide ? 'sudari uklj.' : 'prolaz kroz zidove';
+  const vis = WALK.eyeHeight > 2 ? 'vizura 6,0 m' : 'oči 1,65 m';
   el.textContent = WALK.touch
-    ? `Levo: hod · desno: pogled · tap bira objekat · ${brz}`
+    ? `Levo: hod · desno: pogled · tap bira objekat · ${vis} · ${brz}`
     : (document.pointerLockElement
-      ? `WASD/strelice hod · Shift trk · točkić brzina (${brz}) · C ${sud} · klik bira · Esc pusti miš · F izlaz`
-      : 'Klikni u scenu za pogled mišem · F izlaz');
+      ? `WASD/strelice hod · Shift trk · točkić brzina (${brz}) · E visina (${vis}) · C ${sud} · klik bira · Esc pusti miš · F izlaz`
+      : `WASD/strelice hod · prevuci mišem ili klikni za pogled · E visina (${vis}) · C ${sud} · F izlaz`);
+}
+function updateWalkProximity() {
+  const proxEl = document.getElementById('walk-prox');
+  if (!proxEl || !WALK.on) return;
+  let best = null, bestScore = Infinity;
+  const fwdX = -Math.sin(WALK.yaw), fwdZ = -Math.cos(WALK.yaw);
+  for (const [cid, entry] of nodeGroups.entries()) {
+    if (['L', 'L.U', 'L.U.1', 'L.U.2', 'L.U.K', 'L.P', 'L.H', 'L.MG', 'L.KN'].includes(cid) || !entry.group.visible) continue;
+    const t = entry.node.topo;
+    if (!t) continue;
+    const dx = t.x - WALK.feet.x, dz = t.z - WALK.feet.z;
+    const dist = Math.hypot(dx, dz);
+    const radius = Math.max(t.w || 10, t.d || 10) * 0.5;
+    const edgeDist = Math.max(0, dist - radius);
+    if (edgeDist > 85) continue;
+    const dot = dist > 0.1 ? (dx * fwdX + dz * fwdZ) / dist : 1;
+    if (dot < 0.15 && edgeDist > 14) continue;
+    const score = edgeDist * (1.35 - 0.5 * dot);
+    if (score < bestScore) { bestScore = score; best = { cid, node: entry.node, dist: Math.round(edgeDist) }; }
+  }
+  const absElev = (195 + WALK.feet.y).toFixed(1);
+  if (best) {
+    const lvl = best.node.topo ? best.node.topo.nivo : 'A';
+    proxEl.innerHTML = `<span class="mono">${best.cid}</span> · <strong>${best.node.naziv}</strong> · <span class="mono">${best.dist} m ispred · Nivo ${lvl} · ${absElev}m n.v. (oči +${WALK.eyeHeight.toFixed(2)}m)</span>`;
+  } else {
+    proxEl.innerHTML = `<span class="mono">FELIX ROMVLIANA · ${absElev}m n.v. · Oči +${WALK.eyeHeight.toFixed(2)}m</span>`;
+  }
 }
 /* Okruženje šetnje: blago nebo (kupola) i tanka metarska mreža tla; vidljivi samo u šetnji */
 const skyMat = new THREE.ShaderMaterial({
@@ -2090,38 +2437,62 @@ function toggleWalk(force) {
   if (on === WALK.on) return;
   WALK.on = on;
   document.getElementById('btn-walk').classList.toggle('active', on);
+  document.querySelectorAll('[data-proj]').forEach(b => b.classList.toggle('active', !on && b.dataset.proj === STATE.projMode));
   document.body.classList.toggle('walking', on);
   skyDome.visible = on; walkGrid.visible = on;
   applySceneState();
   if (on) {
     WALK.saved = { pos: camCurrent.pos.clone(), target: camCurrent.target.clone() };
-    // početak: tačka koju orbit gleda (ako je u širem lokalitetu), pogled u istom pravcu
-    const t = controls.target.clone();
-    if (Math.abs(t.x) > 1100 || Math.abs(t.z) > 700) t.set(0, 0, 60);
-    const look = new THREE.Vector3().subVectors(controls.target, camera.position);
-    WALK.yaw = Math.atan2(-look.x, -look.z);
-    WALK.pitch = 0;
-    // ako je tačka pod krovom ili zidom, povlači se ka kameri dok ne nađe slobodno tlo
-    const back = new THREE.Vector3(camera.position.x - t.x, 0, camera.position.z - t.z).normalize();
-    for (let i = 0; i < 80 && groundAt(t.x, t.z, 400) > sampleDemHeight(t.x, t.z) + STEP; i++) { t.x += back.x * 3; t.z += back.z * 3; }
-    const fwd = new THREE.Vector3(-Math.sin(WALK.yaw), 0, -Math.cos(WALK.yaw));
-    for (let i = 0; i < 40; i++) {
-      ray.set(_v.set(t.x, sampleDemHeight(t.x, t.z) + EYE, t.z), fwd); ray.far = 18;
-      if (!ray.intersectObjects(walkSolids(), false).length && groundAt(t.x, t.z, 400) <= sampleDemHeight(t.x, t.z) + STEP) break;
-      t.x -= fwd.x * 3; t.z -= fwd.z * 3;
+    WALK.eyeHeight = EYE;
+    // Odredi ciljnu tačku na tlu prema trenutnom pogledu ili izabranom čvoru
+    const selEntry = nodeGroups.get(STATE.selectedId);
+    let focusX = controls.target.x, focusZ = controls.target.z;
+    const isContainerNode = ['L', 'L.U', 'L.U.1', 'L.U.2', 'L.P', 'L.H', 'L.MG'].includes(STATE.selectedId);
+    if (STATE.scale === 'S1' && Math.hypot(focusX - 420, focusZ - (-65)) < 120) {
+      // U S1 pogledu fokus je kod Tetrapilona (L.TP): postavi šetača ispred Tetrapilona na y = 0
+      focusX = 420; focusZ = -65;
+    } else if (selEntry && selEntry.node.topo && !isContainerNode) {
+      focusX = selEntry.node.topo.x;
+      focusZ = selEntry.node.topo.z;
+    } else if (Math.abs(focusX) > 950 || Math.abs(focusZ) > 550) {
+      focusX = -18; focusZ = -8; // Unutrašnja promenada palate prema Palati I i Velikom hramu
     }
-    WALK.feet.set(t.x, sampleDemHeight(t.x, t.z), t.z);
-    skyDome.position.set(0, 0, 0);
+    // Postavi šetača na slobodno tlo ~28 m ispred fokusne tačke, uvek na y >= 0
+    let dirX = camera.position.x - focusX, dirZ = camera.position.z - focusZ;
+    const dLen = Math.hypot(dirX, dirZ);
+    if (dLen < 1) { dirX = -1; dirZ = 0.4; } else { dirX /= dLen; dirZ /= dLen; }
+    let spawnDist = 28;
+    if (selEntry && selEntry.node.topo && !isContainerNode) {
+      spawnDist = Math.max(22, Math.max(selEntry.node.topo.w || 16, selEntry.node.topo.d || 16) * 0.78 + 12);
+    }
+    let sx = focusX + dirX * spawnDist;
+    let sz = focusZ + dirZ * spawnDist;
+    WALK.yaw = Math.atan2(-(focusX - sx), -(focusZ - sz));
+    WALK.pitch = 0.06; // Blagi pogled ka gornjoj zoni arhitekture, nikada u pod
+    // Ako je tačka unutar punog zida nivoa A, povuci još malo unazad
+    for (let i = 0; i < 25; i++) {
+      const gy = Math.max(0, sampleDemHeight(sx, sz));
+      ray.set(_v.set(sx, gy + 1.2, sz), _d.set(-Math.sin(WALK.yaw), 0, -Math.cos(WALK.yaw)));
+      ray.far = 4.0;
+      if (!ray.intersectObjects(walkSolids(), false).length) break;
+      sx += dirX * 3.5; sz += dirZ * 3.5;
+    }
+    const baseY = Math.max(0, sampleDemHeight(sx, sz));
+    WALK.feet.set(sx, baseY, sz);
+    camera.position.set(sx, baseY + WALK.eyeHeight, sz);
+    camera.rotation.set(WALK.pitch, WALK.yaw, 0, 'YXZ');
+    skyDome.position.copy(camera.position);
     controls.enabled = false;
     camera.near = 0.12; camera.fov = 68; camera.updateProjectionMatrix();
+    updateWalkProximity();
     if (!WALK.touch) lockPointer();
   } else {
     if (document.pointerLockElement) document.exitPointerLock();
     WALK.keys.clear();
     WALK.joy = { x: 0, y: 0, id: null };
     controls.enabled = true;
-    camera.near = 1.0; camera.fov = 42; camera.updateProjectionMatrix();
-    // let nazad u orbit polazi iz tačke gde je šetnja stala
+    camera.near = 1.0; camera.fov = STATE.projMode === '2D' ? 14 : STATE.projMode === '25D' ? 16 : 42;
+    camera.updateProjectionMatrix();
     camCurrent.pos.copy(camera.position);
     camCurrent.target.copy(new THREE.Vector3(0, 0, -30).applyQuaternion(camera.quaternion).add(camera.position));
     flyTo(WALK.saved.pos.toArray(), WALK.saved.target.toArray());
@@ -2144,7 +2515,6 @@ function walkStep(dt) {
     const step = WALK.speed * run * dt * Math.min(1, len) / len;
     const sy = Math.sin(WALK.yaw), cy = Math.cos(WALK.yaw);
     const mx = (-sy * f + cy * r) * step, mz = (-cy * f - sy * r) * step;
-    // klizanje uz zid: prvo ceo pomeraj, pa posebno x i z
     const tryMove = (dx, dz) => {
       const d = Math.hypot(dx, dz);
       if (d < 1e-6) return false;
@@ -2153,21 +2523,29 @@ function walkStep(dt) {
     };
     if (!tryMove(mx, mz)) { tryMove(mx, 0); tryMove(0, mz); }
   }
-  const g = groundAt(WALK.feet.x, WALK.feet.z, WALK.feet.y + STEP);
-  WALK.feet.y += (g - WALK.feet.y) * Math.min(1, dt * 12);
-  camera.position.set(WALK.feet.x, WALK.feet.y + EYE, WALK.feet.z);
+  const g = Math.max(0, groundAt(WALK.feet.x, WALK.feet.z, WALK.feet.y + STEP));
+  WALK.feet.y = Math.max(0, WALK.feet.y + (g - WALK.feet.y) * Math.min(1, dt * 12));
+  camera.position.set(WALK.feet.x, WALK.feet.y + WALK.eyeHeight, WALK.feet.z);
   skyDome.position.copy(camera.position);
   camera.rotation.set(WALK.pitch, WALK.yaw, 0, 'YXZ');
+  updateWalkProximity();
 }
 function walkLook(dx, dy, sens) {
   WALK.yaw -= dx * sens;
-  WALK.pitch = THREE.MathUtils.clamp(WALK.pitch - dy * sens, -1.45, 1.45);
+  WALK.pitch = THREE.MathUtils.clamp(WALK.pitch - dy * sens, -1.35, 1.35);
 }
 document.getElementById('btn-walk').addEventListener('click', () => toggleWalk());
 document.getElementById('walk-exit').addEventListener('click', () => toggleWalk(false));
 window.addEventListener('keydown', (e) => {
   if (!WALK.on || (e.target && e.target.tagName === 'INPUT')) return;
   if (e.code === 'KeyC') { WALK.collide = !WALK.collide; walkHint(); return; }
+  if (e.code === 'KeyE') {
+    WALK.eyeHeight = WALK.eyeHeight > 2.0 ? EYE : 6.0;
+    walkHint();
+    updateWalkProximity();
+    requestRender();
+    return;
+  }
   WALK.keys.add(e.code);
   if (e.code.startsWith('Arrow') || e.code === 'Space') e.preventDefault();
 });
@@ -2203,11 +2581,115 @@ document.addEventListener('mousemove', (e) => {
       walkLook(e.clientX - WALK.look.x, e.clientY - WALK.look.y, 0.005);
       WALK.look.x = e.clientX; WALK.look.y = e.clientY;
     } else if (e.pointerType !== 'touch' && !document.pointerLockElement && e.buttons) {
-      walkLook(e.movementX, e.movementY, 0.004); // ako browser ne da pointer-lock: prevlačenje gleda
+      walkLook(e.movementX, e.movementY, 0.004);
     }
   });
   const endLook = (e) => { if (e.pointerId === WALK.look.id) WALK.look.id = null; };
   canvas.addEventListener('pointerup', endLook); canvas.addEventListener('pointercancel', endLook);
+}
+
+/* ── 12c. INTERAKTIVNA 2D RADAR-MINIMAPA (Utvrđenje, Tetrapilon, Magura i konus kamere) ── */
+const mmCanvas = document.getElementById('minimap-canvas');
+const mmCtx = mmCanvas ? mmCanvas.getContext('2d') : null;
+const MM_BOUNDS = { xMin: -230, xMax: 1040, zMin: -280, zMax: 240 };
+
+function worldToMm(x, z) {
+  const w = mmCanvas.width, h = mmCanvas.height;
+  const u = ((x - MM_BOUNDS.xMin) / (MM_BOUNDS.xMax - MM_BOUNDS.xMin)) * w;
+  const v = ((z - MM_BOUNDS.zMin) / (MM_BOUNDS.zMax - MM_BOUNDS.zMin)) * h;
+  return [u, v];
+}
+function mmToWorld(u, v) {
+  const w = mmCanvas.width, h = mmCanvas.height;
+  const x = MM_BOUNDS.xMin + (u / w) * (MM_BOUNDS.xMax - MM_BOUNDS.xMin);
+  const z = MM_BOUNDS.zMin + (v / h) * (MM_BOUNDS.zMax - MM_BOUNDS.zMin);
+  return [x, z];
+}
+
+function drawMinimap() {
+  if (!mmCtx || !mmCanvas) return;
+  const w = mmCanvas.width, h = mmCanvas.height;
+  mmCtx.clearRect(0, 0, w, h);
+  mmCtx.fillStyle = isNight ? '#161b22' : '#f2ece1';
+  mmCtx.fillRect(0, 0, w, h);
+
+  // Osa apoteoze
+  const [ax0, az0] = worldToMm(-130, 2);
+  const [ax1, az1] = worldToMm(905, -135);
+  mmCtx.strokeStyle = isNight ? 'rgba(224,122,56,0.45)' : 'rgba(158,42,43,0.42)';
+  mmCtx.lineWidth = 1.5;
+  mmCtx.setLineDash([4, 3]);
+  mmCtx.beginPath(); mmCtx.moveTo(ax0, az0); mmCtx.lineTo(ax1, az1); mmCtx.stroke();
+  mmCtx.setLineDash([]);
+
+  // Brdo Magura kontura
+  const [mx, mz] = worldToMm(880, -135);
+  mmCtx.strokeStyle = isNight ? '#445264' : '#b8ad98';
+  mmCtx.beginPath(); mmCtx.arc(mx, mz, 36, 0, Math.PI * 2); mmCtx.stroke();
+
+  // Arhitektonski čvorovi
+  for (const c of DATA.cvorovi) {
+    const t = c.topo;
+    if (!t || c.id === 'L' || c.id === 'L.MG') continue;
+    const [cx, cz] = worldToMm(t.x, t.z);
+    const rw = Math.max(3, (t.w / (MM_BOUNDS.xMax - MM_BOUNDS.xMin)) * w);
+    const rd = Math.max(3, (t.d / (MM_BOUNDS.zMax - MM_BOUNDS.zMin)) * h);
+    const isSel = c.id === STATE.selectedId;
+    if (c.id === 'L.U.2' || c.id === 'L.U.1') {
+      mmCtx.strokeStyle = isSel ? (isNight ? '#e07a38' : '#9e2a2b') : (isNight ? '#8fa0b2' : '#4a4339');
+      mmCtx.lineWidth = c.id === 'L.U.2' ? 2 : 1;
+      mmCtx.strokeRect(cx - rw / 2, cz - rd / 2, rw, rd);
+    } else {
+      mmCtx.fillStyle = isSel ? (isNight ? '#e07a38' : '#9e2a2b') : (isNight ? '#6e7b8a' : '#8c7e6a');
+      mmCtx.fillRect(cx - rw / 2, cz - rd / 2, rw, rd);
+    }
+  }
+
+  // Pozicija kamere i konus pogleda (frustum)
+  const camX = WALK.on ? WALK.feet.x : camera.position.x;
+  const camZ = WALK.on ? WALK.feet.z : camera.position.z;
+  const [px, pz] = worldToMm(
+    THREE.MathUtils.clamp(camX, MM_BOUNDS.xMin + 8, MM_BOUNDS.xMax - 8),
+    THREE.MathUtils.clamp(camZ, MM_BOUNDS.zMin + 8, MM_BOUNDS.zMax - 8)
+  );
+  const dir = new THREE.Vector3();
+  camera.getWorldDirection(dir);
+  const ang = Math.atan2(dir.z, dir.x);
+  const coneLen = 24;
+  mmCtx.fillStyle = isNight ? 'rgba(224,122,56,0.28)' : 'rgba(158,42,43,0.24)';
+  mmCtx.beginPath();
+  mmCtx.moveTo(px, pz);
+  mmCtx.lineTo(px + Math.cos(ang - 0.42) * coneLen, pz + Math.sin(ang - 0.42) * coneLen);
+  mmCtx.lineTo(px + Math.cos(ang + 0.42) * coneLen, pz + Math.sin(ang + 0.42) * coneLen);
+  mmCtx.closePath();
+  mmCtx.fill();
+
+  mmCtx.fillStyle = isNight ? '#e07a38' : '#9e2a2b';
+  mmCtx.beginPath(); mmCtx.arc(px, pz, 4, 0, Math.PI * 2); mmCtx.fill();
+
+  const elevEl = document.getElementById('mm-elev');
+  if (elevEl) {
+    const gy = sampleDemHeight(WALK.on ? WALK.feet.x : controls.target.x, WALK.on ? WALK.feet.z : controls.target.z);
+    elevEl.textContent = `${Math.round(195 + gy)}m n.v.`;
+  }
+}
+
+if (mmCanvas) {
+  mmCanvas.addEventListener('click', (e) => {
+    const rect = mmCanvas.getBoundingClientRect();
+    const u = ((e.clientX - rect.left) / rect.width) * mmCanvas.width;
+    const v = ((e.clientY - rect.top) / rect.height) * mmCanvas.height;
+    const [wx, wz] = mmToWorld(u, v);
+    const wy = sampleDemHeight(wx, wz);
+    if (WALK.on) {
+      WALK.feet.set(wx, wy, wz);
+      updateWalkProximity();
+      requestRender();
+    } else {
+      flyTo([wx - 85, wy + 70, wz + 95], [wx, wy + 4, wz]);
+    }
+    playUiTone(680, 0.03);
+  });
 }
 
 /* ── 13. RESIZE & RENDER-ON-DEMAND GLAVNA PETLJA ── */
@@ -2259,6 +2741,7 @@ function tick(now) {
   if (WALK.on || needsRender || distRemaining > 0.002) {
     renderer.render(scene, camera);
     updateSpatialLabels();
+    drawMinimap();
     document.title = `FELIX ROMVLIANA · 3D Atlas (${STATE.scale} · ${STATE.selectedId} · calls:${renderer.info.render.calls})`;
     needsRender = false;
   }
@@ -2270,8 +2753,22 @@ function tick(now) {
   }
 }
 
-window.__atlas = { camera, WALK, STATE }; // za automatske provere
-/* Inicijalizacija */
+window.__atlas = { camera, WALK, STATE, sampleDemHeight, toggleAbout, setProjMode }; // za automatske provere
+/* Inicijalizacija: čitanje početnog URL hash-a (#razmera=...&cvor=...&faza=...) */
+{
+  const h = new URLSearchParams((window.location.hash || '').replace(/^#/, ''));
+  const hScale = h.get('razmera');
+  const hCvor = h.get('cvor');
+  const hFaza = h.get('faza');
+  if (hFaza && ['SVE', 'F.PR', 'F.T', 'F.KA', 'F.SV'].includes(hFaza)) {
+    STATE.phase = hFaza;
+    document.querySelectorAll('[data-phase]').forEach(b => b.classList.toggle('active', b.dataset.phase === hFaza));
+  }
+  if (hCvor && cvorById.has(hCvor)) STATE.selectedId = hCvor;
+  if (hScale && ['S0', 'S1', 'S2', 'S3', 'S4'].includes(hScale)) {
+    setScale(hScale);
+  }
+}
 document.getElementById('btn-theme').textContent = isNight ? 'Dan' : 'Noć';
 resize();
 applySceneState();
