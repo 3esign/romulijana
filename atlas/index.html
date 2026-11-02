@@ -894,6 +894,21 @@ body.noc .btn-about {
   font-size: 10.5px;
   color: var(--fg-muted);
 }
+.about-credits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px 24px;
+  padding: 12px 18px;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--fg);
+}
+.about-credits .cred { display: flex; flex-direction: column; }
+.about-credits .cred span { color: var(--fg-muted); font-size: 11.5px; }
+.about-credits .cred .cred-n { color: var(--fg); font-size: 12.5px; }
+.about-credits .cred .cred-k { text-transform: uppercase; letter-spacing: .08em; font-size: 10px; }
 .about-foot {
   display: flex;
   flex-wrap: wrap;
@@ -1114,8 +1129,22 @@ body.noc .btn-about {
       <p><strong>Deo obrađenih podataka dobijen je od Arheološkog instituta u Beogradu</strong> (korpus monografija i zbornika <code>R01–R08</code>, 1978–2017: D. Srejović, M. Čanak-Medić, M. Vasić, A. Lalović, Đ. Janković, M. Živić, I. Popović, S. Petković, G. von Bülow, T. Schüler i saradnici). Autorska prava na izvorne publikacije, crteže i fotografije pripadaju autorima i izdavačima; ovaj javno objavljeni naučni instrument prikazuje verifikovane bibliografske navode, citate sa stranom, georeferencirane slojeve i sintetičku 3D geometriju uz dobijene potvrde za javni uvid.</p>
       <p>Regionalni i satelitski slojevi (<code>W01–W78</code>) preuzeti su iz otvorenih naučnih baza: Copernicus DEM GLO-30, DARMC Harvard (CC BY-NC 3.0), Pleiades (CC BY 3.0), UNESCO World Heritage #1253, OpenStreetMap (ODbL) i Wikimedia Commons (CC BY-SA).</p>
     </div>
+    <div class="about-credits">
+      <div class="cred" lang="sr">
+        <span class="cred-k">Autori</span>
+        <span class="cred-n"><strong>doc. dr Bojan Končarević</strong> · <strong>doc. dr Semir Poturak</strong></span>
+        <span>Univerzitet „Union – Nikola Tesla“, Fakultet za graditeljski menadžment, Beograd</span>
+        <span>Arheološki institut, Beograd</span>
+      </div>
+      <div class="cred" lang="en">
+        <span class="cred-k">Authors</span>
+        <span class="cred-n"><strong>Assist. Prof. Bojan Končarević, PhD</strong> · <strong>Assist. Prof. Semir Poturak, PhD</strong></span>
+        <span>Union – Nikola Tesla University, Faculty of Construction Management, Belgrade</span>
+        <span>Institute of Archaeology, Belgrade</span>
+      </div>
+    </div>
     <div class="about-foot">
-      <span><strong>Semir Poturak</strong> · <strong>Svemir</strong> (Departman za arheologiju &amp; Atelje Svemira, 2026)</span>
+      <span>Izgrađeno u sistemu <strong>Svemir</strong> · Built with <strong>Svemir</strong> · 2026</span>
       <span>Bratski projekat: <a href="https://github.com/3esign/medijana" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">Medijana (Naissus)</a> · <a href="https://github.com/3esign/romulijana" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">GitHub Repo</a></span>
     </div>
   </div>
@@ -2718,7 +2747,7 @@ function buildNodeCitation() {
   const datum = new Date().toISOString().slice(0, 10);
   const base = location.protocol.startsWith('http') ? location.origin + location.pathname : 'https://3esign.github.io/romulijana/atlas/';
   const link = `${base}#razmera=${STATE.scale}&cvor=${c.id}&faza=${STATE.phase}`;
-  const kratko = `Romulijana — 3D epistemički atlas (Felix Romuliana, Gamzigrad), čvor ${c.id} „${c.naziv}“. Svemir / Semir Poturak, ${DATA.generisano.slice(0, 10)}. ${link} (pristupljeno ${datum}).`;
+  const kratko = `Romulijana — 3D epistemički atlas (Felix Romuliana, Gamzigrad), čvor ${c.id} „${c.naziv}“. doc. dr Bojan Končarević, doc. dr Semir Poturak (Univerzitet „Union – Nikola Tesla“, Fakultet za graditeljski menadžment; Arheološki institut, Beograd), ${DATA.generisano.slice(0, 10)}. ${link} (pristupljeno ${datum}).`;
   const koriste = new Set();
   const lines = [
     `# ${c.naziv} (${c.id})`, '',

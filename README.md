@@ -4,6 +4,14 @@
 
 - **Živi 3D atlas (GitHub Pages):** **[https://3esign.github.io/romulijana/atlas/](https://3esign.github.io/romulijana/atlas/)**
 - **Bratski projekat:** [Medijana (Naissus)](https://github.com/3esign/medijana)
+
+
+**Autori:** doc. dr Bojan Končarević · doc. dr Semir Poturak  
+Univerzitet „Union – Nikola Tesla“, Fakultet za graditeljski menadžment, Beograd · Arheološki institut, Beograd
+
+**Authors:** Assist. Prof. Bojan Končarević, PhD · Assist. Prof. Semir Poturak, PhD  
+Union – Nikola Tesla University, Faculty of Construction Management, Belgrade · Institute of Archaeology, Belgrade
+
 - **Arhitektura i sistem gradnje:** **Svemir** (*tehnodrom rada i znanja*, departman za arheologiju i Atelje Svemira)
 
 ---
@@ -54,4 +62,9 @@ pa otvoriti `http://localhost:8080/atlas/`.
 
 ---
 
-Semir Poturak · Svemir, departman arheologije · 2026
+
+**Autori:** doc. dr Bojan Končarević · doc. dr Semir Poturak  
+Univerzitet „Union – Nikola Tesla“, Fakultet za graditeljski menadžment, Beograd · Arheološki institut, Beograd  
+*Authors:* Assist. Prof. Bojan Končarević, PhD · Assist. Prof. Semir Poturak, PhD  
+Union – Nikola Tesla University, Faculty of Construction Management, Belgrade · Institute of Archaeology, Belgrade  
+Izgrađeno u sistemu Svemir · Built with Svemir · 2026

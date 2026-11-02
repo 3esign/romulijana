@@ -3,9 +3,13 @@ message: "Ako koristite ovaj materijal, citirajte ga ovako / If you use this mat
 title: "Felix Romuliana (Gamzigrad) — epistemički 3D atlas: izvori, tvrdnje sa dokazima i naučni instrument"
 type: dataset
 authors:
+  - family-names: Končarević
+    given-names: Bojan
+    affiliation: "Union – Nikola Tesla University, Faculty of Construction Management, Belgrade"
   - family-names: Poturak
     given-names: Semir
     email: scumutator@gmail.com
+    affiliation: "Union – Nikola Tesla University, Faculty of Construction Management, Belgrade"
 abstract: >-
   Konsolidacija objavljenih istraživanja kasnoantičke palate cara Galerija
   u Gamzigradu u proverljivu bazu znanja (81 izvor, 71 tvrdnja, 166 dokaza
@@ -26,7 +30,7 @@ references:
   - type: data
     title: "Korpus R01–R08 (monografije i zbornici o Gamzigradu, 1978–2017)"
     authors:
-      - name: "Arheološki institut, Beograd"
+      - name: "Arheološki institut, Beograd (Institute of Archaeology, Belgrade)"
 repository-code: "https://github.com/3esign/romulijana"
 version: 0.1-atlas
 date-released: 2026-11-02
