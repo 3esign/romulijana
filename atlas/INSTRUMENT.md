@@ -19,7 +19,7 @@ Gradimo **forenzički prostorno-epistemološki instrument (*Spatial Epistemic In
    - **Nivo C (Hipoteza):** gornje zone nestalih struktura ili prostorne pretpostavke bez direktnog članka *in situ*.
    - **Bistabilni prikaz (*Capta* / Dve verzije):** tamo gde se primarna literatura razilazi (npr. mlađa jednobrodna crkva: VI vek kod S. Petković / W21 / RD-008 naspram X–XI veka kod Đ. Jankovića u R04; ili tačna godina apoteoze RU-018), instrument ne računa „prosek", već nudi **dvojni preklop (ghost-split)** sa oba dokaza.
    - **Vidljive praznine (`P-TVRDNJE` / `P-GEOMETRIJA`):** 12 prostornih čvorova koji još nemaju verifikovanu tvrdnju u registru prikazuju se kao otvoreni temeljni okviri u tlu — neznanje je eksplicitno kartirano.
-4. **Forenzičko-katalogička ravan (Poreklo i konstelacija znanja):** svaki 3D volumen je čvor u `graf.json` (207 čvorova, 603 veze, 32.041 pominjanje u 2.894 strane). Klik na 3D masu u $\le 200\text{ ms}$ otvara tačnu tvrdnju (`RU`, `RS`, `RV`, `RD`, `RP`), citat, PDF stranu, štampanu stranu, render plana i SHA-256 otisak fajla na disku.
+4. **Forenzičko-katalogička ravan (Poreklo i konstelacija znanja):** svaki 3D volumen je čvor u `graf.json` (presek 02.11.2026: 207 čvorova, 603 veze, 32.041 pominjanje u 2.894 strane; tekuće brojke su u `MAPA.md`). Klik na 3D masu u $\le 200\text{ ms}$ otvara tačnu tvrdnju (`RU`, `RS`, `RV`, `RD`, `RP`), citat, PDF stranu, štampanu stranu, render plana i SHA-256 otisak fajla na disku.
 
 ---
 

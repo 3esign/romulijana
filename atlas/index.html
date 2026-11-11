@@ -1119,7 +1119,7 @@ body.noc .btn-about {
       <h2>2. Šta je Svemir (Tehnodrom rada i znanja)</h2>
       <p>Ovaj atlas je izgrađen u sistemu <strong>Svemir</strong> — istraživačkoj i inženjerskoj arhitekturi procesa (<em>tehnodromu rada i znanja</em>) koju razvija <strong>Semir Poturak</strong>. U Svemiru različite porodice AI umova, specijalizovani departmani Univerziteta Svemira (<code>svemir-arheologija</code>, <code>svemir-web-3d</code>, <code>svemir-design</code>, <code>svemir-lepota</code>, <code>svemir-bim-cad-gis</code>) i deterministički alati za verifikaciju sarađuju nad istim koordinatnim sistemom dokaza.</p>
       <p><strong>Kako smo gradili (Dokaz pre piksela):</strong>
-        1) Izvorni korpus monografija i radova prošao je ekstrakciju teksta, OCR i ručno/algoritamsko mapiranje štampanih strana (711/1.147 jedinica) u FTS5 indeks (17.925 pominjanja, 66 čvorova).
+        1) Izvorni korpus monografija i radova prošao je ekstrakciju teksta, OCR i ručno/algoritamsko mapiranje štampanih strana u FTS5 indeks (<span id="stat-pominjanja">—</span> pominjanja, <span id="stat-cvorova">—</span> čvorova).
         2) Svaka naučna tvrdnja formalizovana je u JSONL registru sa izričitom granicom zaključka.
         3) Izvorni arhitektonski planovi (<code>R04</code>, <code>R05</code>, <code>R06</code>), nemačka geomagnetska prospekcija (<code>W02</code>/<code>W17</code>, 9 anomalija) i UNESCO zone (<code>W20</code>, 179,22 ha + 544,93 ha) georeferencirani su u lokalni metarski koordinatni sistem (Pleiades <code>W66</code>: 43.8992°N, 22.1858°E) nad Copernicus GLO-30 DEM reljefom (<code>W78</code>).
         4) Proceduralni CGA-lite generator prevodi podatke u 3D volumene prema stepenu dokaza: <strong>Nivo A</strong> (in situ / izmereno, puna linija ISO 128), <strong>Nivo B</strong> (proporcijska rekonstrukcija Čanak-Medić R06), <strong>Nivo C</strong> (hipoteza, isprekidana linija) i <strong>Capta</strong> (bistabilni preklop tamo gde se autori spore, npr. bazilika VI vs. X–XI vek).
@@ -1156,12 +1156,17 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const DATA = window.ROMULIJANA_ATLAS;
 if (!DATA) throw new Error('Nedostaje window.ROMULIJANA_ATLAS (atlas-podaci.js)');
+// srpska množina: 1 tvrdnja, 2–4 tvrdnje, 5+ tvrdnji (11–14 uvek treći oblik)
+function srMn(n, jedan, dva, pet) { n = Math.abs(Number(n) || 0); const d = n % 10, s = n % 100; if (d === 1 && s !== 11) return jedan; if (d >= 2 && d <= 4 && (s < 12 || s > 14)) return dva; return pet; }
 {
   const k = DATA.korpus || {}, br = n => Number(n || 0).toLocaleString('sr-Latn');
   const s1 = document.getElementById('stat-korpus'), s1o = document.getElementById('stat-korpus-opis'), s2 = document.getElementById('stat-tvrdnje');
   if (s1) s1.textContent = `${br(k.izvora)} izvora · ${br(k.strana)} str.`;
   if (s1o && k.w_poslednji) s1o.textContent = `Indeksirani korpus (R01–R08 + ${k.w_prvi}–${k.w_poslednji})`;
-  if (s2) s2.textContent = `${br(k.tvrdnji)} tvrdnji · ${br(k.dokaza)} dokaza`;
+  const sp = document.getElementById('stat-pominjanja'), sc = document.getElementById('stat-cvorova');
+  if (sp) sp.textContent = br((DATA.zbir || {}).pominjanja);
+  if (sc) sc.textContent = br((DATA.cvorovi || []).length);
+  if (s2) s2.textContent = `${br(k.tvrdnji)} ${srMn(k.tvrdnji, 'tvrdnja', 'tvrdnje', 'tvrdnji')} · ${br(k.dokaza)} ${srMn(k.dokaza, 'dokaz', 'dokaza', 'dokaza')}`;
 }
 
 /* ── Režim teme i reduced-motion ── */
@@ -2498,7 +2503,7 @@ function renderDossier() {
     const closedSummary = document.createElement('div');
     closedSummary.className = 'claim-card';
     closedSummary.innerHTML = `<div class="claim-head"><span>P-TEREN · P-GEOREF · P-OSM-VEKTOR · P-GEOMETRIJA · P-TVRDNJE · P-GEOFIZIKA · P-ZONE</span><span class="badge">ZATVORENO (7/7)</span></div>
-      <div class="claim-text">Svih 7 prostornih praznina epistemičkog atlasa je zatvoreno verifikovanim podacima: <strong>W78</strong> Copernicus GLO-30 DEM (209 tačaka, 141–258 m n.v.), <strong>16</strong> georeferenciranih planova (R04/R05/R06/W02/W20 sa 7 GCP tačaka), <strong>W77</strong> Overpass OSM vektori (191 objekat), <strong>27</strong> vektorskih obrisa čvorova L.*, <strong>${DATA.tvrdnje.length}</strong> tvrdnji, <strong>9</strong> geomagnetskih anomalija (W02) i <strong>2</strong> UNESCO zone (179,22 ha + 544,93 ha iz W20).</div>`;
+      <div class="claim-text">Svih 7 prostornih praznina epistemičkog atlasa je zatvoreno verifikovanim podacima: <strong>W78</strong> Copernicus GLO-30 DEM (209 tačaka, 141–258 m n.v.), <strong>16</strong> georeferenciranih planova (R04/R05/R06/W02/W20 sa 7 GCP tačaka), <strong>W77</strong> Overpass OSM vektori (191 objekat), <strong>27</strong> vektorskih obrisa čvorova L.*, <strong>${DATA.tvrdnje.length}</strong> ${srMn(DATA.tvrdnje.length, 'tvrdnja', 'tvrdnje', 'tvrdnji')}, <strong>9</strong> geomagnetskih anomalija (W02) i <strong>2</strong> UNESCO zone (179,22 ha + 544,93 ha iz W20).</div>`;
     container.appendChild(closedSummary);
     for (const p of DATA.praznine) {
       const d = document.createElement('div');
