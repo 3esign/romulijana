@@ -2,7 +2,7 @@
 
 Putanja: Felix Romuliana (Gamzigrad) › Palata (carski dvorac) › Peristil
 
-Oblici: `peristil`, `peristyl` · ukupno 126 pominjanja u 8 izvora.
+Oblici: `peristil`, `peristyl` · ukupno 127 pominjanja u 9 izvora.
 
 ## R04 · Felix Romuliana – Gamzigrad (2010)
 
@@ -100,3 +100,7 @@ Oblici: `peristil`, `peristyl` · ukupno 126 pominjanja u 8 izvora.
 - **s. 697** — puszta: Innere Chronologie und funktioneller Wandel 695 mehrere Bauten können ihrem Grundriss nach als Villen gedeutet werden. Vom Typus her gehören sie zu den Peristylvillen (25) sowie zu den Villen mit Mittelkorridor (z. B. 6–8, 18–20), das Gebäude 27 könnte als eine Variante mit Eckrisaliten angesprochen werden196. Zudem ist
 - **s. 697** — seines Grundrisses aus201. Praetoria sind allerdings nicht ausschließlich im militärischen Kontext vertreten. Unter dem Aspekt jedoch, dass praetoria und große Peristylvillen eine gemeinsame Herkunft haben202, zudem auch Bäder häufig zu der Anlage gehören, wäre eher für das Gebäude 25 (A) eine solche Funktion in Erwägung zu zie
 - … još 1+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 7** — се јавља у профаној архитектури. На самом Гамзитраду у атријумима палате коришћени су виши стубови да означе улазе, а нижи за колонаде. Сличан случај је и са перистилом Диоклецијанове палате. Овако замишљен распоред стубова, виши на прочељу, а нижи на северној и јужној страни, поставља питање утврђивања њиховог броја и

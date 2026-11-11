@@ -2,7 +2,7 @@
 
 Putanja: Felix Romuliana (Gamzigrad) › Utvrđenje i bedemi › Zapadna kapija
 
-Oblici: `zapadn\w* kapij`, `west(?:ern)? gate`, `porte (?:ouest|occidentale)` · ukupno 156 pominjanja u 16 izvora.
+Oblici: `zapadn\w* kapij`, `west(?:ern)? gate`, `porte (?:ouest|occidentale)` · ukupno 157 pominjanja u 17 izvora.
 
 ## R03 · Felix Romuliana. Galerijeva palata u Gamzigradu (1985)
 
@@ -142,3 +142,7 @@ Oblici: `zapadn\w* kapij`, `west(?:ern)? gate`, `porte (?:ouest|occidentale)` ·
 - **s. 275** — s well as the latest discovery of the defensive ditch along the south rampart, dating to the 6th century (fig. 7). It also suggests that the south tower of the west gate of the fortification of imperial Felix Romuliana (Tower 19: see pl. VIII) had a defensive function from the middle of the 6th century onwards. The mortar floor
 - **s. 279** — part of mediaeval house 1/04 (2/05) in squ. M/XXII in southeast part of Romuliana (Thermae), seen from southeast. been in use at that time. In this period the west gate of Romuliana was walled up, and only the main, east gate was reused. Compared to other mediaeval towns built inside Roman fortifications in Serbia38, Gamzigrad
 - **s. 283** — Combs. Starinar XLIX, 1998, 213–228. 281 PETKOVIĆ 2006 S. Petković, Study of Stratgraphy of Cultural Layers of Late Roman Romuliana. Case Study: South Tower of West Gate of Later Fortification. In: M. Vasić (ed.), Felix Romuliana. 50 Years of Archaeological Excavation (Beograd 2006) 29–45. PETKOVIĆ 2008a S. Petković, Unilateral
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 2** — 136 и западну капију, да се са западне стране налази једна петобродна грађевина, а са јужне објекат са портиком (сл. 2). Ови објекти нису довољно испитани па се не зна да ли им ј

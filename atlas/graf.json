@@ -4,13 +4,13 @@
    "id": "L",
    "tip": "cvor",
    "naziv": "Felix Romuliana (Gamzigrad)",
-   "pominjanja": 4481
+   "pominjanja": 4518
   },
   {
    "id": "L.U",
    "tip": "cvor",
    "naziv": "Utvrđenje i bedemi",
-   "pominjanja": 2672
+   "pominjanja": 2677
   },
   {
    "id": "L.U.1",
@@ -28,7 +28,7 @@
    "id": "L.U.K",
    "tip": "cvor",
    "naziv": "Kule",
-   "pominjanja": 1610
+   "pominjanja": 1611
   },
   {
    "id": "L.U.IK",
@@ -40,13 +40,13 @@
    "id": "L.U.ZK",
    "tip": "cvor",
    "naziv": "Zapadna kapija",
-   "pominjanja": 156
+   "pominjanja": 157
   },
   {
    "id": "L.P",
    "tip": "cvor",
    "naziv": "Palata (carski dvorac)",
-   "pominjanja": 2757
+   "pominjanja": 2778
   },
   {
    "id": "L.P.1",
@@ -64,7 +64,7 @@
    "id": "L.P.PE",
    "tip": "cvor",
    "naziv": "Peristil",
-   "pominjanja": 126
+   "pominjanja": 127
   },
   {
    "id": "L.P.AU",
@@ -82,19 +82,19 @@
    "id": "L.JB",
    "tip": "cvor",
    "naziv": "Južne javne građevine (tribunal/pretorijum G, petobrodna zgrada F)",
-   "pominjanja": 62
+   "pominjanja": 63
   },
   {
    "id": "L.H",
    "tip": "cvor",
    "naziv": "Hramovi",
-   "pominjanja": 1035
+   "pominjanja": 1112
   },
   {
    "id": "L.H.V",
    "tip": "cvor",
    "naziv": "Veliki hram (Divus Galerius)",
-   "pominjanja": 172
+   "pominjanja": 182
   },
   {
    "id": "L.H.M",
@@ -118,7 +118,7 @@
    "id": "L.HR",
    "tip": "cvor",
    "naziv": "Ranohrišćanski objekti (bazilika, crkve)",
-   "pominjanja": 1165
+   "pominjanja": 1167
   },
   {
    "id": "L.KN",
@@ -172,7 +172,7 @@
    "id": "N.FR",
    "tip": "cvor",
    "naziv": "Natpis FELIX ROMULIANA (1984)",
-   "pominjanja": 370
+   "pominjanja": 374
   },
   {
    "id": "N.NO",
@@ -184,7 +184,7 @@
    "id": "N.SK",
    "tip": "cvor",
    "naziv": "Skulptura i portreti",
-   "pominjanja": 905
+   "pominjanja": 907
   },
   {
    "id": "N.ZL",
@@ -202,7 +202,7 @@
    "id": "O.GA",
    "tip": "cvor",
    "naziv": "Galerije",
-   "pominjanja": 1389
+   "pominjanja": 1398
   },
   {
    "id": "O.RO",
@@ -214,7 +214,7 @@
    "id": "O.DI",
    "tip": "cvor",
    "naziv": "Dioklecijan",
-   "pominjanja": 414
+   "pominjanja": 423
   },
   {
    "id": "O.KO",
@@ -226,7 +226,7 @@
    "id": "O.MD",
    "tip": "cvor",
    "naziv": "Maksimin Daja",
-   "pominjanja": 112
+   "pominjanja": 113
   },
   {
    "id": "O.LI",
@@ -250,13 +250,13 @@
    "id": "I.SR",
    "tip": "cvor",
    "naziv": "Dragoslav Srejović",
-   "pominjanja": 568
+   "pominjanja": 578
   },
   {
    "id": "I.CM",
    "tip": "cvor",
    "naziv": "Milka Čanak-Medić",
-   "pominjanja": 455
+   "pominjanja": 463
   },
   {
    "id": "I.MZ",
@@ -268,13 +268,13 @@
    "id": "I.LA",
    "tip": "cvor",
    "naziv": "Anka Lalović",
-   "pominjanja": 119
+   "pominjanja": 121
   },
   {
    "id": "I.JA",
    "tip": "cvor",
    "naziv": "Đorđe Janković",
-   "pominjanja": 294
+   "pominjanja": 297
   },
   {
    "id": "I.VA",
@@ -310,7 +310,7 @@
    "id": "F.T",
    "tip": "cvor",
    "naziv": "Tetrarhija (293–311)",
-   "pominjanja": 562
+   "pominjanja": 563
   },
   {
    "id": "F.PR",
@@ -322,7 +322,7 @@
    "id": "F.KA",
    "tip": "cvor",
    "naziv": "Kasnoantičko-ranovizantijsko (IV–VI v.)",
-   "pominjanja": 811
+   "pominjanja": 817
   },
   {
    "id": "F.SV",
@@ -364,7 +364,7 @@
    "id": "R.SP",
    "tip": "cvor",
    "naziv": "Split (Dioklecijanova palata)",
-   "pominjanja": 363
+   "pominjanja": 367
   },
   {
    "id": "R.SO",
@@ -1412,6 +1412,21 @@
    "prava": "javno"
   },
   {
+   "id": "W79",
+   "tip": "izvor",
+   "naziv": "Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana)",
+   "razmera": [
+    "S3",
+    "S4"
+   ],
+   "slojevi": [
+    "dokaz",
+    "plan",
+    "rekonstrukcija"
+   ],
+   "prava": "privatno"
+  },
+  {
    "id": "RD-001",
    "tip": "tvrdnja",
    "tema": "pod mlađe bazilike",
@@ -1473,6 +1488,90 @@
    "tema": "datovanje bazilike II — podignuta sredina VI veka, moguća obnova u X veku",
    "status": "objavljeni_dokazi_sa_ogranicenjima",
    "registar": "tvrdnje-datovanje.jsonl"
+  },
+  {
+   "id": "RH-001",
+   "tip": "tvrdnja",
+   "tema": "veliki hram — platforma, jezgro i stereobat",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-hramovi.jsonl"
+  },
+  {
+   "id": "RH-002",
+   "tip": "tvrdnja",
+   "tema": "veliki hram — dvojna kripta",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-hramovi.jsonl"
+  },
+  {
+   "id": "RH-003",
+   "tip": "tvrdnja",
+   "tema": "veliki hram — zidovi cele, ante i aditon",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-hramovi.jsonl"
+  },
+  {
+   "id": "RH-004",
+   "tip": "tvrdnja",
+   "tema": "veliki hram — nađeni arhitektonski elementi",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-hramovi.jsonl"
+  },
+  {
+   "id": "RH-005",
+   "tip": "tvrdnja",
+   "tema": "veliki hram — tri varijante izgleda, usvojena treća",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-hramovi.jsonl"
+  },
+  {
+   "id": "RH-006",
+   "tip": "tvrdnja",
+   "tema": "veliki hram — raspored stubova (modul tremova)",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-hramovi.jsonl"
+  },
+  {
+   "id": "RH-007",
+   "tip": "tvrdnja",
+   "tema": "veliki hram — svod cele i krov",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-hramovi.jsonl"
+  },
+  {
+   "id": "RH-008",
+   "tip": "tvrdnja",
+   "tema": "veliki hram — ulaz u celu: nesklad u izvoru",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-hramovi.jsonl"
+  },
+  {
+   "id": "RH-009",
+   "tip": "tvrdnja",
+   "tema": "veliki hram — materijal, poreklo i teza o promeni projekta",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-hramovi.jsonl"
+  },
+  {
+   "id": "RH-010",
+   "tip": "tvrdnja",
+   "tema": "veliki hram — metrološka provera lakta",
+   "status": "objavljeni_dokazi_sa_ogranicenjima",
+   "registar": "tvrdnje-hramovi.jsonl"
+  },
+  {
+   "id": "RH-011",
+   "tip": "tvrdnja",
+   "tema": "veliki hram — poreklo „lakta“ od 47,2–47,7 cm",
+   "status": "potkrepljeno_izvedenim_tekstom",
+   "registar": "tvrdnje-hramovi.jsonl"
+  },
+  {
+   "id": "RH-012",
+   "tip": "tvrdnja",
+   "tema": "veliki hram — pročelje: tekst (205 cm, šest elemenata) prema crtežima",
+   "status": "vizuelno_pregledano_na_reprodukciji",
+   "registar": "tvrdnje-hramovi.jsonl"
   },
   {
    "id": "RP-001",
@@ -3660,6 +3759,54 @@
    "tezina": 158
   },
   {
+   "od": "W79",
+   "ka": "L.H",
+   "tip": "pominje",
+   "tezina": 77
+  },
+  {
+   "od": "W79",
+   "ka": "L",
+   "tip": "pominje",
+   "tezina": 37
+  },
+  {
+   "od": "W79",
+   "ka": "L.P",
+   "tip": "pominje",
+   "tezina": 21
+  },
+  {
+   "od": "W79",
+   "ka": "L.H.V",
+   "tip": "pominje",
+   "tezina": 10
+  },
+  {
+   "od": "W79",
+   "ka": "I.SR",
+   "tip": "pominje",
+   "tezina": 10
+  },
+  {
+   "od": "W79",
+   "ka": "O.GA",
+   "tip": "pominje",
+   "tezina": 9
+  },
+  {
+   "od": "W79",
+   "ka": "O.DI",
+   "tip": "pominje",
+   "tezina": 9
+  },
+  {
+   "od": "W79",
+   "ka": "I.CM",
+   "tip": "pominje",
+   "tezina": 8
+  },
+  {
    "od": "RD-001",
    "ka": "L.HR",
    "tip": "o_cvoru"
@@ -3983,6 +4130,221 @@
    "od": "RD-009",
    "ka": "RD-002",
    "tip": "povezuje"
+  },
+  {
+   "od": "RH-001",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "W79",
+   "ka": "RH-001",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RH-002",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "W79",
+   "ka": "RH-002",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RH-003",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "W79",
+   "ka": "RH-003",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RH-004",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RH-004",
+   "ka": "N.SK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "W79",
+   "ka": "RH-004",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RH-004",
+   "ka": "RU-009",
+   "tip": "dopunjuje"
+  },
+  {
+   "od": "RH-005",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "W79",
+   "ka": "RH-005",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RH-005",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RH-005",
+   "ka": "RH-004",
+   "tip": "oslanja_se_na"
+  },
+  {
+   "od": "RH-006",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "W79",
+   "ka": "RH-006",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RH-006",
+   "ka": "RH-004",
+   "tip": "oslanja_se_na"
+  },
+  {
+   "od": "RH-007",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "W79",
+   "ka": "RH-007",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RH-007",
+   "ka": "RH-004",
+   "tip": "oslanja_se_na"
+  },
+  {
+   "od": "RH-008",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "W79",
+   "ka": "RH-008",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RH-008",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RH-009",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RH-009",
+   "ka": "F.T",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "W79",
+   "ka": "RH-009",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RH-009",
+   "ka": "RH-004",
+   "tip": "oslanja_se_na"
+  },
+  {
+   "od": "RH-010",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "W79",
+   "ka": "RH-010",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RH-010",
+   "ka": "RH-001",
+   "tip": "dopunjuje"
+  },
+  {
+   "od": "RH-011",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RH-011",
+   "ka": "L.U.1",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RH-011",
+   "ka": "L.U.2",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RH-011",
+   "ka": "L.U.ZK",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "RH-011",
+   "ka": "I.CM",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "R06",
+   "ka": "RH-011",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RH-011",
+   "ka": "RH-010",
+   "tip": "razjasnjava"
+  },
+  {
+   "od": "RH-011",
+   "ka": "RH-001",
+   "tip": "oslanja_se_na"
+  },
+  {
+   "od": "RH-012",
+   "ka": "L.H.V",
+   "tip": "o_cvoru"
+  },
+  {
+   "od": "W79",
+   "ka": "RH-012",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "R04",
+   "ka": "RH-012",
+   "tip": "dokazuje"
+  },
+  {
+   "od": "RH-012",
+   "ka": "RH-006",
+   "tip": "razjasnjava"
+  },
+  {
+   "od": "RH-012",
+   "ka": "RH-005",
+   "tip": "odnosi_se_na"
   },
   {
    "od": "RP-001",

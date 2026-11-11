@@ -1,8 +1,8 @@
 # Romulijana · katalog za atlas
 
-Generisano: `node alati/atlas-inventar.js` · 2026-11-02 07:44 UTC. Ne menjati ručno; izvor istine je `baza/`. Mašinski oblik: baza/atlas-katalog.json, graf veza: [graf.json](graf.json).
+Generisano: `node alati/atlas-inventar.js` · 2026-11-11 20:17 UTC. Ne menjati ručno; izvor istine je `baza/`. Mašinski oblik: baza/atlas-katalog.json, graf veza: [graf.json](graf.json).
 
-**Zbir:** 81 izvora · 49 rendera · 71 tvrdnji · 66 čvorova · 3 objekta · 32041 pominjanja · 2118 datuma · graf 221 čvorova / 654 veza.
+**Zbir:** 82 izvora · 49 rendera · 83 tvrdnji · 66 čvorova · 3 objekta · 32256 pominjanja · 2119 datuma · graf 234 čvorova / 705 veza.
 
 Razmera: **S0** region (provincije, putevi carstva) · **S1** okolina do 25 km · **S2** lokalitet (utvrđenje, Magura, nekropole) · **S3** objekat (zgrada, kapija, crkva) · **S4** predmet (skulptura, mozaik, novac).
 
@@ -53,7 +53,7 @@ Razmera: **S0** region (provincije, putevi carstva) · **S1** okolina do 25 km �
 
 | ID | sloj | prava | naslov | čvorovi (pominjanja) | tvrdnje | razlog |
 |---|---|---|---|---|---|---|
-| R06 | dokaz, plan, rekonstrukcija | privatno | Gamzigrad. Kasnoantička palata. Arhitektura i prostorni sklop | L.P 655, L 644, L.U.K 558, L.U 556 | 15 | Čanak-Medić 1978: arhitektura i prostorni sklop, proporcijske rekonstrukcije, p… |
+| R06 | dokaz, plan, rekonstrukcija | privatno | Gamzigrad. Kasnoantička palata. Arhitektura i prostorni sklop | L.P 655, L 644, L.U.K 558, L.U 556 | 16 | Čanak-Medić 1978: arhitektura i prostorni sklop, proporcijske rekonstrukcije, p… |
 | W02 | dokaz, podzemlje | privatno | Geophysical and archaeological research at Gamzigrad: report of the 2… | L.U 125, L.P 43, L.U.K 26, L 16 | 0 | geofizika 2004–2007 van utvrđenja: kandidat za podzemni sloj (karte u PDF-u) |
 | W17 | dokaz, podzemlje | privatno | Gerda von Bülow, Sofija Petković (eds), Gamzigrad-Studien I. Ergebnis… | L.P 47, L 43, N.FR 24, N.SK 22 | 0 | Gamzigrad-Studien I: nemačka istraživanja |
 | W20 | dokaz, zona | privatno | Gamzigrad – Romuliana, Palace of Galerius: nomination dossier for ins… | L.P 430, L 410, L.U 266, L.U.K 264 | 0 | UNESCO dosije 1253: granice zaštićene i tampon zone |
@@ -73,7 +73,7 @@ Razmera: **S0** region (provincije, putevi carstva) · **S1** okolina do 25 km �
 | R01 | dokaz, plan | privatno | Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) | L 82, L.MG.MZ 48, O.GA 48, L.U 35 | 0 | sinteza zgrada palate; planovi u PDF-u, nisu renderovani |
 | R02 | dokaz, vreme | privatno | Gamzigrad (+ Rgotina, antičko nalazište; Istraživanje spomenika u Vre… | L 195, L.H 167, N.SK 74, L.U 56 | 9 | rani terenski izveštaj; stratigrafija slojeva 3–8 (RS-001) |
 | R03 | dokaz | privatno | Felix Romuliana. Galerijeva palata u Gamzigradu | L 172, O.GA 63, L.P 50, O.RO 46 | 1 | Srejović 1985, palata |
-| R04 | dokaz, plan, vreme | privatno | Felix Romuliana – Gamzigrad | L 772, L.P 552, O.GA 448, L.U 355 | 55 | monografija 2010: fazni planovi (sl. 170), skulptura, revidirana hronologija |
+| R04 | dokaz, plan, vreme | privatno | Felix Romuliana – Gamzigrad | L 772, L.P 552, O.GA 448, L.U 355 | 58 | monografija 2010: fazni planovi (sl. 170), skulptura, revidirana hronologija |
 | R05 | dokaz, plan | privatno | Gamzigrad – kasnoantički carski dvorac | L 596, L.P 395, L.U 238, L.H 143 | 17 | osnova mlađe crkve (sl. 90), mere skulpture |
 | W03 | dokaz, zona | privatno | Late Roman necropolis of Romuliana, area south of the fortified palac… | L 87, L.U 71, L.P 35, I.TO 33 | 0 | nekropola južno od palate: zona za kartiranje |
 | W09 | dokaz, vreme | privatno | The Roman settlement on Gamzigrad prior to the imperial palace Felix … | L.U 135, L.T 82, L 78, O.GA 66 | 0 | rimsko naselje pre palate (F.PR) |
@@ -86,7 +86,7 @@ Razmera: **S0** region (provincije, putevi carstva) · **S1** okolina do 25 km �
 | W45 | podloga | javno | Sentinel-2 L2A S2B_34TEP_20250922 (2025-09-22, oblak 0%) — TCI isečak… |  | 0 | Sentinel-2 isečak 10 m/px: ortofoto podloga lokaliteta |
 | W77 | vektor | deli-isto | OpenStreetMap Overpass vektorska geometrija lokaliteta Felix Romulian… |  | 0 | Overpass OSM vektorska geometrija savremenog lokaliteta (191 objekat: bedemi, k… |
 
-## S3 · objekat (zgrada, kapija, crkva) (19)
+## S3 · objekat (zgrada, kapija, crkva) (20)
 
 | ID | sloj | prava | naslov | čvorovi (pominjanja) | tvrdnje | razlog |
 |---|---|---|---|---|---|---|
@@ -109,6 +109,7 @@ Razmera: **S0** region (provincije, putevi carstva) · **S1** okolina do 25 km �
 | W62 | gradja | deli-isto | Gamzigrad — Istočna kapija (Pudelek 5) |  | 0 | fotografija stanja lokaliteta: referenca za materijal, razmeru i kadar |
 | W63 | gradja | deli-isto | Gamzigrad — Felix Romuliana (Pudelek 6) |  | 0 | fotografija stanja lokaliteta: referenca za materijal, razmeru i kadar |
 | W64 | gradja | deli-isto | Gamzigrad — Felix Romuliana (Pudelek 7) |  | 0 | fotografija stanja lokaliteta: referenca za materijal, razmeru i kadar |
+| W79 | dokaz, plan, rekonstrukcija | privatno | Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple… | L.H 77, L 37, L.P 21, L.H.V 10 | 11 | Stojković-Pavelka 1988/89: veliki hram — mere stereobata i kripte, nađeni eleme… |
 
 ## S4 · predmet (skulptura, mozaik, novac) (7)
 
@@ -180,26 +181,26 @@ Razmera: **S0** region (provincije, putevi carstva) · **S1** okolina do 25 km �
 
 | čvor | naziv | pominjanja | izvora | tvrdnje | objekti | planovi |
 |---|---|---|---|---|---|---|
-| L | Felix Romuliana (Gamzigrad) | 4481 | 30 | RT-001 | — | 0 |
-| L.U | Utvrđenje i bedemi | 2672 | 30 | RP-002, RT-002, RT-003 | — | 0 |
-| L.U.1 | Stariji (unutrašnji) bedem — Galerije cezar | 40 | 10 | RT-002 | — | 0 |
-| L.U.2 | Mlađi (spoljni) bedem — Galerije avgust | 70 | 17 | RU-006 | — | 0 |
-| L.U.K | Kule | 1610 | 22 | RT-003 | — | 0 |
+| L | Felix Romuliana (Gamzigrad) | 4518 | 31 | RT-001 | — | 0 |
+| L.U | Utvrđenje i bedemi | 2677 | 31 | RP-002, RT-002, RT-003 | — | 0 |
+| L.U.1 | Stariji (unutrašnji) bedem — Galerije cezar | 40 | 10 | RH-011, RT-002 | — | 0 |
+| L.U.2 | Mlađi (spoljni) bedem — Galerije avgust | 70 | 17 | RH-011, RU-006 | — | 0 |
+| L.U.K | Kule | 1611 | 23 | RT-003 | — | 0 |
 | L.U.IK | Istočna kapija | 122 | 16 | RU-005, RU-006, RV-002, RV-003 | — | 0 |
-| L.U.ZK | Zapadna kapija | 156 | 16 | RU-004 | — | 0 |
-| L.P | Palata (carski dvorac) | 2757 | 29 | RT-004, RT-005 | — | 0 |
+| L.U.ZK | Zapadna kapija | 157 | 17 | RH-011, RU-004 | — | 0 |
+| L.P | Palata (carski dvorac) | 2778 | 30 | RT-004, RT-005 | — | 0 |
 | L.P.1 | Palata I (severozapadna četvrt, D1–D2) | 218 | 11 | RD-001, RD-002, RD-003, RD-004, RD-007, RD-008, RD-009, RS-005, RS-007, RS-008, RS-016, RU-011, RV-010 | ROM-CH-P1-EARLY, ROM-CH-P1-LATE | 4 |
 | L.P.2 | Palata II i zgrada sa koridorom (severoistočna če… | 67 | 7 | RD-006, RS-016 | — | 0 |
-| L.P.PE | Peristil | 126 | 8 | RT-005 | — | 0 |
+| L.P.PE | Peristil | 127 | 9 | RT-005 | — | 0 |
 | L.P.AU | Aula / triklinijum / apsidalna dvorana | 70 | 10 | RU-013 | — | 0 |
 | L.P.MO | Mozaici | 909 | 21 | RU-011, RU-012, RU-013, RU-014, RU-015, RU-016, RV-007, RV-008, RV-010 | — | 0 |
-| L.JB | Južne javne građevine (tribunal/pretorijum G, pet… | 62 | 7 | RT-006 | — | 0 |
-| L.H | Hramovi | 1035 | 22 | RT-007, RT-008 | — | 0 |
-| L.H.V | Veliki hram (Divus Galerius) | 172 | 12 | RU-009, RV-004, RV-005 | — | 0 |
+| L.JB | Južne javne građevine (tribunal/pretorijum G, pet… | 63 | 8 | RT-006 | — | 0 |
+| L.H | Hramovi | 1112 | 23 | RT-007, RT-008 | — | 0 |
+| L.H.V | Veliki hram (Divus Galerius) | 182 | 13 | RH-001, RH-002, RH-003, RH-004, RH-005, RH-006, RH-007, RH-008, RH-009, RH-010, RH-011, RH-012, RU-009, RV-004, RV-005 | — | 0 |
 | L.H.M | Mali hram (Diva Romula) | 66 | 9 | RT-008 | — | 0 |
 | L.T | Terme | 718 | 23 | RU-007, RU-010 | — | 0 |
 | L.HO | Horeum i ekonomski objekti | 324 | 15 | RP-001, RP-002 | — | 0 |
-| L.HR | Ranohrišćanski objekti (bazilika, crkve) | 1165 | 23 | RD-001, RD-002, RD-003, RD-004, RD-005, RD-006, RD-007, RD-008, RD-009, RS-004, RS-007, RS-008, RS-009, RS-010, RS-011, RS-012, RS-013 | — | 0 |
+| L.HR | Ranohrišćanski objekti (bazilika, crkve) | 1167 | 24 | RD-001, RD-002, RD-003, RD-004, RD-005, RD-006, RD-007, RD-008, RD-009, RS-004, RS-007, RS-008, RS-009, RS-010, RS-011, RS-012, RS-013 | — | 0 |
 | L.KN | Kasnije naselje (vizantijsko, srednjovekovno) | 1237 | 26 | RS-001, RS-002, RS-003, RS-004, RS-005, RS-006, RS-014, RS-015, RS-016, RS-017, RS-018 | — | 0 |
 | L.MG | Magura — memorijalni kompleks | 211 | 12 | RT-009, RT-010, RT-011, RU-017, RU-019, RU-020 | — | 0 |
 | L.MG.M1 | Mauzolej 1 (Romula) | 66 | 9 | RT-009 | — | 0 |
@@ -208,39 +209,39 @@ Razmera: **S0** region (provincije, putevi carstva) · **S1** okolina do 25 km �
 | L.MG.MZ | Mauzoleji (opšte) | 369 | 18 | RU-018 | — | 0 |
 | L.TP | Tetrapilon | 88 | 8 | RT-012 | — | 0 |
 | N | Natpisi i nalazi | 0 | 0 | — | — | 0 |
-| N.FR | Natpis FELIX ROMULIANA (1984) | 370 | 24 | RU-001, RU-002, RU-003, RU-004, RV-001, RV-009 | — | 0 |
+| N.FR | Natpis FELIX ROMULIANA (1984) | 374 | 25 | RU-001, RU-002, RU-003, RU-004, RV-001, RV-009 | — | 0 |
 | N.NO | Novac (numizmatika) | 1173 | 24 | — | — | 0 |
-| N.SK | Skulptura i portreti | 905 | 21 | RU-005, RU-006, RU-007, RU-008, RU-009, RU-010, RV-002, RV-003, RV-004, RV-005, RV-006, RV-009 | — | 0 |
+| N.SK | Skulptura i portreti | 907 | 22 | RH-004, RU-005, RU-006, RU-007, RU-008, RU-009, RU-010, RV-002, RV-003, RV-004, RV-005, RV-006, RV-009 | — | 0 |
 | N.ZL | Zlatni nakit i carske insignije | 28 | 14 | — | — | 0 |
 | O | Osobe | 0 | 0 | — | — | 0 |
-| O.GA | Galerije | 1389 | 26 | RU-003, RU-007, RU-008, RU-017, RU-020, RV-006, RV-009 | — | 0 |
+| O.GA | Galerije | 1398 | 27 | RU-003, RU-007, RU-008, RU-017, RU-020, RV-006, RV-009 | — | 0 |
 | O.RO | Romula (Galerijeva majka) | 197 | 16 | RU-003, RU-017, RU-018, RU-019 | — | 0 |
-| O.DI | Dioklecijan | 414 | 18 | RU-008, RU-020 | — | 0 |
+| O.DI | Dioklecijan | 423 | 19 | RU-008, RU-020 | — | 0 |
 | O.KO | Konstantin | 488 | 19 | — | — | 0 |
-| O.MD | Maksimin Daja | 112 | 15 | — | — | 0 |
+| O.MD | Maksimin Daja | 113 | 16 | — | — | 0 |
 | O.LI | Licinije | 106 | 16 | — | — | 0 |
 | O.LA | Laktancije / Aurelije Viktor (antički pisci) | 109 | 9 | — | — | 0 |
 | I | Istraživači | 0 | 0 | — | — | 0 |
-| I.SR | Dragoslav Srejović | 568 | 23 | — | — | 0 |
-| I.CM | Milka Čanak-Medić | 455 | 15 | — | — | 0 |
+| I.SR | Dragoslav Srejović | 578 | 24 | — | — | 0 |
+| I.CM | Milka Čanak-Medić | 463 | 16 | RH-011 | — | 0 |
 | I.MZ | Đorđe Mano-Zisi | 119 | 13 | — | — | 0 |
-| I.LA | Anka Lalović | 119 | 12 | — | — | 0 |
-| I.JA | Đorđe Janković | 294 | 23 | — | — | 0 |
+| I.LA | Anka Lalović | 121 | 13 | — | — | 0 |
+| I.JA | Đorđe Janković | 297 | 24 | — | — | 0 |
 | I.VA | Čedomir Vasić | 345 | 16 | — | — | 0 |
 | I.PO | Ivana Popović | 442 | 11 | — | — | 0 |
 | I.ZI | Maja Živić | 131 | 9 | — | — | 0 |
 | I.TO | Gerda von Bülow / Stefan Pop-Lazić / Sofija Petko… | 660 | 17 | — | — | 0 |
 | F | Faze i hronologija | 0 | 0 | — | — | 0 |
-| F.T | Tetrarhija (293–311) | 562 | 21 | RU-005, RU-006, RV-002, RV-003 | — | 0 |
+| F.T | Tetrarhija (293–311) | 563 | 22 | RH-009, RU-005, RU-006, RV-002, RV-003 | — | 0 |
 | F.PR | Pre utvrđenja (praistorija, rani rimski) | 416 | 19 | — | — | 0 |
-| F.KA | Kasnoantičko-ranovizantijsko (IV–VI v.) | 811 | 22 | RD-001, RD-002, RD-003, RD-004, RD-005, RD-007, RD-008, RD-009, RS-001, RS-002, RS-003, RS-004, RS-005, RS-006, RS-007, RS-008, RS-009, RS-010, RS-011, RS-013, RS-014, RU-019 | — | 0 |
+| F.KA | Kasnoantičko-ranovizantijsko (IV–VI v.) | 817 | 23 | RD-001, RD-002, RD-003, RD-004, RD-005, RD-007, RD-008, RD-009, RS-001, RS-002, RS-003, RS-004, RS-005, RS-006, RS-007, RS-008, RS-009, RS-010, RS-011, RS-013, RS-014, RU-019 | — | 0 |
 | F.SV | Srednji vek (X–XII v.) | 219 | 14 | RD-001, RD-002, RD-003, RD-004, RD-005, RD-006, RD-007, RD-008, RD-009, RS-001, RS-008, RS-010, RS-012, RS-015, RS-016, RS-017, RS-018 | — | 0 |
 | R | Regionalni kontekst | 0 | 0 | — | — | 0 |
 | R.SA | Šarkamen | 46 | 9 | — | — | 0 |
 | R.RG | Rgotina | 9 | 4 | — | — | 0 |
 | R.ZA | Zaječar i Timok | 449 | 21 | RP-001, RP-002, RU-018 | — | 0 |
 | R.ME | Medijana / Naissus | 342 | 13 | RU-020 | — | 0 |
-| R.SP | Split (Dioklecijanova palata) | 363 | 13 | — | — | 0 |
+| R.SP | Split (Dioklecijanova palata) | 367 | 14 | — | — | 0 |
 | R.SO | Solun (Galerijev kompleks) | 243 | 14 | — | — | 0 |
 | R.SI | Sirmijum | 399 | 12 | — | — | 0 |
 | R.SE | Serdika | 50 | 9 | — | — | 0 |

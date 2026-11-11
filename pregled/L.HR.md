@@ -2,7 +2,7 @@
 
 Putanja: Felix Romuliana (Gamzigrad) › Ranohrišćanski objekti (bazilika, crkve)
 
-Oblici: `bazilik`, `basilic`, `crkv`, `church`, `eglise`, `ranohriscansk`, `early christian`, `paleochretien`, `episkop`, `bishop` · ukupno 1165 pominjanja u 23 izvora.
+Oblici: `bazilik`, `basilic`, `crkv`, `church`, `eglise`, `ranohriscansk`, `early christian`, `paleochretien`, `episkop`, `bishop` · ukupno 1167 pominjanja u 24 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -225,3 +225,8 @@ Oblici: `bazilik`, `basilic`, `crkv`, `church`, `eglise`, `ranohriscansk`, `earl
 - **s. 165** — ,4) and blue bead (fig. 4,5) also provide the evidence for dating this layer back to around the year 80036. A hearth was discovered on the floor in the central church. The pottery in the hearth was similar to that from the burnt layer of Structure 1. There were no other finds besides the pottery that could contribute to a mor
 - **s. 166** — o the Early Middle Ages. The female Grave 21 (fig. 6)51 was discovered in the ruins of the sacral complex between the narthexes of the Central and the Southern church. Inside this grave an iron knife was discovered next to the left upper arm of the skeleton. A band-shaped finger ring with a rivet and a bronzed crossbow fibula
 - … još 149+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 7** — ак би био велики, па би деловали крхко у односу на монументални стереобат и кровове. Код прве две варијанте могућег изгледа храма, кровни покривач би био решен базиликално, цела и пронаос би доминирали под једним кровом док би бочни били нижи. Пошто у литератури није пронађен пример храма са таквим базиликалним кровом, мора с
+- **s. 7** — ривач би био решен базиликално, цела и пронаос би доминирали под једним кровом док би бочни били нижи. Пошто у литератури није пронађен пример храма са таквим базиликалним кровом, мора се 22 Уп.: Mortimer Wheeler, Котап Ат and Architecture, London 1964, ills. 66, 68. 23 Vitruvije, нав. дело, 69. 24 Ј. В. Ward-Perkins, Атсћиен

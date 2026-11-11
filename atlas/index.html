@@ -1107,8 +1107,8 @@ body.noc .btn-about {
     </div>
     <div class="about-body">
       <div class="about-grid">
-        <div class="about-stat"><strong>81 izvor · 2.894 str.</strong><span>Indeksirani korpus (R01–R08 + W01–W78)</span></div>
-        <div class="about-stat"><strong>71 tvrdnja · 166 dokaza</strong><span>Svaki sa stranom, citatom i SHA-256</span></div>
+        <div class="about-stat"><strong id="stat-korpus">— izvora · — str.</strong><span id="stat-korpus-opis">Indeksirani korpus (R01–R08 + W)</span></div>
+        <div class="about-stat"><strong id="stat-tvrdnje">— tvrdnji · — dokaza</strong><span>Svaki sa stranom, citatom i SHA-256</span></div>
         <div class="about-stat"><strong>16 georef. planova</strong><span>Afina transformacija (7 GCP, R04–R06/W02/W20)</span></div>
         <div class="about-stat"><strong>2D ↔ 2.5D ↔ 3D + FPS</strong><span>Kontinuum projekcija i šetnja (1,65 m)</span></div>
       </div>
@@ -1127,7 +1127,7 @@ body.noc .btn-about {
 
       <h2>3. Poreklo podataka, potvrde i Arheološki institut u Beogradu</h2>
       <p><strong>Deo obrađenih podataka dobijen je od Arheološkog instituta u Beogradu</strong> (korpus monografija i zbornika <code>R01–R08</code>, 1978–2017: D. Srejović, M. Čanak-Medić, M. Vasić, A. Lalović, Đ. Janković, M. Živić, I. Popović, S. Petković, G. von Bülow, T. Schüler i saradnici). Autorska prava na izvorne publikacije, crteže i fotografije pripadaju autorima i izdavačima; ovaj javno objavljeni naučni instrument prikazuje verifikovane bibliografske navode, citate sa stranom, georeferencirane slojeve i sintetičku 3D geometriju uz dobijene potvrde za javni uvid.</p>
-      <p>Regionalni i satelitski slojevi (<code>W01–W78</code>) preuzeti su iz otvorenih naučnih baza: Copernicus DEM GLO-30, DARMC Harvard (CC BY-NC 3.0), Pleiades (CC BY 3.0), UNESCO World Heritage #1253, OpenStreetMap (ODbL) i Wikimedia Commons (CC BY-SA).</p>
+      <p>Regionalni i satelitski slojevi (<code>W01–W78</code>; spisak svih W izvora je u kartici Izvori) preuzeti su iz otvorenih naučnih baza: Copernicus DEM GLO-30, DARMC Harvard (CC BY-NC 3.0), Pleiades (CC BY 3.0), UNESCO World Heritage #1253, OpenStreetMap (ODbL) i Wikimedia Commons (CC BY-SA).</p>
     </div>
     <div class="about-credits">
       <div class="cred" lang="sr">
@@ -1156,6 +1156,13 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const DATA = window.ROMULIJANA_ATLAS;
 if (!DATA) throw new Error('Nedostaje window.ROMULIJANA_ATLAS (atlas-podaci.js)');
+{
+  const k = DATA.korpus || {}, br = n => Number(n || 0).toLocaleString('sr-Latn');
+  const s1 = document.getElementById('stat-korpus'), s1o = document.getElementById('stat-korpus-opis'), s2 = document.getElementById('stat-tvrdnje');
+  if (s1) s1.textContent = `${br(k.izvora)} izvora · ${br(k.strana)} str.`;
+  if (s1o && k.w_poslednji) s1o.textContent = `Indeksirani korpus (R01–R08 + ${k.w_prvi}–${k.w_poslednji})`;
+  if (s2) s2.textContent = `${br(k.tvrdnji)} tvrdnji · ${br(k.dokaza)} dokaza`;
+}
 
 /* ── Režim teme i reduced-motion ── */
 const params = new URLSearchParams(window.location.search);
@@ -2491,7 +2498,7 @@ function renderDossier() {
     const closedSummary = document.createElement('div');
     closedSummary.className = 'claim-card';
     closedSummary.innerHTML = `<div class="claim-head"><span>P-TEREN · P-GEOREF · P-OSM-VEKTOR · P-GEOMETRIJA · P-TVRDNJE · P-GEOFIZIKA · P-ZONE</span><span class="badge">ZATVORENO (7/7)</span></div>
-      <div class="claim-text">Svih 7 prostornih praznina epistemičkog atlasa je zatvoreno verifikovanim podacima: <strong>W78</strong> Copernicus GLO-30 DEM (209 tačaka, 141–258 m n.v.), <strong>16</strong> georeferenciranih planova (R04/R05/R06/W02/W20 sa 7 GCP tačaka), <strong>W77</strong> Overpass OSM vektori (191 objekat), <strong>27</strong> vektorskih obrisa čvorova L.*, <strong>71</strong> tvrdnja, <strong>9</strong> geomagnetskih anomalija (W02) i <strong>2</strong> UNESCO zone (179,22 ha + 544,93 ha iz W20).</div>`;
+      <div class="claim-text">Svih 7 prostornih praznina epistemičkog atlasa je zatvoreno verifikovanim podacima: <strong>W78</strong> Copernicus GLO-30 DEM (209 tačaka, 141–258 m n.v.), <strong>16</strong> georeferenciranih planova (R04/R05/R06/W02/W20 sa 7 GCP tačaka), <strong>W77</strong> Overpass OSM vektori (191 objekat), <strong>27</strong> vektorskih obrisa čvorova L.*, <strong>${DATA.tvrdnje.length}</strong> tvrdnji, <strong>9</strong> geomagnetskih anomalija (W02) i <strong>2</strong> UNESCO zone (179,22 ha + 544,93 ha iz W20).</div>`;
     container.appendChild(closedSummary);
     for (const p of DATA.praznine) {
       const d = document.createElement('div');

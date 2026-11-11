@@ -2,7 +2,7 @@
 
 Putanja: Felix Romuliana (Gamzigrad) › Palata (carski dvorac)
 
-Oblici: `palat`, `dvor(?:ac|ca|cu|cem)`, `palace`, `palais`, `palast` · ukupno 2757 pominjanja u 29 izvora.
+Oblici: `palat`, `dvor(?:ac|ca|cu|cem)`, `palace`, `palais`, `palast` · ukupno 2778 pominjanja u 30 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -434,3 +434,19 @@ Oblici: `palat`, `dvor(?:ac|ca|cu|cem)`, `palace`, `palais`, `palast` · ukupno 
 - **s. 264** — ülow Abb. 6 Luftaufnahme der Gesamtanlage des spätrömischen Kaiserpalastes Romuliana/Gamzigrad. Blick von Osten. Abb. 7 Gamzigrad, Südostviertel des ehemaligen Palastes Romuliana. Befund der Siedlungsschicht des 6. Jahrhunderts mit Metallurgiewerkplätzen. den (Abb. 6 und Taf. VIII)26. In dieser Funktion hat die von einer monu
 - **s. 264** — e Anlage allerdings kaum zehn Jahre lang existiert. Es gibt aber viele archäologische Hinweise auf eine Nachnutzung mehrerer galeriuszeitlicher Innenbauten des Palastes, die sich in mindestens vier Bauphasen zwischen der zweiten Hälfte des 4. und dem Ende des 6. bzw. dem Anfang des 7. Jahrhunderts untergliedern 26 VASIĆ 2007.
 - … još 49+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 1** — Систематска археолошка истраживања касноантичке · царске – палате y Гамзитраду обухватила «cy крајем седамдесетих година откривање и једне монументалне грађевине.! Она се налази у јужном делу комплекса, а њени видљиви ост
+- **s. 1** — 92, 96—97; исти, Das Konigreich Serbien und das Serbenuolk, II, Leipzig 1909, 370—372. 3 B. Карић, Србија, 1887, 897. 4 Д. Срејовић, ЕеИх Romuliana, Галеријева палата U Гамзираду, Старинар XXXVI, 1985, 51—65. 5 Конзерваторскорестаураторским радовима руководила је од 1953. године др Милка Чанак-Медић, а од 1987. содине задуже
+- **s. 1** — at Gamzigrad, Archaeologia Tugoslavica XIX, Beograd 1978 (1979), 57; исти, Гамзиград, Старинар XXXI, 1980, 70—72; JI. Срејовић, Гамзиград, касноантички царски дворац, Галерија САНУ 45, Београд 1983, 47, са старијом литературом. 7 Д. Срејовић — А. Лаловић — Б. Јанковић, Гамзиград, 70—72.
+- **s. 2** — над којих је био трпанац као испуна. Ниједан свод није потпуно сачуван, али су отисци опеке и почеци сводова били веома јасни, па Сл. 2. Ситуација гамзиградске палате Fig. 2. Situation du palais de Gamzigrad
+- **s. 3** — неки велики сиријски храмови били од значаја при избору типа такве грађевине у Ромулијани.!3 Осим тога, извесне сродности које постоје између Диоклецијанове палате у Сплиту и Галеријеве у Гамзиграду, пре свега близак париод настанка и идентичности ранга личности које су их градиле, упућивале су на тражење сличности и у о
+- **s. 3** — тне целине. Решење коме се тежило треба да представља конструктивни склоп који би садржао све нађене елементе. 8 Д. Срејовић, Гамзиград, касноантички царски дворац, 51. 9 О. Lugli, La technica еаШљла тотапа, con рагнсојаге riguardo а Roma e Lazio, Roma MCMLVII; M. CanakMedic, Opus mixtum i opus listatum u kasnoj antici, M
+- **s. 3** — tehnike i strukture predantickog ı antickog graditeljstua па istochom Jaranskom prostoru, Zagreb 1980, 141—147. 10 Д, Срејовић, Гамзиград, касноантички царски дворац, 49, кат. 33, цртежи представљају ~ идеалну реконструкцију. 11 Исто, 78—87. 12 JI. Срејовић, Felix Котицапа, 51. 13 Као што је велики храм у Хоси Сфири (Ноззп
+- **s. 3** — бова на прочељу ~ (исто, Та. 20), и храм у Хибарији (Hibbariye) са засведеном криптом испод целе (исто, Taf. 89, 90). 4М. Чанак-Медић, Гамзиград, касноантичка палата, Саопштења XI, Републички завод за заштиту спомемика културе СР Србије, Београд 1978, 155—158; D. б5гејомс, Two Mćmorial Monuments ој Roman Palatial Architect
+- **s. 3** — асноантичка палата, Саопштења XI, Републички завод за заштиту спомемика културе СР Србије, Београд 1978, 155—158; D. б5гејомс, Two Mćmorial Monuments ој Roman Palatial Architecture: Diocletianus' Palace in Split and Galeriuus' Palace at Gamzigrad, Archaeologia Tugoslavica XXII—XXIII, 41—49. 15 За архитектуру Диоклецијанове
+- **s. 5** — јонски.21 167. Lugli, нав. дело, 169—353, tav.XXV—LX. 17 Због тога што je размераван – лактовима, – овај храм «ce везује за млађе · утврђење – гамзиградске палате, уп.: M. ЧанакМедић, Гамзиград, 58. 18 Исти геометријски однос препоручује Витрувије за размере атријума, уп.: УшШгиује, Deset knjiga o arhitekturi, preveo dr
+- **s. 5** — ликовна уметност, Годишен зборник на Техничкиот факултет 1957—1958, 43. 19 Уџгимје, нав. дело, 72. 20 Исто, 70. 21 JL. — Срејовић, = Гамзиград, ~ касноантички дворац, 50.
+- **s. 7** — није нађен ниједан сличан пример. Уклапање стубова различитих висина у једну целину чешће се јавља у профаној архитектури. На самом Гамзитраду у атријумима палате коришћени су виши стубови да означе улазе, а нижи за колонаде. Сличан случај је и са перистилом Диоклецијанове палате. Овако замишљен распоред стубова, виши н
+- … još 9+ u bazi

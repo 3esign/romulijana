@@ -1,0 +1,22 @@
+{
+ "created_at": "2026-11-11T20:16:26.728Z",
+ "method": "pdftoppm -r 300 sa isečkom (-x -y -W -H); merenje piksela na sivoj slici (PGM)",
+ "images": [
+  {
+   "file": "r04-s85-plan-xxx-300dpi.png",
+   "sha256": "6986de832ae31550bf2735ae7b9b621d37b41c52837179f3bdc01a7c6a7df398"
+  },
+  {
+   "file": "r04-s85-plan-xxx-razmernik-300dpi.png",
+   "sha256": "637383dc9a1f7ace4460f0c1f713b174e43c642472a74ff563eaadbd85ef2c57"
+  },
+  {
+   "file": "w79-s6-sl4-istocni-stubovi-300dpi.png",
+   "sha256": "be455ff3b2a2705d722a90bda6604716d8542ced2e12d55bfb9208f7cfffb2e5"
+  },
+  {
+   "file": "w79-s6-sl4-razmernik-300dpi.png",
+   "sha256": "418a072e6710da8d07afcb4ababce657449c8a067a790be7430e64966b415390"
+  }
+ ]
+}

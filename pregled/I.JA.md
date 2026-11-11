@@ -2,7 +2,7 @@
 
 Putanja: Istraživači › Đorđe Janković
 
-Oblici: `jankovi` · ukupno 294 pominjanja u 23 izvora.
+Oblici: `jankovi` · ukupno 297 pominjanja u 24 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -208,3 +208,9 @@ Oblici: `jankovi` · ukupno 294 pominjanja u 23 izvora.
 - **s. 279** — ide Roman fortifications in Serbia38, Gamzigrad was a strong fortress. 38 See for Singidunum/Belgrad (POPOVIĆ 2006, 48–61, fig. 19, 21), Taliata/Veliki Gradac (JANKOVIĆ 1981b, 21, 25– 39, fig. 15), Horreum Margi/Ravno (VASIĆ ET AL. 1989, 14–24, 29, pl. 12, fig. 6; IDEM. 2009, 139–141). Grave finds document that the cemetery of
 - **s. 280** — is still not completely solved. The compound name, dating from the Middle Ages, is composed of the JOVANOVIĆ 2000; Documentation of Arch. Inst. in Belgrade. 41 JANKOVIĆ 1983c, 144–146. 42 JANKOVIĆ 1983c, 148, fig. 125–126. 40
 - … još 29+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 1** — ужа аеситапиз који спаја источну архитектонски 1 Овим истраживањима је руководио академик Драгослав Срејовић у сарадњи с археолозима Анком Лаловић и Ђорђем Јанковићем. 2 Е. Kaniz, R6mische Studien in Serbien, Wien 1892, 96—97; исти, Das Konigreich Serbien und das Serbenuolk, II, Leipzig 1909, 370—372. 3 B. Карић, Србија, 1
+- **s. 1** — торским радовима руководила је од 1953. године др Милка Чанак-Медић, а од 1987. содине задужена је арх. Брана Стојковић-Павелка. 6 0. 5гејомс — А. Тајомс — DJ. Jankovic, Тио late roman temples at Gamzigrad, Archaeologia Tugoslavica XIX, Beograd 1978 (1979), 57; исти, Гамзиград, Старинар XXXI, 1980, 70—72; JI. Срејовић, Гамзигр
+- **s. 1** — 1980, 70—72; JI. Срејовић, Гамзиград, касноантички царски дворац, Галерија САНУ 45, Београд 1983, 47, са старијом литературом. 7 Д. Срејовић — А. Лаловић — Б. Јанковић, Гамзиград, 70—72.

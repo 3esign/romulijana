@@ -2,7 +2,7 @@
 
 Putanja: Osobe › Galerije
 
-Oblici: `galerij`, `galeri(?:us|o)`, `galere`, `maksimijan\w* galerij`, `maximian\w* galeri` · ukupno 1389 pominjanja u 26 izvora.
+Oblici: `galerij`, `galeri(?:us|o)`, `galere`, `maksimijan\w* galerij`, `maximian\w* galeri` · ukupno 1398 pominjanja u 27 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -322,3 +322,15 @@ Oblici: `galerij`, `galeri(?:us|o)`, `galere`, `maksimijan\w* galerij`, `maximia
 - **s. 285** — uliana, in der Nähe von Zaječar im östlichen Serbien gelegen, wurde im Jahre 2007 in die Welkulturerbeliste der Unesco aufgenommen. Die Anlage war unter Kaiser Galerius zu Beginn des 4. Jahrhunderts errichtet worden. Der kaiserliche Palastkomplex Felix Romuliana und zwei gemauerte Mausoleen mit zwei zugehörigen Tumili, die als
 - **s. 546** — is only one written source documenting Roman age water regulation measures in the area. At the end of the 3rd century, Sextus Aurelius Victor wrote that Caesar Galerius had the water of lacus Pelso (Lake Balaton) diverted into 14 KÖLTŐ/VÁNDOR 1996, maps 1–15. BÁNFFY/BONDÁR/VIRÁG 1996; BÁNFFY 2007a. 16 KÖLTŐ/VÁNDOR 1996, maps 5,
 - … još 3+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 1** — en, Wien 1892, 96—97; исти, Das Konigreich Serbien und das Serbenuolk, II, Leipzig 1909, 370—372. 3 B. Карић, Србија, 1887, 897. 4 Д. Срејовић, ЕеИх Romuliana, Галеријева палата U Гамзираду, Старинар XXXVI, 1985, 51—65. 5 Конзерваторскорестаураторским радовима руководила је од 1953. године др Милка Чанак-Медић, а од 1987. соди
+- **s. 1** — igrad, Archaeologia Tugoslavica XIX, Beograd 1978 (1979), 57; исти, Гамзиград, Старинар XXXI, 1980, 70—72; JI. Срејовић, Гамзиград, касноантички царски дворац, Галерија САНУ 45, Београд 1983, 47, са старијом литературом. 7 Д. Срејовић — А. Лаловић — Б. Јанковић, Гамзиград, 70—72.
+- **s. 3** — мермера од којих су неки монументалних размера што указује на богату декорацију ове грађевине.!1 Изградња читавог комплекса, па и храма, царска је задужбина Галерија (293—311), прво Диоклецијановог савладара, а затим и цара источног дела Царства. С обзиром на ову чињеницу може се претпоставити да су утицаји с Истока и неки
+- **s. 3** — ски храмови били од значаја при избору типа такве грађевине у Ромулијани.!3 Осим тога, извесне сродности које постоје између Диоклецијанове палате у Сплиту и Галеријеве у Гамзиграду, пре свега близак париод настанка и идентичности ранга личности које су их градиле, упућивале су на тражење сличности и у о архитектури о ова д
+- **s. 10** — како би се постигла што већа разноликост. Ова стена је, иначе, на другим објектима палате коришћена за израду архитектонске пластике, као, на пример, на другој галерији млађег утврђења. Архитектонска пластика храма је скупоценија.
+- **s. 11** — судило да храм не буде изграђен у класичном античком стилу. Овај објекат je највероватније = последњи — подигнути – римски пагански храм.З3“ Две године после Галеријеве смрти хришћанство је добило право постојања и почела је да се развија другачија сакрална архитектура. У ~ сваком | случају, HA ~ изглад | великог гамзиградс
+- **s. 11** — барокностиз5 у градитељству и немирном времеLes recherches archéologiques sur l'emplacement d'un palais de la basse antiquité, bâti au IVe siècle par le roi Galère et appelé par celuici Felix Romuliana, ont eu pour résultat, vers les années 70, la mise au jour des vestiges d'un temple monumental dans la partie méridionale
+- **s. 11** — travaux de conservation, il avait fallu faire une analyse de tous les éléments mis au jour, pour avoir une idée aussi ВЕЛИКИ ХРАМ У ГАМЗИГРАДУ ну, градитељ — (Галерије, цар са посебним империјалним програмом и великим узором у Диоклецијановом животу и његовом градитељству и место настанка — провинција, изложена у већој мери
+- **s. 11** — . В. Ward-Perkins, Has. дело, 283; исти, Dalmatia and the „Marble „Trade, Disputationes Salonitanae 1970, 40. 32 B. Јовић, Камен y гамзиградским „zpabeeunRaMa, Галерија САНУ, каталог 45, 181—185. 33. В. Ward-Perkins, Architettura romana, 284. 3 Иако je y другој половини IV — века = дошло no краткотрајне – обнове ~ паганства, ~

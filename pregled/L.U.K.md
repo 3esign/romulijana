@@ -2,7 +2,7 @@
 
 Putanja: Felix Romuliana (Gamzigrad) › Utvrđenje i bedemi › Kule
 
-Oblici: `kul[aeiu]`, `kulam`, `tower`, `tour` · ukupno 1610 pominjanja u 22 izvora.
+Oblici: `kul[aeiu]`, `kulam`, `tower`, `tour` · ukupno 1611 pominjanja u 23 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -283,3 +283,7 @@ Oblici: `kul[aeiu]`, `kulam`, `tower`, `tour` · ukupno 1610 pominjanja u 22 izv
 - **s. 210** — 3. FERNANDEZ-OCHOA/MORILLO 2005 C. Fernandez-Ochoa/A. Morillo, Walls in the urban landscape of late roman Spain. Defense and imperial strategy. In: K. Bowes/M. Kulikowski (ed.), Hispania in Late Antiquity. Current Perspectives. The mediaeval and early modern Iberian world 24 (Leiden, Boston, Köln 2005) 299–340. FONTANA et a
 - **s. 210** — evo 2: Contesti tardo antichi e altomedievali (Milano 2004) 544–568. GALINIÉ/ZADORA RIO 1996 H. Galinié/E. Zadora Rio (ed.), Vie et mort du cimitière chrétien (Tours 1996). GELICHI 2007 S. Gelichi, Tra Comacchio e Venezia. Economia, società e insediamenti nell’arco alto adriatico durante l’Alto Medioevo. In: F. Berti (ed.),
 - … još 25+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 9** — ити због тога што композиција | јонског | стуба ca — капителом, импостом и луком није страна гамзиградској архитектури. Јавља се већ на капијама и вишеугаоним кулама млађег утврђења, а то би, поред размеравања лактовима, била још једна сличност између ових грађевина. Наспрам анти би као и у претходном случају морали

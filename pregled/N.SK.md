@@ -2,7 +2,7 @@
 
 Putanja: Natpisi i nalazi › Skulptura i portreti
 
-Oblici: `skulptur`, `sculptur`, `portret`, `portrait`, `glava od porfir`, `porfir`, `porphyr`, `statu` · ukupno 905 pominjanja u 21 izvora.
+Oblici: `skulptur`, `sculptur`, `portret`, `portrait`, `glava od porfir`, `porfir`, `porphyr`, `statu` · ukupno 907 pominjanja u 22 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -264,3 +264,8 @@ Oblici: `skulptur`, `sculptur`, `portret`, `portrait`, `glava od porfir`, `porfi
 - **s. 45** — 1995, 61–68. GRÓF/GRÓH 1996a P. Gróf/D. Gróh, A Visegrád-Lepencei őrtorony és a későrómai szoborlelet. Der Wachtturm von Visegrád-Lepence und der spätrömische Statuenfund. Savaria 22 (1992/1995) 1996, 21–24. GRÓF/GRÓH 1996b P. Gróf/D. Gróh, Vízlépcsőrendszer és régészeti kutatás Visegrád-Nagymaros térségében. Water Barrage
 - **s. 45** — /D. Gróh, Visegrád. Római kori emlékek. Tájak korok múzeumok kiskönyvtára 551 (Budapest 1997). GRÓF/GRÓH 1998/1999 P. Gróf/D. Gróh, Spätrömischer Wachtturm und Statuenfund zu Vesegrád-Lepence. Folia Arch. 47, 1998/1999, 103–115. GRÓF/GRÓH 2000 P. Gróf/D. Gróh, A Visegrád-Gizellamajori római erőd rétegviszonyainak építéstörté
 - … još 24+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 3** — сачуван само део конструкције од опеке виссине 10 ст. Био је обликован тако што четири широка пиластра образују плитке нише испред којих су, вероватио, стајале статуе чији су фрагменти нађени приликом ископавања храма. На источној страни стереобата се налази остатак подлоге монументалног степеништа ширине 13 m које са ниво
+- **s. 3** — ђено је и неколико мермерних плоча у облику тегула које су, вероватно, припадале кровном покривачу храма. Осим архитектонске пластике откривени су и фрагменти скулптура од мермера од којих су неки монументалних размера што указује на богату декорацију ове грађевине.!1 Изградња читавог комплекса, па и храма, царска је задужби

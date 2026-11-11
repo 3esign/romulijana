@@ -2,7 +2,7 @@
 
 Putanja: Osobe › Dioklecijan
 
-Oblici: `dioklecij`, `dioclet`, `diocleti` · ukupno 414 pominjanja u 18 izvora.
+Oblici: `dioklecij`, `dioclet`, `diocleti` · ukupno 423 pominjanja u 19 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -173,3 +173,13 @@ Oblici: `dioklecij`, `dioclet`, `diocleti` · ukupno 414 pominjanja u 18 izvora.
 - **s. 315** — om Caričin Grad, but no North African lamps have been found on the site. See BJELAJAC 1990, pl. 16,13–15, 21. 45 African Red Slip wares are rare on the site of Diocletian’s Palace in Split, but quite abundant in Durrës. See DVORŽAK SCHRUNK 1989, 94; SHKODRA 2006, 431, 434, and 436; 433 fig. 3; 435 fig. 4. In Koper (on the Slov
 - **s. 317** — ANTINIU 1981 S. Dolinescu-Ferche/M. Constantiniu, Un établissement du VI-e siècle à Bucarest. Dacia 25, 1981, 289–329. DVORŽAK SCHRUNK 1989 I. Dvoržak Schrunk, Dioklecijanova palača od 4. do 7. stoljeća u svjetlu keramičkih nalaza. Vjesnik Arh. Muz. (Zagreb) 22, 1989, 91–105. FALKNER 2007 R. Falkner, The lamps. In: A. Poulter (e
 - **s. 701** — iseraugst 17, 1996, 149–195. MAYER 2002 E. Mayer, Rom ist dort, wo der Kaiser ist. Untersuchungen zu den Staatsdenkmälern des 699 dezentralisierten Reiches von Diocletian bis zu Theodosius II. RGZM, Forschungsinst. Vorund Frühgesch. Monogr. 53 (Mainz 2002). MÓCSY 1974 A. Mócsy, Pannonia and Upper Moesia (London, Boston 1974).
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 3** — монументалних размера што указује на богату декорацију ове грађевине.!1 Изградња читавог комплекса, па и храма, царска је задужбина Галерија (293—311), прво Диоклецијановог савладара, а затим и цара источног дела Царства. С обзиром на ову чињеницу може се претпоставити да су утицаји с Истока и неки велики сиријски храмови би
+- **s. 3** — цаји с Истока и неки велики сиријски храмови били од значаја при избору типа такве грађевине у Ромулијани.!3 Осим тога, извесне сродности које постоје између Диоклецијанове палате у Сплиту и Галеријеве у Гамзиграду, пре свега близак париод настанка и идентичности ранга личности које су их градиле, упућивале су на тражење слич
+- **s. 3** — пштења XI, Републички завод за заштиту спомемика културе СР Србије, Београд 1978, 155—158; D. б5гејомс, Two Mćmorial Monuments ој Roman Palatial Architecture: Diocletianus' Palace in Split and Galeriuus' Palace at Gamzigrad, Archaeologia Tugoslavica XXII—XXIII, 41—49. 15 За архитектуру Диоклецијанове maAaTe, упоредити: Tomisl
+- **s. 7** — у профаној архитектури. На самом Гамзитраду у атријумима палате коришћени су виши стубови да означе улазе, а нижи за колонаде. Сличан случај је и са перистилом Диоклецијанове палате. Овако замишљен распоред стубова, виши на прочељу, а нижи на северној и јужној страни, поставља питање утврђивања њиховог броја и међусобне
+- **s. 9** — уитет трема око целе и цео објекат ставља под један кров (сл. 8). Ре. 8. Еасаде meridionale ди temple Овакав спољни изглед храма налази ослонац у архитектури Диоклецијанове палате, и то не само у појединим објектима, него у конструктивној логици која је тамо реализована.2• Већ тамо нису примењивани класични конструктивни скло
+- **s. 11** — s éléments mis au jour, pour avoir une idée aussi ВЕЛИКИ ХРАМ У ГАМЗИГРАДУ ну, градитељ — (Галерије, цар са посебним империјалним програмом и великим узором у Диоклецијановом животу и његовом градитељству и место настанка — провинција, изложена у већој мери утицајима Мале Азије и Сирије, него запада, Италије и Рима. 27 G. Lug
+- **s. 12** — plaques de marbre en forme de tégules, découvertes lors des travaux de fouilles. L'aspect du temple, plutôt insolite, présente des analogies avec le palais de Dioclétien à БРАНА СТОЈКОВИЋ - ПАВЛЕКА Split, cellesci ne concernant pas les édifices isolés, mais la logique de l'ensemble de la construction. La structure classique n

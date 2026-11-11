@@ -1,0 +1,126 @@
+{
+  "opis": "Kurirani registar otvorenih pitanja projekta Romulijana. Svako pitanje je vezano za tvrdnje iz baza/tvrdnje-*.jsonl. Stanje: 'otvoreno-van-korpusa' (rešenje traži izvor koji nemamo), 'otvoreno-u-korpusu' (može se proveriti u postojećem materijalu), 'sporno-u-izvorima' (izvori se razilaze, mi ne presuđujemo), 'delimicno-razreseno', 'razreseno'. Od 11.11.2026 prikupljanje je zaustavljeno; ovaj spisak je stanje znanja, ne plan pretrage.",
+  "azurirano": "2026-11-11",
+  "pitanja": [
+    {
+      "id": "O-01",
+      "tema": "Datovanje mlađe bazilike (ROM-CH-P1-LATE)",
+      "pitanje": "Da li je mlađa trobrodna bazilika nad južnim dvoranama Palate I podignuta u VI veku (Petković) ili u X–XI veku (Janković)?",
+      "stanje": "delimicno-razreseno",
+      "sta_imamo": "Oba datovanja u istom zborniku R04 (RS-011, RS-012); Janković revidira sopstveno datovanje iz R05 (RS-010). Podovi, keramika i litijski krst ne presuđuju (RD-001–RD-008). W21 (Petković 2011) daje gradnju sredinom VI veka uz moguću obnovu u X veku (RD-009).",
+      "sta_nedostaje": "Profili i dnevnik iskopavanja, karton inv. 851.",
+      "tvrdnje": ["RS-009", "RS-010", "RS-011", "RS-012", "RD-007", "RD-008", "RD-009"],
+      "dosije": "pregled/DATOVANJE-BAZILIKE.md"
+    },
+    {
+      "id": "O-02",
+      "tema": "Torzo u oklopu i Jupiterova statua",
+      "pitanje": "Da li fragmenti „muškarca u oklopu“ iz R02 pripadaju Jupiterovoj statui ili carskom torzu?",
+      "stanje": "otvoreno-van-korpusa",
+      "sta_imamo": "Herkul iz R02 = R04 sl. 72; Jupiter (R04 sl. 69 = R08 br. 76) je drugi predmet (RU-017, RV-004, RV-005); torzo imperatora u oklopu (RU-020).",
+      "sta_nedostaje": "Katalog skulpture Živić 2005/2007.",
+      "tvrdnje": ["RU-009", "RU-017", "RU-020", "RV-004", "RV-005"],
+      "dosije": "pregled/UMETNOST-VIZUELNO.md"
+    },
+    {
+      "id": "O-03",
+      "tema": "Pilastar sa tetrarsima",
+      "pitanje": "Druga tetrarhija (305/306) ili treća (308, posle Karnuntuma), i šta znači prazan medaljon?",
+      "stanje": "sporno-u-izvorima",
+      "sta_imamo": "Živić/Srejović: druga tetrarhija (RU-005); Čanak-Medić/Stojković-Pavelka: treća (RU-006); vizuelna provera reljefa (RV-002, RV-003).",
+      "sta_nedostaje": "Nezavisna ikonografska studija; u korpusu nema presude.",
+      "tvrdnje": ["RU-005", "RU-006", "RV-002", "RV-003"],
+      "dosije": "pregled/UMETNOST.md"
+    },
+    {
+      "id": "O-04",
+      "tema": "Romulina apoteoza",
+      "pitanje": "Na čemu počiva datum apoteoze 294/295?",
+      "stanje": "otvoreno-van-korpusa",
+      "sta_imamo": "Datum preko R04 (RU-018) i veza tumula sa apoteozom (RT-011).",
+      "sta_nedostaje": "Izvorni rad M. Vasić 2007.",
+      "tvrdnje": ["RU-018", "RT-011", "RU-019"],
+      "dosije": "pregled/UMETNOST.md"
+    },
+    {
+      "id": "O-05",
+      "tema": "Kome je posvećen mali hram (C)",
+      "pitanje": "Kult Dive Romule (R01/R04) ili Kibele sa taurobolijumom (R02/R05)?",
+      "stanje": "sporno-u-izvorima",
+      "sta_imamo": "Tvrdnja o malom hramu i Divi Romuli (RT-008) i sakralna osa hramova (RT-007); razilaženje je zapisano u rečniku (RECNIK.jsonl, „Mali hram (C)“).",
+      "sta_nedostaje": "Epigrafski ili kultni nalaz koji presuđuje; u korpusu ga nema.",
+      "tvrdnje": ["RT-007", "RT-008"],
+      "dosije": "pregled/TOPOLOGIJA.md"
+    },
+    {
+      "id": "O-06",
+      "tema": "Faze gradnje i datovanje mlađeg bedema",
+      "pitanje": "Jedan desetogodišnji proces gradnje ili dve etape („Romulianum“ 297–306 / palata 306–316); mlađi bedem tetrarhijski ili Konstantinov?",
+      "stanje": "sporno-u-izvorima",
+      "sta_imamo": "R02/R05: gradnja „u jednom dahu“; podela na etape samo iz legende Skice 6 (R02). R06 (1978) mlađi bedem pripisuje Konstantinu, R04 (2010) tetrarhiji (RT-002, RT-003, SAZETAK).",
+      "sta_nedostaje": "Stratigrafska objava sloja 2 sa apsolutnim datumima.",
+      "tvrdnje": ["RT-002", "RT-003", "RS-001"],
+      "dosije": "SAZETAK.md"
+    },
+    {
+      "id": "O-07",
+      "tema": "Veliki hram — metrologija",
+      "pitanje": "Kojom merom je projektovan veliki hram i zašto se brojevi W79 ne slažu?",
+      "stanje": "delimicno-razreseno",
+      "sta_imamo": "Poreklo „lakta“ 47,2–47,7 cm: stopa mlađeg utvrđenja 31,5–31,8 cm × 1,5, R06 (RH-011). Nesklad 63 × 45 lakata ≠ 30,20 × 21,76 m ostaje (RH-010). Zapažanje (nije tvrdnja): raspon bočnog trema 18,70 m = 63 rimske stope; prečnik mermernog stuba 47 cm ≈ „lakat“.",
+      "sta_nedostaje": "Premer hrama sa kotama; Wilson Jones, dodatak B (tabele stubova).",
+      "tvrdnje": ["RH-001", "RH-006", "RH-010", "RH-011", "RH-012"],
+      "dosije": "HRAMOVI-LITERATURA.md"
+    },
+    {
+      "id": "O-08",
+      "tema": "Veliki hram — ulaz u celu",
+      "pitanje": "Da li se u celu ulazilo sa zapada (W79, str. 144)?",
+      "stanje": "razreseno",
+      "sta_imamo": "Fasada, stepenište i crteži W79 i R04 str. 82 stavljaju ulaz na istok; rečenica sa str. 144 je verovatno štamparska greška (naš zaključak).",
+      "sta_nedostaje": "—",
+      "tvrdnje": ["RH-008"],
+      "dosije": "HRAMOVI-LITERATURA.md"
+    },
+    {
+      "id": "O-09",
+      "tema": "Veliki hram — razmak stubova 205 cm na pročelju",
+      "pitanje": "Da li je 205 cm svetli ili osovinski razmak?",
+      "stanje": "delimicno-razreseno",
+      "sta_imamo": "Dvosmislenost je opisana u RH-006. Merenje na W79 sl. 4 i R04 planu XXX (RH-012) isključuje svetlo čitanje: raspon krajnjih stubova je 10,9–11,6 m, a svetli razmak bi dao 13,5 m. Crteži, međutim, imaju četiri stuba u tri nejednaka polja, a tekst šest nosećih elemenata.",
+      "sta_nedostaje": "Crtež prve (klasične) varijante sa šest elemenata; u korpusu ga nema.",
+      "tvrdnje": ["RH-005", "RH-006", "RH-012"],
+      "dosije": "HRAMOVI-LITERATURA.md"
+    },
+    {
+      "id": "O-10",
+      "tema": "Veliki hram — sirijske analogije",
+      "pitanje": "Da li su tremovi sa tri strane i zasvedena kripta preuzeti iz hramova Hosn Sfiri, Kalat Fakra i Hibarija?",
+      "stanje": "otvoreno-van-korpusa",
+      "sta_imamo": "Teza iz R04 str. 87 (Čanak-Medić i Stojković-Pavelka); bibliografski opis Segal 2013, Stamper 2005, Wilson Jones 2000, Orlin 1997, Mierse 1999 u HRAMOVI-LITERATURA.md.",
+      "sta_nedostaje": "Bibliotečki primerci: Segal 2013 (br. 14–16, 18–19), Krencker i Zschietzschmann 1938, Ward-Perkins 1974 sl. 349.",
+      "tvrdnje": ["RH-005", "RH-009"],
+      "dosije": "HRAMOVI-LITERATURA.md"
+    },
+    {
+      "id": "O-11",
+      "tema": "Citirani, a nedostupni izvori",
+      "pitanje": "Šta dodaju radovi koje korpus citira, a nemamo ih?",
+      "stanje": "otvoreno-van-korpusa",
+      "sta_imamo": "Citati preko R04 i R07.",
+      "sta_nedostaje": "Srejović i Vasić, Imperial Mausolea (1993–94); Č. Vasić 1997; S. Petković 2008; objave posle 2017.",
+      "tvrdnje": [],
+      "dosije": "SAZETAK.md"
+    },
+    {
+      "id": "O-12",
+      "tema": "Širi tetrarhijski kontekst",
+      "pitanje": "Kako se Romulijana odnosi prema Medijani, Šarkamenu, Solunu i Splitu?",
+      "stanje": "otvoreno-van-korpusa",
+      "sta_imamo": "Regionalni čvorovi R.* i paralele u hijerarhiji; bratski projekat Medijana.",
+      "sta_nedostaje": "Uporedna analiza; nije rađena.",
+      "tvrdnje": [],
+      "dosije": "SAZETAK.md"
+    }
+  ]
+}

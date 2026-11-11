@@ -2,7 +2,7 @@
 
 Putanja: Natpisi i nalazi › Natpis FELIX ROMULIANA (1984)
 
-Oblici: `felix romulian` · ukupno 370 pominjanja u 24 izvora.
+Oblici: `felix romulian` · ukupno 374 pominjanja u 25 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -270,3 +270,10 @@ Oblici: `felix romulian` · ukupno 370 pominjanja u 24 izvora.
 - **s. 284** — ograd) 36, 2009, 133–143. ZEILLER 1967 J. Zeiller, Les origines chrétiennes dans les provinces danubiennes de l’Empire Romain (Roma 1967). ŽIVIĆ 2003 M. Živić, Felix Romuliana, 50 Years of Solving. Felix Romuliana, 50 година одгонeтaњa (Београд/Beograd 2003). ŽIVKOVIĆ et al. 2005 D. Živković/N. Štrbac/M. Cocić/M. Šteharnik/Z. Stević
 - **s. 284** — et al. 2005 D. Živković/N. Štrbac/M. Cocić/M. Šteharnik/Z. Stević/B. Marjanović, Preliminary Investigations of the Early Byzantine Metallurgical Activities at Felix Romuliana (Zaječar, Eastern Serbia). In: A. Avramov (ed.), Procedings of the 3rd International Symposium Metallurgy in Southeast Europe from Ancient Times till the End o
 - … još 7+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 1** — иозне облике и указали на њих не успевајући, међутим, да јој одреде тачну намену (сл. 1). Археолошка ископавања на овом локалитету који је идентификован као Felix Romuliana,“ праћена су од почетка конзерваторскорестаураторским радовима на свим откривеним објектима.5 Да би заштита могла правилно да се изведе, било је неопходно CBaK
+- **s. 10** — проистекла је директно HAH индиректно из Италије, али је била значајно везана за локалну традицију и материјале.3о Ово гледиште се може односити на архитектуру Felix Romuliane и њен велики храм, проистекао из царског култа, на коме се огледа слободан приступ пројектовању = објеката KaO и полихромија грађевинског о материјала, кара
+- **s. 11** — и немирном времеLes recherches archéologiques sur l'emplacement d'un palais de la basse antiquité, bâti au IVe siècle par le roi Galère et appelé par celuici Felix Romuliana, ont eu pour résultat, vers les années 70, la mise au jour des vestiges d'un temple monumental dans la partie méridionale de l'enceinte. Le temple reposait sur
+- **s. 11** — , а односи се на об-лике који су претерани, извештачени, неуравнотежени. Види: Enciklopedija likovnih umetnosti I, A — Cus, Zagreb 1959, 240. Le grand temple à Felix Romuliana (Gamzigrad) BRANA STOJKOVIÉ complète que possible sur l'aspect originel que le temple pouvait présenter. Les résultats des recherches sur les restes du temple

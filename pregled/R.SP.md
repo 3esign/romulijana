@@ -2,7 +2,7 @@
 
 Putanja: Regionalni kontekst › Split (Dioklecijanova palata)
 
-Oblici: `split`, `spalat`, `aspalath` · ukupno 363 pominjanja u 13 izvora.
+Oblici: `split`, `spalat`, `aspalath` · ukupno 367 pominjanja u 14 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -143,3 +143,10 @@ Oblici: `split`, `spalat`, `aspalath` · ukupno 363 pominjanja u 13 izvora.
 - **s. 238** — from the Middle of the VI until the Middle of the VIII Century. Byzantion 34, 1964, 347–374. MARASOVIĆ 2008 T. Marasović, O vremenu obnove salonitanske crkve u Splitu. Sul periodo del rinnovamento della chiesa salonitana a Spalato. In: DUKIĆ u. a. 2008, 417–433. MARKUS 1979 R. A. Markus, Carthage – Prima Justiniana – Ravenna
 - **s. 315** — North African lamps have been found on the site. See BJELAJAC 1990, pl. 16,13–15, 21. 45 African Red Slip wares are rare on the site of Diocletian’s Palace in Split, but quite abundant in Durrës. See DVORŽAK SCHRUNK 1989, 94; SHKODRA 2006, 431, 434, and 436; 433 fig. 3; 435 fig. 4. In Koper (on the Slovenian coast of Istria
 - … još 12+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 3** — ики сиријски храмови били од значаја при избору типа такве грађевине у Ромулијани.!3 Осим тога, извесне сродности које постоје између Диоклецијанове палате у Сплиту и Галеријеве у Гамзиграду, пре свега близак париод настанка и идентичности ранга личности које су их градиле, упућивале су на тражење сличности и у о архитект
+- **s. 3** — и које су их градиле, упућивале су на тражење сличности и у о архитектури о ова два – комплекса.!“ Али, директних аналогија за велики гамзиградски храм нема у Сплиту. Може се, међутим, претпоставити да ~ су – стилске – карактеристике и Čč нека конструктивна решења у ова два комплекса били веома слични. 15 Први корак ка ре
+- **s. 3** — авод за заштиту спомемика културе СР Србије, Београд 1978, 155—158; D. б5гејомс, Two Mćmorial Monuments ој Roman Palatial Architecture: Diocletianus' Palace in Split and Galeriuus' Palace at Gamzigrad, Archaeologia Tugoslavica XXII—XXIII, 41—49. 15 За архитектуру Диоклецијанове maAaTe, упоредити: Tomislav Marasovic, Diokleci
+- **s. 12** — découvertes lors des travaux de fouilles. L'aspect du temple, plutôt insolite, présente des analogies avec le palais de Dioclétien à БРАНА СТОЈКОВИЋ - ПАВЛЕКА Split, cellesci ne concernant pas les édifices isolés, mais la logique de l'ensemble de la construction. La structure classique ne fut pas appliquée dans le palais en

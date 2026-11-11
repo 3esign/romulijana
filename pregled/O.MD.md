@@ -2,7 +2,7 @@
 
 Putanja: Osobe › Maksimin Daja
 
-Oblici: `maksimin`, `maximin\w* daia`, `maximinus`, `daj[aeiu]\b`, `daia` · ukupno 112 pominjanja u 15 izvora.
+Oblici: `maksimin`, `maximin\w* daia`, `maximinus`, `daj[aeiu]\b`, `daia` · ukupno 113 pominjanja u 16 izvora.
 
 ## R02 · Gamzigrad (+ Rgotina, antičko nalazište; Istraživanje spomenika u Vrelu, Šarkamen) (1980)
 
@@ -128,3 +128,7 @@ Oblici: `maksimin`, `maximin\w* daia`, `maximinus`, `daj[aeiu]\b`, `daia` · uku
 - **s. 220** — chtlich der Rolle Anemius’ ziehen zu können39. Bischofsnamen. SOTINEL 2005, 383. Acta concili Aquileiensis 55 (CSEL 82/3, 359, 718– 721). SOTINEL 2005, ebd. 37 MAXIMINUS hat in seinem Kommentar zum Konzil von Aquileia (Scholia Arriana in concilium Aquileiense 20 [CCSL 87, 158] bzw. Scholia Arriana 32 [SC 267, 228]) die Stellungn
 - **s. 607** — teristisch. Das früheste Vorkommen eingeglätteter Ware ist nach der stratigrafischen Einordnung NÁDORFI 1992, 45–51; MARÓTI/TOPÁL 1980, 106, Taf. 9,26.1 (Münze Maximinus Daias). 57 Arrabona, Brigetio und Intercisa haben lokale Produktion. Vom letztgenannten Fundort legte É. Bónis ein Fehlprodukt vor, das auf eine lokale Produktion sc
 - **s. 615** — d-Várdomb, Zengővárkony)130. Von Bedeutung ist das Exemplar aus einer Brunnenfüllung in Savaria, das CVJETIĆANIN 2006, 59. MARÓTI/TOPÁL 1980, 106, Taf. 9,26.1 (Maximinus Daia). 127 SALAMON-BARKÓCZI 1971, 54, Taf. 12,7; NÁDORFI 1992, 45, Taf. I,11. 128 KREKOVIČ 1995, 96, Abb. 2,9. 129 SÁGI 1981, 55, Abb. 36 (Grab 89/11). 130 BIRÓ 1959
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 4** — чено, налази се монументално степениште за прилаз цели. Његов изглед можемо претпоставити на основу сачуване носеће конструкције и упутстава за грађење које даје Витрувије. Подлога од трпанца прати нагиб некадашњег степеништа и у њој се назиру трагови газишта. Витрувије каже да степеник не би требало да буде нижи од 3/

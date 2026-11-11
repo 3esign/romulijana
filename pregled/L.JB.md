@@ -2,7 +2,7 @@
 
 Putanja: Felix Romuliana (Gamzigrad) › Južne javne građevine (tribunal/pretorijum G, petobrodna zgrada F)
 
-Oblici: `petobrodn\w*\s+(?:zgrad|gradjevin)`, `tribunal`, `pretorijum`, `praetori` · ukupno 62 pominjanja u 7 izvora.
+Oblici: `petobrodn\w*\s+(?:zgrad|gradjevin)`, `tribunal`, `pretorijum`, `praetori` · ukupno 63 pominjanja u 8 izvora.
 
 ## R04 · Felix Romuliana – Gamzigrad (2010)
 
@@ -69,3 +69,7 @@ Oblici: `petobrodn\w*\s+(?:zgrad|gradjevin)`, `tribunal`, `pretorijum`, `praetor
 - **s. 205** — d until the second half of the 6th century (Keay 35, Keay 62Q, 55a, of the mid-/end of the 5th–6th c.). As for the slip-wares, in the destruction levels of the Tribunale (end of the 6th c.) the following shapes were found: Hayes 99, 104A and C, 97, 50, 61B (imitations?), and lamps Atlante VIII, XA1, XB1; Atlante X, HIIB, typica
 - **s. 221** — GRAČANIN 2006, 54–58. 44 IUSTINIANUS, Novella 11,1 (SCHOELL/KROLL 1959, 94): …postea autem Attilanis temporibus eiusdem locis devastatis Apraeemius praefectus praetorio de Sirmitana civitate in Thessalonicam profugus venerat, tunc ipsam praefecturam et sacerdotalis honor secutus est, et Thessalonicensis episcopus non sua aucto
 - … još 13+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 2** — 136 и западну капију, да се са западне стране налази једна петобродна грађевина, а са јужне објекат са портиком (сл. 2). Ови објекти нису довољно испитани па се не зна да ли им је функција била везана за храм или није. Терен на коме се хр

@@ -2,7 +2,7 @@
 
 Putanja: Istraživači › Dragoslav Srejović
 
-Oblici: `srejovi` · ukupno 568 pominjanja u 23 izvora.
+Oblici: `srejovi` · ukupno 578 pominjanja u 24 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -276,3 +276,16 @@ Oblici: `srejovi` · ukupno 568 pominjanja u 23 izvora.
 - **s. 284** — of the Late Classical Times (Београд/Beograd 1983) 5–16. SREJOVIĆ 1983 b Д. Срејовић, Царски дворац. Срејовић (Изд.), Гамзиград, касноантички царски дворац. D. Srejović (ed.), Gamzigrad, an Imperial Palace of the Late Classical Times (Београд/Beograd 1983) 24–95. SREJOVIĆ/VASIĆ 1994 D. Srejović/Č. Vasić, Imperial Mausolea and
 - **s. 698** — zwischen Zu Gamzigrad vgl. den Beitrag von G. von Bülow (257–266) und S. Petković (267–283) in diesem Band. – Weiterhin ĆANAK-MEDIĆ/STOJOVIĆ-PAVELKA 2010. 210 SREJOVIĆ/TOMOVIĆ/VASIĆ 1996; TOMOVIĆ et. al. 2005. – Zur Bewertung beider Fundorte im Hinblick auf die kaiserlichen Repräsentation vgl. auch MAYER 2002, 80–91. 211 IVAN
 - … još 17+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 1** — атео имао, као и низ других објеката сродних храму по типу и времену настанка. У овом чланку нећемо расправљати о функцији храма, јер ју је професор Драгослав Срејовић исцрпно проучио и протумачио,“ већ о његовом, могућем, некадашњем изгледу и то на основу материјалних података које пружају Сл. 1. Снимак Велики храм у Гамзи
+- **s. 1** — еменоса. Зна се, ипак, да се дуж храма са северне стране пружа аеситапиз који спаја источну архитектонски 1 Овим истраживањима је руководио академик Драгослав Срејовић у сарадњи с археолозима Анком Лаловић и Ђорђем Јанковићем. 2 Е. Kaniz, R6mische Studien in Serbien, Wien 1892, 96—97; исти, Das Konigreich Serbien und das S
+- **s. 1** — R6mische Studien in Serbien, Wien 1892, 96—97; исти, Das Konigreich Serbien und das Serbenuolk, II, Leipzig 1909, 370—372. 3 B. Карић, Србија, 1887, 897. 4 Д. Срејовић, ЕеИх Romuliana, Галеријева палата U Гамзираду, Старинар XXXVI, 1985, 51—65. 5 Конзерваторскорестаураторским радовима руководила је од 1953. године др Милка Ча
+- **s. 1** — мс — DJ. Jankovic, Тио late roman temples at Gamzigrad, Archaeologia Tugoslavica XIX, Beograd 1978 (1979), 57; исти, Гамзиград, Старинар XXXI, 1980, 70—72; JI. Срејовић, Гамзиград, касноантички царски дворац, Галерија САНУ 45, Београд 1983, 47, са старијом литературом. 7 Д. Срејовић — А. Лаловић — Б. Јанковић, Гамзиград, 70—72
+- **s. 1** — , Гамзиград, Старинар XXXI, 1980, 70—72; JI. Срејовић, Гамзиград, касноантички царски дворац, Галерија САНУ 45, Београд 1983, 47, са старијом литературом. 7 Д. Срејовић — А. Лаловић — Б. Јанковић, Гамзиград, 70—72.
+- **s. 3** — ољна да пружи најпоузданију слику првобитне целине. Решење коме се тежило треба да представља конструктивни склоп који би садржао све нађене елементе. 8 Д. Срејовић, Гамзиград, касноантички царски дворац, 51. 9 О. Lugli, La technica еаШљла тотапа, con рагнсојаге riguardo а Roma e Lazio, Roma MCMLVII; M. CanakMedic, Opus m
+- **s. 3** — pus listatum u kasnoj antici, Materijali, tehnike i strukture predantickog ı antickog graditeljstua па istochom Jaranskom prostoru, Zagreb 1980, 141—147. 10 Д, Срејовић, Гамзиград, касноантички царски дворац, 49, кат. 33, цртежи представљају ~ идеалну реконструкцију. 11 Исто, 78—87. 12 JI. Срејовић, Felix Котицапа, 51. 13 Као
+- **s. 3** — Zagreb 1980, 141—147. 10 Д, Срејовић, Гамзиград, касноантички царски дворац, 49, кат. 33, цртежи представљају ~ идеалну реконструкцију. 11 Исто, 78—87. 12 JI. Срејовић, Felix Котицапа, 51. 13 Као што је велики храм у Хоси Сфири (Ноззп 560) са тространим = тремом (D. Krencker — W. Zschietzschmann, Romiche Тетре in 5упеп, Berli
+- **s. 5** — сину 552 ст. Појава две врсте стубова уз један објекат поставља питање о њиховом међусобном односу. Једно од могућих решења преложио је професор Драгослав Срејовић. Ради се O октостилном периптеру са двоспратним пронаосом, код кога су у доњем реду масивнији модУп М = 9 ЛАКАТА 1 ЛАКАТ = 47,2-47,7 см Fig. 3. Plan du temple
+- **s. 5** — во композициските методи Ha античката ликовна уметност, Годишен зборник на Техничкиот факултет 1957—1958, 43. 19 Уџгимје, нав. дело, 72. 20 Исто, 70. 21 JL. — Срејовић, = Гамзиград, ~ касноантички дворац, 50.

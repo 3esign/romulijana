@@ -2,7 +2,7 @@
 
 Putanja: Istraživači › Anka Lalović
 
-Oblici: `lalovi` · ukupno 119 pominjanja u 12 izvora.
+Oblici: `lalovi` · ukupno 121 pominjanja u 13 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -119,3 +119,8 @@ Oblici: `lalovi` · ukupno 119 pominjanja u 12 izvora.
 - **s. 267** — 27 Угејоме D., Lalović A.. Felix Romuliana: Galerius’ Palace at Gamzigra:!, Belgrade 1989. Srejovic D., Die Darstelhing der Tetrarchen am Osttor der Jiingeren Fortifikation von Romul
 - **s. 267** — apers of the Faculty of Philosophy XVII. Belgrade 1991. Sreyovie D., Lalović A.. Felix Romuliana: Galerius” Palace at Gamczigra:d. Belgrade 1991. Jovanović A., Lalović A.. A Store of Solds from Goamzigrad (Romuliana). Numizmatičar 16. Belgrade 1993. SreJović D.. Felix Romuliana · Galerius” Ideological Testament. Roman Imperia
 - **s. 267** — ovic ).. Belgrade 1995, Vasić C.. Chronological Relations of Palace and Fortificution Svstem of Gamzigrad. The Ае of Tetrarchs, ed. Srejovié D.. Belgrade 1995, Lalovie A.. The Findings of Stiv at Gamzigraud (Ronnuliona). Glasnik Srpskog arheoloskeg društva 13, Belgrade 1997,
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 1** — а северне стране пружа аеситапиз који спаја источну архитектонски 1 Овим истраживањима је руководио академик Драгослав Срејовић у сарадњи с археолозима Анком Лаловић и Ђорђем Јанковићем. 2 Е. Kaniz, R6mische Studien in Serbien, Wien 1892, 96—97; исти, Das Konigreich Serbien und das Serbenuolk, II, Leipzig 1909, 370—372. 3
+- **s. 1** — таринар XXXI, 1980, 70—72; JI. Срејовић, Гамзиград, касноантички царски дворац, Галерија САНУ 45, Београд 1983, 47, са старијом литературом. 7 Д. Срејовић — А. Лаловић — Б. Јанковић, Гамзиград, 70—72.

@@ -2,7 +2,7 @@
 
 Putanja: Istraživači › Milka Čanak-Medić
 
-Oblici: `canak`, `medic\b` · ukupno 455 pominjanja u 15 izvora.
+Oblici: `canak`, `medic\b` · ukupno 463 pominjanja u 16 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -148,3 +148,13 @@ Oblici: `canak`, `medic\b` · ukupno 455 pominjanja u 15 izvora.
 - **s. 698** — s Horreum – aber entlang der Hauptachse zwischen Zu Gamzigrad vgl. den Beitrag von G. von Bülow (257–266) und S. Petković (267–283) in diesem Band. – Weiterhin ĆANAK-MEDIĆ/STOJOVIĆ-PAVELKA 2010. 210 SREJOVIĆ/TOMOVIĆ/VASIĆ 1996; TOMOVIĆ et. al. 2005. – Zur Bewertung beider Fundorte im Hinblick auf die kaiserlichen Repräsentat
 - **s. 699** — Arch. Acad. Scien. Hungaricae 26, 1974, 23–57. BURGER 1966 Sz. Burger, The Late Roman cemetery at Ságvár. Acta Arch. Acad. Scien. Hungaricae 18, 1966, 99–243. ĆANAK-MEDIĆ/STOJOVIĆ-PAVELKA 2010 М. Чaнaк-MeдиЋ/Б. CтojкoвиЋ-Пaвeлкa, Apxитeктypa и пpocтopнa cтpyктypa цapcкe пaлaтe. In: И. Петковић (ed.), Felix Romuliana – Гaмзи
 - **s. 699** — 74, 23–57. BURGER 1966 Sz. Burger, The Late Roman cemetery at Ságvár. Acta Arch. Acad. Scien. Hungaricae 18, 1966, 99–243. ĆANAK-MEDIĆ/STOJOVIĆ-PAVELKA 2010 М. Чaнaк-MeдиЋ/Б. CтojкoвиЋ-Пaвeлкa, Apxитeктypa и пpocтopнa cтpyктypa цapcкe пaлaтe. In: И. Петковић (ed.), Felix Romuliana – Гaмзигpaд (Бeoгpaд 2010) 49–106. CHRISTIE
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 1** — ић, ЕеИх Romuliana, Галеријева палата U Гамзираду, Старинар XXXVI, 1985, 51—65. 5 Конзерваторскорестаураторским радовима руководила је од 1953. године др Милка Чанак-Медић, а од 1987. содине задужена је арх. Брана Стојковић-Павелка. 6 0. 5гејомс — А. Тајомс — DJ. Jankovic, Тио late roman temples at Gamzigrad, Archaeologia Tu
+- **s. 1** — Их Romuliana, Галеријева палата U Гамзираду, Старинар XXXVI, 1985, 51—65. 5 Конзерваторскорестаураторским радовима руководила је од 1953. године др Милка Чанак-Медић, а од 1987. содине задужена је арх. Брана Стојковић-Павелка. 6 0. 5гејомс — А. Тајомс — DJ. Jankovic, Тио late roman temples at Gamzigrad, Archaeologia Tugoslav
+- **s. 3** — нте. 8 Д. Срејовић, Гамзиград, касноантички царски дворац, 51. 9 О. Lugli, La technica еаШљла тотапа, con рагнсојаге riguardo а Roma e Lazio, Roma MCMLVII; M. CanakMedic, Opus mixtum i opus listatum u kasnoj antici, Materijali, tehnike i strukture predantickog ı antickog graditeljstua па istochom Jaranskom prostoru, Zagreb
+- **s. 3** — Калат Факри (Каја Fakra) са шест стубова на прочељу ~ (исто, Та. 20), и храм у Хибарији (Hibbariye) са засведеном криптом испод целе (исто, Taf. 89, 90). 4М. Чанак-Медић, Гамзиград, касноантичка палата, Саопштења XI, Републички завод за заштиту спомемика културе СР Србије, Београд 1978, 155—158; D. б5гејомс, Two Mćmorial
+- **s. 5** — Lugli, нав. дело, 169—353, tav.XXV—LX. 17 Због тога што je размераван – лактовима, – овај храм «ce везује за млађе · утврђење – гамзиградске палате, уп.: M. ЧанакМедић, Гамзиград, 58. 18 Исти геометријски однос препоручује Витрувије за размере атријума, уп.: УшШгиује, Deset knjiga o arhitekturi, preveo dr Matija Горас, Sv
+- **s. 11** — је у секундарној употреби, а други мањи откривен приликом ископавања храма упутио је на порекло претходног. 30J. В. Ward-Perkins, нав. дело, 284, 312. 31 M. Чанак-Медић, Гамзиград, 86—88; Ј. В. Ward-Perkins, Has. дело, 283; исти, Dalmatia and the „Marble „Trade, Disputationes Salonitanae 1970, 40. 32 B. Јовић, Камен y гам
+- **s. 11** — секундарној употреби, а други мањи откривен приликом ископавања храма упутио је на порекло претходног. 30J. В. Ward-Perkins, нав. дело, 284, 312. 31 M. Чанак-Медић, Гамзиград, 86—88; Ј. В. Ward-Perkins, Has. дело, 283; исти, Dalmatia and the „Marble „Trade, Disputationes Salonitanae 1970, 40. 32 B. Јовић, Камен y гамзиград

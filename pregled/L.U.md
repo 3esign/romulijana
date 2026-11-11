@@ -2,7 +2,7 @@
 
 Putanja: Felix Romuliana (Gamzigrad) › Utvrđenje i bedemi
 
-Oblici: `bedem`, `utvrdjenj`, `utvrden`, `fortifikac`, `fortification`, `enceinte`, `rampart`, `wall`, `kurtin`, `curtain` · ukupno 2672 pominjanja u 30 izvora.
+Oblici: `bedem`, `utvrdjenj`, `utvrden`, `fortifikac`, `fortification`, `enceinte`, `rampart`, `wall`, `kurtin`, `curtain` · ukupno 2677 pominjanja u 31 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -394,3 +394,11 @@ Oblici: `bedem`, `utvrdjenj`, `utvrden`, `fortifikac`, `fortification`, `enceint
 - **s. 59** — d the drawing of the new ground plan of the fortification. According to this plan, the fortification of 7 hectares at Környe belongs to the smaller-sized inner fortifications similar to Ságvár. However, as opposed to Ságvár, there are only round towers at Környe, which characterize the second building phase of the inner fortificatio
 - **s. 59** — n the relatively steep southern slope of Leshegy (hill) and Általér (stream), a mildly sloping plateau was established for the construction of the Late Roman fortification. This dyke was built upon a civil settlement, dating to the principate. These structures had been destroyed for the construction of the dyke and the assemblages
 - … još 190+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 1** — у __ Предлог за реконструкцију — Арх. БРАНА СТОЈКОВИЋ-ПАВЕЛКА сачувани облици и камена пластика. Храм је својом главном фасадом окренут истоку и главној капији утврђења. Са те, источне стране, налази се монументално прилазно степениште, испред Kora је откривен отисак = масивног жртвеника. – Непосредна — околина «je — само дели
+- **s. 5** — , а у горњем нижи и тањи јонски.21 167. Lugli, нав. дело, 169—353, tav.XXV—LX. 17 Због тога што je размераван – лактовима, – овај храм «ce везује за млађе · утврђење – гамзиградске палате, уп.: M. ЧанакМедић, Гамзиград, 58. 18 Исти геометријски однос препоручује Витрувије за размере атријума, уп.: УшШгиује, Deset knjiga o a
+- **s. 9** — то композиција | јонског | стуба ca — капителом, импостом и луком није страна гамзиградској архитектури. Јавља се већ на капијама и вишеугаоним кулама млађег утврђења, а то би, поред размеравања лактовима, била још једна сличност између ових грађевина. Наспрам анти би као и у претходном случају морали бити постављени зид
+- **s. 10** — ла што већа разноликост. Ова стена је, иначе, на другим објектима палате коришћена за израду архитектонске пластике, као, на пример, на другој галерији млађег утврђења. Архитектонска пластика храма је скупоценија.
+- **s. 11** — pelé par celuici Felix Romuliana, ont eu pour résultat, vers les années 70, la mise au jour des vestiges d'un temple monumental dans la partie méridionale de l'enceinte. Le temple reposait sur un soubassement élevé, un escalier sur le côté oriental assurant l'accès de la cella. Il présente le type de périptère, entouré d'un lar

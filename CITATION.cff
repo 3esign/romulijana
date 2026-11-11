@@ -12,7 +12,7 @@ authors:
     affiliation: "Union – Nikola Tesla University, Faculty of Construction Management, Belgrade"
 abstract: >-
   Konsolidacija objavljenih istraživanja kasnoantičke palate cara Galerija
-  u Gamzigradu u proverljivu bazu znanja (81 izvor, 71 tvrdnja, 166 dokaza
+  u Gamzigradu u proverljivu bazu znanja (82 izvora, 83 tvrdnje, 226 dokaza
   sa stranom i hešom) i interaktivni 3D instrument sa nivoima sigurnosti
   A/B/C. Deo obrađenih podataka (korpus R01–R08) dobijen je od Arheološkog
   instituta u Beogradu; prava na izvorne publikacije pripadaju autorima i
@@ -32,5 +32,5 @@ references:
     authors:
       - name: "Arheološki institut, Beograd (Institute of Archaeology, Belgrade)"
 repository-code: "https://github.com/3esign/romulijana"
-version: 0.1-atlas
-date-released: 2026-11-02
+version: 0.2-stabilno
+date-released: 2026-11-11

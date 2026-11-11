@@ -1448,6 +1448,24 @@
    "velicina": 30005,
    "sha256": "sha256:c59b7795f5aa632f462e8b79e572490137167d6738cb408b50abd33cc38ba576",
    "status": "potvrđeno 2026-11-02 (209 visinskih tačaka, opseg 141–258 m, centar 195 m n.v., za P-TEREN)"
+  },
+  {
+   "id": "W79",
+   "fajl": "izvori/internet/pdf/saopstenja-1988-89-stojkovic-pavelka-veliki-hram.pdf",
+   "naslov": "Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana)",
+   "autori": "Brana Stojković-Pavelka",
+   "godina": 1989,
+   "objavljeno": "Saopštenja XX–XXI (1988/89), Republički zavod za zaštitu spomenika kulture, Beograd, str. 135–146",
+   "jezik": "sr (ćirilica) + fr rezime",
+   "nivo": "T1",
+   "doi": null,
+   "poreklo": "heritage.gov.rs/latinica/saopstenje_20_21_1988_1989.php (2026-11-11)",
+   "prva_strana": 135,
+   "status": "novo 2026-11-11 — talas 04 hramovi; ceo rad pročitan vizuelno (12 strana), tekst prisilnim OCR-om srp (tekstualni sloj je latinični ostatak)",
+   "url": "https://www.heritage.gov.rs/latinica/saopstenje_20_21_1988_1989.php",
+   "strane": 12,
+   "velicina": 832765,
+   "sha256": "8007928ae019168747971d2fb13d253c043bb2f5ce7c307ab157907025d32e16"
   }
  ]
 }

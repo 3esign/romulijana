@@ -2,7 +2,7 @@
 
 Putanja: Faze i hronologija › Tetrarhija (293–311)
 
-Oblici: `tetrarh`, `tetrarch`, `cezar`, `caesar`, `cesar`, `avgust\b`, `augustus\b` · ukupno 562 pominjanja u 21 izvora.
+Oblici: `tetrarh`, `tetrarch`, `cezar`, `caesar`, `cesar`, `avgust\b`, `augustus\b` · ukupno 563 pominjanja u 22 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -243,3 +243,7 @@ Oblici: `tetrarh`, `tetrarch`, `cezar`, `caesar`, `cesar`, `avgust\b`, `augustus
 - **s. 64** — 62 Péter Prohászka Abb. 1 Goldmünzverkehr der ersten Tetrarchie: Diolletian (▲), Maximian Herculius (●), Galerius (■), Maximinus II. Daia (○), Konstantius I. Chlorus (□), Severus II. (∆), Schatzfund (). Rolle im Münzverke
 - **s. 64** — ts ihren Tiefpunkt. Loriot rechnete dabei mit drei aurei; diese können nun aber um fünf weitere Exemplare ergänzt werden. Ein Aufschwung lässt sich während der Tetrarchie (6 Stücke) und unter der konstantinischen Dynastie (4 Stücke) beobachten. Hinzu kommen Schatzfunde vom Limes (z. B. aus Brigetio)14. In der Zeit Valentinians
 - … još 33+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 10** — d-Parkins) је дошао до неких закључака који би могли да се примене и на архитектуру Гамзиграда. Они се односе на стварање нових грађевинских целина у доба Тетрархије и на њихову специфичну архитектуру, ослоњену на империјални механизам, који је стварао програме зидања административних и других ~ објеката. ВордПеркинс ~

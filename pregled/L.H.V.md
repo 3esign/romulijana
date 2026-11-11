@@ -2,7 +2,7 @@
 
 Putanja: Felix Romuliana (Gamzigrad) › Hramovi › Veliki hram (Divus Galerius)
 
-Oblici: `velik\w* hram`, `large temple`, `great temple`, `grand temple`, `big temple` · ukupno 172 pominjanja u 12 izvora.
+Oblici: `velik\w* hram`, `large temple`, `great temple`, `grand temple`, `big temple` · ukupno 182 pominjanja u 13 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -134,3 +134,16 @@ Oblici: `velik\w* hram`, `large temple`, `great temple`, `grand temple`, `big te
 ## W22 · Keszthely-Fenékpuszta im Kontext spätantiker Kontinuitätsforschung zwischen Noricum und Moesia (CPP 2) (2011)
 
 - **s. 711** — Farbtafel V 709 Palast 1 IC We Greer Tempel /°= 1 Large temple ) 0 100 m Vorgängerbebauung (Mitte 3. Jh.) Spätantike Phase (4.-6. Jh.) Predecessor buildings (middle of the 3" c.) Late Antique Period (4.-6" c.) ____ 1. Mauer
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 1** — Драгослав Срејовић исцрпно проучио и протумачио,“ већ о његовом, могућем, некадашњем изгледу и то на основу материјалних података које пружају Сл. 1. Снимак Велики храм у Гамзиграду __ Предлог за реконструкцију — Арх. БРАНА СТОЈКОВИЋ-ПАВЕЛКА сачувани облици и камена пластика. Храм је својом главном фасадом окренут истоку и глав
+- **s. 3** — нска капитела, сачувана готово у целини, припадала су, судећи по димензијама, мермерним стубовима. Нађено је више одломака који потичу од тог истог типа капиВЕЛИКИ ХРАМ У ГАМЗИГРАДУ тела.179 Ископани су и делови архитрава и лукова од пешчара. Нађено је и неколико мермерних плоча у облику тегула које су, вероватно, припадале кр
+- **s. 3** — рад, касноантички царски дворац, 49, кат. 33, цртежи представљају ~ идеалну реконструкцију. 11 Исто, 78—87. 12 JI. Срејовић, Felix Котицапа, 51. 13 Као што је велики храм у Хоси Сфири (Ноззп 560) са тространим = тремом (D. Krencker — W. Zschietzschmann, Romiche Тетре in 5упеп, Berlin — Leipzig, 1938, Taf. 14), храм У Калат Факри
+- **s. 5** — 139 ВЕЛИКИ ХРАМ У ГАМЗИГРАДУ | | ф — TF ЈЕ · .. . Ј, + | и : РМИНИНИ А 8", | (ЕРИ | МЕ TIM a! ı ı (EET i-— + ı } ||, ı МЕЗЕ a UB) 1 ' ı|| i АНИЈЕ 172 9 КИР Е 5: || || 1 1 dt HI
+- **s. 7** — спона од 18,70 m на десет делова, чиме се добијају места за девет стубова. Њихов међусобни размак је 141 ст, што одговара трострукој дебљини стуба од 47 ст. ВЕЛИКИ ХРАМ У ГАМЗИГРАДУ Тако оформљена бочна колонада има једанаест носећих елемената. У оваквом · случају He ~ постоји — могућност повезивања | нижих јонских стубова –
+- **s. 9** — 143 ВЕЛИКИ ХРАМ У ГАМЗИГРАДУ | — – “~.” ~ Т : I I Т Е ЈЕ а | WEH Ir — = =. | | —— ~ — | — 4 " . ——- —— + || | 4 TT + | 4 — | + == + .“ и | — 2 || | и 7 i ++ = = | | | | | + ||
+- **s. 10** — HAH индиректно из Италије, али је била значајно везана за локалну традицију и материјале.3о Ово гледиште се може односити на архитектуру Felix Romuliane и њен велики храм, проистекао из царског култа, на коме се огледа слободан приступ пројектовању = објеката KaO и полихромија грађевинског о материјала, карактеристична за касну
+- **s. 11** — на, да их уклапа у пројекат или да цео пројакат прилагођава њима. Сматрамо да се управо овакав проблем појавио и у Гамзиграду, при пројектовању и извођењу великог храма. о Стереобат je — монументално пројектован и изведен локалним материјалом. Када су стигли архитектонски елементи увезани из Грчке, две врсте стубова, капители,
+- **s. 11** — taient revêtus etc. Avant de procéder aux travaux de conservation, il avait fallu faire une analyse de tous les éléments mis au jour, pour avoir une idée aussi ВЕЛИКИ ХРАМ У ГАМЗИГРАДУ ну, градитељ — (Галерије, цар са посебним империјалним програмом и великим узором у Диоклецијановом животу и његовом градитељству и место настан
+- **s. 11** — ри касне антике, а односи се на об-лике који су претерани, извештачени, неуравнотежени. Види: Enciklopedija likovnih umetnosti I, A — Cus, Zagreb 1959, 240. Le grand temple à Felix Romuliana (Gamzigrad) BRANA STOJKOVIÉ complète que possible sur l'aspect originel que le temple pouvait présenter. Les résultats des recherches sur les

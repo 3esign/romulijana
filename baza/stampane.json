@@ -14922,6 +14922,80 @@
      "status": null
     }
    ]
+  },
+  "W79": {
+   "strana": 12,
+   "pokriveno": 12,
+   "potvrdjeno": 10,
+   "segmenti": [
+    {
+     "od": 1,
+     "do": 12,
+     "pomeraj": 134
+    }
+   ],
+   "strane": [
+    {
+     "pdf": 1,
+     "stampana": 135,
+     "status": "izvedena"
+    },
+    {
+     "pdf": 2,
+     "stampana": 136,
+     "status": "potvrdjena"
+    },
+    {
+     "pdf": 3,
+     "stampana": 137,
+     "status": "potvrdjena"
+    },
+    {
+     "pdf": 4,
+     "stampana": 138,
+     "status": "potvrdjena"
+    },
+    {
+     "pdf": 5,
+     "stampana": 139,
+     "status": "potvrdjena"
+    },
+    {
+     "pdf": 6,
+     "stampana": 140,
+     "status": "izvedena"
+    },
+    {
+     "pdf": 7,
+     "stampana": 141,
+     "status": "potvrdjena"
+    },
+    {
+     "pdf": 8,
+     "stampana": 142,
+     "status": "potvrdjena"
+    },
+    {
+     "pdf": 9,
+     "stampana": 143,
+     "status": "potvrdjena"
+    },
+    {
+     "pdf": 10,
+     "stampana": 144,
+     "status": "potvrdjena"
+    },
+    {
+     "pdf": 11,
+     "stampana": 145,
+     "status": "potvrdjena"
+    },
+    {
+     "pdf": 12,
+     "stampana": 146,
+     "status": "potvrdjena"
+    }
+   ]
   }
  }
 }

@@ -2,7 +2,7 @@
 
 Putanja: Faze i hronologija › Kasnoantičko-ranovizantijsko (IV–VI v.)
 
-Oblici: `justinijan`, `justinian`, `ranovizantij`, `early byzantine`, `protobyzantin`, `kasnoantick`, `late antique`, `antiquite tardive` · ukupno 811 pominjanja u 22 izvora.
+Oblici: `justinijan`, `justinian`, `ranovizantij`, `early byzantine`, `protobyzantin`, `kasnoantick`, `late antique`, `antiquite tardive` · ukupno 817 pominjanja u 23 izvora.
 
 ## R01 · Emperor Galerius's buildings in Romuliana (Gamzigrad, Eastern Serbia) (1994)
 
@@ -256,3 +256,12 @@ Oblici: `justinijan`, `justinian`, `ranovizantij`, `early byzantine`, `protobyza
 - **s. 160** — 158 Zvezdana Modrijan Fig. 1 The Late Antique and Early Medieaval settlement in Slovenia. shows strong concentrations of such settlements mainly by the Mura, Drava and Sava (fig. 1). The oldest settlement i
 - **s. 162** — rs in the middle of the 6th century22. The evidence for this reconstruction is, amongst others, a small amphora (late small spatheion) with the coin of Emperor Justinian from the middle of the 6th century. This amphora was found near the altar of the central church. The settlement was still thriving in the second half of the 6th
 - … još 122+ u bazi
+
+## W79 · Veliki hram u Gamzigradu — predlog za rekonstrukciju (Le grand temple à Felix Romuliana) (1989)
+
+- **s. 1** — Систематска археолошка истраживања касноантичке · царске – палате y Гамзитраду обухватила «cy крајем седамдесетих година откривање и једне монументалне грађевине.! Она се налази у јужном делу комплекса, а
+- **s. 1** — о late roman temples at Gamzigrad, Archaeologia Tugoslavica XIX, Beograd 1978 (1979), 57; исти, Гамзиград, Старинар XXXI, 1980, 70—72; JI. Срејовић, Гамзиград, касноантички царски дворац, Галерија САНУ 45, Београд 1983, 47, са старијом литературом. 7 Д. Срејовић — А. Лаловић — Б. Јанковић, Гамзиград, 70—72.
+- **s. 3** — зданију слику првобитне целине. Решење коме се тежило треба да представља конструктивни склоп који би садржао све нађене елементе. 8 Д. Срејовић, Гамзиград, касноантички царски дворац, 51. 9 О. Lugli, La technica еаШљла тотапа, con рагнсојаге riguardo а Roma e Lazio, Roma MCMLVII; M. CanakMedic, Opus mixtum i opus listatum u k
+- **s. 3** — antici, Materijali, tehnike i strukture predantickog ı antickog graditeljstua па istochom Jaranskom prostoru, Zagreb 1980, 141—147. 10 Д, Срејовић, Гамзиград, касноантички царски дворац, 49, кат. 33, цртежи представљају ~ идеалну реконструкцију. 11 Исто, 78—87. 12 JI. Срејовић, Felix Котицапа, 51. 13 Као што је велики храм у Хос
+- **s. 3** — ) са шест стубова на прочељу ~ (исто, Та. 20), и храм у Хибарији (Hibbariye) са засведеном криптом испод целе (исто, Taf. 89, 90). 4М. Чанак-Медић, Гамзиград, касноантичка палата, Саопштења XI, Републички завод за заштиту спомемика културе СР Србије, Београд 1978, 155—158; D. б5гејомс, Two Mćmorial Monuments ој Roman Palatial Ar
+- **s. 5** — Ha античката ликовна уметност, Годишен зборник на Техничкиот факултет 1957—1958, 43. 19 Уџгимје, нав. дело, 72. 20 Исто, 70. 21 JL. — Срејовић, = Гамзиград, ~ касноантички дворац, 50.
